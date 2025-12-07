@@ -11,14 +11,13 @@ const translations = {
     "hero.ctaExperience": "View experience timeline",
     "hero.ctaCv": "Jump to full CV",
     "contact.title": "Contact",
-    "contact.phoneFr": "Phone (FR)",
-    "contact.phoneTn": "Phone (TN)",
+    "contact.phoneTn": "Phone",
     "card.skillsTitle": "Skills & Technologies",
     "card.skillsText": "Full list of skills, methodologies, tools and technologies is preserved exactly from the CV documents below.",
     "card.experienceTitle": "Professional Experience",
     "card.experienceText": "Experience across banking, insurance, telecom, agriculture, call-center systems, transport and pharmaceutical supply.",
     "card.languagesTitle": "Languages",
-    "card.languagesText": "Bilingual English / French. Use the language switch above to display interface text in your preferred language.",
+    "card.languagesText": "Bilingual English / French with Arabic interface support. Use the language switch above to display interface text in your preferred language.",
     "timeline.title": "Experience timeline",
     "timeline.note": "All job details and project descriptions are shown in full in the CV section. The timeline below serves as a visual guide.",
     "cv.title": "Full CV (unmodified)",
@@ -43,14 +42,13 @@ const translations = {
     "hero.ctaExperience": "Voir la frise d'expérience",
     "hero.ctaCv": "Aller au CV complet",
     "contact.title": "Contact",
-    "contact.phoneFr": "Téléphone (FR)",
-    "contact.phoneTn": "Téléphone (TN)",
+    "contact.phoneTn": "Téléphone",
     "card.skillsTitle": "Compétences & technologies",
     "card.skillsText": "La liste complète des compétences, méthodologies, outils et technologies est conservée exactement à partir des CV ci-dessous.",
     "card.experienceTitle": "Expérience professionnelle",
     "card.experienceText": "Expérience dans la banque, l’assurance, les télécoms, l’agriculture, les centres d’appels, le transport et le secteur pharmaceutique.",
     "card.languagesTitle": "Langues",
-    "card.languagesText": "Bilingue anglais / français. Utilisez le sélecteur de langue ci-dessus pour afficher le texte de l’interface dans votre langue.",
+    "card.languagesText": "Bilingue anglais / français avec interface arabe. Utilisez le sélecteur de langue ci-dessus pour afficher le texte de l’interface dans votre langue.",
     "timeline.title": "Frise chronologique d'expérience",
     "timeline.note": "Tous les détails de postes et descriptions de projets se trouvent dans la section CV. La frise ci-dessous sert de vue synthétique.",
     "cv.title": "CV complet (non modifié)",
@@ -62,6 +60,37 @@ const translations = {
     "cv.frIntroTitle": "Compétences, outils et systèmes d'information",
     "cv.frExpTitle": "Projets professionnels (texte original)",
     "footer.note": "Texte intégral du CV en anglais et en français conservé exactement comme dans les documents d’origine."
+  },
+  ar: {
+    "brand.role": "مهندس برمجيات",
+    "brand.tagline": "مهندس برمجيات ومهندس حلول ذو خبرة في الأنظمة الموزعة وأنظمة المراسلة والحلول السحابية.",
+    "nav.about": "نبذة",
+    "nav.experience": "الخبرة",
+    "nav.cv": "السيرة الذاتية الكاملة",
+    "nav.contact": "التواصل",
+    "hero.title": "ملف شخصي والسيرة الذاتية",
+    "hero.subtitle": "تعرض هذه الصفحة ملفًا شخصيًا حديثًا وسهل الوصول، مع النص الكامل غير المعدل للسيرة الذاتية باللغتين الإنجليزية والفرنسية.",
+    "hero.ctaExperience": "عرض التسلسل الزمني للخبرة",
+    "hero.ctaCv": "الانتقال إلى السيرة الذاتية الكاملة",
+    "contact.title": "التواصل",
+    "contact.phoneTn": "الهاتف",
+    "card.skillsTitle": "المهارات والتقنيات",
+    "card.skillsText": "تم الاحتفاظ بالقائمة الكاملة للمهارات والمنهجيات والأدوات والتقنيات كما هي في مستندات السيرة الذاتية أدناه.",
+    "card.experienceTitle": "الخبرة المهنية",
+    "card.experienceText": "خبرة في مجالات البنوك والتأمين والاتصالات والزراعة وأنظمة مراكز الاتصال والنقل وسلاسل التوريد الدوائية.",
+    "card.languagesTitle": "اللغات",
+    "card.languagesText": "إنجليزي / فرنسي مع واجهة عربية. استخدم زر اختيار اللغة في الأعلى لتغيير لغة واجهة الموقع.",
+    "timeline.title": "الخط الزمني للخبرة",
+    "timeline.note": "جميع تفاصيل الوظائف والمشاريع موجودة بالكامل في قسم السيرة الذاتية. يمثل هذا الخط الزمني عرضًا بصريًا مختصرًا.",
+    "cv.title": "السيرة الذاتية الكاملة (بدون تعديل)",
+    "cv.intro": "تحتوي الأقسام التالية على النص الكامل من مستندات السيرة الذاتية الأصلية باللغتين الإنجليزية والفرنسية دون أي حذف أو تعديل أو تلخيص.",
+    "cv.enTitle": "السيرة الذاتية بالإنجليزية",
+    "cv.enIntroTitle": "المهارات والأدوات وأنظمة المعلومات",
+    "cv.enExpTitle": "الخبرة المهنية (النص الأصلي)",
+    "cv.frTitle": "السيرة الذاتية بالفرنسية",
+    "cv.frIntroTitle": "المهارات والأدوات وأنظمة المعلومات",
+    "cv.frExpTitle": "المشاريع المهنية (النص الأصلي)",
+    "footer.note": "تم الاحتفاظ بالنص الكامل للسيرة الذاتية باللغتين الإنجليزية والفرنسية كما هو في المستندات الأصلية."
   }
 };
 
@@ -69,9 +98,12 @@ function setLanguage(lang) {
   const dict = translations[lang];
   if (!dict) return;
 
-  document.documentElement.lang = lang;
+  document.documentElement.lang = lang === "ar" ? "ar" : lang;
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+
   document.body.classList.toggle("lang-en", lang === "en");
   document.body.classList.toggle("lang-fr", lang === "fr");
+  document.body.classList.toggle("lang-ar", lang === "ar");
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");

@@ -278,7 +278,7 @@ a:hover {
 
 .contact-list .label {
   display: inline-block;
-  min-width: 7rem;
+  min-width: 5.5rem;
   font-size: 0.8rem;
   color: #9ca3af;
 }
@@ -426,7 +426,7 @@ a:hover {
   flex-wrap: wrap;
 }
 
-/* Language visibility */
+/* Language visibility: EN as default, FR only when selected, AR shares EN CV */
 .lang-en-section {
   display: block;
 }
@@ -441,6 +441,14 @@ body.lang-fr .lang-en-section {
 
 body.lang-fr .lang-fr-section {
   display: block;
+}
+
+body.lang-ar .lang-en-section {
+  display: block;
+}
+
+body.lang-ar .lang-fr-section {
+  display: none;
 }
 
 /* Responsive */
@@ -481,6 +489,15 @@ body.lang-fr .lang-fr-section {
 
   .cards-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h2 {
+    font-size: 1.4rem;
+  }
+  .brand-name {
+    font-size: 1.2rem;
   }
 }
 
