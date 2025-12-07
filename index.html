@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mouadh Jaber | Senior Software Engineer & Architect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Mouadh Jaber, Senior Software Engineer & Architect specializing in .NET, cloud, and distributed systems." />
+  <meta name="keywords" content="Mouadh Jaber, Senior Software Engineer, Software Architect, .NET, C#, Azure, Microservices, Cloud, DevOps" />
+  <meta name="author" content="Mouadh Jaber" />
+  <meta property="og:title" content="Mouadh Jaber | Senior Software Engineer & Architect" />
+  <meta property="og:description" content="Senior Software Engineer & Architect with expertise in .NET, cloud, microservices, and distributed systems." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-mark">MJ</div>
+        <div>
+          <div class="brand-name" data-i18n="brand.name">Mouadh Jaber</div>
+          <div class="brand-role" data-i18n="brand.role">Senior Software Engineer &amp; Architect</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="link-icon" href="https://www.linkedin.com/in/mouadhjaber/" target="_blank" rel="noreferrer">
+          <span class="sr-only">LinkedIn</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.32 8.16h4.36V24H.32zM8.34 8.16H12.5v2.15h.06c.58-1.1 2-2.26 4.12-2.26 4.4 0 5.21 2.9 5.21 6.67V24h-4.36v-7.5c0-1.79-.03-4.09-2.49-4.09-2.49 0-2.87 1.94-2.87 3.96V24H8.34z"></path>
+          </svg>
+        </a>
+        <div class="lang-toggle" role="radiogroup" aria-label="Language selector">
+          <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+        </div>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-kicker" data-i18n="hero.kicker">Senior Software Engineer &amp; Architect</p>
+          <h1 data-i18n="hero.title">Building reliable, modern software for cloud-scale businesses.</h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            I design and deliver robust .NET and cloud architectures for banking, insurance, telecom, transport, and pharmaceutical companies.
+          </p>
+          <div class="hero-actions">
+            <a href="#experience" class="btn primary" data-i18n="hero.ctaPrimary">View experience</a>
+            <a href="#contact" class="btn ghost" data-i18n="hero.ctaSecondary">Contact me</a>
+          </div>
+          <div class="hero-meta">
+            <div>
+              <span class="label" data-i18n="hero.locationLabel">Based in</span>
+              <span data-i18n="hero.locationValue">France &amp; International (remote)</span>
+            </div>
+            <div>
+              <span class="label" data-i18n="hero.yearsLabel">Experience</span>
+              <span data-i18n="hero.yearsValue">15+ years</span>
+            </div>
+            <div>
+              <span class="label" data-i18n="hero.focusLabel">Focus</span>
+              <span data-i18n="hero.focusValue">.NET, cloud, microservices, distributed systems</span>
+            </div>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <h2 data-i18n="hero.cardTitle">Core technologies</h2>
+          <ul class="tag-list">
+            <li>.NET / C#</li>
+            <li>ASP.NET / Web API</li>
+            <li>Azure / Cloud</li>
+            <li>Microservices</li>
+            <li>Docker</li>
+            <li>Kafka</li>
+            <li>WCF / REST</li>
+            <li>SQL Server / Oracle</li>
+          </ul>
+          <h3 data-i18n="hero.cardSubtitle">Domains</h3>
+          <p class="hero-card-text" data-i18n="hero.cardText">
+            Banking, insurance, telecom, transport, agritech, and pharmaceutical supply.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="section section-alt">
+      <div class="container section-inner two-column">
+        <div>
+          <h2 data-i18n="about.title">About</h2>
+          <p data-i18n="about.p1">
+            I am a senior software engineer and architect with deep experience designing and building distributed, real-time, and mission-critical systems.
+            Over the last decade, I have helped large organizations modernize their platforms, migrate to the cloud, and improve reliability.
+          </p>
+          <p data-i18n="about.p2">
+            My expertise covers .NET and C#, microservices, event-driven architectures, authentication and identity systems, and DevOps practices.
+            I enjoy working closely with technical and business stakeholders to translate complex requirements into clean, maintainable solutions.
+          </p>
+        </div>
+        <div class="about-grid">
+          <div class="about-stat">
+            <div class="about-stat-number">10+</div>
+            <div class="about-stat-label" data-i18n="about.statClients">enterprise clients</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-number">5</div>
+            <div class="about-stat-label" data-i18n="about.statSectors">industry sectors</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-number">2</div>
+            <div class="about-stat-label" data-i18n="about.statLanguages">languages (FR / EN)</div>
+          </div>
+          <div class="about-note">
+            <p data-i18n="about.note">
+              Comfortable leading architecture, mentoring teams, and hands-on coding on complex projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container section-inner">
+        <h2 data-i18n="skills.title">Skills</h2>
+        <div class="skills-grid">
+          <article class="card">
+            <h3 data-i18n="skills.softwareTitle">Software engineering &amp; architecture</h3>
+            <ul>
+              <li data-i18n="skills.software1">Distributed, modular, and real-time applications</li>
+              <li data-i18n="skills.software2">Microservices, layered and domain-driven design</li>
+              <li data-i18n="skills.software3">API design (REST, Web API, WCF, messaging)</li>
+              <li data-i18n="skills.software4">Authentication &amp; identity (SSO, IdentityServer, 2FA)</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3 data-i18n="skills.dotnetTitle">.NET &amp; cloud stack</h3>
+            <ul>
+              <li>.NET / C#, ASP.NET MVC, Web API, WCF</li>
+              <li>Entity Framework, LINQ, NHibernate</li>
+              <li>Azure (Service Bus, cloud services, DevOps, Data Lake)</li>
+              <li>Docker, Kafka, microservice messaging</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3 data-i18n="skills.processTitle">Methods &amp; delivery</h3>
+            <ul>
+              <li data-i18n="skills.process1">Agile (Scrum, XP, SAFe), TDD / BDD</li>
+              <li data-i18n="skills.process2">DevOps / DevSecOps, CI/CD, code quality</li>
+              <li data-i18n="skills.process3">ITIL-based production processes</li>
+              <li data-i18n="skills.process4">Technical leadership &amp; mentoring</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3 data-i18n="skills.otherTitle">Other technologies</h3>
+            <ul>
+              <li>C / C++, Python</li>
+              <li>JavaScript, jQuery, AngularJS, basic React</li>
+              <li>SQL Server, Oracle</li>
+              <li>Lotus Notes / Domino, SharePoint, Office 365</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section section-alt">
+      <div class="container section-inner">
+        <h2 data-i18n="experience.title">Experience</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <div class="timeline-date" data-i18n="exp.netcom.date">Jul 2025 – Present</div>
+              <div class="timeline-location">Netcom · Telecom</div>
+            </div>
+            <h3 data-i18n="exp.netcom.title">Senior Software Engineer</h3>
+            <ul>
+              <li data-i18n="exp.netcom.b1">Mobile development with Flutter and .NET backends.</li>
+              <li data-i18n="exp.netcom.b2">Backend APIs and Swagger documentation for internal CRM.</li>
+              <li data-i18n="exp.netcom.b3">Dockerization and urbanization of existing projects.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <div class="timeline-date" data-i18n="exp.mowasalat.date">Nov 2024 – Jun 2025</div>
+              <div class="timeline-location">Mowasalat · Transport</div>
+            </div>
+            <h3 data-i18n="exp.mowasalat.title">Senior Software Engineer</h3>
+            <ul>
+              <li data-i18n="exp.mowasalat.b1">Designed and developed .NET Core backend for fleet management.</li>
+              <li data-i18n="exp.mowasalat.b2">Updated payment system and back-office monitoring modules.</li>
+              <li data-i18n="exp.mowasalat.b3">Delivered new APIs to support operations and reporting.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <div class="timeline-date" data-i18n="exp.vermeg.date">Oct 2024 – Nov 2024</div>
+              <div class="timeline-location">Vermeg · Banking / Fintech</div>
+            </div>
+            <h3 data-i18n="exp.vermeg.title">Senior Software Engineer</h3>
+            <ul>
+              <li data-i18n="exp.vermeg.b1">Worked on liquidation systems on the sales side.</li>
+              <li data-i18n="exp.vermeg.b2">Contributed to high-performance financial software in C++ / Delphi.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <div class="timeline-date" data-i18n="exp.astera.date">May 2023 – Sep 2024</div>
+              <div class="timeline-location">ASTERA · Pharmaceutical supply · France</div>
+            </div>
+            <h3 data-i18n="exp.astera.title">Senior Software Engineer</h3>
+            <ul>
+              <li data-i18n="exp.astera.b1">Implemented IdentityService with 2-factor authentication and QR-code SMS.</li>
+              <li data-i18n="exp.astera.b2">Modernized authentication workflows and DevOps processes on Azure.</li>
+              <li data-i18n="exp.astera.b3">Helped secure and streamline access across a suite of internal applications.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <div class="timeline-date" data-i18n="exp.ziwo.date">Mar 2023 – May 2023</div>
+              <div class="timeline-location">Ziwo · Call-center platform · UAE</div>
+            </div>
+            <h3 data-i18n="exp.ziwo.title">Senior Software Engineer &amp; Architect</h3>
+            <ul>
+              <li data-i18n="exp.ziwo.b1">Designed microservice components using Docker, gRPC/Protobuff, and Kafka.</li>
+              <li data-i18n="exp.ziwo.b2">Defined technical architecture and integration patterns for core services.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <div class="timeline-date" data-i18n="exp.candriam.date">May 2021 – Oct 2022</div>
+              <div class="timeline-location">Candriam · Asset management · France / Belgium</div>
+            </div>
+            <h3 data-i18n="exp.candriam.title">Senior Software Engineer &amp; Architect</h3>
+            <ul>
+              <li data-i18n="exp.candriam.b1">Integrated data flows from multiple sources including Belfius.</li>
+              <li data-i18n="exp.candriam.b2">Defined microservice architecture using Azure services and message bus.</li>
+              <li data-i18n="exp.candriam.b3">Implemented SSIS batches, Web APIs, and WCF services.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <div class="timeline-date" data-i18n="exp.socgen.date">Dec 2018 – May 2021</div>
+              <div class="timeline-location">Société Générale · Banking · France</div>
+            </div>
+            <h3 data-i18n="exp.socgen.title">Senior Engineer &amp; Architect</h3>
+            <ul>
+              <li data-i18n="exp.socgen.b1">Defined architecture for new software components and workflows.</li>
+              <li data-i18n="exp.socgen.b2">Supported provisioning and SSO integration for new tools.</li>
+              <li data-i18n="exp.socgen.b3">Collaborated with operations teams to prepare infrastructure.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item timeline-item--compact">
+            <div class="timeline-meta">
+              <div class="timeline-date" data-i18n="exp.earlier.date">2009 – 2018</div>
+              <div class="timeline-location" data-i18n="exp.earlier.location">Banking, insurance, agritech, telecom</div>
+            </div>
+            <h3 data-i18n="exp.earlier.title">Earlier experience</h3>
+            <p data-i18n="exp.earlier.text">
+              Technical and leadership roles at Generali, AXA, Société Générale CIB, INVIVO, and Orange Business Services,
+              covering WPF, trading systems, Silverlight, REST services, and large migration projects.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container section-inner two-column contact">
+        <div>
+          <h2 data-i18n="contact.title">Contact</h2>
+          <p data-i18n="contact.text">
+            For opportunities, collaborations, or consulting missions, feel free to reach out directly.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <span class="label" data-i18n="contact.emailLabel">Email</span>
+              <a href="mailto:mouadh.jaber@msn.com">mouadh.jaber@msn.com</a>
+            </li>
+            <li>
+              <span class="label" data-i18n="contact.phoneLabel">Phone (FR)</span>
+              <a href="tel:+33752597006">+33 7 52 59 70 06</a>
+            </li>
+            <li>
+              <span class="label" data-i18n="contact.phoneTnLabel">Phone (TN)</span>
+              <a href="tel:+21658201430">+216 58 201 430</a>
+            </li>
+            <li>
+              <span class="label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/mouadhjaber/" target="_blank" rel="noreferrer">
+                linkedin.com/in/mouadhjaber/
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="contact-card card">
+          <h3 data-i18n="contact.highlightTitle">What I can help with</h3>
+          <ul>
+            <li data-i18n="contact.h1">Design and implementation of .NET and cloud architectures.</li>
+            <li data-i18n="contact.h2">Modernization and migration of legacy systems.</li>
+            <li data-i18n="contact.h3">Identity and authentication (SSO, 2FA, IdentityServer).</li>
+            <li data-i18n="contact.h4">Technical leadership, code reviews, and mentoring.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>&copy; <span id="year"></span> Mouadh Jaber</span>
+      <span data-i18n="footer.rights">All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
