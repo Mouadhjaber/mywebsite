@@ -575,3 +575,11 @@ body.lang-ar .lang-fr-section {
     transition-duration: 0.01ms !important;
   }
 }
+
+.cv-separator {
+  text-align:center;
+  color:#4da3ff;
+  margin:20px 0;
+  font-weight:300;
+  letter-spacing:2px;
+}
