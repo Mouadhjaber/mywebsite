@@ -94,7 +94,15 @@ const translations = {
   }
 };
 
-function setLanguage(lang) {
+function setLanguage(lang){
+  if (lang === "ar") {
+    const phone = document.querySelector('a[href^="tel:+216"]');
+    if (phone) phone.textContent = "+٢١٦ ٥٨ ٢٠١ ٤٣٠";
+  } else {
+    const phone = document.querySelector('a[href^="tel:+216"]');
+    if (phone) phone.textContent = "+216 58 201 430";
+  }
+
   const dict = translations[lang];
   if (!dict) return;
 
