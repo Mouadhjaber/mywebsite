@@ -583,3 +583,5 @@ body.lang-ar .lang-fr-section {
   font-weight:300;
   letter-spacing:2px;
 }
+
+.lang-ar-section{display:none;} body.lang-ar .lang-ar-section{display:block;} body.lang-ar .lang-en-section, body.lang-ar .lang-fr-section{display:none;}
