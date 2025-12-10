@@ -2,1484 +2,1744 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Portfolio & CV | Mouadh JABER</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio and full bilingual CV (English & French) of Mouadh JABER, Senior Software Engineer and Architect working on distributed, messaging and cloud-based systems." />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="Mouadh JABER" />
-  <meta property="og:title" content="Portfolio & CV | Mouadh JABER" />
-  <meta property="og:description" content="Modern portfolio and complete English/French CV of Mouadh JABER." />
+  <title>Mouadh JABER — Software Engineer Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Senior Software Engineer & Architect — .NET, distributed systems, messaging, banking, telecom, asset management, pharma, transport, and more. Portfolio and full CV of Mouadh JABER." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="Mouadh JABER — Software Engineer Portfolio" />
+  <meta property="og:description" content="Senior Software Engineer & Architect with experience across banking, insurance, telecom, asset management, pharma, and transport sectors." />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="lang-en">
   <a class="skip-link" href="#main">Skip to content</a>
-
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <div class="brand-photo-wrapper" aria-hidden="true">
-          <img src="profile.jpg" alt="Portrait of Mouadh Jaber" class="brand-photo" />
+        <div class="avatar-wrapper">
+          <img src="profile.jpg" alt="Portrait de Mouadh JABER" class="avatar" />
         </div>
-        <div class="brand-text">
-          <h1 class="brand-name">Mouadh JABER</h1>
-          <p class="brand-role" data-i18n="brand.role">Senior Software Engineer & Architect</p>
-          <p class="brand-tagline" data-i18n="brand.tagline">
-            Designing and building distributed, messaging and cloud-based systems across banking, insurance, telecom, transport and more.
-          </p>
+        <div>
+          <h1 class="brand-title">Mouadh JABER</h1>
+          <p class="brand-tagline" data-i18n="brand.tagline">Senior Software Engineer &amp; Architect</p>
         </div>
       </div>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#about" data-i18n="nav.about">About</a>
-        <a href="#experience" data-i18n="nav.experience">Experience</a>
-        <a href="#cv" data-i18n="nav.cv">Full CV</a>
-        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <nav class="main-nav" aria-label="Main">
+        <ul>
+          <li><a href="#summary" data-i18n="nav.summary">Summary</a></li>
+          <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="#full-cv" data-i18n="nav.fullcv">Full CV</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
       </nav>
-      <div class="controls">
-        <div class="lang-toggle" role="radiogroup" aria-label="Language selector">
-          <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
-          <button class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
-          <button class="lang-btn" data-lang="ar" aria-pressed="false">AR</button>
-        </div>
+      <div class="lang-switch" aria-label="Language selector">
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        <button class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+        <button class="lang-btn" data-lang="ar" aria-label="العربية">AR</button>
       </div>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
 
   <main id="main">
-    <section id="about" class="section hero-section">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h2 data-i18n="hero.title">Senior Software Engineer & Architect</h2>
-          <p data-i18n="hero.subtitle">
-            Experienced in designing and delivering complex software systems: distributed back-ends, messaging platforms, APIs, cloud-native services and enterprise integrations.
+    <section id="summary" class="section section-hero">
+      <div class="container hero-grid">
+        <div>
+          <h2 data-i18n="hero.title">Senior Software Engineer &amp; Architect</h2>
+          <p class="hero-text" data-i18n="hero.subtitle">
+            Designing and building distributed, message-driven, real-time systems across banking, insurance, telecom, asset management, pharma, agriculture, and transport.
           </p>
-          <div class="hero-actions">
-            <a href="#experience" class="btn primary" data-i18n="hero.ctaExperience">View experience timeline</a>
-            <a href="#cv" class="btn ghost" data-i18n="hero.ctaCv">Jump to full CV</a>
+          <div class="hero-cards">
+            <article class="info-card">
+              <h3 data-i18n="hero.card.expertise">Expertise</h3>
+              <p data-i18n="hero.card.expertiseText">
+                .NET, C#, distributed architectures, messaging, microservices, DevOps / DevSecOps, Azure, and high-availability back-end systems.
+              </p>
+            </article>
+            <article class="info-card">
+              <h3 data-i18n="hero.card.domains">Domains</h3>
+              <p data-i18n="hero.card.domainsText">
+                Banking, insurance, asset management, pharma supply, telecom, call-center systems, agriculture cooperative, and transport.
+              </p>
+            </article>
+            <article class="info-card">
+              <h3 data-i18n="hero.card.value">Value</h3>
+              <p data-i18n="hero.card.valueText">
+                From legacy modernization to cloud-native architectures, delivering reliable, maintainable, and secure software platforms.
+              </p>
+            </article>
           </div>
         </div>
-        <aside class="hero-card" aria-label="Key contacts" id="contact">
-          <h3 data-i18n="contact.title">Contact</h3>
-          <ul class="contact-list">
-            <li>
-              <span class="label">Email</span>
-              <a href="mailto:mouadh.jaber@msn.com">mouadh.jaber@msn.com</a>
-            </li>
-            <li>
-              <span class="label" data-i18n="contact.phoneTn">Phone</span>
-              <a href="tel:+21658201430">+216 58 201 430</a>
-            </li>
-            <li>
-              <span class="label">LinkedIn</span>
-              <a href="https://www.linkedin.com/in/mouadhjaber/" target="_blank" rel="noreferrer">
-                linkedin.com/in/mouadhjaber/
-              </a>
-            </li>
+        <aside class="sidebar-card" aria-label="Key information">
+          <h3 data-i18n="sidebar.title">Key Information</h3>
+          <ul class="key-list">
+            <li><span data-i18n="sidebar.locationLabel">Location:</span> <span data-i18n="sidebar.locationValue">France / International</span></li>
+            <li><span data-i18n="sidebar.experienceLabel">Experience:</span> <span data-i18n="sidebar.experienceValue">+15 years</span></li>
+            <li><span data-i18n="sidebar.phoneLabel">Phone:</span> <a href="tel:+21658201430">+216 58 201 430</a></li>
+            <li><span data-i18n="sidebar.emailLabel">Email:</span> <a href="mailto:mouadh.jaber@msn.com">mouadh.jaber@msn.com</a></li>
+            <li><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/mouadhjaber/" target="_blank" rel="noopener">linkedin.com/in/mouadhjaber</a></li>
           </ul>
         </aside>
       </div>
     </section>
 
-    <section class="section cards-section" aria-label="Overview cards">
-      <div class="container cards-grid">
-        <article class="card">
-          <h3 data-i18n="card.skillsTitle">Skills & Technologies</h3>
-          <p data-i18n="card.skillsText">
-            Deep experience with Microsoft .NET, messaging systems, APIs, integration, cloud, enterprise architectures and software craftsmanship.
-          </p>
-        </article>
-        <article class="card">
-          <h3 data-i18n="card.experienceTitle">Domains & Industries</h3>
-          <p data-i18n="card.experienceText">
-            Projects across banking, insurance, asset management, telecom, agriculture, transport, call-center systems and pharmaceutical supply chains.
-          </p>
-        </article>
-        <article class="card">
-          <h3 data-i18n="card.languagesTitle">Languages</h3>
-          <p data-i18n="card.languagesText">
-            English and French CV content, with Arabic interface support. Use the language switch above to change interface language.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="experience" class="section experience-section" aria-label="Experience timeline">
+    <section id="experience" class="section section-experience">
       <div class="container">
-        <h2 data-i18n="timeline.title">Experience timeline</h2>
-        <p class="timeline-note" data-i18n="timeline.note">
-          High-level overview of roles and missions. Full project details are available in the CV section below.
+        <h2 data-i18n="experience.title">Professional Experience (Timeline)</h2>
+        <p class="section-intro" data-i18n="experience.subtitle">
+          Structured timeline view built directly from the detailed French CV. Each entry preserves the original content and structure (Contexte, Tools, Technologies, etc.).
         </p>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-point"></div>
-            <div class="timeline-content">
-              <div class="timeline-headline">
-                <span class="timeline-company">NETCOM</span>
-                <span class="timeline-sector">Telecommunication</span>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-dates">July 2025 – Present</span>
-                <span class="timeline-role">Senior Software Engineer</span>
-              </div>
-            </div>
-          </div>
+        <div class="timeline" aria-label="Professional experience timeline">
 
-          <div class="timeline-item">
-            <div class="timeline-point"></div>
-            <div class="timeline-content">
-              <div class="timeline-headline">
-                <span class="timeline-company">MOWASALAT</span>
-                <span class="timeline-sector">Transport</span>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-dates">November 2024 – June 2025</span>
-                <span class="timeline-role">Senior Software Engineer</span>
-              </div>
-            </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-card">
+          <h3 class="timeline-company">NETCOM                                                                                                           TELECOMMUNICATION</h3>
+          <p class="timeline-meta">Juillet 2025 à present · Ingénieur logiciel senior    </p>
+          <div class="timeline-sections">
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Contexte</h5>
+<p class="timeline-section-text">Développement mobile flutter</p>
+<p class="timeline-section-text">Développement au tours de la CRM interne</p>
+<p class="timeline-section-text">Dockerisation des projets en cours</p>
+<p class="timeline-section-text">Développement des backend Swagger et API</p>
+<p class="timeline-section-text">Urbanisation</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Tools</h5>
+<p class="timeline-section-text">Visual Studio 2019 – 2022, C# , Futter  , JavaScript , docker</p>
+</div>
           </div>
+        </div>
+      </div>
 
-          <div class="timeline-item">
-            <div class="timeline-point"></div>
-            <div class="timeline-content">
-              <div class="timeline-headline">
-                <span class="timeline-company">VERMEG</span>
-                <span class="timeline-sector">Banking</span>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-dates">October 2024 – November 2024</span>
-                <span class="timeline-role">Senior Software Engineer</span>
-              </div>
-            </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-card">
+          <h3 class="timeline-company">MOWASALAT                                                                                                                              TRANSPORT                                                 </h3>
+          <p class="timeline-meta">Novembre 2024 à Juin  2025 · Ingénieur logiciel senior    </p>
+          <div class="timeline-sections">
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Contexte</h5>
+<p class="timeline-section-text">Système de gestion de flotte de véhicules.</p>
+<p class="timeline-section-text">Développement logiciel Back-End en .NET Core C#.</p>
+<p class="timeline-section-text">Mise à jour du système de paiement avec le fournisseur.</p>
+<p class="timeline-section-text">Ajout de modules au back-office pour le suivi et le monitoring des performances.</p>
+<p class="timeline-section-text">Ajout de quelques API.</p>
+<p class="timeline-section-text">Développement logiciel.</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Tools</h5>
+<p class="timeline-section-text">Visual Studio 2019 – 2022, C#</p>
+</div>
           </div>
+        </div>
+      </div>
 
-          <div class="timeline-item">
-            <div class="timeline-point"></div>
-            <div class="timeline-content">
-              <div class="timeline-headline">
-                <span class="timeline-company">ASTERA</span>
-                <span class="timeline-sector">Pharmaceutical supply</span>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-dates">Per CV</span>
-                <span class="timeline-role">Senior Software Engineer</span>
-              </div>
-            </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-card">
+          <h3 class="timeline-company">VERGMEG                                                                                                                                            BANKING </h3>
+          <p class="timeline-meta">October 2024 à Novembre 2024 · Ingénieur logiciel senior    </p>
+          <div class="timeline-sections">
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Contexte</h5>
+<p class="timeline-section-text">Ingénierie logicielle de la liquidation, côté vente.</p>
+<p class="timeline-section-text">https://www.crunchbase.com/organization/vermeg</p>
+<p class="timeline-section-text">Les fonds proviennent de Charterhouse Capital Partners.</p>
+<p class="timeline-section-text">Des projets incroyables, la start-up utilise toutes les ressources pour le développement de fonds ESG locaux, des certifications ISO provenant d’Europe. Des fonds ont été levés pour valoriser l’entreprise.</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Tools</h5>
+<p class="timeline-section-text">Visual Studio C ++ – Delphi</p>
+</div>
           </div>
+        </div>
+      </div>
 
-          <div class="timeline-item">
-            <div class="timeline-point"></div>
-            <div class="timeline-content">
-              <div class="timeline-headline">
-                <span class="timeline-company">ZIWO</span>
-                <span class="timeline-sector">Call-center system</span>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-dates">Per CV</span>
-                <span class="timeline-role">Senior Software Engineer &amp; Architect</span>
-              </div>
-            </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-card">
+          <h3 class="timeline-company">ASTERA                                                                                                     PHARMACEUTICAL SUPPLY </h3>
+          <p class="timeline-meta">May 2023 à  September 2024 · Ingénieur logiciel senior    </p>
+          <div class="timeline-sections">
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Contexte</h5>
+<p class="timeline-section-text">Implémenter IdentityService avec l’authentification 2Factor et QRCode SMS</p>
+<p class="timeline-section-text">L’industrie pharmaceutique modernise le flux de travail</p>
+<p class="timeline-section-text">système d’authentification et de l’entreprise et fournir des ressources informatiques, après la crise COVID Composants Azure et migration , DevOpsTools: Visual Studio 2019 – 2022, C# , Gulp , JavaScript , Bootstrap, Azure Components, DevOps</p>
+</div>
           </div>
+        </div>
+      </div>
 
-          <div class="timeline-item">
-            <div class="timeline-point"></div>
-            <div class="timeline-content">
-              <div class="timeline-headline">
-                <span class="timeline-company">CANDRIAM</span>
-                <span class="timeline-sector">Multi-specialist asset management firm</span>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-dates">Per CV</span>
-                <span class="timeline-role">Senior Engineer &amp; Architect</span>
-              </div>
-            </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-card">
+          <h3 class="timeline-company">ZIWO                                                                                                                     CALL-CENTER SYSTEM </h3>
+          <p class="timeline-meta">Mars 2023 jusqu’à May 2023  · Ingénieur logiciel senior et architecte                                                                  </p>
+          <div class="timeline-sections">
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Contexte</h5>
+<p class="timeline-section-text">Architecture logicielle et conception de composants de microservices</p>
+<p class="timeline-section-text">- Dockers</p>
+<p class="timeline-section-text">- Protobuff</p>
+<p class="timeline-section-text">- Microservice</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Tools</h5>
+<p class="timeline-section-text">Visual Studio 2019 - 2022, Azure Components, DevSecops</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Technologies</h5>
+<p class="timeline-section-text">C#, Oracle, PowerShell as Bach</p>
+</div>
           </div>
+        </div>
+      </div>
 
-          <div class="timeline-item">
-            <div class="timeline-point"></div>
-            <div class="timeline-content">
-              <div class="timeline-headline">
-                <span class="timeline-company">SOCIETE GENERALE</span>
-                <span class="timeline-sector">Banking</span>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-dates">Per CV</span>
-                <span class="timeline-role">Architect / Software Engineer</span>
-              </div>
-            </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-card">
+          <h3 class="timeline-company">CANDRIAM                                                                                                              MULTI-SPECIALIST ASSET MANAGEMENT FIRM </h3>
+          <p class="timeline-meta">Mai 2021 jusqu’à Octobre 2022  · Ingénieur &amp; Architect Senior  </p>
+          <div class="timeline-sections">
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Contexte</h5>
+<p class="timeline-section-text">Intégrer le nouveau flux de données de la source de données Belfius, en mappant de nombreuses sources de données.</p>
+<p class="timeline-section-text">Concevoir le nouveau Flux et l’interaction entre composants.</p>
+<p class="timeline-section-text">Définir les Service Cloud Microsoft Azure, en Miro service</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Projets</h5>
+<p class="timeline-section-text">Solutions logicielles et Cloud</p>
+<p class="timeline-section-text">Web Services cloud</p>
+<p class="timeline-section-text">Infrastructure Azure – flux de données sur Cloud</p>
+<p class="timeline-section-text">Service WCF en promise</p>
+<p class="timeline-section-text">Modélisation de base de données sur cloud</p>
+<p class="timeline-section-text">Infrastructure Data Lake Cloud</p>
+<p class="timeline-section-text">Outils : Visual Studio 2019, Azure Devops , Azure Cloud Infrastructure</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Technologies</h5>
+<p class="timeline-section-text">C#, Oracle, PowerShell as Bach</p>
+</div>
           </div>
+        </div>
+      </div>
 
-          <div class="timeline-item">
-            <div class="timeline-point"></div>
-            <div class="timeline-content">
-              <div class="timeline-headline">
-                <span class="timeline-company">GENERALI / AXA</span>
-                <span class="timeline-sector">Insurance</span>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-dates">Per CV</span>
-                <span class="timeline-role">Architect / Software Engineer</span>
-              </div>
-            </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-card">
+          <h3 class="timeline-company">SOCIETE GENERALE                                                                                                        BANQUE</h3>
+          <p class="timeline-meta">Décembre 2018 à Mai 2021 · Architecte / Ingénieur étude et développement </p>
+          <div class="timeline-sections">
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Contexte</h5>
+<p class="timeline-section-text">Analyse et définition de la nouvelle architecture des nouveaux composants</p>
+<p class="timeline-section-text">Intégration des nouveaux outils pour le provisionning</p>
+<p class="timeline-section-text">Définition des Workflow</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Projets</h5>
+<p class="timeline-section-text">Provisioning:</p>
+<p class="timeline-section-text">Mise à jour des composant API Web API avec le fournisseur d’autorisation</p>
+<p class="timeline-section-text">Préparation d’infrastructure pour les nouveaux logiciels</p>
+<p class="timeline-section-text">Adaptation sur le  SSO des nouveau outils</p>
+<p class="timeline-section-text">Développement en C++ Composant système seamless Citrix</p>
+<p class="timeline-section-text">Développement des API C# des composant applicatif</p>
+<p class="timeline-section-text">Modélisation   and flux :</p>
+<p class="timeline-section-text">Reverse engineering</p>
+<p class="timeline-section-text">Relais technique</p>
+<p class="timeline-section-text">Document d’architecture</p>
+<p class="timeline-section-text">Pré requis non fonctionnelle</p>
+<p class="timeline-section-text">Solution and intégration</p>
+<p class="timeline-section-text">Etude</p>
+<p class="timeline-section-text">Cinématique</p>
+<p class="timeline-section-text">Outils : Visual Studio 2015-2017-2019, Azure DevOps, Azure</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Technologies</h5>
+<p class="timeline-section-text">C++, C#, .net core ,Java, PowerShell as Bach</p>
+</div>
           </div>
+        </div>
+      </div>
 
-          <div class="timeline-item">
-            <div class="timeline-point"></div>
-            <div class="timeline-content">
-              <div class="timeline-headline">
-                <span class="timeline-company">SOCIETE GENERALE CIB</span>
-                <span class="timeline-sector">Investment banking</span>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-dates">Per CV</span>
-                <span class="timeline-role">Senior Engineer</span>
-              </div>
-            </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-card">
+          <h3 class="timeline-company">GENERALI - EA HOLDING                                                                                                                                                               ASSURANCES</h3>
+          <p class="timeline-meta">Mars 2017 à Décembre 2018   · Architecte / Ingénieur étude et développement  </p>
+          <div class="timeline-sections">
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Contexte</h5>
+<p class="timeline-section-text">Étude, développement .Net</p>
+<p class="timeline-section-text">Maintenances applicatives des applications de la holding</p>
+<p class="timeline-section-text">Elaboration des solutions techniques pour répondre aux besoins techniques et fonctionnels et aux enjeux de performance</p>
+<p class="timeline-section-text">Rédaction des spécifications techniques</p>
+<p class="timeline-section-text">Réalisation des développements selon les spécifications et la solution d’implémentation définie</p>
+<p class="timeline-section-text">Réalisation des tests unitaires</p>
+<p class="timeline-section-text">Réalisation des tests d’intégration avant livraison en recette</p>
+<p class="timeline-section-text">Participation aux revues de codes d’autres développeurs</p>
+<p class="timeline-section-text">Pilotage des mises en production des projets en collaboration avec les équipes d’intégration technique et d’exploitation</p>
+<p class="timeline-section-text">Effectuer un ‘reporting’ d’avancement des tâches confiées</p>
+<p class="timeline-section-text">Outils :</p>
+<p class="timeline-section-text">Visual Studio 2015, TFS 2013</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Technologies</h5>
+<p class="timeline-section-text">C#, C++, Razor, ASP.NET MVC .Net, WCF, JQuery, AngularJS</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Méthodologie &amp; Conception</h5>
+<p class="timeline-section-text">XP</p>
+</div>
           </div>
+        </div>
+      </div>
 
-          <div class="timeline-item">
-            <div class="timeline-point"></div>
-            <div class="timeline-content">
-              <div class="timeline-headline">
-                <span class="timeline-company">INVIVO</span>
-                <span class="timeline-sector">Agriculture cooperative</span>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-dates">Per CV</span>
-                <span class="timeline-role">Senior Consultant .NET</span>
-              </div>
-            </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-card">
+          <h3 class="timeline-company">AXA                                                                                                                                                                                                        ASSURANCES</h3>
+          <p class="timeline-meta">Mars 2016 à Mars 2017 · Architecte  </p>
+          <div class="timeline-sections">
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Contexte</h5>
+<p class="timeline-section-text">Définition des modèles IARD, and integration des webapi et webservices</p>
+<p class="timeline-section-text">o Elaboration des flux donnés</p>
+<p class="timeline-section-text">o Elaboration des documents DAT , dossier architecture techniques</p>
+<p class="timeline-section-text">o Participation de l’intégration logiciel</p>
+<p class="timeline-section-text">o Intégration continue ,devops</p>
+<p class="timeline-section-text">o Management d&#x27;une équipe de 5 personnes</p>
+<p class="timeline-section-text">Outils:</p>
+<p class="timeline-section-text">Visual Studio 2015, TFS 2013</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Technologies</h5>
+<p class="timeline-section-text">ASP.Net MVC5, C# 5 / 6, JQuery, SignalR, WebAPI , Azure</p>
+</div>
           </div>
+        </div>
+      </div>
 
-          <div class="timeline-item">
-            <div class="timeline-point"></div>
-            <div class="timeline-content">
-              <div class="timeline-headline">
-                <span class="timeline-company">ORANGE BUSINESS SERVICES</span>
-                <span class="timeline-sector">Telecommunication</span>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-dates">Per CV</span>
-                <span class="timeline-role">Software developer - R&amp;D Team</span>
-              </div>
-            </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-card">
+          <h3 class="timeline-company">SOCIETE GENERALE CORPORATE AND INVESTMENT BANKING                                                                                                BFI</h3>
+          <p class="timeline-meta">Septembre 2014 à Mars 2016 · Ingénieur étude et développement </p>
+          <div class="timeline-sections">
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Contexte</h5>
+<p class="timeline-section-text">Étude, conception et développement des applications de trading.</p>
+<p class="timeline-section-text">Maintenances applicatives</p>
+<p class="timeline-section-text">Projet Migration et consolidation des automates de trading (PPX)</p>
+<p class="timeline-section-text">Méthodologie</p>
+<p class="timeline-section-text">TDD</p>
+<p class="timeline-section-text">Développement, Codage et Test</p>
+<p class="timeline-section-text">Codage de l’application</p>
+<p class="timeline-section-text">Implémentation les interfaces graphiques</p>
+<p class="timeline-section-text">Ecrire les tests unitaires</p>
+<p class="timeline-section-text">Projet simulateur de marché</p>
+<p class="timeline-section-text">Méthodologie</p>
+<p class="timeline-section-text">TDD / BDD</p>
+<p class="timeline-section-text">Architecture</p>
+<p class="timeline-section-text">Configuration de serveur de build</p>
+<p class="timeline-section-text">Configuration de serveur de contrôle code source</p>
+<p class="timeline-section-text">Ajout des politiques de qualité de code « stylecop »</p>
+<p class="timeline-section-text">Choix des librairies et des outils</p>
+<p class="timeline-section-text">Conception</p>
+<p class="timeline-section-text">Définir les composants applicatifs</p>
+<p class="timeline-section-text">Conception du moteur de calcul</p>
+<p class="timeline-section-text">Conception des services utilisés</p>
+<p class="timeline-section-text">Définir les « EndPoint » des services</p>
+<p class="timeline-section-text">Conception de la couche communication</p>
+<p class="timeline-section-text">TAP (modèle asynchrone basé sur les tâches)</p>
+<p class="timeline-section-text">Développement, Codage et Test</p>
+<p class="timeline-section-text">Codage de l’application</p>
+<p class="timeline-section-text">Ecrire les tests unitaires</p>
+<p class="timeline-section-text">Revue de code</p>
+<p class="timeline-section-text">Outils :</p>
+<p class="timeline-section-text">Visual Studio 2010 / 2013, CVS, Fiddler, SVN, TeamCity , PL-SQL Oracle, Jenkins , Eclipse</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Technologies</h5>
+<p class="timeline-section-text">C#, WPF, WinForm, , ASP , Razor, MVC , Socket, Ultra-Messaging, FIX protocol , Fidessa (OMS)</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Méthodologie &amp; Conception</h5>
+<p class="timeline-section-text">XP</p>
+</div>
           </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-card">
+          <h3 class="timeline-company">INVIVO                                                                                                                                                                                COOPÉRATIF AGRICOLE                                           </h3>
+          <p class="timeline-meta">Février 2011 à Septembre 2014– 3 ans · Ingénieur étude et développement C# / Responsable technique - Division Agro-Solutions</p>
+          <div class="timeline-sections">
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Contexte</h5>
+<p class="timeline-section-text">Développement d’un ensemble d’applications destiné aux coopératives.</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Projets réalisés</h5>
+<p class="timeline-section-text">Trois projets client lourd WPF</p>
+<p class="timeline-section-text">Développement de trois modules dans un pro logiciel de conseil et optimisation agronome.</p>
+<p class="timeline-section-text">Communication client – compréhension du besoin</p>
+<p class="timeline-section-text">Conception et réalisation des Proof of concept</p>
+<p class="timeline-section-text">Conception de la base donnée</p>
+<p class="timeline-section-text">Réalisation des maquettes d’interfaces graphiques avec l’outil Balsamiq Mockup</p>
+<p class="timeline-section-text">Rédaction des spécifications techniques : diagrammes des classes, des cas d’utilisations...</p>
+<p class="timeline-section-text">Développement, Codage et test</p>
+<p class="timeline-section-text">Réalisation des interfaces graphiques</p>
+<p class="timeline-section-text">Implémentation des procédures stockées</p>
+<p class="timeline-section-text">Implémentation du logique métier</p>
+<p class="timeline-section-text">Implémentation des tests unitaires via la plateforme NUnit , Mock</p>
+<p class="timeline-section-text">Relais technique</p>
+<p class="timeline-section-text">Cerner les limitations techniques de l’architecture</p>
+<p class="timeline-section-text">Contribuer à l’ajout des fonctionnalités à la Framework</p>
+<p class="timeline-section-text">Participer au chiffrage des projets</p>
+<p class="timeline-section-text">Pilotage des développeurs</p>
+<p class="timeline-section-text">Assurer la montée en compétences</p>
+<p class="timeline-section-text">Contrôler la qualité du code</p>
+<p class="timeline-section-text">Outils :</p>
+<p class="timeline-section-text">Team Foundation Server 2008, Visual Studio 2008 / Visual Studio 2010 / 2012,</p>
+<p class="timeline-section-text">Microsoft Expression Blend</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Technologies</h5>
+<p class="timeline-section-text">WPF 3.0 / 4.0, MVVM, PRISM, Entity Framework, SQL Server 2008 Express</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Méthodologie &amp; Conception</h5>
+<p class="timeline-section-text">Scrum, UML, Merise</p>
+<p class="timeline-section-text">Résultat</p>
+<p class="timeline-section-text">Les modules en cours d’utilisation sur le portail des techniciens</p>
+<p class="timeline-section-text">Projet WCF - REST</p>
+<p class="timeline-section-text">Conception et développement d’un moteur de calcul pour prévoir des maladies au cours d’un cycle agricole.</p>
+<p class="timeline-section-text">Développement d’un WebService pour être consommé d’un logiciel développé par l’équipe R&amp;D</p>
+<p class="timeline-section-text">Rétro ingénierie</p>
+<p class="timeline-section-text">Analyser le code de l’ancienne application développé en Pascal</p>
+<p class="timeline-section-text">Reproduire l’application en utilisant Delphi</p>
+<p class="timeline-section-text">Valider les entrées / sorties de l’application avec le logiciel existant</p>
+<p class="timeline-section-text">Etude de la volémie des données échangées par le Web Service</p>
+<p class="timeline-section-text">Conception</p>
+<p class="timeline-section-text">Conception de la base de données</p>
+<p class="timeline-section-text">Conception des objets métiers</p>
+<p class="timeline-section-text">Spécifier les entrées sorties des verbes http dans le cadre de l’architecture REST</p>
+<p class="timeline-section-text">Rédaction des documents techniques</p>
+<p class="timeline-section-text">Implémentation</p>
+<p class="timeline-section-text">Implémentation des procédures stockées</p>
+<p class="timeline-section-text">Réalisation des interfaces graphiques</p>
+<p class="timeline-section-text">Implémentation du logique métier</p>
+<p class="timeline-section-text">Test Validation</p>
+<p class="timeline-section-text">Intégration</p>
+<p class="timeline-section-text">Paramétrages du serveur IIS et WCF, pour la compatibilité avec le nouveau logiciel</p>
+<p class="timeline-section-text">Test Validation</p>
+<p class="timeline-section-text">Outils :</p>
+<p class="timeline-section-text">Team Foundation Server 2008, Visual Studio 2008 / Visual Studio 2010 / 2012, Embarcadero Delphi, Fiddler, IIS</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Technologies</h5>
+<p class="timeline-section-text">WCF</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Méthodologies &amp; Conception</h5>
+<p class="timeline-section-text">XP</p>
+<p class="timeline-section-text">Deux Projets Silverlight</p>
+<p class="timeline-section-text">Développement d’un référentiel des variétés et cultures</p>
+<p class="timeline-section-text">Développement d’un référentiel des engrais</p>
+<p class="timeline-section-text">Communication client – compréhension de besoin</p>
+<p class="timeline-section-text">Architecture / Conception</p>
+<p class="timeline-section-text">Etudier les solutions techniques possibles</p>
+<p class="timeline-section-text">Réaction des spécifications techniques</p>
+<p class="timeline-section-text">Conception des bases de données</p>
+<p class="timeline-section-text">Développement logiciel – codage</p>
+<p class="timeline-section-text">Mise en place de l’architecture</p>
+<p class="timeline-section-text">Codage des classes métiers</p>
+<p class="timeline-section-text">Création des interfaces graphiques</p>
+<p class="timeline-section-text">Implémentation des procédures stockées</p>
+<p class="timeline-section-text">Outils :</p>
+<p class="timeline-section-text">Team Foundation Server 2008, Visual Studio 2008 / Visual Studio 2010, Fiddler</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Technologies</h5>
+<p class="timeline-section-text">.Net 3.5 / 4.0, Silverlight, RIA Services (WCF), MVVM comme modèle graphique, Entity Framework 4, SQL Server 2008 R2</p>
+<p class="timeline-section-text">Projet WCF – Web MVC 3</p>
+<p class="timeline-section-text">Conception / développement d’un Service Web pour forcer la réplication SQL Server.</p>
+<p class="timeline-section-text">Site Back-Office d’administration des clients connectés sur la plateforme de réplication.</p>
+<p class="timeline-section-text">Analyse de la problématique et réalisation des POC</p>
+<p class="timeline-section-text">Etude des scénarios d’erreurs de réplication</p>
+<p class="timeline-section-text">Réalisation des Proof of Concept pour contourner les problématiques de la réplication</p>
+<p class="timeline-section-text">Conception</p>
+<p class="timeline-section-text">Rédaction des spécifications techniques</p>
+<p class="timeline-section-text">Conception du service web</p>
+<p class="timeline-section-text">Conception de la base de données</p>
+<p class="timeline-section-text">Paramétrage de serveur SQL</p>
+<p class="timeline-section-text">Validation de la conception par les DBA</p>
+<p class="timeline-section-text">Développement</p>
+<p class="timeline-section-text">Implémenter les procédures stockées</p>
+<p class="timeline-section-text">Implémentation du service Web</p>
+<p class="timeline-section-text">Test /Intégration</p>
+<p class="timeline-section-text">Validation sur l’environnement de qualification</p>
+<p class="timeline-section-text">Injection de l’application cliente au démarrage de l’application</p>
+<p class="timeline-section-text">Outils :</p>
+<p class="timeline-section-text">Team Foundation Server 2008, Visual Studio 2008 / Visual Studio 2010 / 2012, Fiddler</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Technologies</h5>
+<p class="timeline-section-text">WCF, MVC3, JQuery, SQL Server 2008 R2 Express / Enterprise, Team Foundation Server 2008</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Méthodologies &amp; Conception</h5>
+<p class="timeline-section-text">XP, UML, Merise</p>
+<p class="timeline-section-text">@Autres Projets</p>
+<p class="timeline-section-text">Maintenance des anciennes applications en WPF</p>
+<p class="timeline-section-text">Déploiement SharePoint 2010 / MOSS (pour centraliser les documents techniques)</p>
+<p class="timeline-section-text">Team Foundation Server (déploiement et gestion projet)</p>
+<p class="timeline-section-text">Virtualisation – Hyper V (plateforme de qualification des applications)</p>
+</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-card">
+          <h3 class="timeline-company">ORANGE BUSINESS SERVICES                                                                                                                           TELECOMMUNICATION</h3>
+          <p class="timeline-meta">Février 2009 à Février 2011 – 2 ans · Ingénieur étude et développement .Net - Equipe R&amp;D</p>
+          <div class="timeline-sections">
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Contexte</h5>
+<p class="timeline-section-text">Développement des applications destinées aux administrateurs et ingénieurs systèmes pour le pilotage et la réalisation des migrations des systèmes de messagerie.</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Projets réalisés</h5>
+<p class="timeline-section-text">Projet « Système de pilotage des migrations »</p>
+<p class="timeline-section-text">Pour piloter les migrations des systèmes de messagerie ; des applications clientes installées sur les machines communiquent avec un portail Web et lancent les actions adéquates en arrière-plan pour assurer une migration transparente de Lotus vers Outlook.</p>
+<p class="timeline-section-text">Le projet consiste à créer un portail Web afin de superviser le processus de la migration.</p>
+<p class="timeline-section-text">Analyse de besoin</p>
+<p class="timeline-section-text">Conception et architecture des composants logiciels</p>
+<p class="timeline-section-text">Conception des bases de données</p>
+<p class="timeline-section-text">Réalisation des diagrammes des composants</p>
+<p class="timeline-section-text">Rédaction des spécifications techniques</p>
+<p class="timeline-section-text">Développement du portail Web</p>
+<p class="timeline-section-text">Création des services web</p>
+<p class="timeline-section-text">Développement des connecteurs Active Directory</p>
+<p class="timeline-section-text">Outils :</p>
+<p class="timeline-section-text">Visual Studio 2008 / Visual Studio 2010 , Fiddler</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Technologies</h5>
+<p class="timeline-section-text">ASP.NET (MVC2), JQuery, WCF (callbacks...), services windows, GPO AD</p>
+<p class="timeline-section-text">Projet « Client Wizard for Lotus Notes »</p>
+<p class="timeline-section-text">Développement   « Client Wizard for Outlook » :</p>
+<p class="timeline-section-text">Mise à jour d&#x27;un outil de Conversion de données pour les projets de Migration, cet outil permet de convertir les données d&#x27;Outlook vers une base Lotus Notes</p>
+<p class="timeline-section-text">Analyse de besoins</p>
+<p class="timeline-section-text">Conception</p>
+<p class="timeline-section-text">Conception des interfaces utilisateurs</p>
+<p class="timeline-section-text">Conception des modèles objets</p>
+<p class="timeline-section-text">Rédaction des spécifications techniques</p>
+<p class="timeline-section-text">Développement</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Technologies</h5>
+<p class="timeline-section-text">VB.NET / WinForm / composants COM</p>
+<p class="timeline-section-text">Projet « WaveBox »</p>
+<p class="timeline-section-text">Développement « WaveBox » :</p>
+<p class="timeline-section-text">Un outil centralisé qui permet l&#x27;automatisation du processus de migration.</p>
+<p class="timeline-section-text">Maintenance de l’application</p>
+<p class="timeline-section-text">Ajout des fonctionnalités</p>
+<p class="timeline-section-text">Technologie : Lotus Script / composants COM</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Projet</h5>
+<p class="timeline-section-text">créations des scripts</p>
+<p class="timeline-section-text">Scripting pour automatiser une migration.</p>
+</div>
+<div class="timeline-section-block">
+<h5 class="timeline-section-title">Technologies</h5>
+<p class="timeline-section-text">AD, GPO, MS Exchange, PowerShell, VBscript</p>
+</div>
+          </div>
+        </div>
+      </div>
         </div>
       </div>
     </section>
 
-    <section id="cv" class="section cv-section">
+    <section id="full-cv" class="section section-cv">
       <div class="container">
-        <h2 data-i18n="cv.title">Full CV</h2>
-        <p class="cv-intro" data-i18n="cv.intro">
-          The following sections contain the full CV content in English and in French. English uses the English CV file and translated experience blocks; French uses the original French CV plus the detailed missions.
+        <h2 data-i18n="fullcv.title">Full CV</h2>
+        <p class="section-intro" data-i18n="fullcv.subtitle">
+          Complete CV content in English and French exactly as in the original documents.
         </p>
 
         <section class="cv-lang-section lang-en-section" aria-label="English CV">
-          <h3 data-i18n="cv.enTitle">English CV</h3>
-          <article class="cv-card">
-            <h4 data-i18n="cv.enMainTitle">Complete English CV</h4>
-<p>Mouadh JABER</p>
-<p>Software Engineer </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tel: +216 58 201 430                                                             Mail: mouadh.jaber@msn.com</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Skills: </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Software Development: </p>
-<p>Architecture:  Distributed, Composite, and Real-time applications, layer models, Micro-Services, Mesh architecture, monolithic architecture</p>
-<p>Methodologies:  XP, Scrum, SAFe, TDD, BDD </p>
-<p>Process:  ITIL, DevOps; DevSecOps</p>
-<p>Modeling:  UML V2, Merise </p>
-<p>Communication:  Web, pipe, socket, messaging system, SAO, JSON, messaging</p>
-<p>Design Patterns:  Repository, UnitOfWork, IoC, DI, Facade, Proxy, MVVM, MVC, DDD …</p>
-<p>Languages / Technologies: </p>
-<p>Microsoft: .Net C#, VB.Net, ASP.Net, WCF, WebAPI, ADO.NET, Linq, Linq SQL, Entity Framework, NHibernate, UnitTest, SpecFlow, Sonar , .net Core , Blazor , Rest API,Kafka , Docker</p>
-<p>Other languages: C, C++, Python </p>
-<p>IBM Lotus Notes Technology: Lotus Script, XPage</p>
-<p>Scripting:</p>
-<p>VB Script, PowerShell, Lotus Script, Java Script, JQuery, AngularJS</p>
-<p>Information System:</p>
-<p>Microsoft Solutions: </p>
-<p>Active Directory Windows 2003 / 2008 /2012</p>
-<p>Microsoft SQL Server 2008/ 2014  </p>
-<p>MS SharePoint / MOSS</p>
-<p>Windows Azure Services Bus</p>
-<p>IBM Solutions: </p>
-<p>Lotus Notes / Domino, Sametime</p>
-<p>Messaging – Unified messaging: </p>
-<p>Migration of messaging platform (Transition &amp; Migration &amp; consolidation)</p>
-<p>Workflow, Collaboration, SOA, SaaS</p>
-<p>Interconnection &amp; Unification des services </p>
-<p>MS Exchange (5.5 /2003/2007)</p>
-<p>Office Communication Server  </p>
-<p>IBM Domino, Sametime, BPOS – Office 365, MS Online</p>
-<p>Tools</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Visual Studio 2008 /2010 / 2012 /2013 / 2015 / 2017 / 2022, CVS, SNV, TeamCity </p>
-<p>Team Foundation Server / Microsoft Test Manager</p>
-<p>Eclipse, JBuilder</p>
-<p>Microsoft Office products</p>
-<p>Projects management software: MS Project &amp; MS Project Server </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Langue </p>
-<p>French, English </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>PROFESSIONAL EXPERIENCE (MOST RECENT FIRST)</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>ASTERA                                                                              PHARMACEUTICAL SUPPLY </p>
-<p>May 2023 to Now</p>
-<p>Senior Software Engineer                                                                                       France-Rouen</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Context:</p>
-<p>Implement IdentityService with 2Factor authentification and QRCode SMS</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Pharmaceutical industry Modernize the Workflow </p>
-<p>authentication System and of the company and provide IT resources, after COVID Crisis Implement IdentityServer for the set of the application and involving the DevOps process </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Microsoft Azure ,Migration DevOpsTools: Visual Studio 2019 – 2022, C# , Gulp , JavaScript , Bootstrap, Azure Components, DevSecops </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>ZIWO                                                                                           CALL-CENTER SYSTEM </p>
-<p>Mars 2023 to May 2023 </p>
-<p>Senior Software Engineer &amp; Architect                                                                       UAE-Dubai</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Context:</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Software Architecture and Design of Microservice Components</p>
-<p>- Dockers</p>
-<p>- Protobuff </p>
-<p>- Microservice</p>
-<p>-Kafka</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio 2019 - 2022, Azure Components, DevSecops </p>
-<p>Technologies:  C#, Oracle, PowerShell as Bach</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>CANDRIAM                                        MULTI-SPECIALIST ASSET MANAGEMENT FIRM </p>
-<p>May 2021 to October 2022 </p>
-<p>Senior Software Engineer &amp; Architect                                                                       France-Paris</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Context:</p>
-<p>Integrate the new flow of data from Belfius (Brussel) Data source, mapping many data sources. refactoring and defining the micro-service architecture with Bus.</p>
-<p>Design the new Flow and business interaction with Microsoft service.</p>
-<p>Working with many processes ITIL DevOps etc.</p>
-<p>Projects: Technical Solution and Software Development  </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Batch development SSIS</p>
-<p>Web Services – Micro-Service</p>
-<p>Azure infrastructure </p>
-<p>WCF service </p>
-<p>Database modeling </p>
-<p>Web API</p>
-<p>DevOps</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio 2019 - 2022, Azure Components, DevSecops </p>
-<p>Technologies:  C#, Oracle, PowerShell as Bach</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>SOCIETE GENERALE                                                                                           BANKING</p>
-<p>December 2018 to May 2021 </p>
-<p>Senior Engineer &amp; Architect                                                                                         France-Paris</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Context:</p>
-<p>Analyzing, Design, and Definition new architecture of software components  </p>
-<p>Updating connectors and integrating new tools and software</p>
-<p>Provisioning Microsoft software  </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Projects: </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Provisioning: </p>
-<p>Updating components </p>
-<p>Preparation of infrastructure for new software </p>
-<p>Preparation of the SSO (Single Sign On) of the new tools and software</p>
-<p>Preparing Application Middleware and servers</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Modeling and flow: </p>
-<p>Reverse engineering </p>
-<p>Technical relay; contribute and discuss new solutions </p>
-<p>Design services</p>
-<p>Architecture documents</p>
-<p>Defining the main nonfunctional requirement </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Solution and integration </p>
-<p>Study the technical requirement of software integration from another team </p>
-<p>Relay with administrator and technical engineers</p>
-<p>Kinematic</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio 2015, TFS  2013</p>
-<p>Technologies:  C++, C#  , Java , PowerShell as Bach</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>GENERALI - EA HOLDING INSURANCE</p>
-<p>June 2017 to December 2018 </p>
-<p>Senior Software Engineer                                                                                             France-Paris</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Context:</p>
-<p>Engineering and Development of software </p>
-<p>Maintaining a set of applications for the clients and affiliates of the holding  </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Elaboration of technical solutions for functional / scalability requirements</p>
-<p>Write technical specification </p>
-<p>Development of the solution</p>
-<p>Write unit tests </p>
-<p>Participate in code review of other developers </p>
-<p>Control the release of the project with technical / integration teams </p>
-<p>Task reporting</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio 2015, TFS  2013</p>
-<p>Technologies:  ASP.Net MVC5, C# 5 / 6, JQuery, SignalR, WebAPI, Azure</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>AXA                                                                                                                                                 INSURANCES</p>
-<p>March 2016 to March 2017</p>
-<p>Consultant Architect                                                                                                      France-Paris</p>
-<p>Context:</p>
-<p>Definition of the model of IARD, and integration of sales software </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Elaboration of technical solutions</p>
-<p>Write technical specification DAT</p>
-<p>Participate in the integration of new software  </p>
-<p>Control the release of the project with technical / integration teams </p>
-<p>Lead a team f 5 people around many projects  </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio 2015, TFS  2013</p>
-<p>Technologies:  ASP.Net MVC5, C# 5 / 6, JQuery, SignalR, WebAPI, Azure</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>SOCIETE GENERALE INVESTMENT BANKING                                                               BANKING</p>
-<p>September 2014 to March 2016 </p>
-<p>Senior Engineer                                                                                                                France-Paris</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Context:</p>
-<p>Analyzing, designing, Conception &amp; develop a trading application (multithreaded environment).</p>
-<p>Maintaining production, configuring servers, and users support.</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Projects: </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Maintaining: automaton for trading system </p>
-<p>Maintaining Production environment - deliveries</p>
-<p>Code review</p>
-<p>Adding new features.</p>
-<p>Bugs fixes</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Migration to the new automaton:</p>
-<p>Reverse engineering </p>
-<p>Add feed connectors to get market data </p>
-<p>Parsing and warping to object from/to socket layer </p>
-<p>Technical relay; contribute and discuss new solutions </p>
-<p>Design services</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio 2010 - 2013, CVS, Fiddler, SVN, TeamCity</p>
-<p>Technologies: MVC5, C# 5, JQuery, SignalR, Ultra messaging, FIX Protocol, Fidessa (OMS)</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>INVIVO                                                                               AGRICULTURE COOPERATIVE </p>
-<p>February 2011 to September 2014</p>
-<p>Senior Consultant .Net Consultant - Agro-Solutions Division                                  France-Paris</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Context: Development of a set of applications designed for cooperatives.</p>
-<p>WPF Projects: Development of tree modules in the PRISM application.</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Client Communication– understanding of the need  </p>
-<p>Design and realizing of Proof of concept</p>
-<p>Database design (schema, procedures) </p>
-<p>Realizing mock-up UI with Balsamiq-Mockup</p>
-<p>Drafting of technical specifications – use cases, class diagram ... </p>
-<p>Development, Coding, and Testing</p>
-<p>Realization of graphical interfaces </p>
-<p>Implementation of stored procedures </p>
-<p>Implementation of business logic</p>
-<p>Implementation of unit tests via NUnit, Mock</p>
-<p>Technical Relay</p>
-<p>Identify the technical limitations of the architecture</p>
-<p>Contribute to the addition of features to the Framework</p>
-<p>Participate in the estimation of the projects</p>
-<p>Steering</p>
-<p>Ensure the rise of development skills </p>
-<p>Control the quality of the code</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio 2008 / 2010, TFS, Microsoft Blend, Telerik</p>
-<p>Technologies: C# 3.0 / 4.0, WPF, MVVM, PRISM, Entity Framework, SQL Server 2008 R2 / Express</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>WCF - REST   Project:  Design and development of a calculation engine to predict disease in an agricultural cycle.</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Reverse engineering</p>
-<p>Analyze the code of the previous application developed in Pascal</p>
-<p>Reproduce the application using Delphi</p>
-<p>Validate the inputs/outputs of the application with the existing software </p>
-<p>Study of the volume of data exchanged by the Web Service </p>
-<p>Conception </p>
-<p>Database design</p>
-<p>Design of business objects </p>
-<p>Specify the inputs of the HTTP verbs in the REST architecture </p>
-<p>Drafting the technical documents </p>
-<p>Implementation</p>
-<p>Implementation of stored procedures </p>
-<p>Realization of graphical interfaces </p>
-<p>Implementation of business logic </p>
-<p>Validation tests</p>
-<p> Integration </p>
-<p>Settings of the IIS and WCF, for compatibility with the new software</p>
-<p>Validation tests </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Team Foundation Server 2008, Visual Studio 2010, Embarcadero Delphi, Fiddler, IIS</p>
-<p>Technologies: C#, WCF, Pascal </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Silverlight Projects: Design and development of a repository of crops and varieties and a repository of fertilizers </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Customer communication - understanding the need </p>
-<p>Architecture / Conception</p>
-<p>Study possible technical solutions</p>
-<p>The reaction of technical specifications</p>
-<p>Design of databases (schema, stored procedures)</p>
-<p>Development– coding </p>
-<p>Implementation of the architecture</p>
-<p>Coding of the crafts classes </p>
-<p>Creation of graphical interfaces </p>
-<p>Implementation of stored procedures</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: SQL Server 2008 R2, Team Foundation Server 2008, Visual Studio 2008 / Visual Studio 2010, Fiddler</p>
-<p>Technologies: C# .Net 3.5 / 4.0, Silverlight, RIA Services (WCF), MVVM, Entity Framework 4, </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>WCF – Web MVC 3 Projects: Design and development of a Web Service to force SQL Server replication.</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Analysis of the issue and realization of the POC </p>
-<p>Study of scenarios of replication errors</p>
-<p>Realizing the Proof of Concept to work around the replication issues</p>
-<p>Conception </p>
-<p>Writing technical specifications</p>
-<p>Web service design</p>
-<p>Design of database </p>
-<p>SQL Server Setup </p>
-<p>Validation of the design by the DBA </p>
-<p>Development</p>
-<p>Implementing stored procedures </p>
-<p>Implementation of the Web service </p>
-<p>Test /Integration </p>
-<p>Validation </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio 2010, SQL Server 2008 R2 Express / Enterprise, Team Foundation Server 2008</p>
-<p>Technologies : C#.NET, WCF, MVC3, JQuery</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Others Projects </p>
-<p>Maintenance of older applications in WPF </p>
-<p>SharePoint 2010 deployment / MOSS (to centralize technical documents)</p>
-<p>Team Foundation Server (deployment and project management)</p>
-<p>Virtualization - Hyper V (qualification of applications platform)</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>ORANGE BUSINESS SERVICES                                      TELECOMMUNICATION                          </p>
-<p>February 2009 to February 2011 – 2 years</p>
-<p>Software developer - R&amp;D Team                                                                               France-Paris</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Project:  Development of applications for administrators and system engineers for piloting and implementation of messaging systems migration.</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Needs analysis</p>
-<p>Design and architecture of software components </p>
-<p>Design of database </p>
-<p>Realization of the digraphs of components</p>
-<p>Writing technical specifications </p>
-<p>Development of the Web portal</p>
-<p>Creation of web services</p>
-<p>Development of Active Directory connectors</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Technologies: ASP.NET (MVC2), JQuery, WCF (callbacks...), services windows, GPO AD</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Project « ClientWizard for Lotus Notes » Update a tool for the Conversion of data for Migration projects, this tool allows converting data from Outlook to a Lotus Notes database.</p>
-<p>Needs analysis</p>
-<p>Conception </p>
-<p>Design of user interfaces </p>
-<p>Design of object models </p>
-<p>Writing technical specifications</p>
-<p>Development</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Technologies: VB.NET / WinForm / COM components</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Project « WaveBox » a centralized tool that allows the automation of the migration process.</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Maintenance of the application</p>
-<p>Adding features </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Technologies: Lotus Script / COM components</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Project: creations of scripts </p>
-<p>Scripting to automate the migration.</p>
-<p>Technologies: AD, GPO, MS Exchange, PowerShell, VBscript</p>
-          </article>
-          <article class="cv-card">
-            <h4 data-i18n="cv.enRecentTitle">Recent missions</h4>
-
-<div class="cv-separator">──────────────────────────────────────────────</div>
-<div class="cv-block">
-  <div class="cv-separator">──────────────────────────────────────────────</div>
-<h3 class="cv-company">NETCOM</h3>
-  <p class="cv-sector">Telecommunication</p>
-  <p class="cv-dates">July 2025 – Present</p>
-  <p class="cv-role">Senior Software Engineer</p>
-  <p>Context: Flutter mobile development; internal CRM development; containerization of ongoing projects with Docker; backend development with Swagger and APIs; urbanization work.</p>
-  <p>Tools: Visual Studio 2019–2022, C#, Flutter, JavaScript, Docker.</p>
-</div>
-
-<div class="cv-separator">──────────────────────────────────────────────</div>
-<div class="cv-block">
-  <div class="cv-separator">──────────────────────────────────────────────</div>
-<h3 class="cv-company">MOWASALAT</h3>
-  <p class="cv-sector">Transport</p>
-  <p class="cv-dates">November 2024 – June 2025</p>
-  <p class="cv-role">Senior Software Engineer</p>
-  <p>Context: Vehicle fleet management system; back-end software development in .NET Core C#; payment system upgrade with provider; adding back-office modules for performance monitoring and tracking; adding APIs; software development.</p>
-  <p>Tools: Visual Studio 2019–2022, C#.</p>
-</div>
-
-<div class="cv-separator">──────────────────────────────────────────────</div>
-<div class="cv-block">
-  <div class="cv-separator">──────────────────────────────────────────────</div>
-<h3 class="cv-company">VERMEG</h3>
-  <p class="cv-sector">Banking</p>
-  <p class="cv-dates">October 2024 – November 2024</p>
-  <p class="cv-role">Senior Software Engineer</p>
-  <p>Context: Software engineering on liquidation (sell side). See: https://www.crunchbase.com/organization/vermeg</p>
-  <p>Funds originate from Charterhouse Capital Partners. The startup makes extensive use of resources to develop local ESG funds and obtain ISO certifications from Europe. Funding has been raised to grow the company’s value.</p>
-  <p>Tools: Visual Studio, C++, Delphi.</p>
-</div>
-          </article>
+          <h3 data-i18n="fullcv.enTitle">English CV</h3>
+          <div class="cv-text">
+<p class="cv-paragraph">Mouadh JABER</p>
+<p class="cv-paragraph">Software Engineer</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tel: +216 58 201 430                                                             Mail: mouadh.jaber@msn.com</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Skills:</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Software Development:</p>
+<p class="cv-paragraph">Architecture:  Distributed, Composite, and Real-time applications, layer models, Micro-Services, Mesh architecture, monolithic architecture</p>
+<p class="cv-paragraph">Methodologies:  XP, Scrum, SAFe, TDD, BDD</p>
+<p class="cv-paragraph">Process:  ITIL, DevOps; DevSecOps</p>
+<p class="cv-paragraph">Modeling:  UML V2, Merise</p>
+<p class="cv-paragraph">Communication:  Web, pipe, socket, messaging system, SAO, JSON, messaging</p>
+<p class="cv-paragraph">Design Patterns:  Repository, UnitOfWork, IoC, DI, Facade, Proxy, MVVM, MVC, DDD …</p>
+<p class="cv-paragraph">Languages / Technologies:</p>
+<p class="cv-paragraph">Microsoft: .Net C#, VB.Net, ASP.Net, WCF, WebAPI, ADO.NET, Linq, Linq SQL, Entity Framework, NHibernate, UnitTest, SpecFlow, Sonar , .net Core , Blazor , Rest API,Kafka , Docker</p>
+<p class="cv-paragraph">Other languages: C, C++, Python</p>
+<p class="cv-paragraph">IBM Lotus Notes Technology: Lotus Script, XPage</p>
+<p class="cv-paragraph">Scripting:</p>
+<p class="cv-paragraph">VB Script, PowerShell, Lotus Script, Java Script, JQuery, AngularJS</p>
+<p class="cv-paragraph">Information System:</p>
+<p class="cv-paragraph">Microsoft Solutions:</p>
+<p class="cv-paragraph">Active Directory Windows 2003 / 2008 /2012</p>
+<p class="cv-paragraph">Microsoft SQL Server 2008/ 2014</p>
+<p class="cv-paragraph">MS SharePoint / MOSS</p>
+<p class="cv-paragraph">Windows Azure Services Bus</p>
+<p class="cv-paragraph">IBM Solutions:</p>
+<p class="cv-paragraph">Lotus Notes / Domino, Sametime</p>
+<p class="cv-paragraph">Messaging – Unified messaging:</p>
+<p class="cv-paragraph">Migration of messaging platform (Transition &amp; Migration &amp; consolidation)</p>
+<p class="cv-paragraph">Workflow, Collaboration, SOA, SaaS</p>
+<p class="cv-paragraph">Interconnection &amp; Unification des services</p>
+<p class="cv-paragraph">MS Exchange (5.5 /2003/2007)</p>
+<p class="cv-paragraph">Office Communication Server</p>
+<p class="cv-paragraph">IBM Domino, Sametime, BPOS – Office 365, MS Online</p>
+<p class="cv-paragraph">Tools</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Visual Studio 2008 /2010 / 2012 /2013 / 2015 / 2017 / 2022, CVS, SNV, TeamCity</p>
+<p class="cv-paragraph">Team Foundation Server / Microsoft Test Manager</p>
+<p class="cv-paragraph">Eclipse, JBuilder</p>
+<p class="cv-paragraph">Microsoft Office products</p>
+<p class="cv-paragraph">Projects management software: MS Project &amp; MS Project Server</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Langue</p>
+<p class="cv-paragraph">French, English</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">PROFESSIONAL EXPERIENCE (MOST RECENT FIRST)</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">ASTERA                                                                              PHARMACEUTICAL SUPPLY</p>
+<p class="cv-paragraph">May 2023 to Now</p>
+<p class="cv-paragraph">Senior Software Engineer                                                                                       France-Rouen</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Context:</p>
+<p class="cv-paragraph">Implement IdentityService with 2Factor authentification and QRCode SMS</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Pharmaceutical industry Modernize the Workflow</p>
+<p class="cv-paragraph">authentication System and of the company and provide IT resources, after COVID Crisis Implement IdentityServer for the set of the application and involving the DevOps process</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Microsoft Azure ,Migration DevOpsTools: Visual Studio 2019 – 2022, C# , Gulp , JavaScript , Bootstrap, Azure Components, DevSecops</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">ZIWO                                                                                           CALL-CENTER SYSTEM</p>
+<p class="cv-paragraph">Mars 2023 to May 2023</p>
+<p class="cv-paragraph">Senior Software Engineer &amp; Architect                                                                       UAE-Dubai</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Context:</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Software Architecture and Design of Microservice Components</p>
+<p class="cv-paragraph">- Dockers</p>
+<p class="cv-paragraph">- Protobuff</p>
+<p class="cv-paragraph">- Microservice</p>
+<p class="cv-paragraph">-Kafka</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio 2019 - 2022, Azure Components, DevSecops</p>
+<p class="cv-paragraph">Technologies:  C#, Oracle, PowerShell as Bach</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">CANDRIAM                                        MULTI-SPECIALIST ASSET MANAGEMENT FIRM</p>
+<p class="cv-paragraph">May 2021 to October 2022</p>
+<p class="cv-paragraph">Senior Software Engineer &amp; Architect                                                                       France-Paris</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Context:</p>
+<p class="cv-paragraph">Integrate the new flow of data from Belfius (Brussel) Data source, mapping many data sources. refactoring and defining the micro-service architecture with Bus.</p>
+<p class="cv-paragraph">Design the new Flow and business interaction with Microsoft service.</p>
+<p class="cv-paragraph">Working with many processes ITIL DevOps etc.</p>
+<p class="cv-paragraph">Projects: Technical Solution and Software Development</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Batch development SSIS</p>
+<p class="cv-paragraph">Web Services – Micro-Service</p>
+<p class="cv-paragraph">Azure infrastructure</p>
+<p class="cv-paragraph">WCF service</p>
+<p class="cv-paragraph">Database modeling</p>
+<p class="cv-paragraph">Web API</p>
+<p class="cv-paragraph">DevOps</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio 2019 - 2022, Azure Components, DevSecops</p>
+<p class="cv-paragraph">Technologies:  C#, Oracle, PowerShell as Bach</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">SOCIETE GENERALE                                                                                           BANKING</p>
+<p class="cv-paragraph">December 2018 to May 2021</p>
+<p class="cv-paragraph">Senior Engineer &amp; Architect                                                                                         France-Paris</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Context:</p>
+<p class="cv-paragraph">Analyzing, Design, and Definition new architecture of software components</p>
+<p class="cv-paragraph">Updating connectors and integrating new tools and software</p>
+<p class="cv-paragraph">Provisioning Microsoft software</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Projects:</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Provisioning:</p>
+<p class="cv-paragraph">Updating components</p>
+<p class="cv-paragraph">Preparation of infrastructure for new software</p>
+<p class="cv-paragraph">Preparation of the SSO (Single Sign On) of the new tools and software</p>
+<p class="cv-paragraph">Preparing Application Middleware and servers</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Modeling and flow:</p>
+<p class="cv-paragraph">Reverse engineering</p>
+<p class="cv-paragraph">Technical relay; contribute and discuss new solutions</p>
+<p class="cv-paragraph">Design services</p>
+<p class="cv-paragraph">Architecture documents</p>
+<p class="cv-paragraph">Defining the main nonfunctional requirement</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Solution and integration</p>
+<p class="cv-paragraph">Study the technical requirement of software integration from another team</p>
+<p class="cv-paragraph">Relay with administrator and technical engineers</p>
+<p class="cv-paragraph">Kinematic</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio 2015, TFS  2013</p>
+<p class="cv-paragraph">Technologies:  C++, C#  , Java , PowerShell as Bach</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">GENERALI - EA HOLDING INSURANCE</p>
+<p class="cv-paragraph">June 2017 to December 2018</p>
+<p class="cv-paragraph">Senior Software Engineer                                                                                             France-Paris</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Context:</p>
+<p class="cv-paragraph">Engineering and Development of software</p>
+<p class="cv-paragraph">Maintaining a set of applications for the clients and affiliates of the holding</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Elaboration of technical solutions for functional / scalability requirements</p>
+<p class="cv-paragraph">Write technical specification</p>
+<p class="cv-paragraph">Development of the solution</p>
+<p class="cv-paragraph">Write unit tests</p>
+<p class="cv-paragraph">Participate in code review of other developers</p>
+<p class="cv-paragraph">Control the release of the project with technical / integration teams</p>
+<p class="cv-paragraph">Task reporting</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio 2015, TFS  2013</p>
+<p class="cv-paragraph">Technologies:  ASP.Net MVC5, C# 5 / 6, JQuery, SignalR, WebAPI, Azure</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">AXA                                                                                                                                                 INSURANCES</p>
+<p class="cv-paragraph">March 2016 to March 2017</p>
+<p class="cv-paragraph">Consultant Architect                                                                                                      France-Paris</p>
+<p class="cv-paragraph">Context:</p>
+<p class="cv-paragraph">Definition of the model of IARD, and integration of sales software</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Elaboration of technical solutions</p>
+<p class="cv-paragraph">Write technical specification DAT</p>
+<p class="cv-paragraph">Participate in the integration of new software</p>
+<p class="cv-paragraph">Control the release of the project with technical / integration teams</p>
+<p class="cv-paragraph">Lead a team f 5 people around many projects</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio 2015, TFS  2013</p>
+<p class="cv-paragraph">Technologies:  ASP.Net MVC5, C# 5 / 6, JQuery, SignalR, WebAPI, Azure</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">SOCIETE GENERALE INVESTMENT BANKING                                                               BANKING</p>
+<p class="cv-paragraph">September 2014 to March 2016</p>
+<p class="cv-paragraph">Senior Engineer                                                                                                                France-Paris</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Context:</p>
+<p class="cv-paragraph">Analyzing, designing, Conception &amp; develop a trading application (multithreaded environment).</p>
+<p class="cv-paragraph">Maintaining production, configuring servers, and users support.</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Projects:</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Maintaining: automaton for trading system</p>
+<p class="cv-paragraph">Maintaining Production environment - deliveries</p>
+<p class="cv-paragraph">Code review</p>
+<p class="cv-paragraph">Adding new features.</p>
+<p class="cv-paragraph">Bugs fixes</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Migration to the new automaton:</p>
+<p class="cv-paragraph">Reverse engineering</p>
+<p class="cv-paragraph">Add feed connectors to get market data</p>
+<p class="cv-paragraph">Parsing and warping to object from/to socket layer</p>
+<p class="cv-paragraph">Technical relay; contribute and discuss new solutions</p>
+<p class="cv-paragraph">Design services</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio 2010 - 2013, CVS, Fiddler, SVN, TeamCity</p>
+<p class="cv-paragraph">Technologies: MVC5, C# 5, JQuery, SignalR, Ultra messaging, FIX Protocol, Fidessa (OMS)</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">INVIVO                                                                               AGRICULTURE COOPERATIVE</p>
+<p class="cv-paragraph">February 2011 to September 2014</p>
+<p class="cv-paragraph">Senior Consultant .Net Consultant - Agro-Solutions Division                                  France-Paris</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Context: Development of a set of applications designed for cooperatives.</p>
+<p class="cv-paragraph">WPF Projects: Development of tree modules in the PRISM application.</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Client Communication– understanding of the need</p>
+<p class="cv-paragraph">Design and realizing of Proof of concept</p>
+<p class="cv-paragraph">Database design (schema, procedures)</p>
+<p class="cv-paragraph">Realizing mock-up UI with Balsamiq-Mockup</p>
+<p class="cv-paragraph">Drafting of technical specifications – use cases, class diagram ...</p>
+<p class="cv-paragraph">Development, Coding, and Testing</p>
+<p class="cv-paragraph">Realization of graphical interfaces</p>
+<p class="cv-paragraph">Implementation of stored procedures</p>
+<p class="cv-paragraph">Implementation of business logic</p>
+<p class="cv-paragraph">Implementation of unit tests via NUnit, Mock</p>
+<p class="cv-paragraph">Technical Relay</p>
+<p class="cv-paragraph">Identify the technical limitations of the architecture</p>
+<p class="cv-paragraph">Contribute to the addition of features to the Framework</p>
+<p class="cv-paragraph">Participate in the estimation of the projects</p>
+<p class="cv-paragraph">Steering</p>
+<p class="cv-paragraph">Ensure the rise of development skills</p>
+<p class="cv-paragraph">Control the quality of the code</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio 2008 / 2010, TFS, Microsoft Blend, Telerik</p>
+<p class="cv-paragraph">Technologies: C# 3.0 / 4.0, WPF, MVVM, PRISM, Entity Framework, SQL Server 2008 R2 / Express</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">WCF - REST   Project:  Design and development of a calculation engine to predict disease in an agricultural cycle.</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Reverse engineering</p>
+<p class="cv-paragraph">Analyze the code of the previous application developed in Pascal</p>
+<p class="cv-paragraph">Reproduce the application using Delphi</p>
+<p class="cv-paragraph">Validate the inputs/outputs of the application with the existing software</p>
+<p class="cv-paragraph">Study of the volume of data exchanged by the Web Service</p>
+<p class="cv-paragraph">Conception</p>
+<p class="cv-paragraph">Database design</p>
+<p class="cv-paragraph">Design of business objects</p>
+<p class="cv-paragraph">Specify the inputs of the HTTP verbs in the REST architecture</p>
+<p class="cv-paragraph">Drafting the technical documents</p>
+<p class="cv-paragraph">Implementation</p>
+<p class="cv-paragraph">Implementation of stored procedures</p>
+<p class="cv-paragraph">Realization of graphical interfaces</p>
+<p class="cv-paragraph">Implementation of business logic</p>
+<p class="cv-paragraph">Validation tests</p>
+<p class="cv-paragraph">Integration</p>
+<p class="cv-paragraph">Settings of the IIS and WCF, for compatibility with the new software</p>
+<p class="cv-paragraph">Validation tests</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Team Foundation Server 2008, Visual Studio 2010, Embarcadero Delphi, Fiddler, IIS</p>
+<p class="cv-paragraph">Technologies: C#, WCF, Pascal</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Silverlight Projects: Design and development of a repository of crops and varieties and a repository of fertilizers</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Customer communication - understanding the need</p>
+<p class="cv-paragraph">Architecture / Conception</p>
+<p class="cv-paragraph">Study possible technical solutions</p>
+<p class="cv-paragraph">The reaction of technical specifications</p>
+<p class="cv-paragraph">Design of databases (schema, stored procedures)</p>
+<p class="cv-paragraph">Development– coding</p>
+<p class="cv-paragraph">Implementation of the architecture</p>
+<p class="cv-paragraph">Coding of the crafts classes</p>
+<p class="cv-paragraph">Creation of graphical interfaces</p>
+<p class="cv-paragraph">Implementation of stored procedures</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: SQL Server 2008 R2, Team Foundation Server 2008, Visual Studio 2008 / Visual Studio 2010, Fiddler</p>
+<p class="cv-paragraph">Technologies: C# .Net 3.5 / 4.0, Silverlight, RIA Services (WCF), MVVM, Entity Framework 4,</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">WCF – Web MVC 3 Projects: Design and development of a Web Service to force SQL Server replication.</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Analysis of the issue and realization of the POC</p>
+<p class="cv-paragraph">Study of scenarios of replication errors</p>
+<p class="cv-paragraph">Realizing the Proof of Concept to work around the replication issues</p>
+<p class="cv-paragraph">Conception</p>
+<p class="cv-paragraph">Writing technical specifications</p>
+<p class="cv-paragraph">Web service design</p>
+<p class="cv-paragraph">Design of database</p>
+<p class="cv-paragraph">SQL Server Setup</p>
+<p class="cv-paragraph">Validation of the design by the DBA</p>
+<p class="cv-paragraph">Development</p>
+<p class="cv-paragraph">Implementing stored procedures</p>
+<p class="cv-paragraph">Implementation of the Web service</p>
+<p class="cv-paragraph">Test /Integration</p>
+<p class="cv-paragraph">Validation</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio 2010, SQL Server 2008 R2 Express / Enterprise, Team Foundation Server 2008</p>
+<p class="cv-paragraph">Technologies : C#.NET, WCF, MVC3, JQuery</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Others Projects</p>
+<p class="cv-paragraph">Maintenance of older applications in WPF</p>
+<p class="cv-paragraph">SharePoint 2010 deployment / MOSS (to centralize technical documents)</p>
+<p class="cv-paragraph">Team Foundation Server (deployment and project management)</p>
+<p class="cv-paragraph">Virtualization - Hyper V (qualification of applications platform)</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">ORANGE BUSINESS SERVICES                                      TELECOMMUNICATION</p>
+<p class="cv-paragraph">February 2009 to February 2011 – 2 years</p>
+<p class="cv-paragraph">Software developer - R&amp;D Team                                                                               France-Paris</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Project:  Development of applications for administrators and system engineers for piloting and implementation of messaging systems migration.</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Needs analysis</p>
+<p class="cv-paragraph">Design and architecture of software components</p>
+<p class="cv-paragraph">Design of database</p>
+<p class="cv-paragraph">Realization of the digraphs of components</p>
+<p class="cv-paragraph">Writing technical specifications</p>
+<p class="cv-paragraph">Development of the Web portal</p>
+<p class="cv-paragraph">Creation of web services</p>
+<p class="cv-paragraph">Development of Active Directory connectors</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Technologies: ASP.NET (MVC2), JQuery, WCF (callbacks...), services windows, GPO AD</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Project « ClientWizard for Lotus Notes » Update a tool for the Conversion of data for Migration projects, this tool allows converting data from Outlook to a Lotus Notes database.</p>
+<p class="cv-paragraph">Needs analysis</p>
+<p class="cv-paragraph">Conception</p>
+<p class="cv-paragraph">Design of user interfaces</p>
+<p class="cv-paragraph">Design of object models</p>
+<p class="cv-paragraph">Writing technical specifications</p>
+<p class="cv-paragraph">Development</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Technologies: VB.NET / WinForm / COM components</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Project « WaveBox » a centralized tool that allows the automation of the migration process.</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Maintenance of the application</p>
+<p class="cv-paragraph">Adding features</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Technologies: Lotus Script / COM components</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Project: creations of scripts</p>
+<p class="cv-paragraph">Scripting to automate the migration.</p>
+<p class="cv-paragraph">Technologies: AD, GPO, MS Exchange, PowerShell, VBscript</p>
+          </div>
         </section>
 
-        <section class="cv-lang-section lang-fr-section" aria-label="French CV">
-          <h3 data-i18n="cv.frTitle">CV français</h3>
-          <article class="cv-card">
-            <h4 data-i18n="cv.frMainTitle">CV complet (version française)</h4>
-<p>Mouadh JABER</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>+216 58 201 430                                                           Mail : mouadh.jaber@msn.com</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Compétences</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Développement logiciel : </p>
-<p>Architecture     : Applications réparties, modulaires et temps-réel , modèles en couche, micro service , MeSH   </p>
-<p>Méthodes Agiles   : XP, Scrum , TDD , BDD</p>
-<p>Modélisation         : UML V2, Merise</p>
-<p>Communication    : Web, tube, socket, messaging , SOA, JSON , Messaging</p>
-<p>P. de conception   : Repository , UnitOfWork , IoC , Façade , DI, Façade , Proxy, MVVM , MVC , DDD…</p>
-<p>Langages / Technologies : </p>
-<p>Technologies Microsoft : .NET C#, VB .net, ASP, WCF, Web API, ADO.NET, Linq, Linq SQL, Entity Framework, nHibernate, UnitTest , SpecFlow</p>
-<p>Language native (sous Windows) C, C++ </p>
-<p>Technologie IBM Lotus Notes : Lotus Script, XPage</p>
-<p>Scripting :</p>
-<p>VB Script, PowerShell, Lotus Script, Java Script, JQuery, AngularJS, React</p>
-<p>Systèmes d&#x27;Information :</p>
-<p>Solutions Microsoft : </p>
-<p>Active Directory Windows 2003 / 2008 / 2012</p>
-<p>Microsoft SQL Server 2008, 2014,2016</p>
-<p>MS SharePoint / MOSS /Office 365 /Sharepoint Online</p>
-<p>Windows Azure Services Bus</p>
-<p>Cloud Azure</p>
-<p>Solutions IBM : </p>
-<p>Lotus Notes / Domino, Sametime</p>
-<p>Messagerie - Messagerie Unifiée : </p>
-<p>Migration des plateformes de messagerie (Transition &amp; Migration &amp; consolidation)</p>
-<p>WorkFlow , Collaboration , SOA, SaaS</p>
-<p>Interconnexion &amp; Unification des services </p>
-<p>MS Exchange (5.5 /2003/2007)</p>
-<p>Office Communication Server  </p>
-<p>IBM Domino, Sametime , BPOS – Office 365, MS Online</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Outils </p>
-<p>Visual Studio 2008 /2010 / 2012 /2013 / 2015, CVS, SNV, TeamCity , Eclipse</p>
-<p>Team Foundation Server / Microsoft Test Manager</p>
-<p>Gamme des produits MS Office </p>
-<p>Outil MS de gestion des projets : MS Project &amp; MS Project Server</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Langue </p>
-<p>Anglais , Français </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>PROJETS PROFESSIONNELS</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>NETCOM                                                                                                           TELECOMMUNICATION</p>
-<p>Juillet 2025 à present</p>
-<p>Ingénieur logiciel senior    </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Contexte:</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Développement mobile flutter </p>
-<p>Développement au tours de la CRM interne </p>
-<p>Dockerisation des projets en cours</p>
-<p>Développement des backend Swagger et API</p>
-<p>Urbanisation </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio 2019 – 2022, C# , Futter  , JavaScript , docker </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>MOWASALAT                                                                                                                              TRANSPORT                                                 </p>
-<p>Novembre 2024 à Juin  2025</p>
-<p>Ingénieur logiciel senior    </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Contexte:</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Système de gestion de flotte de véhicules.</p>
-<p>Développement logiciel Back-End en .NET Core C#.</p>
-<p>Mise à jour du système de paiement avec le fournisseur.</p>
-<p>Ajout de modules au back-office pour le suivi et le monitoring des performances.</p>
-<p>Ajout de quelques API.</p>
-<p>Développement logiciel.</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio 2019 – 2022, C#</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>VERGMEG                                                                                                                                            BANKING </p>
-<p>October 2024 à Novembre 2024</p>
-<p>Ingénieur logiciel senior    </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Contexte:</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Ingénierie logicielle de la liquidation, côté vente.</p>
-<p>https://www.crunchbase.com/organization/vermeg</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Les fonds proviennent de Charterhouse Capital Partners.</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Des projets incroyables, la start-up utilise toutes les ressources pour le développement de fonds ESG locaux, des certifications ISO provenant d’Europe. Des fonds ont été levés pour valoriser l’entreprise.</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio C ++ – Delphi</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>ASTERA                                                                                                     PHARMACEUTICAL SUPPLY </p>
-<p>May 2023 à  September 2024</p>
-<p>Ingénieur logiciel senior    </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Contexte:</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Implémenter IdentityService avec l’authentification 2Factor et QRCode SMS</p>
-<p>L’industrie pharmaceutique modernise le flux de travail </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>système d’authentification et de l’entreprise et fournir des ressources informatiques, après la crise COVID Composants Azure et migration , DevOpsTools: Visual Studio 2019 – 2022, C# , Gulp , JavaScript , Bootstrap, Azure Components, DevOps </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>ZIWO                                                                                                                     CALL-CENTER SYSTEM </p>
-<p>Mars 2023 jusqu’à May 2023 </p>
-<p>Ingénieur logiciel senior et architecte                                                                  </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Contexte:</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Architecture logicielle et conception de composants de microservices</p>
-<p>- Dockers</p>
-<p>- Protobuff </p>
-<p>- Microservice</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio 2019 - 2022, Azure Components, DevSecops </p>
-<p>Technologies:  C#, Oracle, PowerShell as Bach</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>CANDRIAM                                                                                                              MULTI-SPECIALIST ASSET MANAGEMENT FIRM </p>
-<p>Mai 2021 jusqu’à Octobre 2022 </p>
-<p>Ingénieur &amp; Architect Senior  </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Contexte :</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Intégrer le nouveau flux de données de la source de données Belfius, en mappant de nombreuses sources de données.</p>
-<p>Concevoir le nouveau Flux et l’interaction entre composants.</p>
-<p>Définir les Service Cloud Microsoft Azure, en Miro service </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Projets : </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Solutions logicielles et Cloud  </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Web Services cloud</p>
-<p>Infrastructure Azure – flux de données sur Cloud</p>
-<p>Service WCF en promise</p>
-<p>Modélisation de base de données sur cloud</p>
-<p>Infrastructure Data Lake Cloud</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Outils : Visual Studio 2019, Azure Devops , Azure Cloud Infrastructure</p>
-<p>Technologies :  C#, Oracle, PowerShell as Bach</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>SOCIETE GENERALE                                                                                                        BANQUE</p>
-<p>Décembre 2018 à Mai 2021</p>
-<p>Architecte / Ingénieur étude et développement </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Contexte :</p>
-<p>Analyse et définition de la nouvelle architecture des nouveaux composants </p>
-<p>Intégration des nouveaux outils pour le provisionning </p>
-<p>Définition des Workflow </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Projets: </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Provisioning: </p>
-<p>Mise à jour des composant API Web API avec le fournisseur d’autorisation </p>
-<p>Préparation d’infrastructure pour les nouveaux logiciels </p>
-<p>Adaptation sur le  SSO des nouveau outils</p>
-<p>Développement en C++ Composant système seamless Citrix</p>
-<p>Développement des API C# des composant applicatif</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Modélisation   and flux : </p>
-<p>Reverse engineering </p>
-<p>Relais technique </p>
-<p>Document d’architecture </p>
-<p>Pré requis non fonctionnelle </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Solution and intégration </p>
-<p>Etude  </p>
-<p>Cinématique</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Outils : Visual Studio 2015-2017-2019, Azure DevOps, Azure </p>
-<p>Technologies :  C++, C#, .net core ,Java, PowerShell as Bach</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>GENERALI - EA HOLDING                                                                                                                                                               ASSURANCES</p>
-<p>Mars 2017 à Décembre 2018  </p>
-<p>Architecte / Ingénieur étude et développement  </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Contexte :   </p>
-<p>Étude, développement .Net </p>
-<p>Maintenances applicatives des applications de la holding   </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Elaboration des solutions techniques pour répondre aux besoins techniques et fonctionnels et aux enjeux de performance </p>
-<p>Rédaction des spécifications techniques </p>
-<p>Réalisation des développements selon les spécifications et la solution d’implémentation définie </p>
-<p>Réalisation des tests unitaires </p>
-<p>Réalisation des tests d’intégration avant livraison en recette </p>
-<p>Participation aux revues de codes d’autres développeurs </p>
-<p>Pilotage des mises en production des projets en collaboration avec les équipes d’intégration technique et d’exploitation </p>
-<p>Effectuer un ‘reporting’ d’avancement des tâches confiées </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Outils :</p>
-<p>Visual Studio 2015, TFS 2013</p>
-<p>Technologies :  </p>
-<p>C#, C++, Razor, ASP.NET MVC .Net, WCF, JQuery, AngularJS </p>
-<p>Méthodologie &amp; Conception :</p>
-<p>XP</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>AXA                                                                                                                                                                                                        ASSURANCES</p>
-<p>Mars 2016 à Mars 2017</p>
-<p>Architecte  </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Contexte :   </p>
-<p>Définition des modèles IARD, and integration des webapi et webservices  </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>o Elaboration des flux donnés </p>
-<p>o Elaboration des documents DAT , dossier architecture techniques</p>
-<p>o Participation de l’intégration logiciel </p>
-<p>o Intégration continue ,devops</p>
-<p>o Management d&#x27;une équipe de 5 personnes</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Outils: </p>
-<p>           Visual Studio 2015, TFS 2013</p>
-<p>Technologies: </p>
-<p>          ASP.Net MVC5, C# 5 / 6, JQuery, SignalR, WebAPI , Azure </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>SOCIETE GENERALE CORPORATE AND INVESTMENT BANKING                                                                                                BFI</p>
-<p>Septembre 2014 à Mars 2016</p>
-<p>Ingénieur étude et développement </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Contexte :   </p>
-<p>Étude, conception et développement des applications de trading.</p>
-<p>Maintenances applicatives </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Projet Migration et consolidation des automates de trading (PPX)</p>
-<p>Méthodologie </p>
-<p>TDD</p>
-<p>Développement, Codage et Test</p>
-<p>Codage de l’application </p>
-<p>Implémentation les interfaces graphiques</p>
-<p>Ecrire les tests unitaires</p>
-<p>Projet simulateur de marché  </p>
-<p>Méthodologie </p>
-<p>TDD / BDD</p>
-<p>Architecture</p>
-<p>Configuration de serveur de build</p>
-<p>Configuration de serveur de contrôle code source</p>
-<p>Ajout des politiques de qualité de code « stylecop »</p>
-<p>Choix des librairies et des outils  </p>
-<p>Conception </p>
-<p>Définir les composants applicatifs</p>
-<p>Conception du moteur de calcul</p>
-<p>Conception des services utilisés</p>
-<p>Définir les « EndPoint » des services </p>
-<p>Conception de la couche communication </p>
-<p>TAP (modèle asynchrone basé sur les tâches) </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Développement, Codage et Test</p>
-<p>Codage de l’application </p>
-<p>Ecrire les tests unitaires</p>
-<p>Revue de code </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Outils :</p>
-<p>Visual Studio 2010 / 2013, CVS, Fiddler, SVN, TeamCity , PL-SQL Oracle, Jenkins , Eclipse </p>
-<p>Technologies :  </p>
-<p>C#, WPF, WinForm, , ASP , Razor, MVC , Socket, Ultra-Messaging, FIX protocol , Fidessa (OMS) </p>
-<p>Méthodologie &amp; Conception :</p>
-<p>XP</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>INVIVO                                                                                                                                                                                COOPÉRATIF AGRICOLE                                           </p>
-<p>Février 2011 à Septembre 2014– 3 ans</p>
-<p>Ingénieur étude et développement C# / Responsable technique - Division Agro-Solutions</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Contexte :            </p>
-<p>Développement d’un ensemble d’applications destiné aux coopératives.</p>
-<p>Projets réalisés :</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Trois projets client lourd WPF</p>
-<p>Développement de trois modules dans un pro logiciel de conseil et optimisation agronome.</p>
-<p>Communication client – compréhension du besoin </p>
-<p>Conception et réalisation des Proof of concept</p>
-<p>Conception de la base donnée </p>
-<p>Réalisation des maquettes d’interfaces graphiques avec l’outil Balsamiq Mockup</p>
-<p>Rédaction des spécifications techniques : diagrammes des classes, des cas d’utilisations... </p>
-<p>Développement, Codage et test</p>
-<p>Réalisation des interfaces graphiques</p>
-<p>Implémentation des procédures stockées</p>
-<p>Implémentation du logique métier</p>
-<p>Implémentation des tests unitaires via la plateforme NUnit , Mock</p>
-<p>Relais technique</p>
-<p>Cerner les limitations techniques de l’architecture</p>
-<p>Contribuer à l’ajout des fonctionnalités à la Framework </p>
-<p>Participer au chiffrage des projets</p>
-<p>Pilotage des développeurs</p>
-<p>Assurer la montée en compétences</p>
-<p>Contrôler la qualité du code</p>
-<p>Outils :</p>
-<p>Team Foundation Server 2008, Visual Studio 2008 / Visual Studio 2010 / 2012, </p>
-<p>Microsoft Expression Blend</p>
-<p>Technologies :</p>
-<p>WPF 3.0 / 4.0, MVVM, PRISM, Entity Framework, SQL Server 2008 Express</p>
-<p>Méthodologie &amp; Conception :</p>
-<p>Scrum, UML, Merise</p>
-<p>Résultat </p>
-<p>Les modules en cours d’utilisation sur le portail des techniciens</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Projet WCF - REST </p>
-<p>Conception et développement d’un moteur de calcul pour prévoir des maladies au cours d’un cycle agricole.</p>
-<p>Développement d’un WebService pour être consommé d’un logiciel développé par l’équipe R&amp;D</p>
-<p>Rétro ingénierie</p>
-<p>Analyser le code de l’ancienne application développé en Pascal</p>
-<p>Reproduire l’application en utilisant Delphi  </p>
-<p>Valider les entrées / sorties de l’application avec le logiciel existant</p>
-<p>Etude de la volémie des données échangées par le Web Service</p>
-<p>Conception </p>
-<p>Conception de la base de données</p>
-<p>Conception des objets métiers</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Spécifier les entrées sorties des verbes http dans le cadre de l’architecture REST</p>
-<p>Rédaction des documents techniques</p>
-<p>Implémentation</p>
-<p>Implémentation des procédures stockées </p>
-<p>Réalisation des interfaces graphiques</p>
-<p>Implémentation du logique métier</p>
-<p>Test Validation</p>
-<p> Intégration </p>
-<p>Paramétrages du serveur IIS et WCF, pour la compatibilité avec le nouveau logiciel </p>
-<p>Test Validation </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Outils :</p>
-<p>Team Foundation Server 2008, Visual Studio 2008 / Visual Studio 2010 / 2012, Embarcadero Delphi, Fiddler, IIS</p>
-<p>Technologies :</p>
-<p>WCF</p>
-<p>Méthodologies &amp; Conception :</p>
-<p>XP</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Deux Projets Silverlight</p>
-<p>Développement d’un référentiel des variétés et cultures </p>
-<p>Développement d’un référentiel des engrais </p>
-<p>Communication client – compréhension de besoin </p>
-<p>Architecture / Conception</p>
-<p>Etudier les solutions techniques possibles</p>
-<p>Réaction des spécifications techniques</p>
-<p>Conception des bases de données</p>
-<p>Développement logiciel – codage </p>
-<p>Mise en place de l’architecture </p>
-<p>Codage des classes métiers </p>
-<p>Création des interfaces graphiques</p>
-<p>Implémentation des procédures stockées </p>
-<p>Outils :</p>
-<p>Team Foundation Server 2008, Visual Studio 2008 / Visual Studio 2010, Fiddler</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Technologies : </p>
-<p>.Net 3.5 / 4.0, Silverlight, RIA Services (WCF), MVVM comme modèle graphique, Entity Framework 4, SQL Server 2008 R2</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Projet WCF – Web MVC 3  </p>
-<p>Conception / développement d’un Service Web pour forcer la réplication SQL Server.</p>
-<p>Site Back-Office d’administration des clients connectés sur la plateforme de réplication.</p>
-<p>Analyse de la problématique et réalisation des POC</p>
-<p>Etude des scénarios d’erreurs de réplication</p>
-<p>Réalisation des Proof of Concept pour contourner les problématiques de la réplication</p>
-<p>Conception </p>
-<p>Rédaction des spécifications techniques</p>
-<p>Conception du service web</p>
-<p>Conception de la base de données</p>
-<p>Paramétrage de serveur SQL</p>
-<p>Validation de la conception par les DBA </p>
-<p>Développement</p>
-<p>Implémenter les procédures stockées</p>
-<p>Implémentation du service Web</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Test /Intégration </p>
-<p>Validation sur l’environnement de qualification </p>
-<p>Injection de l’application cliente au démarrage de l’application</p>
-<p>Outils :</p>
-<p>Team Foundation Server 2008, Visual Studio 2008 / Visual Studio 2010 / 2012, Fiddler</p>
-<p>Technologies:</p>
-<p>WCF, MVC3, JQuery, SQL Server 2008 R2 Express / Enterprise, Team Foundation Server 2008</p>
-<p>Méthodologies &amp; Conception :</p>
-<p>XP, UML, Merise</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>@Autres Projets </p>
-<p>Maintenance des anciennes applications en WPF </p>
-<p>Déploiement SharePoint 2010 / MOSS (pour centraliser les documents techniques) </p>
-<p>Team Foundation Server (déploiement et gestion projet)</p>
-<p>Virtualisation – Hyper V (plateforme de qualification des applications)</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>ORANGE BUSINESS SERVICES                                                                                                                           TELECOMMUNICATION</p>
-<p>Février 2009 à Février 2011 – 2 ans</p>
-<p>Ingénieur étude et développement .Net - Equipe R&amp;D</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Contexte :               </p>
-<p>Développement des applications destinées aux administrateurs et ingénieurs systèmes pour le pilotage et la réalisation des migrations des systèmes de messagerie.</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Projets réalisés :</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Projet « Système de pilotage des migrations » </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Pour piloter les migrations des systèmes de messagerie ; des applications clientes installées sur les machines communiquent avec un portail Web et lancent les actions adéquates en arrière-plan pour assurer une migration transparente de Lotus vers Outlook. </p>
-<p>Le projet consiste à créer un portail Web afin de superviser le processus de la migration.</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Analyse de besoin</p>
-<p>Conception et architecture des composants logiciels </p>
-<p>Conception des bases de données</p>
-<p>Réalisation des diagrammes des composants</p>
-<p>Rédaction des spécifications techniques</p>
-<p>Développement du portail Web</p>
-<p>Création des services web</p>
-<p>Développement des connecteurs Active Directory</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Outils :</p>
-<p>Visual Studio 2008 / Visual Studio 2010 , Fiddler</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Technologies: ASP.NET (MVC2), JQuery, WCF (callbacks...), services windows, GPO AD</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Projet « Client Wizard for Lotus Notes » </p>
-<p>Développement   « Client Wizard for Outlook » : </p>
-<p>Mise à jour d&#x27;un outil de Conversion de données pour les projets de Migration, cet outil permet de convertir les données d&#x27;Outlook vers une base Lotus Notes</p>
-<p>Analyse de besoins</p>
-<p>Conception </p>
-<p>Conception des interfaces utilisateurs</p>
-<p>Conception des modèles objets</p>
-<p> Rédaction des spécifications techniques</p>
-<p>Développement</p>
-<p>Technologies : VB.NET / WinForm / composants COM</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Projet « WaveBox » </p>
-<p>Développement « WaveBox » : </p>
-<p>Un outil centralisé qui permet l&#x27;automatisation du processus de migration.</p>
-<p>Maintenance de l’application </p>
-<p>Ajout des fonctionnalités </p>
-<p>Technologie : Lotus Script / composants COM</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Projet : créations des scripts</p>
-<p>Scripting pour automatiser une migration.</p>
-<p>Technologies: AD, GPO, MS Exchange, PowerShell, VBscript</p>
-          </article>
-          <article class="cv-card">
-            <h4 data-i18n="cv.frRecentTitle">Missions récentes</h4>
-
-<div class="cv-separator">──────────────────────────────────────────────</div>
-<div class="cv-block">
-  <div class="cv-separator">──────────────────────────────────────────────</div>
-<h3 class="cv-company">NETCOM</h3>
-  <p class="cv-sector">TELECOMMUNICATION</p>
-  <p class="cv-dates">Juillet 2025 à présent</p>
-  <p class="cv-role">Ingénieur logiciel senior</p>
-  <p>Contexte :</p>
-  <p>Développement mobile Flutter.</p>
-  <p>Développement autour de la CRM interne.</p>
-  <p>Dockerisation des projets en cours.</p>
-  <p>Développement des backends Swagger et API.</p>
-  <p>Urbanisation.</p>
-  <p>Tools: Visual Studio 2019 – 2022, C#, Flutter, JavaScript, Docker.</p>
-</div>
-
-<div class="cv-separator">──────────────────────────────────────────────</div>
-<div class="cv-block">
-  <div class="cv-separator">──────────────────────────────────────────────</div>
-<h3 class="cv-company">MOWASALAT</h3>
-  <p class="cv-sector">TRANSPORT</p>
-  <p class="cv-dates">Novembre 2024 à Juin 2025</p>
-  <p class="cv-role">Ingénieur logiciel senior</p>
-  <p>Contexte :</p>
-  <p>Système de gestion de flotte de véhicules.</p>
-  <p>Développement logiciel Back-End en .NET Core C#.</p>
-  <p>Mise à jour du système de paiement avec le fournisseur.</p>
-  <p>Ajout de modules au back-office pour le suivi et le monitoring des performances.</p>
-  <p>Ajout de quelques API.</p>
-  <p>Développement logiciel.</p>
-  <p>Tools: Visual Studio 2019 – 2022, C#.</p>
-</div>
-
-<div class="cv-separator">──────────────────────────────────────────────</div>
-<div class="cv-block">
-  <div class="cv-separator">──────────────────────────────────────────────</div>
-<h3 class="cv-company">VERMEG</h3>
-  <p class="cv-sector">BANKING</p>
-  <p class="cv-dates">October 2024 à Novembre 2024</p>
-  <p class="cv-role">Ingénieur logiciel senior</p>
-  <p>Contexte :</p>
-  <p>Ingénierie logicielle de la liquidation, côté vente.</p>
-  <p>https://www.crunchbase.com/organization/vermeg</p>
-  <p>Les fonds proviennent de Charterhouse Capital Partners.</p>
-  <p>Des projets incroyables, la start-up utilise toutes les ressources pour le développement de fonds ESG locaux, des certifications ISO provenant d’Europe. Des fonds ont été levés pour valoriser l’entreprise.</p>
-  <p>Tools: Visual Studio C++ – Delphi.</p>
-</div>
-          </article>
-        <section class="cv-lang-section lang-ar-section" aria-label="السيرة الذاتية (EN)">
-          <h3 data-i18n="cv.enTitle">السيرة الذاتية (EN)</h3>
-          <article class="cv-card">
-            <h4 data-i18n="cv.enMainTitle">Complete السيرة الذاتية (EN)</h4>
-<p>Mouadh JABER</p>
-<p>Software Engineer </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tel: +216 58 201 430                                                             Mail: mouadh.jaber@msn.com</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Skills: </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Software Development: </p>
-<p>Architecture:  Distributed, Composite, and Real-time applications, layer models, Micro-Services, Mesh architecture, monolithic architecture</p>
-<p>Methodologies:  XP, Scrum, SAFe, TDD, BDD </p>
-<p>Process:  ITIL, DevOps; DevSecOps</p>
-<p>Modeling:  UML V2, Merise </p>
-<p>Communication:  Web, pipe, socket, messaging system, SAO, JSON, messaging</p>
-<p>Design Patterns:  Repository, UnitOfWork, IoC, DI, Facade, Proxy, MVVM, MVC, DDD …</p>
-<p>Languages / Technologies: </p>
-<p>Microsoft: .Net C#, VB.Net, ASP.Net, WCF, WebAPI, ADO.NET, Linq, Linq SQL, Entity Framework, NHibernate, UnitTest, SpecFlow, Sonar , .net Core , Blazor , Rest API,Kafka , Docker</p>
-<p>Other languages: C, C++, Python </p>
-<p>IBM Lotus Notes Technology: Lotus Script, XPage</p>
-<p>Scripting:</p>
-<p>VB Script, PowerShell, Lotus Script, Java Script, JQuery, AngularJS</p>
-<p>Information System:</p>
-<p>Microsoft Solutions: </p>
-<p>Active Directory Windows 2003 / 2008 /2012</p>
-<p>Microsoft SQL Server 2008/ 2014  </p>
-<p>MS SharePoint / MOSS</p>
-<p>Windows Azure Services Bus</p>
-<p>IBM Solutions: </p>
-<p>Lotus Notes / Domino, Sametime</p>
-<p>Messaging – Unified messaging: </p>
-<p>Migration of messaging platform (Transition &amp; Migration &amp; consolidation)</p>
-<p>Workflow, Collaboration, SOA, SaaS</p>
-<p>Interconnection &amp; Unification des services </p>
-<p>MS Exchange (5.5 /2003/2007)</p>
-<p>Office Communication Server  </p>
-<p>IBM Domino, Sametime, BPOS – Office 365, MS Online</p>
-<p>Tools</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Visual Studio 2008 /2010 / 2012 /2013 / 2015 / 2017 / 2022, CVS, SNV, TeamCity </p>
-<p>Team Foundation Server / Microsoft Test Manager</p>
-<p>Eclipse, JBuilder</p>
-<p>Microsoft Office products</p>
-<p>Projects management software: MS Project &amp; MS Project Server </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Langue </p>
-<p>French, English </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>PROFESSIONAL EXPERIENCE (MOST RECENT FIRST)</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>ASTERA                                                                              PHARMACEUTICAL SUPPLY </p>
-<p>May 2023 to Now</p>
-<p>Senior Software Engineer                                                                                       France-Rouen</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Context:</p>
-<p>Implement IdentityService with 2Factor authentification and QRCode SMS</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Pharmaceutical industry Modernize the Workflow </p>
-<p>authentication System and of the company and provide IT resources, after COVID Crisis Implement IdentityServer for the set of the application and involving the DevOps process </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Microsoft Azure ,Migration DevOpsTools: Visual Studio 2019 – 2022, C# , Gulp , JavaScript , Bootstrap, Azure Components, DevSecops </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>ZIWO                                                                                           CALL-CENTER SYSTEM </p>
-<p>Mars 2023 to May 2023 </p>
-<p>Senior Software Engineer &amp; Architect                                                                       UAE-Dubai</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Context:</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Software Architecture and Design of Microservice Components</p>
-<p>- Dockers</p>
-<p>- Protobuff </p>
-<p>- Microservice</p>
-<p>-Kafka</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio 2019 - 2022, Azure Components, DevSecops </p>
-<p>Technologies:  C#, Oracle, PowerShell as Bach</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>CANDRIAM                                        MULTI-SPECIALIST ASSET MANAGEMENT FIRM </p>
-<p>May 2021 to October 2022 </p>
-<p>Senior Software Engineer &amp; Architect                                                                       France-Paris</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Context:</p>
-<p>Integrate the new flow of data from Belfius (Brussel) Data source, mapping many data sources. refactoring and defining the micro-service architecture with Bus.</p>
-<p>Design the new Flow and business interaction with Microsoft service.</p>
-<p>Working with many processes ITIL DevOps etc.</p>
-<p>Projects: Technical Solution and Software Development  </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Batch development SSIS</p>
-<p>Web Services – Micro-Service</p>
-<p>Azure infrastructure </p>
-<p>WCF service </p>
-<p>Database modeling </p>
-<p>Web API</p>
-<p>DevOps</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio 2019 - 2022, Azure Components, DevSecops </p>
-<p>Technologies:  C#, Oracle, PowerShell as Bach</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>SOCIETE GENERALE                                                                                           BANKING</p>
-<p>December 2018 to May 2021 </p>
-<p>Senior Engineer &amp; Architect                                                                                         France-Paris</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Context:</p>
-<p>Analyzing, Design, and Definition new architecture of software components  </p>
-<p>Updating connectors and integrating new tools and software</p>
-<p>Provisioning Microsoft software  </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Projects: </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Provisioning: </p>
-<p>Updating components </p>
-<p>Preparation of infrastructure for new software </p>
-<p>Preparation of the SSO (Single Sign On) of the new tools and software</p>
-<p>Preparing Application Middleware and servers</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Modeling and flow: </p>
-<p>Reverse engineering </p>
-<p>Technical relay; contribute and discuss new solutions </p>
-<p>Design services</p>
-<p>Architecture documents</p>
-<p>Defining the main nonfunctional requirement </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Solution and integration </p>
-<p>Study the technical requirement of software integration from another team </p>
-<p>Relay with administrator and technical engineers</p>
-<p>Kinematic</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio 2015, TFS  2013</p>
-<p>Technologies:  C++, C#  , Java , PowerShell as Bach</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>GENERALI - EA HOLDING INSURANCE</p>
-<p>June 2017 to December 2018 </p>
-<p>Senior Software Engineer                                                                                             France-Paris</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Context:</p>
-<p>Engineering and Development of software </p>
-<p>Maintaining a set of applications for the clients and affiliates of the holding  </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Elaboration of technical solutions for functional / scalability requirements</p>
-<p>Write technical specification </p>
-<p>Development of the solution</p>
-<p>Write unit tests </p>
-<p>Participate in code review of other developers </p>
-<p>Control the release of the project with technical / integration teams </p>
-<p>Task reporting</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio 2015, TFS  2013</p>
-<p>Technologies:  ASP.Net MVC5, C# 5 / 6, JQuery, SignalR, WebAPI, Azure</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>AXA                                                                                                                                                 INSURANCES</p>
-<p>March 2016 to March 2017</p>
-<p>Consultant Architect                                                                                                      France-Paris</p>
-<p>Context:</p>
-<p>Definition of the model of IARD, and integration of sales software </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Elaboration of technical solutions</p>
-<p>Write technical specification DAT</p>
-<p>Participate in the integration of new software  </p>
-<p>Control the release of the project with technical / integration teams </p>
-<p>Lead a team f 5 people around many projects  </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio 2015, TFS  2013</p>
-<p>Technologies:  ASP.Net MVC5, C# 5 / 6, JQuery, SignalR, WebAPI, Azure</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>SOCIETE GENERALE INVESTMENT BANKING                                                               BANKING</p>
-<p>September 2014 to March 2016 </p>
-<p>Senior Engineer                                                                                                                France-Paris</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Context:</p>
-<p>Analyzing, designing, Conception &amp; develop a trading application (multithreaded environment).</p>
-<p>Maintaining production, configuring servers, and users support.</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Projects: </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Maintaining: automaton for trading system </p>
-<p>Maintaining Production environment - deliveries</p>
-<p>Code review</p>
-<p>Adding new features.</p>
-<p>Bugs fixes</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Migration to the new automaton:</p>
-<p>Reverse engineering </p>
-<p>Add feed connectors to get market data </p>
-<p>Parsing and warping to object from/to socket layer </p>
-<p>Technical relay; contribute and discuss new solutions </p>
-<p>Design services</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio 2010 - 2013, CVS, Fiddler, SVN, TeamCity</p>
-<p>Technologies: MVC5, C# 5, JQuery, SignalR, Ultra messaging, FIX Protocol, Fidessa (OMS)</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>INVIVO                                                                               AGRICULTURE COOPERATIVE </p>
-<p>February 2011 to September 2014</p>
-<p>Senior Consultant .Net Consultant - Agro-Solutions Division                                  France-Paris</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Context: Development of a set of applications designed for cooperatives.</p>
-<p>WPF Projects: Development of tree modules in the PRISM application.</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Client Communication– understanding of the need  </p>
-<p>Design and realizing of Proof of concept</p>
-<p>Database design (schema, procedures) </p>
-<p>Realizing mock-up UI with Balsamiq-Mockup</p>
-<p>Drafting of technical specifications – use cases, class diagram ... </p>
-<p>Development, Coding, and Testing</p>
-<p>Realization of graphical interfaces </p>
-<p>Implementation of stored procedures </p>
-<p>Implementation of business logic</p>
-<p>Implementation of unit tests via NUnit, Mock</p>
-<p>Technical Relay</p>
-<p>Identify the technical limitations of the architecture</p>
-<p>Contribute to the addition of features to the Framework</p>
-<p>Participate in the estimation of the projects</p>
-<p>Steering</p>
-<p>Ensure the rise of development skills </p>
-<p>Control the quality of the code</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio 2008 / 2010, TFS, Microsoft Blend, Telerik</p>
-<p>Technologies: C# 3.0 / 4.0, WPF, MVVM, PRISM, Entity Framework, SQL Server 2008 R2 / Express</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>WCF - REST   Project:  Design and development of a calculation engine to predict disease in an agricultural cycle.</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Reverse engineering</p>
-<p>Analyze the code of the previous application developed in Pascal</p>
-<p>Reproduce the application using Delphi</p>
-<p>Validate the inputs/outputs of the application with the existing software </p>
-<p>Study of the volume of data exchanged by the Web Service </p>
-<p>Conception </p>
-<p>Database design</p>
-<p>Design of business objects </p>
-<p>Specify the inputs of the HTTP verbs in the REST architecture </p>
-<p>Drafting the technical documents </p>
-<p>Implementation</p>
-<p>Implementation of stored procedures </p>
-<p>Realization of graphical interfaces </p>
-<p>Implementation of business logic </p>
-<p>Validation tests</p>
-<p> Integration </p>
-<p>Settings of the IIS and WCF, for compatibility with the new software</p>
-<p>Validation tests </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Team Foundation Server 2008, Visual Studio 2010, Embarcadero Delphi, Fiddler, IIS</p>
-<p>Technologies: C#, WCF, Pascal </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Silverlight Projects: Design and development of a repository of crops and varieties and a repository of fertilizers </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Customer communication - understanding the need </p>
-<p>Architecture / Conception</p>
-<p>Study possible technical solutions</p>
-<p>The reaction of technical specifications</p>
-<p>Design of databases (schema, stored procedures)</p>
-<p>Development– coding </p>
-<p>Implementation of the architecture</p>
-<p>Coding of the crafts classes </p>
-<p>Creation of graphical interfaces </p>
-<p>Implementation of stored procedures</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: SQL Server 2008 R2, Team Foundation Server 2008, Visual Studio 2008 / Visual Studio 2010, Fiddler</p>
-<p>Technologies: C# .Net 3.5 / 4.0, Silverlight, RIA Services (WCF), MVVM, Entity Framework 4, </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>WCF – Web MVC 3 Projects: Design and development of a Web Service to force SQL Server replication.</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Analysis of the issue and realization of the POC </p>
-<p>Study of scenarios of replication errors</p>
-<p>Realizing the Proof of Concept to work around the replication issues</p>
-<p>Conception </p>
-<p>Writing technical specifications</p>
-<p>Web service design</p>
-<p>Design of database </p>
-<p>SQL Server Setup </p>
-<p>Validation of the design by the DBA </p>
-<p>Development</p>
-<p>Implementing stored procedures </p>
-<p>Implementation of the Web service </p>
-<p>Test /Integration </p>
-<p>Validation </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Tools: Visual Studio 2010, SQL Server 2008 R2 Express / Enterprise, Team Foundation Server 2008</p>
-<p>Technologies : C#.NET, WCF, MVC3, JQuery</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Others Projects </p>
-<p>Maintenance of older applications in WPF </p>
-<p>SharePoint 2010 deployment / MOSS (to centralize technical documents)</p>
-<p>Team Foundation Server (deployment and project management)</p>
-<p>Virtualization - Hyper V (qualification of applications platform)</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>ORANGE BUSINESS SERVICES                                      TELECOMMUNICATION                          </p>
-<p>February 2009 to February 2011 – 2 years</p>
-<p>Software developer - R&amp;D Team                                                                               France-Paris</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Project:  Development of applications for administrators and system engineers for piloting and implementation of messaging systems migration.</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Needs analysis</p>
-<p>Design and architecture of software components </p>
-<p>Design of database </p>
-<p>Realization of the digraphs of components</p>
-<p>Writing technical specifications </p>
-<p>Development of the Web portal</p>
-<p>Creation of web services</p>
-<p>Development of Active Directory connectors</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Technologies: ASP.NET (MVC2), JQuery, WCF (callbacks...), services windows, GPO AD</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Project « ClientWizard for Lotus Notes » Update a tool for the Conversion of data for Migration projects, this tool allows converting data from Outlook to a Lotus Notes database.</p>
-<p>Needs analysis</p>
-<p>Conception </p>
-<p>Design of user interfaces </p>
-<p>Design of object models </p>
-<p>Writing technical specifications</p>
-<p>Development</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Technologies: VB.NET / WinForm / COM components</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Project « WaveBox » a centralized tool that allows the automation of the migration process.</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Maintenance of the application</p>
-<p>Adding features </p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Technologies: Lotus Script / COM components</p>
-<p class="cv-spacer" aria-hidden="true">&nbsp;</p>
-<p>Project: creations of scripts </p>
-<p>Scripting to automate the migration.</p>
-<p>Technologies: AD, GPO, MS Exchange, PowerShell, VBscript</p>
-          </article>
-          <article class="cv-card">
-            <h4 data-i18n="cv.enRecentTitle">Recent missions</h4>
-
-<div class="cv-separator">──────────────────────────────────────────────</div>
-<div class="cv-block">
-  <div class="cv-separator">──────────────────────────────────────────────</div>
-<h3 class="cv-company">NETCOM</h3>
-  <p class="cv-sector">Telecommunication</p>
-  <p class="cv-dates">July 2025 – Present</p>
-  <p class="cv-role">Senior Software Engineer</p>
-  <p>Context: Flutter mobile development; internal CRM development; containerization of ongoing projects with Docker; backend development with Swagger and APIs; urbanization work.</p>
-  <p>Tools: Visual Studio 2019–2022, C#, Flutter, JavaScript, Docker.</p>
-</div>
-
-<div class="cv-separator">──────────────────────────────────────────────</div>
-<div class="cv-block">
-  <div class="cv-separator">──────────────────────────────────────────────</div>
-<h3 class="cv-company">MOWASALAT</h3>
-  <p class="cv-sector">Transport</p>
-  <p class="cv-dates">November 2024 – June 2025</p>
-  <p class="cv-role">Senior Software Engineer</p>
-  <p>Context: Vehicle fleet management system; back-end software development in .NET Core C#; payment system upgrade with provider; adding back-office modules for performance monitoring and tracking; adding APIs; software development.</p>
-  <p>Tools: Visual Studio 2019–2022, C#.</p>
-</div>
-
-<div class="cv-separator">──────────────────────────────────────────────</div>
-<div class="cv-block">
-  <div class="cv-separator">──────────────────────────────────────────────</div>
-<h3 class="cv-company">VERMEG</h3>
-  <p class="cv-sector">Banking</p>
-  <p class="cv-dates">October 2024 – November 2024</p>
-  <p class="cv-role">Senior Software Engineer</p>
-  <p>Context: Software engineering on liquidation (sell side). See: https://www.crunchbase.com/organization/vermeg</p>
-  <p>Funds originate from Charterhouse Capital Partners. The startup makes extensive use of resources to develop local ESG funds and obtain ISO certifications from Europe. Funding has been raised to grow the company’s value.</p>
-  <p>Tools: Visual Studio, C++, Delphi.</p>
-</div>
-          </article>
+        <section class="cv-lang-section lang-fr-section" aria-label="CV Français">
+          <h3 data-i18n="fullcv.frTitle">CV Français</h3>
+          <div class="cv-text">
+<p class="cv-paragraph">Mouadh JABER</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">+216 58 201 430                                                           Mail : mouadh.jaber@msn.com</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Compétences</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Développement logiciel :</p>
+<p class="cv-paragraph">Architecture     : Applications réparties, modulaires et temps-réel , modèles en couche, micro service , MeSH</p>
+<p class="cv-paragraph">Méthodes Agiles   : XP, Scrum , TDD , BDD</p>
+<p class="cv-paragraph">Modélisation         : UML V2, Merise</p>
+<p class="cv-paragraph">Communication    : Web, tube, socket, messaging , SOA, JSON , Messaging</p>
+<p class="cv-paragraph">P. de conception   : Repository , UnitOfWork , IoC , Façade , DI, Façade , Proxy, MVVM , MVC , DDD…</p>
+<p class="cv-paragraph">Langages / Technologies :</p>
+<p class="cv-paragraph">Technologies Microsoft : .NET C#, VB .net, ASP, WCF, Web API, ADO.NET, Linq, Linq SQL, Entity Framework, nHibernate, UnitTest , SpecFlow</p>
+<p class="cv-paragraph">Language native (sous Windows) C, C++</p>
+<p class="cv-paragraph">Technologie IBM Lotus Notes : Lotus Script, XPage</p>
+<p class="cv-paragraph">Scripting :</p>
+<p class="cv-paragraph">VB Script, PowerShell, Lotus Script, Java Script, JQuery, AngularJS, React</p>
+<p class="cv-paragraph">Systèmes d&#x27;Information :</p>
+<p class="cv-paragraph">Solutions Microsoft :</p>
+<p class="cv-paragraph">Active Directory Windows 2003 / 2008 / 2012</p>
+<p class="cv-paragraph">Microsoft SQL Server 2008, 2014,2016</p>
+<p class="cv-paragraph">MS SharePoint / MOSS /Office 365 /Sharepoint Online</p>
+<p class="cv-paragraph">Windows Azure Services Bus</p>
+<p class="cv-paragraph">Cloud Azure</p>
+<p class="cv-paragraph">Solutions IBM :</p>
+<p class="cv-paragraph">Lotus Notes / Domino, Sametime</p>
+<p class="cv-paragraph">Messagerie - Messagerie Unifiée :</p>
+<p class="cv-paragraph">Migration des plateformes de messagerie (Transition &amp; Migration &amp; consolidation)</p>
+<p class="cv-paragraph">WorkFlow , Collaboration , SOA, SaaS</p>
+<p class="cv-paragraph">Interconnexion &amp; Unification des services</p>
+<p class="cv-paragraph">MS Exchange (5.5 /2003/2007)</p>
+<p class="cv-paragraph">Office Communication Server</p>
+<p class="cv-paragraph">IBM Domino, Sametime , BPOS – Office 365, MS Online</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Outils</p>
+<p class="cv-paragraph">Visual Studio 2008 /2010 / 2012 /2013 / 2015, CVS, SNV, TeamCity , Eclipse</p>
+<p class="cv-paragraph">Team Foundation Server / Microsoft Test Manager</p>
+<p class="cv-paragraph">Gamme des produits MS Office</p>
+<p class="cv-paragraph">Outil MS de gestion des projets : MS Project &amp; MS Project Server</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Langue</p>
+<p class="cv-paragraph">Anglais , Français</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">PROJETS PROFESSIONNELS</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">NETCOM                                                                                                           TELECOMMUNICATION</p>
+<p class="cv-paragraph">Juillet 2025 à present</p>
+<p class="cv-paragraph">Ingénieur logiciel senior</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Contexte:</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Développement mobile flutter</p>
+<p class="cv-paragraph">Développement au tours de la CRM interne</p>
+<p class="cv-paragraph">Dockerisation des projets en cours</p>
+<p class="cv-paragraph">Développement des backend Swagger et API</p>
+<p class="cv-paragraph">Urbanisation</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio 2019 – 2022, C# , Futter  , JavaScript , docker</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">MOWASALAT                                                                                                                              TRANSPORT</p>
+<p class="cv-paragraph">Novembre 2024 à Juin  2025</p>
+<p class="cv-paragraph">Ingénieur logiciel senior</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Contexte:</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Système de gestion de flotte de véhicules.</p>
+<p class="cv-paragraph">Développement logiciel Back-End en .NET Core C#.</p>
+<p class="cv-paragraph">Mise à jour du système de paiement avec le fournisseur.</p>
+<p class="cv-paragraph">Ajout de modules au back-office pour le suivi et le monitoring des performances.</p>
+<p class="cv-paragraph">Ajout de quelques API.</p>
+<p class="cv-paragraph">Développement logiciel.</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio 2019 – 2022, C#</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">VERGMEG                                                                                                                                            BANKING</p>
+<p class="cv-paragraph">October 2024 à Novembre 2024</p>
+<p class="cv-paragraph">Ingénieur logiciel senior</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Contexte:</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Ingénierie logicielle de la liquidation, côté vente.</p>
+<p class="cv-paragraph">https://www.crunchbase.com/organization/vermeg</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Les fonds proviennent de Charterhouse Capital Partners.</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Des projets incroyables, la start-up utilise toutes les ressources pour le développement de fonds ESG locaux, des certifications ISO provenant d’Europe. Des fonds ont été levés pour valoriser l’entreprise.</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio C ++ – Delphi</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">ASTERA                                                                                                     PHARMACEUTICAL SUPPLY</p>
+<p class="cv-paragraph">May 2023 à  September 2024</p>
+<p class="cv-paragraph">Ingénieur logiciel senior</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Contexte:</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Implémenter IdentityService avec l’authentification 2Factor et QRCode SMS</p>
+<p class="cv-paragraph">L’industrie pharmaceutique modernise le flux de travail</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">système d’authentification et de l’entreprise et fournir des ressources informatiques, après la crise COVID Composants Azure et migration , DevOpsTools: Visual Studio 2019 – 2022, C# , Gulp , JavaScript , Bootstrap, Azure Components, DevOps</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">ZIWO                                                                                                                     CALL-CENTER SYSTEM</p>
+<p class="cv-paragraph">Mars 2023 jusqu’à May 2023</p>
+<p class="cv-paragraph">Ingénieur logiciel senior et architecte</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Contexte:</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Architecture logicielle et conception de composants de microservices</p>
+<p class="cv-paragraph">- Dockers</p>
+<p class="cv-paragraph">- Protobuff</p>
+<p class="cv-paragraph">- Microservice</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio 2019 - 2022, Azure Components, DevSecops</p>
+<p class="cv-paragraph">Technologies:  C#, Oracle, PowerShell as Bach</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">CANDRIAM                                                                                                              MULTI-SPECIALIST ASSET MANAGEMENT FIRM</p>
+<p class="cv-paragraph">Mai 2021 jusqu’à Octobre 2022</p>
+<p class="cv-paragraph">Ingénieur &amp; Architect Senior</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Contexte :</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Intégrer le nouveau flux de données de la source de données Belfius, en mappant de nombreuses sources de données.</p>
+<p class="cv-paragraph">Concevoir le nouveau Flux et l’interaction entre composants.</p>
+<p class="cv-paragraph">Définir les Service Cloud Microsoft Azure, en Miro service</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Projets :</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Solutions logicielles et Cloud</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Web Services cloud</p>
+<p class="cv-paragraph">Infrastructure Azure – flux de données sur Cloud</p>
+<p class="cv-paragraph">Service WCF en promise</p>
+<p class="cv-paragraph">Modélisation de base de données sur cloud</p>
+<p class="cv-paragraph">Infrastructure Data Lake Cloud</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Outils : Visual Studio 2019, Azure Devops , Azure Cloud Infrastructure</p>
+<p class="cv-paragraph">Technologies :  C#, Oracle, PowerShell as Bach</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">SOCIETE GENERALE                                                                                                        BANQUE</p>
+<p class="cv-paragraph">Décembre 2018 à Mai 2021</p>
+<p class="cv-paragraph">Architecte / Ingénieur étude et développement</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Contexte :</p>
+<p class="cv-paragraph">Analyse et définition de la nouvelle architecture des nouveaux composants</p>
+<p class="cv-paragraph">Intégration des nouveaux outils pour le provisionning</p>
+<p class="cv-paragraph">Définition des Workflow</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Projets:</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Provisioning:</p>
+<p class="cv-paragraph">Mise à jour des composant API Web API avec le fournisseur d’autorisation</p>
+<p class="cv-paragraph">Préparation d’infrastructure pour les nouveaux logiciels</p>
+<p class="cv-paragraph">Adaptation sur le  SSO des nouveau outils</p>
+<p class="cv-paragraph">Développement en C++ Composant système seamless Citrix</p>
+<p class="cv-paragraph">Développement des API C# des composant applicatif</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Modélisation   and flux :</p>
+<p class="cv-paragraph">Reverse engineering</p>
+<p class="cv-paragraph">Relais technique</p>
+<p class="cv-paragraph">Document d’architecture</p>
+<p class="cv-paragraph">Pré requis non fonctionnelle</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Solution and intégration</p>
+<p class="cv-paragraph">Etude</p>
+<p class="cv-paragraph">Cinématique</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Outils : Visual Studio 2015-2017-2019, Azure DevOps, Azure</p>
+<p class="cv-paragraph">Technologies :  C++, C#, .net core ,Java, PowerShell as Bach</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">GENERALI - EA HOLDING                                                                                                                                                               ASSURANCES</p>
+<p class="cv-paragraph">Mars 2017 à Décembre 2018</p>
+<p class="cv-paragraph">Architecte / Ingénieur étude et développement</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Contexte :</p>
+<p class="cv-paragraph">Étude, développement .Net</p>
+<p class="cv-paragraph">Maintenances applicatives des applications de la holding</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Elaboration des solutions techniques pour répondre aux besoins techniques et fonctionnels et aux enjeux de performance</p>
+<p class="cv-paragraph">Rédaction des spécifications techniques</p>
+<p class="cv-paragraph">Réalisation des développements selon les spécifications et la solution d’implémentation définie</p>
+<p class="cv-paragraph">Réalisation des tests unitaires</p>
+<p class="cv-paragraph">Réalisation des tests d’intégration avant livraison en recette</p>
+<p class="cv-paragraph">Participation aux revues de codes d’autres développeurs</p>
+<p class="cv-paragraph">Pilotage des mises en production des projets en collaboration avec les équipes d’intégration technique et d’exploitation</p>
+<p class="cv-paragraph">Effectuer un ‘reporting’ d’avancement des tâches confiées</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Outils :</p>
+<p class="cv-paragraph">Visual Studio 2015, TFS 2013</p>
+<p class="cv-paragraph">Technologies :</p>
+<p class="cv-paragraph">C#, C++, Razor, ASP.NET MVC .Net, WCF, JQuery, AngularJS</p>
+<p class="cv-paragraph">Méthodologie &amp; Conception :</p>
+<p class="cv-paragraph">XP</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">AXA                                                                                                                                                                                                        ASSURANCES</p>
+<p class="cv-paragraph">Mars 2016 à Mars 2017</p>
+<p class="cv-paragraph">Architecte</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Contexte :</p>
+<p class="cv-paragraph">Définition des modèles IARD, and integration des webapi et webservices</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">o Elaboration des flux donnés</p>
+<p class="cv-paragraph">o Elaboration des documents DAT , dossier architecture techniques</p>
+<p class="cv-paragraph">o Participation de l’intégration logiciel</p>
+<p class="cv-paragraph">o Intégration continue ,devops</p>
+<p class="cv-paragraph">o Management d&#x27;une équipe de 5 personnes</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Outils:</p>
+<p class="cv-paragraph">Visual Studio 2015, TFS 2013</p>
+<p class="cv-paragraph">Technologies:</p>
+<p class="cv-paragraph">ASP.Net MVC5, C# 5 / 6, JQuery, SignalR, WebAPI , Azure</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">SOCIETE GENERALE CORPORATE AND INVESTMENT BANKING                                                                                                BFI</p>
+<p class="cv-paragraph">Septembre 2014 à Mars 2016</p>
+<p class="cv-paragraph">Ingénieur étude et développement</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Contexte :</p>
+<p class="cv-paragraph">Étude, conception et développement des applications de trading.</p>
+<p class="cv-paragraph">Maintenances applicatives</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Projet Migration et consolidation des automates de trading (PPX)</p>
+<p class="cv-paragraph">Méthodologie</p>
+<p class="cv-paragraph">TDD</p>
+<p class="cv-paragraph">Développement, Codage et Test</p>
+<p class="cv-paragraph">Codage de l’application</p>
+<p class="cv-paragraph">Implémentation les interfaces graphiques</p>
+<p class="cv-paragraph">Ecrire les tests unitaires</p>
+<p class="cv-paragraph">Projet simulateur de marché</p>
+<p class="cv-paragraph">Méthodologie</p>
+<p class="cv-paragraph">TDD / BDD</p>
+<p class="cv-paragraph">Architecture</p>
+<p class="cv-paragraph">Configuration de serveur de build</p>
+<p class="cv-paragraph">Configuration de serveur de contrôle code source</p>
+<p class="cv-paragraph">Ajout des politiques de qualité de code « stylecop »</p>
+<p class="cv-paragraph">Choix des librairies et des outils</p>
+<p class="cv-paragraph">Conception</p>
+<p class="cv-paragraph">Définir les composants applicatifs</p>
+<p class="cv-paragraph">Conception du moteur de calcul</p>
+<p class="cv-paragraph">Conception des services utilisés</p>
+<p class="cv-paragraph">Définir les « EndPoint » des services</p>
+<p class="cv-paragraph">Conception de la couche communication</p>
+<p class="cv-paragraph">TAP (modèle asynchrone basé sur les tâches)</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Développement, Codage et Test</p>
+<p class="cv-paragraph">Codage de l’application</p>
+<p class="cv-paragraph">Ecrire les tests unitaires</p>
+<p class="cv-paragraph">Revue de code</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Outils :</p>
+<p class="cv-paragraph">Visual Studio 2010 / 2013, CVS, Fiddler, SVN, TeamCity , PL-SQL Oracle, Jenkins , Eclipse</p>
+<p class="cv-paragraph">Technologies :</p>
+<p class="cv-paragraph">C#, WPF, WinForm, , ASP , Razor, MVC , Socket, Ultra-Messaging, FIX protocol , Fidessa (OMS)</p>
+<p class="cv-paragraph">Méthodologie &amp; Conception :</p>
+<p class="cv-paragraph">XP</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">INVIVO                                                                                                                                                                                COOPÉRATIF AGRICOLE</p>
+<p class="cv-paragraph">Février 2011 à Septembre 2014– 3 ans</p>
+<p class="cv-paragraph">Ingénieur étude et développement C# / Responsable technique - Division Agro-Solutions</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Contexte :</p>
+<p class="cv-paragraph">Développement d’un ensemble d’applications destiné aux coopératives.</p>
+<p class="cv-paragraph">Projets réalisés :</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Trois projets client lourd WPF</p>
+<p class="cv-paragraph">Développement de trois modules dans un pro logiciel de conseil et optimisation agronome.</p>
+<p class="cv-paragraph">Communication client – compréhension du besoin</p>
+<p class="cv-paragraph">Conception et réalisation des Proof of concept</p>
+<p class="cv-paragraph">Conception de la base donnée</p>
+<p class="cv-paragraph">Réalisation des maquettes d’interfaces graphiques avec l’outil Balsamiq Mockup</p>
+<p class="cv-paragraph">Rédaction des spécifications techniques : diagrammes des classes, des cas d’utilisations...</p>
+<p class="cv-paragraph">Développement, Codage et test</p>
+<p class="cv-paragraph">Réalisation des interfaces graphiques</p>
+<p class="cv-paragraph">Implémentation des procédures stockées</p>
+<p class="cv-paragraph">Implémentation du logique métier</p>
+<p class="cv-paragraph">Implémentation des tests unitaires via la plateforme NUnit , Mock</p>
+<p class="cv-paragraph">Relais technique</p>
+<p class="cv-paragraph">Cerner les limitations techniques de l’architecture</p>
+<p class="cv-paragraph">Contribuer à l’ajout des fonctionnalités à la Framework</p>
+<p class="cv-paragraph">Participer au chiffrage des projets</p>
+<p class="cv-paragraph">Pilotage des développeurs</p>
+<p class="cv-paragraph">Assurer la montée en compétences</p>
+<p class="cv-paragraph">Contrôler la qualité du code</p>
+<p class="cv-paragraph">Outils :</p>
+<p class="cv-paragraph">Team Foundation Server 2008, Visual Studio 2008 / Visual Studio 2010 / 2012,</p>
+<p class="cv-paragraph">Microsoft Expression Blend</p>
+<p class="cv-paragraph">Technologies :</p>
+<p class="cv-paragraph">WPF 3.0 / 4.0, MVVM, PRISM, Entity Framework, SQL Server 2008 Express</p>
+<p class="cv-paragraph">Méthodologie &amp; Conception :</p>
+<p class="cv-paragraph">Scrum, UML, Merise</p>
+<p class="cv-paragraph">Résultat</p>
+<p class="cv-paragraph">Les modules en cours d’utilisation sur le portail des techniciens</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Projet WCF - REST</p>
+<p class="cv-paragraph">Conception et développement d’un moteur de calcul pour prévoir des maladies au cours d’un cycle agricole.</p>
+<p class="cv-paragraph">Développement d’un WebService pour être consommé d’un logiciel développé par l’équipe R&amp;D</p>
+<p class="cv-paragraph">Rétro ingénierie</p>
+<p class="cv-paragraph">Analyser le code de l’ancienne application développé en Pascal</p>
+<p class="cv-paragraph">Reproduire l’application en utilisant Delphi</p>
+<p class="cv-paragraph">Valider les entrées / sorties de l’application avec le logiciel existant</p>
+<p class="cv-paragraph">Etude de la volémie des données échangées par le Web Service</p>
+<p class="cv-paragraph">Conception</p>
+<p class="cv-paragraph">Conception de la base de données</p>
+<p class="cv-paragraph">Conception des objets métiers</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Spécifier les entrées sorties des verbes http dans le cadre de l’architecture REST</p>
+<p class="cv-paragraph">Rédaction des documents techniques</p>
+<p class="cv-paragraph">Implémentation</p>
+<p class="cv-paragraph">Implémentation des procédures stockées</p>
+<p class="cv-paragraph">Réalisation des interfaces graphiques</p>
+<p class="cv-paragraph">Implémentation du logique métier</p>
+<p class="cv-paragraph">Test Validation</p>
+<p class="cv-paragraph">Intégration</p>
+<p class="cv-paragraph">Paramétrages du serveur IIS et WCF, pour la compatibilité avec le nouveau logiciel</p>
+<p class="cv-paragraph">Test Validation</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Outils :</p>
+<p class="cv-paragraph">Team Foundation Server 2008, Visual Studio 2008 / Visual Studio 2010 / 2012, Embarcadero Delphi, Fiddler, IIS</p>
+<p class="cv-paragraph">Technologies :</p>
+<p class="cv-paragraph">WCF</p>
+<p class="cv-paragraph">Méthodologies &amp; Conception :</p>
+<p class="cv-paragraph">XP</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Deux Projets Silverlight</p>
+<p class="cv-paragraph">Développement d’un référentiel des variétés et cultures</p>
+<p class="cv-paragraph">Développement d’un référentiel des engrais</p>
+<p class="cv-paragraph">Communication client – compréhension de besoin</p>
+<p class="cv-paragraph">Architecture / Conception</p>
+<p class="cv-paragraph">Etudier les solutions techniques possibles</p>
+<p class="cv-paragraph">Réaction des spécifications techniques</p>
+<p class="cv-paragraph">Conception des bases de données</p>
+<p class="cv-paragraph">Développement logiciel – codage</p>
+<p class="cv-paragraph">Mise en place de l’architecture</p>
+<p class="cv-paragraph">Codage des classes métiers</p>
+<p class="cv-paragraph">Création des interfaces graphiques</p>
+<p class="cv-paragraph">Implémentation des procédures stockées</p>
+<p class="cv-paragraph">Outils :</p>
+<p class="cv-paragraph">Team Foundation Server 2008, Visual Studio 2008 / Visual Studio 2010, Fiddler</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Technologies :</p>
+<p class="cv-paragraph">.Net 3.5 / 4.0, Silverlight, RIA Services (WCF), MVVM comme modèle graphique, Entity Framework 4, SQL Server 2008 R2</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Projet WCF – Web MVC 3</p>
+<p class="cv-paragraph">Conception / développement d’un Service Web pour forcer la réplication SQL Server.</p>
+<p class="cv-paragraph">Site Back-Office d’administration des clients connectés sur la plateforme de réplication.</p>
+<p class="cv-paragraph">Analyse de la problématique et réalisation des POC</p>
+<p class="cv-paragraph">Etude des scénarios d’erreurs de réplication</p>
+<p class="cv-paragraph">Réalisation des Proof of Concept pour contourner les problématiques de la réplication</p>
+<p class="cv-paragraph">Conception</p>
+<p class="cv-paragraph">Rédaction des spécifications techniques</p>
+<p class="cv-paragraph">Conception du service web</p>
+<p class="cv-paragraph">Conception de la base de données</p>
+<p class="cv-paragraph">Paramétrage de serveur SQL</p>
+<p class="cv-paragraph">Validation de la conception par les DBA</p>
+<p class="cv-paragraph">Développement</p>
+<p class="cv-paragraph">Implémenter les procédures stockées</p>
+<p class="cv-paragraph">Implémentation du service Web</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Test /Intégration</p>
+<p class="cv-paragraph">Validation sur l’environnement de qualification</p>
+<p class="cv-paragraph">Injection de l’application cliente au démarrage de l’application</p>
+<p class="cv-paragraph">Outils :</p>
+<p class="cv-paragraph">Team Foundation Server 2008, Visual Studio 2008 / Visual Studio 2010 / 2012, Fiddler</p>
+<p class="cv-paragraph">Technologies:</p>
+<p class="cv-paragraph">WCF, MVC3, JQuery, SQL Server 2008 R2 Express / Enterprise, Team Foundation Server 2008</p>
+<p class="cv-paragraph">Méthodologies &amp; Conception :</p>
+<p class="cv-paragraph">XP, UML, Merise</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">@Autres Projets</p>
+<p class="cv-paragraph">Maintenance des anciennes applications en WPF</p>
+<p class="cv-paragraph">Déploiement SharePoint 2010 / MOSS (pour centraliser les documents techniques)</p>
+<p class="cv-paragraph">Team Foundation Server (déploiement et gestion projet)</p>
+<p class="cv-paragraph">Virtualisation – Hyper V (plateforme de qualification des applications)</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">ORANGE BUSINESS SERVICES                                                                                                                           TELECOMMUNICATION</p>
+<p class="cv-paragraph">Février 2009 à Février 2011 – 2 ans</p>
+<p class="cv-paragraph">Ingénieur étude et développement .Net - Equipe R&amp;D</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Contexte :</p>
+<p class="cv-paragraph">Développement des applications destinées aux administrateurs et ingénieurs systèmes pour le pilotage et la réalisation des migrations des systèmes de messagerie.</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Projets réalisés :</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Projet « Système de pilotage des migrations »</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Pour piloter les migrations des systèmes de messagerie ; des applications clientes installées sur les machines communiquent avec un portail Web et lancent les actions adéquates en arrière-plan pour assurer une migration transparente de Lotus vers Outlook.</p>
+<p class="cv-paragraph">Le projet consiste à créer un portail Web afin de superviser le processus de la migration.</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Analyse de besoin</p>
+<p class="cv-paragraph">Conception et architecture des composants logiciels</p>
+<p class="cv-paragraph">Conception des bases de données</p>
+<p class="cv-paragraph">Réalisation des diagrammes des composants</p>
+<p class="cv-paragraph">Rédaction des spécifications techniques</p>
+<p class="cv-paragraph">Développement du portail Web</p>
+<p class="cv-paragraph">Création des services web</p>
+<p class="cv-paragraph">Développement des connecteurs Active Directory</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Outils :</p>
+<p class="cv-paragraph">Visual Studio 2008 / Visual Studio 2010 , Fiddler</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Technologies: ASP.NET (MVC2), JQuery, WCF (callbacks...), services windows, GPO AD</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Projet « Client Wizard for Lotus Notes »</p>
+<p class="cv-paragraph">Développement   « Client Wizard for Outlook » :</p>
+<p class="cv-paragraph">Mise à jour d&#x27;un outil de Conversion de données pour les projets de Migration, cet outil permet de convertir les données d&#x27;Outlook vers une base Lotus Notes</p>
+<p class="cv-paragraph">Analyse de besoins</p>
+<p class="cv-paragraph">Conception</p>
+<p class="cv-paragraph">Conception des interfaces utilisateurs</p>
+<p class="cv-paragraph">Conception des modèles objets</p>
+<p class="cv-paragraph">Rédaction des spécifications techniques</p>
+<p class="cv-paragraph">Développement</p>
+<p class="cv-paragraph">Technologies : VB.NET / WinForm / composants COM</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Projet « WaveBox »</p>
+<p class="cv-paragraph">Développement « WaveBox » :</p>
+<p class="cv-paragraph">Un outil centralisé qui permet l&#x27;automatisation du processus de migration.</p>
+<p class="cv-paragraph">Maintenance de l’application</p>
+<p class="cv-paragraph">Ajout des fonctionnalités</p>
+<p class="cv-paragraph">Technologie : Lotus Script / composants COM</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Projet : créations des scripts</p>
+<p class="cv-paragraph">Scripting pour automatiser une migration.</p>
+<p class="cv-paragraph">Technologies: AD, GPO, MS Exchange, PowerShell, VBscript</p>
+          </div>
         </section>
-</section>
+
+        <section class="cv-lang-section lang-ar-section" aria-label="السيرة الذاتية (نسخة عربية)">
+          <h3 data-i18n="fullcv.arTitle">السيرة الذاتية (EN)</h3>
+          <div class="cv-text">
+<p class="cv-paragraph">Mouadh JABER</p>
+<p class="cv-paragraph">Software Engineer</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tel: +216 58 201 430                                                             Mail: mouadh.jaber@msn.com</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Skills:</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Software Development:</p>
+<p class="cv-paragraph">Architecture:  Distributed, Composite, and Real-time applications, layer models, Micro-Services, Mesh architecture, monolithic architecture</p>
+<p class="cv-paragraph">Methodologies:  XP, Scrum, SAFe, TDD, BDD</p>
+<p class="cv-paragraph">Process:  ITIL, DevOps; DevSecOps</p>
+<p class="cv-paragraph">Modeling:  UML V2, Merise</p>
+<p class="cv-paragraph">Communication:  Web, pipe, socket, messaging system, SAO, JSON, messaging</p>
+<p class="cv-paragraph">Design Patterns:  Repository, UnitOfWork, IoC, DI, Facade, Proxy, MVVM, MVC, DDD …</p>
+<p class="cv-paragraph">Languages / Technologies:</p>
+<p class="cv-paragraph">Microsoft: .Net C#, VB.Net, ASP.Net, WCF, WebAPI, ADO.NET, Linq, Linq SQL, Entity Framework, NHibernate, UnitTest, SpecFlow, Sonar , .net Core , Blazor , Rest API,Kafka , Docker</p>
+<p class="cv-paragraph">Other languages: C, C++, Python</p>
+<p class="cv-paragraph">IBM Lotus Notes Technology: Lotus Script, XPage</p>
+<p class="cv-paragraph">Scripting:</p>
+<p class="cv-paragraph">VB Script, PowerShell, Lotus Script, Java Script, JQuery, AngularJS</p>
+<p class="cv-paragraph">Information System:</p>
+<p class="cv-paragraph">Microsoft Solutions:</p>
+<p class="cv-paragraph">Active Directory Windows 2003 / 2008 /2012</p>
+<p class="cv-paragraph">Microsoft SQL Server 2008/ 2014</p>
+<p class="cv-paragraph">MS SharePoint / MOSS</p>
+<p class="cv-paragraph">Windows Azure Services Bus</p>
+<p class="cv-paragraph">IBM Solutions:</p>
+<p class="cv-paragraph">Lotus Notes / Domino, Sametime</p>
+<p class="cv-paragraph">Messaging – Unified messaging:</p>
+<p class="cv-paragraph">Migration of messaging platform (Transition &amp; Migration &amp; consolidation)</p>
+<p class="cv-paragraph">Workflow, Collaboration, SOA, SaaS</p>
+<p class="cv-paragraph">Interconnection &amp; Unification des services</p>
+<p class="cv-paragraph">MS Exchange (5.5 /2003/2007)</p>
+<p class="cv-paragraph">Office Communication Server</p>
+<p class="cv-paragraph">IBM Domino, Sametime, BPOS – Office 365, MS Online</p>
+<p class="cv-paragraph">Tools</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Visual Studio 2008 /2010 / 2012 /2013 / 2015 / 2017 / 2022, CVS, SNV, TeamCity</p>
+<p class="cv-paragraph">Team Foundation Server / Microsoft Test Manager</p>
+<p class="cv-paragraph">Eclipse, JBuilder</p>
+<p class="cv-paragraph">Microsoft Office products</p>
+<p class="cv-paragraph">Projects management software: MS Project &amp; MS Project Server</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Langue</p>
+<p class="cv-paragraph">French, English</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">PROFESSIONAL EXPERIENCE (MOST RECENT FIRST)</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">ASTERA                                                                              PHARMACEUTICAL SUPPLY</p>
+<p class="cv-paragraph">May 2023 to Now</p>
+<p class="cv-paragraph">Senior Software Engineer                                                                                       France-Rouen</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Context:</p>
+<p class="cv-paragraph">Implement IdentityService with 2Factor authentification and QRCode SMS</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Pharmaceutical industry Modernize the Workflow</p>
+<p class="cv-paragraph">authentication System and of the company and provide IT resources, after COVID Crisis Implement IdentityServer for the set of the application and involving the DevOps process</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Microsoft Azure ,Migration DevOpsTools: Visual Studio 2019 – 2022, C# , Gulp , JavaScript , Bootstrap, Azure Components, DevSecops</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">ZIWO                                                                                           CALL-CENTER SYSTEM</p>
+<p class="cv-paragraph">Mars 2023 to May 2023</p>
+<p class="cv-paragraph">Senior Software Engineer &amp; Architect                                                                       UAE-Dubai</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Context:</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Software Architecture and Design of Microservice Components</p>
+<p class="cv-paragraph">- Dockers</p>
+<p class="cv-paragraph">- Protobuff</p>
+<p class="cv-paragraph">- Microservice</p>
+<p class="cv-paragraph">-Kafka</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio 2019 - 2022, Azure Components, DevSecops</p>
+<p class="cv-paragraph">Technologies:  C#, Oracle, PowerShell as Bach</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">CANDRIAM                                        MULTI-SPECIALIST ASSET MANAGEMENT FIRM</p>
+<p class="cv-paragraph">May 2021 to October 2022</p>
+<p class="cv-paragraph">Senior Software Engineer &amp; Architect                                                                       France-Paris</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Context:</p>
+<p class="cv-paragraph">Integrate the new flow of data from Belfius (Brussel) Data source, mapping many data sources. refactoring and defining the micro-service architecture with Bus.</p>
+<p class="cv-paragraph">Design the new Flow and business interaction with Microsoft service.</p>
+<p class="cv-paragraph">Working with many processes ITIL DevOps etc.</p>
+<p class="cv-paragraph">Projects: Technical Solution and Software Development</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Batch development SSIS</p>
+<p class="cv-paragraph">Web Services – Micro-Service</p>
+<p class="cv-paragraph">Azure infrastructure</p>
+<p class="cv-paragraph">WCF service</p>
+<p class="cv-paragraph">Database modeling</p>
+<p class="cv-paragraph">Web API</p>
+<p class="cv-paragraph">DevOps</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio 2019 - 2022, Azure Components, DevSecops</p>
+<p class="cv-paragraph">Technologies:  C#, Oracle, PowerShell as Bach</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">SOCIETE GENERALE                                                                                           BANKING</p>
+<p class="cv-paragraph">December 2018 to May 2021</p>
+<p class="cv-paragraph">Senior Engineer &amp; Architect                                                                                         France-Paris</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Context:</p>
+<p class="cv-paragraph">Analyzing, Design, and Definition new architecture of software components</p>
+<p class="cv-paragraph">Updating connectors and integrating new tools and software</p>
+<p class="cv-paragraph">Provisioning Microsoft software</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Projects:</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Provisioning:</p>
+<p class="cv-paragraph">Updating components</p>
+<p class="cv-paragraph">Preparation of infrastructure for new software</p>
+<p class="cv-paragraph">Preparation of the SSO (Single Sign On) of the new tools and software</p>
+<p class="cv-paragraph">Preparing Application Middleware and servers</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Modeling and flow:</p>
+<p class="cv-paragraph">Reverse engineering</p>
+<p class="cv-paragraph">Technical relay; contribute and discuss new solutions</p>
+<p class="cv-paragraph">Design services</p>
+<p class="cv-paragraph">Architecture documents</p>
+<p class="cv-paragraph">Defining the main nonfunctional requirement</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Solution and integration</p>
+<p class="cv-paragraph">Study the technical requirement of software integration from another team</p>
+<p class="cv-paragraph">Relay with administrator and technical engineers</p>
+<p class="cv-paragraph">Kinematic</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio 2015, TFS  2013</p>
+<p class="cv-paragraph">Technologies:  C++, C#  , Java , PowerShell as Bach</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">GENERALI - EA HOLDING INSURANCE</p>
+<p class="cv-paragraph">June 2017 to December 2018</p>
+<p class="cv-paragraph">Senior Software Engineer                                                                                             France-Paris</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Context:</p>
+<p class="cv-paragraph">Engineering and Development of software</p>
+<p class="cv-paragraph">Maintaining a set of applications for the clients and affiliates of the holding</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Elaboration of technical solutions for functional / scalability requirements</p>
+<p class="cv-paragraph">Write technical specification</p>
+<p class="cv-paragraph">Development of the solution</p>
+<p class="cv-paragraph">Write unit tests</p>
+<p class="cv-paragraph">Participate in code review of other developers</p>
+<p class="cv-paragraph">Control the release of the project with technical / integration teams</p>
+<p class="cv-paragraph">Task reporting</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio 2015, TFS  2013</p>
+<p class="cv-paragraph">Technologies:  ASP.Net MVC5, C# 5 / 6, JQuery, SignalR, WebAPI, Azure</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">AXA                                                                                                                                                 INSURANCES</p>
+<p class="cv-paragraph">March 2016 to March 2017</p>
+<p class="cv-paragraph">Consultant Architect                                                                                                      France-Paris</p>
+<p class="cv-paragraph">Context:</p>
+<p class="cv-paragraph">Definition of the model of IARD, and integration of sales software</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Elaboration of technical solutions</p>
+<p class="cv-paragraph">Write technical specification DAT</p>
+<p class="cv-paragraph">Participate in the integration of new software</p>
+<p class="cv-paragraph">Control the release of the project with technical / integration teams</p>
+<p class="cv-paragraph">Lead a team f 5 people around many projects</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio 2015, TFS  2013</p>
+<p class="cv-paragraph">Technologies:  ASP.Net MVC5, C# 5 / 6, JQuery, SignalR, WebAPI, Azure</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">SOCIETE GENERALE INVESTMENT BANKING                                                               BANKING</p>
+<p class="cv-paragraph">September 2014 to March 2016</p>
+<p class="cv-paragraph">Senior Engineer                                                                                                                France-Paris</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Context:</p>
+<p class="cv-paragraph">Analyzing, designing, Conception &amp; develop a trading application (multithreaded environment).</p>
+<p class="cv-paragraph">Maintaining production, configuring servers, and users support.</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Projects:</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Maintaining: automaton for trading system</p>
+<p class="cv-paragraph">Maintaining Production environment - deliveries</p>
+<p class="cv-paragraph">Code review</p>
+<p class="cv-paragraph">Adding new features.</p>
+<p class="cv-paragraph">Bugs fixes</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Migration to the new automaton:</p>
+<p class="cv-paragraph">Reverse engineering</p>
+<p class="cv-paragraph">Add feed connectors to get market data</p>
+<p class="cv-paragraph">Parsing and warping to object from/to socket layer</p>
+<p class="cv-paragraph">Technical relay; contribute and discuss new solutions</p>
+<p class="cv-paragraph">Design services</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio 2010 - 2013, CVS, Fiddler, SVN, TeamCity</p>
+<p class="cv-paragraph">Technologies: MVC5, C# 5, JQuery, SignalR, Ultra messaging, FIX Protocol, Fidessa (OMS)</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">INVIVO                                                                               AGRICULTURE COOPERATIVE</p>
+<p class="cv-paragraph">February 2011 to September 2014</p>
+<p class="cv-paragraph">Senior Consultant .Net Consultant - Agro-Solutions Division                                  France-Paris</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Context: Development of a set of applications designed for cooperatives.</p>
+<p class="cv-paragraph">WPF Projects: Development of tree modules in the PRISM application.</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Client Communication– understanding of the need</p>
+<p class="cv-paragraph">Design and realizing of Proof of concept</p>
+<p class="cv-paragraph">Database design (schema, procedures)</p>
+<p class="cv-paragraph">Realizing mock-up UI with Balsamiq-Mockup</p>
+<p class="cv-paragraph">Drafting of technical specifications – use cases, class diagram ...</p>
+<p class="cv-paragraph">Development, Coding, and Testing</p>
+<p class="cv-paragraph">Realization of graphical interfaces</p>
+<p class="cv-paragraph">Implementation of stored procedures</p>
+<p class="cv-paragraph">Implementation of business logic</p>
+<p class="cv-paragraph">Implementation of unit tests via NUnit, Mock</p>
+<p class="cv-paragraph">Technical Relay</p>
+<p class="cv-paragraph">Identify the technical limitations of the architecture</p>
+<p class="cv-paragraph">Contribute to the addition of features to the Framework</p>
+<p class="cv-paragraph">Participate in the estimation of the projects</p>
+<p class="cv-paragraph">Steering</p>
+<p class="cv-paragraph">Ensure the rise of development skills</p>
+<p class="cv-paragraph">Control the quality of the code</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio 2008 / 2010, TFS, Microsoft Blend, Telerik</p>
+<p class="cv-paragraph">Technologies: C# 3.0 / 4.0, WPF, MVVM, PRISM, Entity Framework, SQL Server 2008 R2 / Express</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">WCF - REST   Project:  Design and development of a calculation engine to predict disease in an agricultural cycle.</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Reverse engineering</p>
+<p class="cv-paragraph">Analyze the code of the previous application developed in Pascal</p>
+<p class="cv-paragraph">Reproduce the application using Delphi</p>
+<p class="cv-paragraph">Validate the inputs/outputs of the application with the existing software</p>
+<p class="cv-paragraph">Study of the volume of data exchanged by the Web Service</p>
+<p class="cv-paragraph">Conception</p>
+<p class="cv-paragraph">Database design</p>
+<p class="cv-paragraph">Design of business objects</p>
+<p class="cv-paragraph">Specify the inputs of the HTTP verbs in the REST architecture</p>
+<p class="cv-paragraph">Drafting the technical documents</p>
+<p class="cv-paragraph">Implementation</p>
+<p class="cv-paragraph">Implementation of stored procedures</p>
+<p class="cv-paragraph">Realization of graphical interfaces</p>
+<p class="cv-paragraph">Implementation of business logic</p>
+<p class="cv-paragraph">Validation tests</p>
+<p class="cv-paragraph">Integration</p>
+<p class="cv-paragraph">Settings of the IIS and WCF, for compatibility with the new software</p>
+<p class="cv-paragraph">Validation tests</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Team Foundation Server 2008, Visual Studio 2010, Embarcadero Delphi, Fiddler, IIS</p>
+<p class="cv-paragraph">Technologies: C#, WCF, Pascal</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Silverlight Projects: Design and development of a repository of crops and varieties and a repository of fertilizers</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Customer communication - understanding the need</p>
+<p class="cv-paragraph">Architecture / Conception</p>
+<p class="cv-paragraph">Study possible technical solutions</p>
+<p class="cv-paragraph">The reaction of technical specifications</p>
+<p class="cv-paragraph">Design of databases (schema, stored procedures)</p>
+<p class="cv-paragraph">Development– coding</p>
+<p class="cv-paragraph">Implementation of the architecture</p>
+<p class="cv-paragraph">Coding of the crafts classes</p>
+<p class="cv-paragraph">Creation of graphical interfaces</p>
+<p class="cv-paragraph">Implementation of stored procedures</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: SQL Server 2008 R2, Team Foundation Server 2008, Visual Studio 2008 / Visual Studio 2010, Fiddler</p>
+<p class="cv-paragraph">Technologies: C# .Net 3.5 / 4.0, Silverlight, RIA Services (WCF), MVVM, Entity Framework 4,</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">WCF – Web MVC 3 Projects: Design and development of a Web Service to force SQL Server replication.</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Analysis of the issue and realization of the POC</p>
+<p class="cv-paragraph">Study of scenarios of replication errors</p>
+<p class="cv-paragraph">Realizing the Proof of Concept to work around the replication issues</p>
+<p class="cv-paragraph">Conception</p>
+<p class="cv-paragraph">Writing technical specifications</p>
+<p class="cv-paragraph">Web service design</p>
+<p class="cv-paragraph">Design of database</p>
+<p class="cv-paragraph">SQL Server Setup</p>
+<p class="cv-paragraph">Validation of the design by the DBA</p>
+<p class="cv-paragraph">Development</p>
+<p class="cv-paragraph">Implementing stored procedures</p>
+<p class="cv-paragraph">Implementation of the Web service</p>
+<p class="cv-paragraph">Test /Integration</p>
+<p class="cv-paragraph">Validation</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Tools: Visual Studio 2010, SQL Server 2008 R2 Express / Enterprise, Team Foundation Server 2008</p>
+<p class="cv-paragraph">Technologies : C#.NET, WCF, MVC3, JQuery</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Others Projects</p>
+<p class="cv-paragraph">Maintenance of older applications in WPF</p>
+<p class="cv-paragraph">SharePoint 2010 deployment / MOSS (to centralize technical documents)</p>
+<p class="cv-paragraph">Team Foundation Server (deployment and project management)</p>
+<p class="cv-paragraph">Virtualization - Hyper V (qualification of applications platform)</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">ORANGE BUSINESS SERVICES                                      TELECOMMUNICATION</p>
+<p class="cv-paragraph">February 2009 to February 2011 – 2 years</p>
+<p class="cv-paragraph">Software developer - R&amp;D Team                                                                               France-Paris</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Project:  Development of applications for administrators and system engineers for piloting and implementation of messaging systems migration.</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Needs analysis</p>
+<p class="cv-paragraph">Design and architecture of software components</p>
+<p class="cv-paragraph">Design of database</p>
+<p class="cv-paragraph">Realization of the digraphs of components</p>
+<p class="cv-paragraph">Writing technical specifications</p>
+<p class="cv-paragraph">Development of the Web portal</p>
+<p class="cv-paragraph">Creation of web services</p>
+<p class="cv-paragraph">Development of Active Directory connectors</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Technologies: ASP.NET (MVC2), JQuery, WCF (callbacks...), services windows, GPO AD</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Project « ClientWizard for Lotus Notes » Update a tool for the Conversion of data for Migration projects, this tool allows converting data from Outlook to a Lotus Notes database.</p>
+<p class="cv-paragraph">Needs analysis</p>
+<p class="cv-paragraph">Conception</p>
+<p class="cv-paragraph">Design of user interfaces</p>
+<p class="cv-paragraph">Design of object models</p>
+<p class="cv-paragraph">Writing technical specifications</p>
+<p class="cv-paragraph">Development</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Technologies: VB.NET / WinForm / COM components</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Project « WaveBox » a centralized tool that allows the automation of the migration process.</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Maintenance of the application</p>
+<p class="cv-paragraph">Adding features</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Technologies: Lotus Script / COM components</p>
+<p class="cv-empty-line">&nbsp;</p>
+<p class="cv-paragraph">Project: creations of scripts</p>
+<p class="cv-paragraph">Scripting to automate the migration.</p>
+<p class="cv-paragraph">Technologies: AD, GPO, MS Exchange, PowerShell, VBscript</p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-contact">
+      <div class="container contact-grid">
+        <div>
+          <h2 data-i18n="contact.title">Contact</h2>
+          <p data-i18n="contact.text">
+            For opportunities, collaborations, or consulting missions, feel free to reach out by email, phone, or LinkedIn.
+          </p>
+        </div>
+        <div class="contact-list-wrapper">
+          <ul class="key-list">
+            <li><span data-i18n="contact.phoneLabel">Phone:</span> <a href="tel:+21658201430">+216 58 201 430</a></li>
+            <li><span data-i18n="contact.emailLabel">Email:</span> <a href="mailto:mouadh.jaber@msn.com">mouadh.jaber@msn.com</a></li>
+            <li><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/mouadhjaber/" target="_blank" rel="noopener">linkedin.com/in/mouadhjaber</a></li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
@@ -1487,6 +1747,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© 2026 Mouadh JABER</p>
+      <p data-i18n="footer.built">Built as a static, SEO-friendly portfolio from the original CV documents.</p>
     </div>
   </footer>
 

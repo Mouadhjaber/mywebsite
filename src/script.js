@@ -1,139 +1,136 @@
-const translations = {
-  en: {
-    "brand.role": "Senior Software Engineer & Architect",
-    "brand.tagline": "Designing and building distributed, messaging and cloud-based systems across banking, insurance, telecom, transport and more.",
-    "nav.about": "About",
-    "nav.experience": "Experience",
-    "nav.cv": "Full CV",
-    "nav.contact": "Contact",
-    "hero.title": "Senior Software Engineer & Architect",
-    "hero.subtitle": "Experienced in designing and delivering complex software systems: distributed back-ends, messaging platforms, APIs, cloud-native services and enterprise integrations.",
-    "hero.ctaExperience": "View experience timeline",
-    "hero.ctaCv": "Jump to full CV",
-    "contact.title": "Contact",
-    "contact.phoneTn": "Phone",
-    "card.skillsTitle": "Skills & Technologies",
-    "card.skillsText": "Deep experience with Microsoft .NET, messaging systems, APIs, integration, cloud, enterprise architectures and software craftsmanship.",
-    "card.experienceTitle": "Domains & Industries",
-    "card.experienceText": "Projects across banking, insurance, asset management, telecom, agriculture, transport, call-center systems and pharmaceutical supply chains.",
-    "card.languagesTitle": "Languages",
-    "card.languagesText": "English and French CV content, with Arabic interface support. Use the language switch above to change interface language.",
-    "timeline.title": "Experience timeline",
-    "timeline.note": "High-level overview of roles and missions. Full project details are available in the CV section below.",
-    "cv.title": "Full CV",
-    "cv.intro": "The following sections contain the full CV content in English and in French. English uses the English CV file and translated experience blocks; French uses the original French CV plus the detailed missions.",
-    "cv.enTitle": "English CV",
-    "cv.enMainTitle": "Complete English CV",
-    "cv.enRecentTitle": "Recent missions",
-    "cv.frTitle": "French CV",
-    "cv.frMainTitle": "Complete French CV",
-    "cv.frRecentTitle": "Recent missions (FR)"
-  },
-  fr: {
-    "brand.role": "Ingénieur logiciel senior & architecte",
-    "brand.tagline": "Conception et réalisation de systèmes distribués, de plateformes de messagerie et de solutions orientées cloud dans la banque, l’assurance, les télécoms, le transport et plus encore.",
-    "nav.about": "À propos",
-    "nav.experience": "Expérience",
-    "nav.cv": "CV complet",
-    "nav.contact": "Contact",
-    "hero.title": "Ingénieur logiciel senior & architecte",
-    "hero.subtitle": "Expérience dans la conception et la livraison de systèmes logiciels complexes : back-ends distribués, plateformes de messagerie, API, services cloud-native et intégrations d’entreprise.",
-    "hero.ctaExperience": "Voir la frise d’expérience",
-    "hero.ctaCv": "Aller au CV complet",
-    "contact.title": "Contact",
-    "contact.phoneTn": "Téléphone",
-    "card.skillsTitle": "Compétences & technologies",
-    "card.skillsText": "Forte expérience sur Microsoft .NET, systèmes de messagerie, API, intégration, cloud, architectures d’entreprise et qualité logicielle.",
-    "card.experienceTitle": "Secteurs & domaines",
-    "card.experienceText": "Projets dans la banque, l’assurance, la gestion d’actifs, les télécoms, l’agriculture, le transport, les centres d’appels et la chaîne d’approvisionnement pharmaceutique.",
-    "card.languagesTitle": "Langues",
-    "card.languagesText": "Contenu du CV en anglais et en français, avec interface en arabe. Utilisez le sélecteur de langue ci-dessus pour changer la langue de l’interface.",
-    "timeline.title": "Frise chronologique d’expérience",
-    "timeline.note": "Vue synthétique des postes et missions. Les détails complets des projets se trouvent dans la section CV ci-dessous.",
-    "cv.title": "CV complet",
-    "cv.intro": "Les sections suivantes contiennent le texte intégral du CV en anglais et en français. La version anglaise utilise le fichier CV anglais et des blocs d’expérience traduits ; la version française utilise le CV original en français et les missions détaillées.",
-    "cv.enTitle": "CV anglais",
-    "cv.enMainTitle": "CV anglais complet",
-    "cv.enRecentTitle": "Missions récentes (version EN)",
-    "cv.frTitle": "CV français",
-    "cv.frMainTitle": "CV complet (version française)",
-    "cv.frRecentTitle": "Missions récentes"
-  },
-  ar: {
-    "brand.role": "مهندس برمجيات أول ومهندس حلول",
-    "brand.tagline": "تصميم وتطوير أنظمة موزعة، ومنصات مراسلة، وخدمات سحابية في مجالات البنوك، التأمين، الاتصالات، النقل وغيرها.",
-    "nav.about": "نبذة",
-    "nav.experience": "الخبرة",
-    "nav.cv": "السيرة الذاتية الكاملة",
-    "nav.contact": "التواصل",
-    "hero.title": "مهندس برمجيات أول ومهندس حلول",
-    "hero.subtitle": "خبرة في تصميم وتسليم أنظمة برمجية معقدة: back-ends موزعة، منصات مراسلة، واجهات برمجة تطبيقات، خدمات سحابية وتكاملات على مستوى المؤسسات.",
-    "hero.ctaExperience": "عرض التسلسل الزمني للخبرة",
-    "hero.ctaCv": "الانتقال إلى السيرة الذاتية الكاملة",
-    "contact.title": "التواصل",
-    "contact.phoneTn": "الهاتف",
-    "card.skillsTitle": "المهارات والتقنيات",
-    "card.skillsText": "خبرة واسعة في Microsoft .NET وأنظمة المراسلة وواجهات البرمجة والتكامل والحلول السحابية والهندسة المعمارية للمؤسسات وجودة البرمجيات.",
-    "card.experienceTitle": "القطاعات والمجالات",
-    "card.experienceText": "مشاريع في مجالات البنوك والتأمين وإدارة الأصول والاتصالات والزراعة والنقل وأنظمة مراكز الاتصال وسلاسل التوريد الدوائية.",
-    "card.languagesTitle": "اللغات",
-    "card.languagesText": "محتوى السيرة الذاتية بالإنجليزية والفرنسية مع واجهة عربية. استخدم اختيار اللغة في الأعلى لتغيير لغة الواجهة.",
-    "timeline.title": "الخط الزمني للخبرة",
-    "timeline.note": "عرض عام للوظائف والمهام. تفاصيل المشاريع الكاملة متاحة في قسم السيرة الذاتية أدناه.",
-    "cv.title": "السيرة الذاتية الكاملة",
-    "cv.intro": "تحتوي الأقسام التالية على النص الكامل للسيرة الذاتية بالإنجليزية والفرنسية. النسخة الإنجليزية تستخدم ملف السيرة الذاتية بالإنجليزية مع كتل خبرة مترجمة، والنسخة الفرنسية تستخدم السيرة الذاتية الأصلية بالفرنسية مع المهام المفصلة.",
-    "cv.enTitle": "السيرة الذاتية بالإنجليزية",
-    "cv.enMainTitle": "السيرة الذاتية الكاملة (إنجليزي)",
-    "cv.enRecentTitle": "المهام الأخيرة (نسخة EN)",
-    "cv.frTitle": "السيرة الذاتية بالفرنسية",
-    "cv.frMainTitle": "السيرة الذاتية الكاملة (فرنسي)",
-    "cv.frRecentTitle": "المهام الأخيرة"
-  }
-};
 
-function setLanguage(lang) {
-  const dict = translations[lang];
-  if (!dict) return;
-
-  document.documentElement.lang = lang === "ar" ? "ar" : lang;
-  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-
-  document.body.classList.toggle("lang-en", lang === "en");
-  document.body.classList.toggle("lang-fr", lang === "fr");
-  document.body.classList.toggle("lang-ar", lang === "ar");
-
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    if (dict[key]) {
-      el.textContent = dict[key];
+(function () {
+  const translations = {
+    en: {
+      "brand.tagline": "Senior Software Engineer & Architect",
+      "nav.summary": "Summary",
+      "nav.experience": "Experience",
+      "nav.fullcv": "Full CV",
+      "nav.contact": "Contact",
+      "hero.title": "Senior Software Engineer & Architect",
+      "hero.subtitle": "Designing and building distributed, message-driven, real-time systems across banking, insurance, telecom, asset management, pharma, agriculture, and transport.",
+      "hero.card.expertise": "Expertise",
+      "hero.card.expertiseText": ".NET, C#, distributed architectures, messaging, microservices, DevOps / DevSecOps, Azure, and high-availability back-end systems.",
+      "hero.card.domains": "Domains",
+      "hero.card.domainsText": "Banking, insurance, asset management, pharma supply, telecom, call-center systems, agriculture cooperative, and transport.",
+      "hero.card.value": "Value",
+      "hero.card.valueText": "From legacy modernization to cloud-native architectures, delivering reliable, maintainable, and secure software platforms.",
+      "sidebar.title": "Key Information",
+      "sidebar.locationLabel": "Location:",
+      "sidebar.locationValue": "France / International",
+      "sidebar.experienceLabel": "Experience:",
+      "sidebar.experienceValue": "+15 years",
+      "sidebar.phoneLabel": "Phone:",
+      "sidebar.emailLabel": "Email:",
+      "experience.title": "Professional Experience (Timeline)",
+      "experience.subtitle": "Structured timeline view built directly from the detailed French CV. Each entry preserves the original content and structure (Contexte, Tools, Technologies, etc.).",
+      "fullcv.title": "Full CV",
+      "fullcv.subtitle": "Complete CV content in English and French exactly as in the original documents.",
+      "fullcv.enTitle": "English CV",
+      "fullcv.frTitle": "French CV",
+      "fullcv.arTitle": "CV (Arabic UI, English content)",
+      "contact.title": "Contact",
+      "contact.text": "For opportunities, collaborations, or consulting missions, feel free to reach out by email, phone, or LinkedIn.",
+      "contact.phoneLabel": "Phone:",
+      "contact.emailLabel": "Email:",
+      "footer.built": "Built as a static, SEO-friendly portfolio from the original CV documents."
+    },
+    fr: {
+      "brand.tagline": "Ingénieur logiciel senior & Architecte",
+      "nav.summary": "Résumé",
+      "nav.experience": "Expérience",
+      "nav.fullcv": "CV complet",
+      "nav.contact": "Contact",
+      "hero.title": "Ingénieur logiciel senior & Architecte",
+      "hero.subtitle": "Conception et développement de systèmes distribués temps réel orientés messages dans la banque, l’assurance, les télécoms, la gestion d’actifs, la pharmacie, l’agriculture et le transport.",
+      "hero.card.expertise": "Expertise",
+      "hero.card.expertiseText": ".NET, C#, architectures distribuées, messaging, microservices, DevOps / DevSecOps, Azure et back-ends haute disponibilité.",
+      "hero.card.domains": "Secteurs",
+      "hero.card.domainsText": "Banque, assurance, gestion d’actifs, chaîne pharmaceutique, télécom, centres d’appels, coopérative agricole et transport.",
+      "hero.card.value": "Valeur",
+      "hero.card.valueText": "De la modernisation du legacy aux architectures cloud-native, en livrant des plateformes fiables, maintenables et sécurisées.",
+      "sidebar.title": "Informations clés",
+      "sidebar.locationLabel": "Localisation :",
+      "sidebar.locationValue": "France / International",
+      "sidebar.experienceLabel": "Expérience :",
+      "sidebar.experienceValue": "+15 ans",
+      "sidebar.phoneLabel": "Téléphone :",
+      "sidebar.emailLabel": "Email :",
+      "experience.title": "Expérience professionnelle (Timeline)",
+      "experience.subtitle": "Vue chronologique construite directement à partir du CV détaillé en français. Chaque entrée préserve le contenu et la structure d’origine (Contexte, Tools, Technologies, etc.).",
+      "fullcv.title": "CV complet",
+      "fullcv.subtitle": "Contenu complet du CV en anglais et en français, identique aux documents d’origine.",
+      "fullcv.enTitle": "CV anglais",
+      "fullcv.frTitle": "CV français",
+      "fullcv.arTitle": "CV (interface arabe, contenu anglais)",
+      "contact.title": "Contact",
+      "contact.text": "Pour des opportunités, collaborations ou missions de consulting, vous pouvez me contacter par email, téléphone ou via LinkedIn.",
+      "contact.phoneLabel": "Téléphone :",
+      "contact.emailLabel": "Email :",
+      "footer.built": "Réalisé comme un portfolio statique, optimisé SEO, à partir des CV d’origine."
+    },
+    ar: {
+      "brand.tagline": "مهندس برمجيات أول ومهندس حلول",
+      "nav.summary": "الملخص",
+      "nav.experience": "الخبرة",
+      "nav.fullcv": "السيرة الذاتية",
+      "nav.contact": "التواصل",
+      "hero.title": "مهندس برمجيات أول ومهندس حلول",
+      "hero.subtitle": "تصميم وتطوير أنظمة موزعة وتطبيقات لحظية معتمدة على الرسائل في مجالات البنوك، التأمين، الاتصالات، إدارة الأصول، الصيدلة، الزراعة والنقل.",
+      "hero.card.expertise": "الخبرة",
+      "hero.card.expertiseText": ".NET و C# والهندسة المعمارية الموزعة وأنظمة المراسلة والـ Microservices و DevOps و Azure والأنظمة الخلفية عالية الاعتمادية.",
+      "hero.card.domains": "القطاعات",
+      "hero.card.domainsText": "البنوك، التأمين، إدارة الأصول، سلسلة التوريد الدوائية، الاتصالات، مراكز الاتصال، التعاونيات الزراعية، والنقل.",
+      "hero.card.value": "القيمة",
+      "hero.card.valueText": "من تحديث الأنظمة القديمة إلى البنى السحابية الحديثة، مع التركيز على الموثوقية وسهولة الصيانة والأمان.",
+      "sidebar.title": "معلومات أساسية",
+      "sidebar.locationLabel": "الموقع:",
+      "sidebar.locationValue": "فرنسا / دولي",
+      "sidebar.experienceLabel": "الخبرة:",
+      "sidebar.experienceValue": "+15 سنة",
+      "sidebar.phoneLabel": "الهاتف:",
+      "sidebar.emailLabel": "البريد:",
+      "experience.title": "الخبرة المهنية (محور زمني)",
+      "experience.subtitle": "عرض زمني مبني مباشرة من السيرة الذاتية التفصيلية باللغة الفرنسية مع الحفاظ على البنية الأصلية (Contexte، Tools، Technologies، وغيرها).",
+      "fullcv.title": "السيرة الذاتية",
+      "fullcv.subtitle": "نص السيرة الذاتية الكامل بالإنجليزية والفرنسية كما هو في المستندات الأصلية.",
+      "fullcv.enTitle": "السيرة الذاتية بالإنجليزية",
+      "fullcv.frTitle": "السيرة الذاتية بالفرنسية",
+      "fullcv.arTitle": "السيرة الذاتية (واجهة عربية، محتوى إنجليزي)",
+      "contact.title": "التواصل",
+      "contact.text": "للحصول على فرص عمل أو تعاون أو استشارات، يمكن التواصل عبر البريد الإلكتروني أو الهاتف أو لينكدإن.",
+      "contact.phoneLabel": "الهاتف:",
+      "contact.emailLabel": "البريد:",
+      "footer.built": "موقع بورتفوليو ثابت، محسّن لمحركات البحث، مبني مباشرة من السيرة الذاتية الأصلية."
     }
-  });
+  };
 
-  document.querySelectorAll(".lang-btn").forEach((btn) => {
-    const isActive = btn.getAttribute("data-lang") === lang;
-    btn.classList.toggle("active", isActive);
-    btn.setAttribute("aria-pressed", String(isActive));
-  });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const navToggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".nav");
-  if (navToggle && nav) {
-    navToggle.addEventListener("click", () => {
-      nav.classList.toggle("open");
-    });
-    nav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => nav.classList.remove("open"));
+  function applyTranslations(lang) {
+    const dict = translations[lang] || translations.en;
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (dict[key]) {
+        el.textContent = dict[key];
+      }
     });
   }
 
-  document.querySelectorAll(".lang-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const lang = btn.getAttribute("data-lang");
-      setLanguage(lang);
-    });
-  });
+  function setLanguage(lang) {
+    document.body.classList.remove("lang-en", "lang-fr", "lang-ar");
+    document.body.classList.add("lang-" + lang);
+    document.documentElement.lang = lang === "ar" ? "ar" : lang;
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    applyTranslations(lang);
+  }
 
-  setLanguage("en");
-});
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".lang-btn").forEach((btn) => {
+      btn.addEventListener("click", function () {
+        const lang = btn.getAttribute("data-lang");
+        setLanguage(lang);
+      });
+    });
+    // Default language
+    setLanguage("en");
+  });
+})();
