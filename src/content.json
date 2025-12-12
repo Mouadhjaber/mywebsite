@@ -115,7 +115,8 @@
         "Swagger & backend API development",
         "Urbanization / application modernization"
       ],
-      "stack": "C#, Flutter, JavaScript, Docker, Visual Studio (2019–2022)"
+      "stack": "C#, Flutter, JavaScript, Docker, Visual Studio (2019–2022)",
+      "full_description_en": "Senior Software Engineer working on telecommunication platforms.\nResponsible for mobile development using Flutter, backend API design,\nDockerization of projects, Swagger/OpenAPI documentation, CRM integrations,\nand modernization (urbanization) of legacy applications."
     },
     {
       "company": "MOWASALAT",
@@ -129,7 +130,8 @@
         "Back-office modules for tracking/monitoring performance",
         "API additions and general software development"
       ],
-      "stack": "C#, .NET Core, Visual Studio (2019–2022)"
+      "stack": "C#, .NET Core, Visual Studio (2019–2022)",
+      "full_description_en": "Senior Software Engineer involved in a large-scale vehicle fleet\nmanagement system. Responsibilities included backend development in .NET Core,\nintegration with payment providers, development of back-office monitoring modules,\nAPI extensions, and performance tracking tools."
     },
     {
       "company": "VERMEG",
@@ -139,7 +141,8 @@
       "highlights_en": [
         "Sell-side liquidation software engineering"
       ],
-      "stack": "C++, Delphi, Visual Studio"
+      "stack": "C++, Delphi, Visual Studio",
+      "full_description_en": "Senior Software Engineer contributing to sell-side liquidation software\nwithin a banking environment. Focused on high-performance financial systems\nimplemented in C++ and Delphi."
     },
     {
       "company": "ASTERA",
@@ -151,7 +154,8 @@
         "Modernized workflow and authentication system post-COVID",
         "Contributed to DevOps/DevSecOps and Azure migration"
       ],
-      "stack": "C#, JavaScript, Gulp, Bootstrap, Azure components, Visual Studio (2019–2022)"
+      "stack": "C#, JavaScript, Gulp, Bootstrap, Azure components, Visual Studio (2019–2022)",
+      "full_description_en": "Senior Software Engineer working on pharmaceutical supply chain systems.\nImplemented an Identity Service with 2FA (QR code & SMS), modernized authentication\nand workflows post-COVID, and contributed to DevOps, DevSecOps, and Azure cloud\nmigration initiatives."
     },
     {
       "company": "ZIWO",
@@ -163,7 +167,8 @@
         "Docker, Protocol Buffers, Kafka",
         "Automation & scripting"
       ],
-      "stack": "C#, Oracle, PowerShell, Docker, Kafka, Azure components"
+      "stack": "C#, Oracle, PowerShell, Docker, Kafka, Azure components",
+      "full_description_en": "Senior Software Engineer in a cloud call-center platform.\nWorked on microservice architecture, component design, Docker-based deployments,\nProtocol Buffers, Kafka messaging, automation, and scripting."
     },
     {
       "company": "CANDRIAM",
@@ -175,7 +180,8 @@
         "Refactoring and microservice architecture with bus",
         "SSIS batch development; WCF services; Web API; DevOps"
       ],
-      "stack": "C#, Oracle, PowerShell, SSIS, WCF, Web API, Azure, Visual Studio (2019–2022)"
+      "stack": "C#, Oracle, PowerShell, SSIS, WCF, Web API, Azure, Visual Studio (2019–2022)",
+      "full_description_en": "Senior Software Engineer in asset management systems.\nIntegrated complex data flows from multiple sources, refactored applications\ntowards microservices architecture, implemented SSIS batch processing, WCF services,\nWeb APIs, and DevOps pipelines."
     },
     {
       "company": "SOCIETE GENERALE",
@@ -188,7 +194,8 @@
         "SSO preparation, middleware/server prep, reverse engineering",
         "Technical liaison with admins and engineering teams"
       ],
-      "stack": "C++, C#, Java, PowerShell, Visual Studio, TFS"
+      "stack": "C++, C#, Java, PowerShell, Visual Studio, TFS",
+      "full_description_en": "Senior Engineer and Architect working on IT provisioning\ninfrastructures and annex services. Defined system architecture, updated connectors,\nprepared SSO integration, performed reverse engineering, and acted as technical\ninterface between engineering and infrastructure teams."
     },
     {
       "company": "GENERALI (EA Holding)",
@@ -200,7 +207,8 @@
         "Technical specs, unit tests, code reviews, release control",
         "Worked with MVC5, SignalR, WebAPI and Azure"
       ],
-      "stack": "ASP.NET MVC5, C#, jQuery, SignalR, WebAPI, Azure, Visual Studio, TFS"
+      "stack": "ASP.NET MVC5, C#, jQuery, SignalR, WebAPI, Azure, Visual Studio, TFS",
+      "full_description_en": "Senior Software Engineer developing and maintaining\ninsurance holding applications. Responsible for technical specifications, unit tests,\ncode reviews, release management, and development using ASP.NET MVC5, SignalR,\nWebAPI, and Azure."
     },
     {
       "company": "AXA",
@@ -212,7 +220,8 @@
         "Led a team of 5 across multiple projects",
         "Specs (DAT), integration, release control"
       ],
-      "stack": "ASP.NET MVC5, C#, jQuery, SignalR, WebAPI, Azure, Visual Studio, TFS"
+      "stack": "ASP.NET MVC5, C#, jQuery, SignalR, WebAPI, Azure, Visual Studio, TFS",
+      "full_description_en": "Consultant Engineer working on insurance systems.\nDefined IARD models, integrated sales software, led a team of five engineers,\nproduced technical specifications (DAT), and supervised integration and releases."
     },
     {
       "company": "SOCIETE GENERALE Investment Banking",
@@ -224,7 +233,8 @@
         "Production maintenance and server configuration",
         "Market data connectors; socket-layer parsing; services design"
       ],
-      "stack": "C#, MVC5, SignalR, FIX protocol, Ultra messaging, TeamCity, SVN/CVS"
+      "stack": "C#, MVC5, SignalR, FIX protocol, Ultra messaging, TeamCity, SVN/CVS",
+      "full_description_en": "Senior Engineer developing multithreaded\ntrading applications. Maintained production systems, configured servers, implemented\nmarket data connectors, socket-layer parsing, and service-oriented architectures."
     },
     {
       "company": "INVIVO",
@@ -236,7 +246,8 @@
         "WCF/REST calculation engine; reverse engineering from Pascal/Delphi",
         "Silverlight repositories; MVC3 web service for SQL replication"
       ],
-      "stack": "C#, WPF, MVVM, PRISM, WCF, REST, Silverlight, MVC3, SQL Server, TFS"
+      "stack": "C#, WPF, MVVM, PRISM, WCF, REST, Silverlight, MVC3, SQL Server, TFS",
+      "full_description_en": "Senior .NET Consultant working on enterprise and industrial systems.\nDeveloped WPF applications with PRISM/MVVM, calculation engines via WCF/REST,\nreverse engineered legacy Pascal/Delphi systems, and built Silverlight and MVC3\ndata replication services."
     },
     {
       "company": "ORANGE Business Services",
@@ -248,7 +259,8 @@
         "Active Directory connectors; WCF callbacks",
         "Lotus Notes conversion & automation scripting"
       ],
-      "stack": "ASP.NET MVC2, WCF, AD/GPO, PowerShell, VB.NET, Lotus Script"
+      "stack": "ASP.NET MVC2, WCF, AD/GPO, PowerShell, VB.NET, Lotus Script",
+      "full_description_en": "Software Engineer in R&D.\nDeveloped messaging migration tools (web portal and services), Active Directory\nconnectors, WCF callbacks, and automated Lotus Notes migration using scripting."
     }
   ]
 }

@@ -147,12 +147,17 @@ function render(locale, content){
       ul.appendChild(li);
     });
 
+    const full = document.createElement("p");
+    full.className = "small";
+    full.textContent = x.full_description_en || "";
+
     const stack = document.createElement("div");
     stack.className = "small";
     stack.textContent = x.stack;
 
     div.appendChild(head);
     div.appendChild(ul);
+    div.appendChild(full);
     div.appendChild(stack);
     timeline.appendChild(div);
   });
