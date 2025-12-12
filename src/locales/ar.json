@@ -1,0 +1,40 @@
+{
+  "langCode": "ar",
+  "dir": "rtl",
+  "siteTitle": "معاذ جابر — مهندس برمجيات",
+  "nav": {
+    "about": "نبذة",
+    "skills": "المهارات",
+    "experience": "الخبرات",
+    "contact": "التواصل"
+  },
+  "hero": {
+    "title": "معاذ جابر",
+    "subtitle": "مهندس برمجيات",
+    "ctaPrimary": "تحميل السيرة الذاتية (PDF)",
+    "ctaSecondary": "تواصل"
+  },
+  "about": {
+    "title": "نبذة",
+    "body": "مهندس برمجيات أول بخبرة في الاتصالات، البنوك، التأمين، النقل، إدارة الأصول، وسلاسل الإمداد الدوائية. خبرة قوية في ‎.NET‎، هندسة الأنظمة، DevOps/DevSecOps وتكامل الأنظمة المؤسسية."
+  },
+  "skills": {
+    "title": "المهارات"
+  },
+  "experience": {
+    "title": "الخبرات المهنية"
+  },
+  "contact": {
+    "title": "التواصل",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "linkedin": "لينكدإن"
+  },
+  "seo": {
+    "description": "معاذ جابر — مهندس برمجيات. ‎.NET‎ / C# / Microservices / DevOps. سيرة ذاتية بالإنجليزية والفرنسية والعربية.",
+    "keywords": "معاذ جابر, Mouadh Jaber, مهندس برمجيات, .NET, C#, Microservices, DevOps, Azure, Web API"
+  },
+  "search": {
+    "placeholder": "ابحث في الخبرات والمهارات…"
+  }
+}

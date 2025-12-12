@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta id="meta-desc" name="description" content="" />
+  <meta id="meta-keywords" name="keywords" content="" />
+
+  <!-- Search Console / Bing Webmaster Tools verification (replace with your codes) -->
+  <meta name="google-site-verification" content="REPLACE_WITH_GOOGLE_VERIFICATION_CODE" />
+  <meta name="msvalidate.01" content="REPLACE_WITH_BING_VERIFICATION_CODE" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta id="og-title" property="og:title" content="" />
+  <meta id="og-desc" property="og:description" content="" />
+  <meta property="og:image" content="./assets/profile.jpg" />
+
+  <!-- hreflang -->
+  <link rel="alternate" href="./?lang=en" hreflang="en" />
+  <link rel="alternate" href="./?lang=fr" hreflang="fr" />
+  <link rel="alternate" href="./?lang=ar" hreflang="ar" />
+  <link rel="alternate" href="./" hreflang="x-default" />
+
+  <link rel="icon" href="./assets/profile.jpg" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="application/ld+json" id="jsonld"></script>
+
+  <title></title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <strong id="brand-name">Mouadh Jaber</strong>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="#about" data-i18n="nav.about"></a>
+        <a href="#skills" data-i18n="nav.skills"></a>
+        <a href="#experience" data-i18n="nav.experience"></a>
+        <a href="#contact" data-i18n="nav.contact"></a>
+      </nav>
+
+      <div class="controls">
+        <input class="search" id="search" type="search" placeholder="" aria-label="Search" />
+        <select class="select" id="lang" aria-label="Language">
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="ar">AR</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="top">
+    <section class="hero">
+      <div class="avatar" aria-hidden="true">
+        <img src="./assets/profile.jpg" alt="Profile photo" />
+      </div>
+
+      <div>
+        <h1 id="hero-title"></h1>
+        <p id="hero-subtitle"></p>
+
+        <div class="hero-actions">
+          <a class="btn primary" id="cv-link" href="./">Download CV</a>
+          <a class="btn" id="contact-link" href="#contact">Contact</a>
+        </div>
+
+        <div class="small" style="margin-top:12px">
+          <span style="opacity:.9">SEO-ready:</span>
+          sitemap.xml • robots.txt • OpenGraph • Schema.org • hreflang
+        </div>
+      </div>
+    </section>
+
+    <section class="grid" style="margin-top:18px">
+      <article class="card" id="about">
+        <h2 id="about-title"></h2>
+        <p id="about-body"></p>
+      </article>
+
+      <article class="card" id="skills">
+        <h2 id="skills-title"></h2>
+        <div class="badges" id="skills-badges"></div>
+      </article>
+    </section>
+
+    <section class="card" id="experience" style="margin-top:16px">
+      <h2 id="exp-title"></h2>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section class="card" id="contact" style="margin-top:16px">
+      <h2 id="contact-title"></h2>
+
+      <div class="grid" style="grid-template-columns: 1fr 1fr; margin-top:10px">
+        <div>
+          <div class="small"><span id="contact-phone-label"></span></div>
+          <a class="btn" id="phone" href="#"></a>
+        </div>
+        <div>
+          <div class="small"><span id="contact-email-label"></span></div>
+          <a class="btn" id="email" href="#"></a>
+        </div>
+      </div>
+
+      <div style="margin-top:12px">
+        <div class="small"><span id="contact-linkedin-label"></span></div>
+        <a class="btn" id="linkedin" href="#" target="_blank" rel="noopener"></a>
+      </div>
+
+      <p class="small" style="margin-top:14px">
+        Tip: Replace the verification codes in the &lt;meta&gt; tags for Google Search Console and Bing Webmaster Tools, then submit the sitemap URL.
+      </p>
+    </section>
+
+    <div class="footer">
+      © <span id="year"></span> Mouadh Jaber • Built as a fast, static, multi-language site.
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="./app.js" defer></script>
+</body>
+</html>
