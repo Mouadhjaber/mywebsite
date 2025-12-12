@@ -153,7 +153,7 @@ function render(locale, content){
 
     const full = document.createElement("div");
     full.className = "accordion-content";
-    full.textContent =
+    full.innerHTML =
       locale.langCode === "ar"
         ? (x.full_description_ar || "")
         : (x.full_description_en || "");
