@@ -147,9 +147,18 @@ function render(locale, content){
       ul.appendChild(li);
     });
 
-    const full = document.createElement("p");
-    full.className = "small";
+    const toggle = document.createElement("button");
+    toggle.className = "accordion-toggle";
+    toggle.textContent = "Read more";
+
+    const full = document.createElement("div");
+    full.className = "accordion-content";
     full.textContent = x.full_description_en || "";
+
+    toggle.addEventListener("click", ()=>{
+      const open = full.classList.toggle("open");
+      toggle.textContent = open ? "Hide" : "Read more";
+    });
 
     const stack = document.createElement("div");
     stack.className = "small";
@@ -157,6 +166,8 @@ function render(locale, content){
 
     div.appendChild(head);
     div.appendChild(ul);
+    div.appendChild(full);
+    div.appendChild(toggle);
     div.appendChild(full);
     div.appendChild(stack);
     timeline.appendChild(div);
