@@ -91,30 +91,24 @@ function render(locale, content){
 
   $("#contact-link").textContent = t(locale, "hero.ctaSecondary");
 
-  // Skills: turn content.skills into badge groups
+  // Skills: render verbatim resume sections from DOCX
+  const sections = (content.resume_sections && content.resume_sections[locale.langCode]) || [];
+  const headerSec = sections.find(s=>s.id==="header");
+  const skillsSec = sections.find(s=>s.id==="skills");
   const badgeContainer = $("#skills-badges");
   badgeContainer.innerHTML = "";
-  const skillBuckets = [
-    ...content.skills.methods,
-    ...content.skills.process,
-    ...content.skills.modeling,
-    ...content.skills.patterns,
-    ...content.skills.microsoft,
-    ...content.skills.other_langs,
-    ...content.skills.scripting,
-    ...content.skills.tools
-  ];
-  // Deduplicate
-  const seen = new Set();
-  skillBuckets.forEach(s => {
-    const k = normalize(s);
-    if(seen.has(k)) return;
-    seen.add(k);
-    const span = document.createElement("span");
-    span.className = "badge";
-    span.textContent = s;
-    badgeContainer.appendChild(span);
-  });
+  if(headerSec){
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `<div class="card-body"><div class="small">${headerSec.html}</div></div>`;
+    badgeContainer.appendChild(div);
+  }
+  if(skillsSec){
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `<div class="card-body"><div class="small">${skillsSec.html}</div></div>`;
+    badgeContainer.appendChild(div);
+  }
 
   // Experience timeline
   const timeline = $("#timeline");
@@ -141,7 +135,7 @@ function render(locale, content){
     head.appendChild(meta);
 
     const ul = document.createElement("ul");
-    (x.highlights_en||[]).forEach(h=>{
+    ( (locale.langCode==="fr"? (x.highlights_fr||[]) : (x.highlights_en||[])) ).forEach(h=>{
       const li = document.createElement("li");
       li.textContent = h;
       ul.appendChild(li);
@@ -156,7 +150,9 @@ function render(locale, content){
     full.innerHTML =
       locale.langCode === "ar"
         ? (x.full_description_ar || "")
-        : (x.full_description_en || "");
+        : (locale.langCode === "fr"
+            ? (x.full_description_fr || "")
+            : (x.full_description_en || ""));
 
     toggle.addEventListener("click", ()=>{
       const open = full.classList.toggle("open");
