@@ -116,7 +116,8 @@
         "Urbanization / application modernization"
       ],
       "stack": "C#, Flutter, JavaScript, Docker, Visual Studio (2019–2022)",
-      "full_description_en": "Senior Software Engineer working on telecommunication platforms.\nResponsible for mobile development using Flutter, backend API design,\nDockerization of projects, Swagger/OpenAPI documentation, CRM integrations,\nand modernization (urbanization) of legacy applications."
+      "full_description_en": "Senior Software Engineer working on telecommunication platforms.\nResponsible for mobile development using Flutter, backend API design,\nDockerization of projects, Swagger/OpenAPI documentation, CRM integrations,\nand modernization (urbanization) of legacy applications.",
+      "full_description_ar": "مهندس برمجيات أول يعمل على منصات الاتصالات. مسؤول عن تطوير تطبيقات الهاتف باستخدام Flutter، تصميم واجهات API الخلفية، تحويل المشاريع إلى Docker، توثيق Swagger/OpenAPI، تكامل أنظمة CRM، وتحديث الأنظمة القديمة."
     },
     {
       "company": "MOWASALAT",
@@ -131,7 +132,8 @@
         "API additions and general software development"
       ],
       "stack": "C#, .NET Core, Visual Studio (2019–2022)",
-      "full_description_en": "Senior Software Engineer involved in a large-scale vehicle fleet\nmanagement system. Responsibilities included backend development in .NET Core,\nintegration with payment providers, development of back-office monitoring modules,\nAPI extensions, and performance tracking tools."
+      "full_description_en": "Senior Software Engineer involved in a large-scale vehicle fleet\nmanagement system. Responsibilities included backend development in .NET Core,\nintegration with payment providers, development of back-office monitoring modules,\nAPI extensions, and performance tracking tools.",
+      "full_description_ar": "مهندس برمجيات أول مشارك في نظام واسع النطاق لإدارة أساطيل المركبات. شملت المسؤوليات تطوير الخلفية باستخدام ‎.NET Core‎، التكامل مع مزودي الدفع، تطوير وحدات Back‑Office للمتابعة، وتوسيع واجهات API وتحسين الأداء."
     },
     {
       "company": "VERMEG",
@@ -142,7 +144,8 @@
         "Sell-side liquidation software engineering"
       ],
       "stack": "C++, Delphi, Visual Studio",
-      "full_description_en": "Senior Software Engineer contributing to sell-side liquidation software\nwithin a banking environment. Focused on high-performance financial systems\nimplemented in C++ and Delphi."
+      "full_description_en": "Senior Software Engineer contributing to sell-side liquidation software\nwithin a banking environment. Focused on high-performance financial systems\nimplemented in C++ and Delphi.",
+      "full_description_ar": "مهندس برمجيات أول ساهم في تطوير أنظمة التصفية (Liquidation) في المجال البنكي. التركيز على الأنظمة المالية عالية الأداء باستخدام C++ وDelphi."
     },
     {
       "company": "ASTERA",
@@ -155,7 +158,8 @@
         "Contributed to DevOps/DevSecOps and Azure migration"
       ],
       "stack": "C#, JavaScript, Gulp, Bootstrap, Azure components, Visual Studio (2019–2022)",
-      "full_description_en": "Senior Software Engineer working on pharmaceutical supply chain systems.\nImplemented an Identity Service with 2FA (QR code & SMS), modernized authentication\nand workflows post-COVID, and contributed to DevOps, DevSecOps, and Azure cloud\nmigration initiatives."
+      "full_description_en": "Senior Software Engineer working on pharmaceutical supply chain systems.\nImplemented an Identity Service with 2FA (QR code & SMS), modernized authentication\nand workflows post-COVID, and contributed to DevOps, DevSecOps, and Azure cloud\nmigration initiatives.",
+      "full_description_ar": "مهندس برمجيات أول يعمل على أنظمة سلاسل الإمداد الدوائية. قام بتنفيذ خدمة هوية مع مصادقة ثنائية (QR وSMS)، تحديث أنظمة المصادقة بعد جائحة كوفيد، والمساهمة في DevOps وDevSecOps وترحيل الأنظمة إلى Azure."
     },
     {
       "company": "ZIWO",
@@ -168,7 +172,8 @@
         "Automation & scripting"
       ],
       "stack": "C#, Oracle, PowerShell, Docker, Kafka, Azure components",
-      "full_description_en": "Senior Software Engineer in a cloud call-center platform.\nWorked on microservice architecture, component design, Docker-based deployments,\nProtocol Buffers, Kafka messaging, automation, and scripting."
+      "full_description_en": "Senior Software Engineer in a cloud call-center platform.\nWorked on microservice architecture, component design, Docker-based deployments,\nProtocol Buffers, Kafka messaging, automation, and scripting.",
+      "full_description_ar": "مهندس برمجيات أول في منصة مركز اتصال سحابية. عمل على تصميم بنية Microservices، النشر باستخدام Docker، استخدام Protocol Buffers وKafka، وأتمتة العمليات بالسكربت."
     },
     {
       "company": "CANDRIAM",
@@ -181,7 +186,8 @@
         "SSIS batch development; WCF services; Web API; DevOps"
       ],
       "stack": "C#, Oracle, PowerShell, SSIS, WCF, Web API, Azure, Visual Studio (2019–2022)",
-      "full_description_en": "Senior Software Engineer in asset management systems.\nIntegrated complex data flows from multiple sources, refactored applications\ntowards microservices architecture, implemented SSIS batch processing, WCF services,\nWeb APIs, and DevOps pipelines."
+      "full_description_en": "Senior Software Engineer in asset management systems.\nIntegrated complex data flows from multiple sources, refactored applications\ntowards microservices architecture, implemented SSIS batch processing, WCF services,\nWeb APIs, and DevOps pipelines.",
+      "full_description_ar": "مهندس برمجيات أول في أنظمة إدارة الأصول. قام بدمج تدفقات بيانات معقدة من مصادر متعددة، إعادة هيكلة الأنظمة إلى Microservices، تطوير SSIS Batches، خدمات WCF، Web APIs، وخطوط DevOps."
     },
     {
       "company": "SOCIETE GENERALE",
@@ -195,7 +201,8 @@
         "Technical liaison with admins and engineering teams"
       ],
       "stack": "C++, C#, Java, PowerShell, Visual Studio, TFS",
-      "full_description_en": "Senior Engineer and Architect working on IT provisioning\ninfrastructures and annex services. Defined system architecture, updated connectors,\nprepared SSO integration, performed reverse engineering, and acted as technical\ninterface between engineering and infrastructure teams."
+      "full_description_en": "Senior Engineer and Architect working on IT provisioning\ninfrastructures and annex services. Defined system architecture, updated connectors,\nprepared SSO integration, performed reverse engineering, and acted as technical\ninterface between engineering and infrastructure teams.",
+      "full_description_ar": "مهندس ومعماري أول عمل على بنى توفير خدمات تكنولوجيا المعلومات. مسؤول عن تعريف المعمارية، تحديث الموصلات، التحضير لتكامل SSO، تنفيذ هندسة عكسية، والعمل كحلقة وصل تقنية بين الفرق."
     },
     {
       "company": "GENERALI (EA Holding)",
@@ -208,7 +215,8 @@
         "Worked with MVC5, SignalR, WebAPI and Azure"
       ],
       "stack": "ASP.NET MVC5, C#, jQuery, SignalR, WebAPI, Azure, Visual Studio, TFS",
-      "full_description_en": "Senior Software Engineer developing and maintaining\ninsurance holding applications. Responsible for technical specifications, unit tests,\ncode reviews, release management, and development using ASP.NET MVC5, SignalR,\nWebAPI, and Azure."
+      "full_description_en": "Senior Software Engineer developing and maintaining\ninsurance holding applications. Responsible for technical specifications, unit tests,\ncode reviews, release management, and development using ASP.NET MVC5, SignalR,\nWebAPI, and Azure.",
+      "full_description_ar": "مهندس برمجيات أول مسؤول عن تطوير وصيانة تطبيقات التأمين. شملت المهام إعداد المواصفات التقنية، اختبارات الوحدات، مراجعة الكود، وإدارة الإصدارات باستخدام MVC وSignalR وAzure."
     },
     {
       "company": "AXA",
@@ -221,7 +229,8 @@
         "Specs (DAT), integration, release control"
       ],
       "stack": "ASP.NET MVC5, C#, jQuery, SignalR, WebAPI, Azure, Visual Studio, TFS",
-      "full_description_en": "Consultant Engineer working on insurance systems.\nDefined IARD models, integrated sales software, led a team of five engineers,\nproduced technical specifications (DAT), and supervised integration and releases."
+      "full_description_en": "Consultant Engineer working on insurance systems.\nDefined IARD models, integrated sales software, led a team of five engineers,\nproduced technical specifications (DAT), and supervised integration and releases.",
+      "full_description_ar": "مهندس استشاري في مجال التأمين. قام بتعريف نماذج IARD، دمج أنظمة المبيعات، قيادة فريق من خمسة مهندسين، إعداد المواصفات التقنية، والإشراف على الدمج والإصدارات."
     },
     {
       "company": "SOCIETE GENERALE Investment Banking",
@@ -234,7 +243,8 @@
         "Market data connectors; socket-layer parsing; services design"
       ],
       "stack": "C#, MVC5, SignalR, FIX protocol, Ultra messaging, TeamCity, SVN/CVS",
-      "full_description_en": "Senior Engineer developing multithreaded\ntrading applications. Maintained production systems, configured servers, implemented\nmarket data connectors, socket-layer parsing, and service-oriented architectures."
+      "full_description_en": "Senior Engineer developing multithreaded\ntrading applications. Maintained production systems, configured servers, implemented\nmarket data connectors, socket-layer parsing, and service-oriented architectures.",
+      "full_description_ar": "مهندس أول قام بتطوير تطبيقات تداول متعددة الخيوط. مسؤول عن صيانة الإنتاج، إعداد الخوادم، تطوير موصلات بيانات السوق، تحليل طبقة المقابس، وتصميم الخدمات."
     },
     {
       "company": "INVIVO",
@@ -247,7 +257,8 @@
         "Silverlight repositories; MVC3 web service for SQL replication"
       ],
       "stack": "C#, WPF, MVVM, PRISM, WCF, REST, Silverlight, MVC3, SQL Server, TFS",
-      "full_description_en": "Senior .NET Consultant working on enterprise and industrial systems.\nDeveloped WPF applications with PRISM/MVVM, calculation engines via WCF/REST,\nreverse engineered legacy Pascal/Delphi systems, and built Silverlight and MVC3\ndata replication services."
+      "full_description_en": "Senior .NET Consultant working on enterprise and industrial systems.\nDeveloped WPF applications with PRISM/MVVM, calculation engines via WCF/REST,\nreverse engineered legacy Pascal/Delphi systems, and built Silverlight and MVC3\ndata replication services.",
+      "full_description_ar": "استشاري ‎.NET‎ أول عمل على أنظمة صناعية ومؤسسية. تطوير تطبيقات WPF باستخدام MVVM وPRISM، محركات حسابية عبر WCF/REST، هندسة عكسية لأنظمة Pascal/Delphi، وخدمات MVC وSilverlight."
     },
     {
       "company": "ORANGE Business Services",
@@ -260,7 +271,8 @@
         "Lotus Notes conversion & automation scripting"
       ],
       "stack": "ASP.NET MVC2, WCF, AD/GPO, PowerShell, VB.NET, Lotus Script",
-      "full_description_en": "Software Engineer in R&D.\nDeveloped messaging migration tools (web portal and services), Active Directory\nconnectors, WCF callbacks, and automated Lotus Notes migration using scripting."
+      "full_description_en": "Software Engineer in R&D.\nDeveloped messaging migration tools (web portal and services), Active Directory\nconnectors, WCF callbacks, and automated Lotus Notes migration using scripting.",
+      "full_description_ar": "مهندس برمجيات في قسم البحث والتطوير. تطوير أدوات ترحيل أنظمة المراسلة، موصلات Active Directory، WCF callbacks، وأتمتة ترحيل Lotus Notes باستخدام السكربت."
     }
   ]
 }

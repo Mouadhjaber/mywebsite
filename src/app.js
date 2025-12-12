@@ -153,7 +153,10 @@ function render(locale, content){
 
     const full = document.createElement("div");
     full.className = "accordion-content";
-    full.textContent = x.full_description_en || "";
+    full.textContent =
+      locale.langCode === "ar"
+        ? (x.full_description_ar || "")
+        : (x.full_description_en || "");
 
     toggle.addEventListener("click", ()=>{
       const open = full.classList.toggle("open");
