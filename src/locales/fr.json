@@ -1,0 +1,39 @@
+{
+  "langCode": "fr",
+  "siteTitle": "Mouadh Jaber — Ingénieur logiciel",
+  "nav": {
+    "about": "Profil",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Mouadh Jaber",
+    "subtitle": "Ingénieur logiciel",
+    "ctaPrimary": "Télécharger le CV (PDF)",
+    "ctaSecondary": "Contact"
+  },
+  "about": {
+    "title": "Profil",
+    "body": "Ingénieur logiciel senior avec une expérience en télécoms, banque, assurance, transport, gestion d’actifs et industrie pharmaceutique. Solide expertise .NET, architecture, DevOps/DevSecOps et intégration SI."
+  },
+  "skills": {
+    "title": "Compétences"
+  },
+  "experience": {
+    "title": "Expériences professionnelles"
+  },
+  "contact": {
+    "title": "Contact",
+    "phone": "Téléphone",
+    "email": "Email",
+    "linkedin": "LinkedIn"
+  },
+  "seo": {
+    "description": "Mouadh Jaber — Ingénieur logiciel. .NET / C# / Microservices / DevOps. CV en anglais, français et arabe.",
+    "keywords": "Mouadh Jaber, Ingénieur logiciel, .NET, C#, Microservices, DevOps, DevSecOps, Azure, WCF, Web API"
+  },
+  "search": {
+    "placeholder": "Rechercher dans l’expérience & compétences…"
+  }
+}
