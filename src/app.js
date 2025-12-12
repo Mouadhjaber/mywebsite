@@ -91,24 +91,30 @@ function render(locale, content){
 
   $("#contact-link").textContent = t(locale, "hero.ctaSecondary");
 
-  // Skills: render verbatim resume sections from DOCX
-  const sections = (content.resume_sections && content.resume_sections[locale.langCode]) || [];
-  const headerSec = sections.find(s=>s.id==="header");
-  const skillsSec = sections.find(s=>s.id==="skills");
+  // Skills: turn content.skills into badge groups
   const badgeContainer = $("#skills-badges");
   badgeContainer.innerHTML = "";
-  if(headerSec){
-    const div = document.createElement("div");
-    div.className = "card";
-    div.innerHTML = `<div class="card-body"><div class="small">${headerSec.html}</div></div>`;
-    badgeContainer.appendChild(div);
-  }
-  if(skillsSec){
-    const div = document.createElement("div");
-    div.className = "card";
-    div.innerHTML = `<div class="card-body"><div class="small">${skillsSec.html}</div></div>`;
-    badgeContainer.appendChild(div);
-  }
+  const skillBuckets = [
+    ...content.skills.methods,
+    ...content.skills.process,
+    ...content.skills.modeling,
+    ...content.skills.patterns,
+    ...content.skills.microsoft,
+    ...content.skills.other_langs,
+    ...content.skills.scripting,
+    ...content.skills.tools
+  ];
+  // Deduplicate
+  const seen = new Set();
+  skillBuckets.forEach(s => {
+    const k = normalize(s);
+    if(seen.has(k)) return;
+    seen.add(k);
+    const span = document.createElement("span");
+    span.className = "badge";
+    span.textContent = s;
+    badgeContainer.appendChild(span);
+  });
 
   // Experience timeline
   const timeline = $("#timeline");
@@ -135,28 +141,10 @@ function render(locale, content){
     head.appendChild(meta);
 
     const ul = document.createElement("ul");
-    ( (locale.langCode==="fr"? (x.highlights_fr||[]) : (x.highlights_en||[])) ).forEach(h=>{
+    (x.highlights_en||[]).forEach(h=>{
       const li = document.createElement("li");
       li.textContent = h;
       ul.appendChild(li);
-    });
-
-    const toggle = document.createElement("button");
-    toggle.className = "accordion-toggle";
-    toggle.textContent = locale.langCode === "ar" ? "اقرأ المزيد" : "Read more";
-
-    const full = document.createElement("div");
-    full.className = "accordion-content";
-    full.innerHTML =
-      locale.langCode === "ar"
-        ? (x.full_description_ar || "")
-        : (locale.langCode === "fr"
-            ? (x.full_description_fr || "")
-            : (x.full_description_en || ""));
-
-    toggle.addEventListener("click", ()=>{
-      const open = full.classList.toggle("open");
-      toggle.textContent = open ? (locale.langCode === "ar" ? "إخفاء" : "Hide") : (locale.langCode === "ar" ? "اقرأ المزيد" : "Read more");
     });
 
     const stack = document.createElement("div");
@@ -165,9 +153,6 @@ function render(locale, content){
 
     div.appendChild(head);
     div.appendChild(ul);
-    div.appendChild(full);
-    div.appendChild(toggle);
-    div.appendChild(full);
     div.appendChild(stack);
     timeline.appendChild(div);
   });
