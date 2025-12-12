@@ -147,12 +147,31 @@ function render(locale, content){
       ul.appendChild(li);
     });
 
+    const toggle = document.createElement("button");
+    toggle.className = "accordion-toggle";
+    toggle.textContent = locale.langCode === "ar" ? "اقرأ المزيد" : "Read more";
+
+    const full = document.createElement("div");
+    full.className = "accordion-content";
+    full.innerHTML =
+      locale.langCode === "ar"
+        ? (x.full_description_ar || "")
+        : (x.full_description_en || "");
+
+    toggle.addEventListener("click", ()=>{
+      const open = full.classList.toggle("open");
+      toggle.textContent = open ? (locale.langCode === "ar" ? "إخفاء" : "Hide") : (locale.langCode === "ar" ? "اقرأ المزيد" : "Read more");
+    });
+
     const stack = document.createElement("div");
     stack.className = "small";
     stack.textContent = x.stack;
 
     div.appendChild(head);
     div.appendChild(ul);
+    div.appendChild(full);
+    div.appendChild(toggle);
+    div.appendChild(full);
     div.appendChild(stack);
     timeline.appendChild(div);
   });
