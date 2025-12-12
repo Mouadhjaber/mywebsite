@@ -167,3 +167,20 @@ select option{
   background-color: #12141a;
   color: #e9eef7;
 }
+
+
+/* Language selector – force BLACK, never blue */
+.select,
+select,
+select:focus,
+select:active,
+select:hover{
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,.2) !important;
+}
+
+select option{
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
