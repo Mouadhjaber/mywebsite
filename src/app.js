@@ -53,6 +53,62 @@ function t(locale, path){
   return path.split(".").reduce((acc, k) => acc && acc[k], locale) ?? "";
 }
 
+function generatePDF(content, locale){
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+
+  const title = `${content.name} — ${locale.langCode === "ar" ? content.title_ar : locale.langCode === "fr" ? content.title_fr : content.title_en}`;
+  const phone = content.phone;
+  const email = content.email;
+  const linkedin = content.linkedin;
+
+  let y = 10;
+
+  doc.setFontSize(16);
+  doc.text(title, 10, y);
+  y += 10;
+
+  doc.setFontSize(12);
+  doc.text(`Phone: ${phone}`, 10, y); y += 7;
+  doc.text(`Email: ${email}`, 10, y); y += 7;
+  doc.text(`LinkedIn: ${linkedin}`, 10, y); y += 10;
+
+  // Skills
+  doc.setFontSize(14);
+  doc.text(t(locale, "skills.title"), 10, y); y += 7;
+  doc.setFontSize(12);
+  const skills = [].concat(
+    content.skills.methods,
+    content.skills.process,
+    content.skills.modeling,
+    content.skills.patterns,
+    content.skills.microsoft,
+    content.skills.other_langs,
+    content.skills.scripting,
+    content.skills.tools
+  );
+  doc.text(skills.join(", "), 10, y); y += 10;
+
+  // Experience
+  doc.setFontSize(14);
+  doc.text(t(locale, "experience.title"), 10, y); y += 7;
+  doc.setFontSize(12);
+  content.experience.forEach(exp => {
+    const role = locale.langCode === "ar" ? exp.role_ar : locale.langCode === "fr" ? exp.role_fr : exp.role_en;
+    const company = exp.company;
+    const date = locale.langCode === "ar" ? exp.date_ar : locale.langCode === "fr" ? exp.date_fr : exp.date_en;
+    doc.text(`${role} @ ${company} (${date})`, 10, y);
+    y += 7;
+    const highlights = locale.langCode === "ar" ? exp.highlights_ar : locale.langCode === "fr" ? exp.highlights_fr : exp.highlights_en;
+    highlights.forEach(h => { doc.text(`- ${h}`, 12, y); y += 7; });
+    y += 3;
+    if (y > 280) { doc.addPage(); y = 10; }
+  });
+
+  const filename = `CV-${locale.langCode}.pdf`;
+  doc.save(filename);
+}
+
 function render(locale, content){
   $("#brand-name").textContent = content.name;
 
@@ -82,28 +138,29 @@ function render(locale, content){
   $("#linkedin").textContent = content.linkedin.replace("https://","").replace("http://","");
   $("#linkedin").href = content.linkedin;
 
+  // CV download
   $("#cv-link").textContent = t(locale, "hero.ctaPrimary");
-  $("#cv-link").href = locale.langCode === "ar" ? "./resume-ar.md" : "./";
+  $("#cv-link").href = "#";
   $("#cv-link").addEventListener("click", (e)=>{
-    // Placeholder: CV PDFs not auto-generated yet
-  }, {once:true});
+    e.preventDefault();
+    generatePDF(content, locale);
+  });
 
   $("#contact-link").textContent = t(locale, "hero.ctaSecondary");
 
-  // Skills: turn content.skills into badge groups
+  // Skills badges
   const badgeContainer = $("#skills-badges");
   badgeContainer.innerHTML = "";
-  const skillBuckets = [
-    ...content.skills.methods,
-    ...content.skills.process,
-    ...content.skills.modeling,
-    ...content.skills.patterns,
-    ...content.skills.microsoft,
-    ...content.skills.other_langs,
-    ...content.skills.scripting,
-    ...content.skills.tools
-  ];
-  // Deduplicate
+  const skillBuckets = [].concat(
+    content.skills.methods,
+    content.skills.process,
+    content.skills.modeling,
+    content.skills.patterns,
+    content.skills.microsoft,
+    content.skills.other_langs,
+    content.skills.scripting,
+    content.skills.tools
+  );
   const seen = new Set();
   skillBuckets.forEach(s => {
     const k = normalize(s);
@@ -121,9 +178,7 @@ function render(locale, content){
   content.experience.forEach(x => {
     const div = document.createElement("div");
     div.className = "item";
-    div.setAttribute("data-search", normalize([
-      x.company, x.industry_en, x.date_en, x.role_en, x.stack, ...(x.highlights_en||[])
-    ].join(" ")));
+    div.setAttribute("data-search", normalize([x.company, x.industry_en, x.date_en, x.role_en, x.stack, ...(x.highlights_en||[])].join(" ")));
 
     const head = document.createElement("div");
     head.className = "item-head";
