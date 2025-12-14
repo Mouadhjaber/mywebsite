@@ -100,7 +100,6 @@ function render(locale, content){
     ...content.skills.scripting,
     ...content.skills.tools
   ];
-
   const seen = new Set();
   skillBuckets.forEach(s => {
     const k = normalize(s);
@@ -139,8 +138,7 @@ function render(locale, content){
 
     const meta = document.createElement("div");
     meta.className = "item-meta";
-    meta.textContent =
-      `${x[`industry_${lang}`] || x.industry_en} • ${x[`date_${lang}`] || x.date_en}`;
+    meta.textContent = `${x[`industry_${lang}`] || x.industry_en} • ${x[`date_${lang}`] || x.date_en}`;
 
     head.appendChild(title);
     head.appendChild(meta);
@@ -158,16 +156,11 @@ function render(locale, content){
 
     const full = document.createElement("div");
     full.className = "accordion-content";
-    full.innerHTML =
-      x[`full_description_${lang}`] ||
-      x.full_description_en ||
-      "";
+    full.innerHTML = x[`full_description_${lang}`] || x.full_description_en || "";
 
     toggle.addEventListener("click", () => {
       const open = full.classList.toggle("open");
-      toggle.textContent = open
-        ? t(locale, "experience.hide")
-        : t(locale, "experience.readMore");
+      toggle.textContent = open ? t(locale, "experience.hide") : t(locale, "experience.readMore");
     });
 
     const stack = document.createElement("div");
@@ -205,7 +198,7 @@ async function main(){
   const locales = {
     en: await loadJSON("./locales/en.json"),
     fr: await loadJSON("./locales/fr.json"),
-    ar: await loadJSON("./locales/ar.json"),
+    ar: await loadJSON("./locales/ar.json")
   };
 
   const setLang = async (code) => {
@@ -225,6 +218,5 @@ async function main(){
 
 main().catch(err=>{
   console.error(err);
-  document.body.innerHTML =
-    "<div style='padding:24px;font-family:system-ui'>Failed to load site assets.</div>";
+  document.body.innerHTML = "<div style='padding:24px;font-family:system-ui'>Failed to load site assets.</div>";
 });

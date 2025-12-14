@@ -1,140 +1,75 @@
 {
   "name": "Mouadh Jaber",
-  "title_en": "Software Engineer",
-  "title_fr": "Ingénieur logiciel senior",
-  "title_ar": "مهندس برمجيات أول",
   "phone": "+216 58 201 430",
   "email": "mouadh.jaber@msn.com",
   "linkedin": "https://www.linkedin.com/in/mouadhjaber/",
   "skills": {
-    "architecture": [
-      "Applications distribuées, composites et temps réel",
-      "Architecture en couches, microservices, mesh, monolithique"
-    ],
     "methods": ["XP", "Scrum", "SAFe", "TDD", "BDD"],
     "process": ["ITIL", "DevOps", "DevSecOps"],
     "modeling": ["UML v2", "Merise"],
-    "patterns": [
-      "Repository",
-      "Unit of Work",
-      "IoC",
-      "DI",
-      "Facade",
-      "Proxy",
-      "MVVM",
-      "MVC",
-      "DDD"
-    ],
-    "microsoft": [
-      ".NET (C#, VB.NET)",
-      "ASP.NET",
-      "WCF",
-      "Web API / REST",
-      "Entity Framework",
-      ".NET Core",
-      "Blazor",
-      "Docker",
-      "Kafka",
-      "Azure"
-    ],
-    "scripting": ["PowerShell", "JavaScript", "Angular", "React"],
-    "tools": ["Visual Studio", "Azure DevOps", "TeamCity", "Git"]
-  },
-  "languages": {
-    "en": "English",
-    "fr": "Français",
-    "ar": "العربية"
+    "patterns": ["Repository", "Unit of Work", "IoC", "DI", "Facade", "Proxy", "MVVM", "MVC", "DDD"],
+    "microsoft": [".NET (C#, VB.NET)", "ASP.NET", "WCF", "WebAPI / REST", "ADO.NET", "LINQ", "Entity Framework", "NHibernate", ".NET Core", "Blazor", "Kafka", "Docker", "SpecFlow", "Sonar"],
+    "other_langs": ["C", "C++", "Python"],
+    "scripting": ["VBScript", "PowerShell", "JavaScript", "jQuery", "AngularJS", "React"],
+    "tools": ["Visual Studio (2008–2022)", "TFS / Azure DevOps", "TeamCity", "CVS/SVN", "Eclipse", "MS Project / Project Server"]
   },
   "experience": [
     {
       "company": "NETCOM",
       "industry_en": "Telecommunication",
-      "date_en": "Jul 2025 – Présent",
+      "industry_fr": "Télécommunications",
+      "industry_ar": "الاتصالات",
+      "date_en": "Jul 2025 – Present",
+      "date_fr": "Juil 2025 – Présent",
+      "date_ar": "يوليو 2025 – الآن",
       "role_en": "Senior Software Engineer",
-      "highlights_en": [
-        "Développement mobile Flutter",
-        "Modernisation applicative",
-        "Dockerisation des projets",
-        "Développement API backend"
-      ],
-      "stack": "C#, Flutter, Docker, JavaScript",
-      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> travaillant sur des plateformes de télécommunications à grande échelle.</p><p>Responsable du développement mobile avec Flutter, de la conception d’API backend via Swagger/OpenAPI, de la conteneurisation Docker, de l’intégration CRM et de la modernisation d’applications existantes.</p>",
-      "full_description_en": "",
-      "full_description_ar": ""
+      "role_fr": "Ingénieur logiciel senior",
+      "role_ar": "مهندس برمجيات أول",
+      "highlights_en": ["Mobile development (Flutter)", "Development around internal CRM", "Dockerization of ongoing projects", "Swagger & backend API development", "Urbanization / application modernization"],
+      "highlights_fr": ["Développement mobile (Flutter)", "Développement autour du CRM interne", "Dockerisation des projets en cours", "Développement Swagger et API backend", "Urbanisation / modernisation des applications"],
+      "highlights_ar": ["تطوير تطبيقات الهاتف باستخدام Flutter", "تطوير حول CRM الداخلي", "تحويل المشاريع إلى Docker", "تطوير Swagger وواجهات API الخلفية", "تحديث وتطوير التطبيقات"],
+      "stack": "C#, Flutter, JavaScript, Docker, Visual Studio (2019–2022)",
+      "full_description_en": "<p><strong>Senior Software Engineer</strong> working on large-scale telecommunication platforms.</p><p>Responsibilities include mobile development using Flutter, backend API design with Swagger / OpenAPI, Dockerization of projects, CRM integrations, and modernization of legacy applications.</p>",
+      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> travaillant sur des plateformes de télécommunications à grande échelle.</p><p>Les responsabilités incluent le développement mobile avec Flutter, la conception d’API backend avec Swagger/OpenAPI, la conteneurisation des projets, l’intégration de CRM et la modernisation des applications legacy.</p>",
+      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> يعمل على منصات الاتصالات واسعة النطاق.</p><p>تشمل المسؤوليات تطوير تطبيقات الهاتف باستخدام Flutter، تصميم واجهات API الخلفية باستخدام Swagger/OpenAPI، تحويل المشاريع باستخدام Docker، تكامل CRM، وتحديث الأنظمة القديمة.</p>"
     },
     {
       "company": "MOWASALAT",
       "industry_en": "Transport",
-      "date_en": "Nov 2024 – Juin 2025",
+      "industry_fr": "Transport",
+      "industry_ar": "النقل",
+      "date_en": "Nov 2024 – Jun 2025",
+      "date_fr": "Nov 2024 – Juin 2025",
+      "date_ar": "نوفمبر 2024 – يونيو 2025",
       "role_en": "Senior Software Engineer",
-      "highlights_en": [
-        "Gestion de flotte de véhicules",
-        "Développement backend .NET Core",
-        "Intégration système de paiement"
-      ],
-      "stack": "C#, .NET Core",
-      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> sur un système de gestion de flotte de véhicules à grande échelle.</p><p>Développement backend en .NET Core, intégration de fournisseurs de paiement, création de modules back-office pour le suivi des performances et évolution continue des API.</p>",
-      "full_description_en": "",
-      "full_description_ar": ""
+      "role_fr": "Ingénieur logiciel senior",
+      "role_ar": "مهندس برمجيات أول",
+      "highlights_en": ["Vehicle fleet management system", "Back-end development in .NET Core (C#)", "Payment system update with supplier", "Back-office modules for tracking/monitoring performance", "API additions and general software development"],
+      "highlights_fr": ["Système de gestion de flotte de véhicules", "Développement backend en .NET Core (C#)", "Mise à jour du système de paiement avec le fournisseur", "Modules back-office pour le suivi/performance", "Ajouts d’API et développement logiciel général"],
+      "highlights_ar": ["نظام إدارة أسطول المركبات", "تطوير الخلفية باستخدام .NET Core (C#)", "تحديث نظام الدفع مع المورد", "وحدات back-office لمتابعة الأداء", "إضافات API والتطوير العام للبرمجيات"],
+      "stack": "C#, .NET Core, Visual Studio (2019–2022)",
+      "full_description_en": "<p><strong>Senior Software Engineer</strong> involved in a large-scale vehicle fleet management system.</p><p>Main responsibilities included backend development in .NET Core, integration with external payment providers, back-office monitoring modules, performance tracking, and API extensions.</p>",
+      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> impliqué dans un système de gestion de flotte de véhicules à grande échelle.</p><p>Les principales responsabilités incluent le développement backend en .NET Core, l’intégration avec des fournisseurs de paiement externes, les modules de suivi back-office, le suivi des performances et les extensions d’API.</p>",
+      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> مشارك في نظام إدارة أسطول مركبات واسع النطاق.</p><p>شملت المسؤوليات تطوير الخلفية باستخدام .NET Core، التكامل مع مزودي الدفع الخارجيين، وحدات متابعة back-office، تتبع الأداء، وإضافات API.</p>"
     },
     {
       "company": "VERMEG",
       "industry_en": "Banking",
+      "industry_fr": "Banque",
+      "industry_ar": "الخدمات المصرفية",
       "date_en": "Oct 2024 – Nov 2024",
+      "date_fr": "Oct 2024 – Nov 2024",
+      "date_ar": "أكتوبر 2024 – نوفمبر 2024",
       "role_en": "Senior Software Engineer",
-      "highlights_en": [
-        "Logiciels de liquidation bancaire",
-        "Systèmes financiers haute performance"
-      ],
-      "stack": "C++, Delphi",
-      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> intervenant sur des logiciels de liquidation bancaire côté sell-side.</p><p>Développement et maintenance de systèmes financiers haute performance en C++ et Delphi avec un fort accent sur la stabilité et la fiabilité.</p>",
-      "full_description_en": "",
-      "full_description_ar": ""
-    },
-    {
-      "company": "ASTERA",
-      "industry_en": "Pharmaceutical Supply",
-      "date_en": "Mai 2023 – Oct 2024",
-      "role_en": "Senior Software Engineer",
-      "highlights_en": [
-        "Authentification forte (2FA)",
-        "Migration Azure",
-        "DevOps / DevSecOps"
-      ],
-      "stack": "C#, Azure, JavaScript",
-      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> sur des plateformes de chaîne d’approvisionnement pharmaceutique.</p><p>Mise en place d’un service d’identité avec authentification forte (2FA), modernisation des workflows post-COVID et participation active aux initiatives DevOps et à la migration Azure.</p>",
-      "full_description_en": "",
-      "full_description_ar": ""
-    },
-    {
-      "company": "ZIWO",
-      "industry_en": "Call Center",
-      "date_en": "Mar 2023 – Mai 2023",
-      "role_en": "Senior Software Engineer",
-      "highlights_en": [
-        "Architecture microservices",
-        "Kafka & Docker",
-        "Automatisation"
-      ],
-      "stack": "C#, Kafka, Docker",
-      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> sur une plateforme cloud de centre d’appels.</p><p>Conception d’architectures microservices, déploiements conteneurisés avec Docker, communication asynchrone via Kafka et automatisation des processus.</p>",
-      "full_description_en": "",
-      "full_description_ar": ""
-    },
-    {
-      "company": "SOCIETE GENERALE",
-      "industry_en": "Banking",
-      "date_en": "Déc 2018 – Mai 2021",
-      "role_en": "Senior Engineer & Architect",
-      "highlights_en": [
-        "Architecture SI",
-        "SSO",
-        "Reverse engineering"
-      ],
-      "stack": "C#, C++, PowerShell",
-      "full_description_fr": "<p><strong>Ingénieur et architecte senior</strong> sur des infrastructures de provisioning IT.</p><p>Définition d’architectures, préparation SSO, reverse engineering et coordination technique entre équipes d’ingénierie et d’infrastructure.</p>",
-      "full_description_en": "",
-      "full_description_ar": ""
+      "role_fr": "Ingénieur logiciel senior",
+      "role_ar": "مهندس برمجيات أول",
+      "highlights_en": ["Sell-side liquidation software engineering"],
+      "highlights_fr": ["Ingénierie logicielle de liquidation côté vente"],
+      "highlights_ar": ["هندسة برمجيات التصفية في الجانب البيعي"],
+      "stack": "C++, Delphi, Visual Studio",
+      "full_description_en": "<p><strong>Senior Software Engineer</strong> contributing to sell-side banking liquidation software.</p><p>Worked on high-performance financial systems implemented in C++ and Delphi, emphasizing stability and performance.</p>",
+      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> contribuant au logiciel de liquidation côté vente bancaire.</p><p>Travail sur des systèmes financiers haute performance en C++ et Delphi, avec un accent sur la stabilité et la performance.</p>",
+      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> مساهم في تطوير أنظمة التصفية البنكية.</p><p>العمل على أنظمة مالية عالية الأداء باستخدام C++ وDelphi، مع التركيز على الاستقرار والأداء.</p>"
     }
   ]
 }
