@@ -85,8 +85,7 @@ function render(locale, content){
   $("#cv-link").textContent = t(locale, "hero.ctaPrimary");
   $("#cv-link").href = locale.langCode === "ar" ? "./resume-ar.md" : "./";
   $("#cv-link").addEventListener("click", (e)=>{
-    // For now, CV PDFs are not auto-generated; keep link to Markdown for Arabic and to provided docx assets if user replaces.
-    // User can swap this later with actual PDFs.
+    // Placeholder: CV PDFs not auto-generated yet
   }, {once:true});
 
   $("#contact-link").textContent = t(locale, "hero.ctaSecondary");
@@ -131,17 +130,18 @@ function render(locale, content){
 
     const title = document.createElement("div");
     title.className = "item-title";
-    title.textContent = `${x.company} — ${x.role_en}`;
+    title.textContent = `${x.company} — ${locale.langCode === "ar" ? x.role_ar : locale.langCode === "fr" ? x.role_fr : x.role_en}`;
 
     const meta = document.createElement("div");
     meta.className = "item-meta";
-    meta.textContent = `${x.industry_en} • ${x.date_en}`;
+    meta.textContent = `${locale.langCode === "ar" ? x.industry_ar : locale.langCode === "fr" ? x.industry_fr : x.industry_en} • ${locale.langCode === "ar" ? x.date_ar : locale.langCode === "fr" ? x.date_fr : x.date_en}`;
 
     head.appendChild(title);
     head.appendChild(meta);
 
     const ul = document.createElement("ul");
-    (x.highlights_en||[]).forEach(h=>{
+    const highlights = locale.langCode === "ar" ? (x.highlights_ar || []) : locale.langCode === "fr" ? (x.highlights_fr || []) : (x.highlights_en || []);
+    highlights.forEach(h=>{
       const li = document.createElement("li");
       li.textContent = h;
       ul.appendChild(li);
@@ -149,18 +149,21 @@ function render(locale, content){
 
     const toggle = document.createElement("button");
     toggle.className = "accordion-toggle";
-    toggle.textContent = locale.langCode === "ar" ? "اقرأ المزيد" : "Read more";
+    if(locale.langCode === "ar") toggle.textContent = "اقرأ المزيد";
+    else if(locale.langCode === "fr") toggle.textContent = "Lire la suite";
+    else toggle.textContent = "Read more";
 
     const full = document.createElement("div");
     full.className = "accordion-content";
-    full.innerHTML =
-      locale.langCode === "ar"
-        ? (x.full_description_ar || "")
-        : (x.full_description_en || "");
+    if(locale.langCode === "ar") full.innerHTML = x.full_description_ar || "";
+    else if(locale.langCode === "fr") full.innerHTML = x.full_description_fr || "";
+    else full.innerHTML = x.full_description_en || "";
 
     toggle.addEventListener("click", ()=>{
       const open = full.classList.toggle("open");
-      toggle.textContent = open ? (locale.langCode === "ar" ? "إخفاء" : "Hide") : (locale.langCode === "ar" ? "اقرأ المزيد" : "Read more");
+      if(locale.langCode === "ar") toggle.textContent = open ? "إخفاء" : "اقرأ المزيد";
+      else if(locale.langCode === "fr") toggle.textContent = open ? "Masquer" : "Lire la suite";
+      else toggle.textContent = open ? "Hide" : "Read more";
     });
 
     const stack = document.createElement("div");
@@ -169,10 +172,10 @@ function render(locale, content){
 
     div.appendChild(head);
     div.appendChild(ul);
-    div.appendChild(full);
     div.appendChild(toggle);
     div.appendChild(full);
     div.appendChild(stack);
+
     timeline.appendChild(div);
   });
 }
