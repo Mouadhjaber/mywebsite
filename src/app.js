@@ -18,8 +18,16 @@ async function loadJSON(path){
   return await res.json();
 }
 
-function normalize(s){
-  return (s||"").toString().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+function normalizeSearch(s){
+  if(!s) return "";
+  return s.toString().toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g,"")
+          .replace(/[أإآا]/g,"ا")
+          .replace(/[يى]/g,"ي")
+          .replace(/[ة]/g,"ه")
+          .replace(/[ؤئ]/g,"ء")
+          .trim();
 }
 
 function applySEO(locale, content){
@@ -30,16 +38,6 @@ function applySEO(locale, content){
   $("#meta-keywords").setAttribute("content", keywords);
   $("#og-title").setAttribute("content", locale.siteTitle);
   $("#og-desc").setAttribute("content", desc);
-  $("#jsonld").textContent = JSON.stringify({
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name": content.name,
-    "jobTitle": locale.hero.subtitle,
-    "email": content.email,
-    "telephone": content.phone,
-    "url": content.linkedin,
-    "image": location.origin + "/assets/profile.jpg"
-  }, null, 2);
 }
 
 function setDirAndRTL(locale){
@@ -53,61 +51,45 @@ function t(locale, path){
   return path.split(".").reduce((acc, k) => acc && acc[k], locale) ?? "";
 }
 
-// PDF generator for EN/FR/AR
-function generatePDF(content, locale){
+// Generate PDF dynamically using jsPDF
+function generatePDF(locale, content){
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF();
-
-  const title = `${content.name} — ${locale.langCode === "ar" ? content.title_ar : locale.langCode === "fr" ? content.title_fr : content.title_en}`;
   let y = 10;
 
-  doc.setFontSize(16);
-  doc.text(title, 10, y); y += 10;
-
-  doc.setFontSize(12);
-  doc.text(`Phone: ${content.phone}`, 10, y); y += 7;
-  doc.text(`Email: ${content.email}`, 10, y); y += 7;
-  doc.text(`LinkedIn: ${content.linkedin}`, 10, y); y += 10;
-
-  // Skills
+  doc.setFontSize(18);
+  doc.text(content.name, 10, y); y += 10;
   doc.setFontSize(14);
-  doc.text(t(locale, "skills.title"), 10, y); y += 7;
+  doc.text(locale.hero.subtitle, 10, y); y += 10;
   doc.setFontSize(12);
-  const skills = [].concat(
-    content.skills.methods,
-    content.skills.process,
-    content.skills.modeling,
-    content.skills.patterns,
-    content.skills.microsoft,
-    content.skills.other_langs,
-    content.skills.scripting,
-    content.skills.tools
-  );
-  doc.text(skills.join(", "), 10, y); y += 10;
+  doc.text(`${t(locale,"contact.phone")}: ${content.phone}`, 10, y); y += 6;
+  doc.text(`${t(locale,"contact.email")}: ${content.email}`, 10, y); y += 6;
+  doc.text(`${t(locale,"contact.linkedin")}: ${content.linkedin}`, 10, y); y += 10;
 
-  // Experience
-  doc.setFontSize(14);
-  doc.text(t(locale, "experience.title"), 10, y); y += 7;
-  doc.setFontSize(12);
-  content.experience.forEach(exp => {
-    const role = locale.langCode === "ar" ? exp.role_ar : locale.langCode === "fr" ? exp.role_fr : exp.role_en;
-    const company = exp.company;
-    const date = locale.langCode === "ar" ? exp.date_ar : locale.langCode === "fr" ? exp.date_fr : exp.date_en;
-    doc.text(`${role} @ ${company} (${date})`, 10, y); y += 7;
-    const highlights = locale.langCode === "ar" ? exp.highlights_ar : locale.langCode === "fr" ? exp.highlights_fr : exp.highlights_en;
-    highlights.forEach(h => { doc.text(`- ${h}`, 12, y); y += 7; });
-    y += 3;
-    if (y > 280) { doc.addPage(); y = 10; }
+  content.experience.forEach(x=>{
+    doc.setFontSize(14);
+    const role = locale.langCode==="ar"?x.role_ar:locale.langCode==="fr"?x.role_fr:x.role_en;
+    const company = x.company;
+    doc.text(`${role} — ${company}`, 10, y); y+=6;
+    doc.setFontSize(12);
+    const dates = locale.langCode==="ar"?x.date_ar:locale.langCode==="fr"?x.date_fr:x.date_en;
+    const industry = locale.langCode==="ar"?x.industry_ar:locale.langCode==="fr"?x.industry_fr:x.industry_en;
+    doc.text(`${industry} • ${dates}`, 10, y); y+=6;
+    const desc = locale.langCode==="ar"?x.full_description_ar:locale.langCode==="fr"?x.full_description_fr:x.full_description_en;
+    const text = desc.replace(/<[^>]*>/g,'').replace(/\s+/g,' ');
+    doc.text(doc.splitTextToSize(text, 180), 10, y);
+    y+=text.length/2; // approximate
+    y+=5;
+    if(y>270){ doc.addPage(); y=10; }
   });
 
-  const filename = `CV-${locale.langCode}.pdf`;
-  doc.save(filename);
+  return doc;
 }
 
 function render(locale, content){
   $("#brand-name").textContent = content.name;
 
-  $$("#nav a").forEach(a => {
+  $$("#nav a").forEach(a=>{
     const key = a.getAttribute("data-i18n");
     a.textContent = t(locale, key);
   });
@@ -134,16 +116,17 @@ function render(locale, content){
   $("#linkedin").href = content.linkedin;
 
   $("#cv-link").textContent = t(locale, "hero.ctaPrimary");
-  $("#cv-link").addEventListener("click", (e)=>{
+  $("#cv-link").addEventListener("click",(e)=>{
     e.preventDefault();
-    generatePDF(content, locale);
+    const pdf = generatePDF(locale, content);
+    pdf.save(`${content.name}-${locale.langCode}.pdf`);
   });
 
   $("#contact-link").textContent = t(locale, "hero.ctaSecondary");
 
-  // Skills badges
+  // Skills
   const badgeContainer = $("#skills-badges");
-  badgeContainer.innerHTML = "";
+  badgeContainer.innerHTML="";
   const skillBuckets = [
     ...content.skills.methods,
     ...content.skills.process,
@@ -155,70 +138,68 @@ function render(locale, content){
     ...content.skills.tools
   ];
   const seen = new Set();
-  skillBuckets.forEach(s => {
-    const k = normalize(s);
+  skillBuckets.forEach(s=>{
+    const k = normalizeSearch(s);
     if(seen.has(k)) return;
     seen.add(k);
     const span = document.createElement("span");
-    span.className = "badge";
-    span.textContent = s;
+    span.className="badge";
+    span.textContent=s;
     badgeContainer.appendChild(span);
   });
 
-  // Experience timeline
-  const timeline = $("#timeline");
-  timeline.innerHTML = "";
-  content.experience.forEach(x => {
-    const div = document.createElement("div");
-    div.className = "item";
-    div.setAttribute("data-search", normalize([
-      x.company, x.industry_en, x.date_en, x.role_en, x.stack, ...(x.highlights_en||[])
+  // Experience
+  const timeline=$("#timeline");
+  timeline.innerHTML="";
+  content.experience.forEach(x=>{
+    const div=document.createElement("div");
+    div.className="item";
+    div.setAttribute("data-search", normalizeSearch([
+      x.company, x.industry_en, x.industry_fr, x.industry_ar,
+      x.date_en, x.date_fr, x.date_ar,
+      x.role_en, x.role_fr, x.role_ar,
+      x.stack, ...(x.highlights_en||[]), ...(x.highlights_fr||[]), ...(x.highlights_ar||[])
     ].join(" ")));
 
-    const head = document.createElement("div");
-    head.className = "item-head";
-
-    const title = document.createElement("div");
-    title.className = "item-title";
-    title.textContent = `${x.company} — ${locale.langCode === "ar" ? x.role_ar : locale.langCode === "fr" ? x.role_fr : x.role_en}`;
-
-    const meta = document.createElement("div");
-    meta.className = "item-meta";
-    meta.textContent = `${locale.langCode === "ar" ? x.industry_ar : locale.langCode === "fr" ? x.industry_fr : x.industry_en} • ${locale.langCode === "ar" ? x.date_ar : locale.langCode === "fr" ? x.date_fr : x.date_en}`;
-
+    const head=document.createElement("div");
+    head.className="item-head";
+    const title=document.createElement("div");
+    title.className="item-title";
+    title.textContent = `${x.company} — ${locale.langCode==="ar"?x.role_ar:locale.langCode==="fr"?x.role_fr:x.role_en}`;
+    const meta=document.createElement("div");
+    meta.className="item-meta";
+    meta.textContent = `${locale.langCode==="ar"?x.industry_ar:locale.langCode==="fr"?x.industry_fr:x.industry_en} • ${locale.langCode==="ar"?x.date_ar:locale.langCode==="fr"?x.date_fr:x.date_en}`;
     head.appendChild(title);
     head.appendChild(meta);
 
-    const ul = document.createElement("ul");
-    const highlights = locale.langCode === "ar" ? (x.highlights_ar || []) : locale.langCode === "fr" ? (x.highlights_fr || []) : (x.highlights_en || []);
-    highlights.forEach(h=>{
-      const li = document.createElement("li");
-      li.textContent = h;
+    const ul=document.createElement("ul");
+    const highlights = locale.langCode==="ar"?x.highlights_ar:locale.langCode==="fr"?x.highlights_fr:x.highlights_en;
+    (highlights||[]).forEach(h=>{
+      const li=document.createElement("li");
+      li.textContent=h;
       ul.appendChild(li);
     });
 
-    const toggle = document.createElement("button");
-    toggle.className = "accordion-toggle";
-    if(locale.langCode === "ar") toggle.textContent = "اقرأ المزيد";
-    else if(locale.langCode === "fr") toggle.textContent = "Lire la suite";
-    else toggle.textContent = "Read more";
+    const toggle=document.createElement("button");
+    toggle.className="accordion-toggle";
+    if(locale.langCode==="ar") toggle.textContent="اقرأ المزيد";
+    else if(locale.langCode==="fr") toggle.textContent="Lire la suite";
+    else toggle.textContent="Read more";
 
-    const full = document.createElement("div");
-    full.className = "accordion-content";
-    if(locale.langCode === "ar") full.innerHTML = x.full_description_ar || "";
-    else if(locale.langCode === "fr") full.innerHTML = x.full_description_fr || "";
-    else full.innerHTML = x.full_description_en || "";
+    const full=document.createElement("div");
+    full.className="accordion-content";
+    full.innerHTML = locale.langCode==="ar"?x.full_description_ar:locale.langCode==="fr"?x.full_description_fr:x.full_description_en;
 
     toggle.addEventListener("click", ()=>{
       const open = full.classList.toggle("open");
-      if(locale.langCode === "ar") toggle.textContent = open ? "إخفاء" : "اقرأ المزيد";
-      else if(locale.langCode === "fr") toggle.textContent = open ? "Masquer" : "Lire la suite";
-      else toggle.textContent = open ? "Hide" : "Read more";
+      if(locale.langCode==="ar") toggle.textContent=open?"إخفاء":"اقرأ المزيد";
+      else if(locale.langCode==="fr") toggle.textContent=open?"Masquer":"Lire la suite";
+      else toggle.textContent=open?"Hide":"Read more";
     });
 
-    const stack = document.createElement("div");
-    stack.className = "small";
-    stack.textContent = x.stack;
+    const stack=document.createElement("div");
+    stack.className="small";
+    stack.textContent=x.stack;
 
     div.appendChild(head);
     div.appendChild(ul);
@@ -233,14 +214,17 @@ function render(locale, content){
 function bindSearch(){
   const input = $("#search");
   const items = $$("#timeline .item");
+
   const update = () => {
-    const q = normalize(input.value.trim());
-    items.forEach(it => {
-      const hay = it.getAttribute("data-search") || "";
-      it.style.display = (q === "" || hay.includes(q)) ? "" : "none";
+    const q = normalizeSearch(input.value.trim());
+    items.forEach(it=>{
+      const hay = normalizeSearch(it.getAttribute("data-search")||"");
+      it.style.display = (q==="" || hay.includes(q))?"":"none";
     });
   };
+
   input.addEventListener("input", update);
+  update();
 }
 
 async function main(){
@@ -251,11 +235,11 @@ async function main(){
   const locales = {
     en: await loadJSON("./locales/en.json"),
     fr: await loadJSON("./locales/fr.json"),
-    ar: await loadJSON("./locales/ar.json"),
+    ar: await loadJSON("./locales/ar.json")
   };
 
-  const setLang = async (code) => {
-    const locale = locales[code] || locales.en;
+  const setLang = async (code)=>{
+    const locale = locales[code]||locales.en;
     setQueryParam("lang", locale.langCode);
     localStorage.setItem("lang", locale.langCode);
     langSelect.value = locale.langCode;
@@ -265,11 +249,11 @@ async function main(){
     bindSearch();
   };
 
-  langSelect.addEventListener("change", (e)=> setLang(e.target.value));
+  langSelect.addEventListener("change", (e)=>setLang(e.target.value));
   await setLang(requested);
 }
 
 main().catch(err=>{
   console.error(err);
-  document.body.innerHTML = "<div style='padding:24px;font-family:system-ui;color:#111;background:#fff'>Failed to load site assets.</div>";
+  document.body.innerHTML="<div style='padding:24px;font-family:system-ui;color:#111;background:#fff'>Failed to load site assets.</div>";
 });
