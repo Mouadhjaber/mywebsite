@@ -54,8 +54,6 @@ function t(locale, path){
 }
 
 function render(locale, content){
-  const lang = locale.langCode;
-
   $("#brand-name").textContent = content.name;
 
   $$("#nav a").forEach(a => {
@@ -81,13 +79,19 @@ function render(locale, content){
   $("#phone").href = `tel:${content.phone.replace(/\s+/g,'')}`;
   $("#email").textContent = content.email;
   $("#email").href = `mailto:${content.email}`;
-  $("#linkedin").textContent = content.linkedin.replace(/^https?:\/\//,"");
+  $("#linkedin").textContent = content.linkedin.replace("https://","").replace("http://","");
   $("#linkedin").href = content.linkedin;
 
   $("#cv-link").textContent = t(locale, "hero.ctaPrimary");
+  $("#cv-link").href = locale.langCode === "ar" ? "./resume-ar.md" : "./";
+  $("#cv-link").addEventListener("click", (e)=>{
+    // For now, CV PDFs are not auto-generated; keep link to Markdown for Arabic and to provided docx assets if user replaces.
+    // User can swap this later with actual PDFs.
+  }, {once:true});
+
   $("#contact-link").textContent = t(locale, "hero.ctaSecondary");
 
-  // Skills
+  // Skills: turn content.skills into badge groups
   const badgeContainer = $("#skills-badges");
   badgeContainer.innerHTML = "";
   const skillBuckets = [
@@ -100,6 +104,7 @@ function render(locale, content){
     ...content.skills.scripting,
     ...content.skills.tools
   ];
+  // Deduplicate
   const seen = new Set();
   skillBuckets.forEach(s => {
     const k = normalize(s);
@@ -114,19 +119,11 @@ function render(locale, content){
   // Experience timeline
   const timeline = $("#timeline");
   timeline.innerHTML = "";
-
   content.experience.forEach(x => {
     const div = document.createElement("div");
     div.className = "item";
-
     div.setAttribute("data-search", normalize([
-      x.company,
-      x[`industry_${lang}`] || x.industry_en,
-      x[`date_${lang}`] || x.date_en,
-      x[`role_${lang}`] || x.role_en,
-      x.stack,
-      ...(x[`highlights_${lang}`] || x.highlights_en || []),
-      x[`full_description_${lang}`] || ""
+      x.company, x.industry_en, x.date_en, x.role_en, x.stack, ...(x.highlights_en||[])
     ].join(" ")));
 
     const head = document.createElement("div");
@@ -134,17 +131,17 @@ function render(locale, content){
 
     const title = document.createElement("div");
     title.className = "item-title";
-    title.textContent = `${x.company} — ${x[`role_${lang}`] || x.role_en}`;
+    title.textContent = `${x.company} — ${x.role_en}`;
 
     const meta = document.createElement("div");
     meta.className = "item-meta";
-    meta.textContent = `${x[`industry_${lang}`] || x.industry_en} • ${x[`date_${lang}`] || x.date_en}`;
+    meta.textContent = `${x.industry_en} • ${x.date_en}`;
 
     head.appendChild(title);
     head.appendChild(meta);
 
     const ul = document.createElement("ul");
-    (x[`highlights_${lang}`] || x.highlights_en || []).forEach(h => {
+    (x.highlights_en||[]).forEach(h=>{
       const li = document.createElement("li");
       li.textContent = h;
       ul.appendChild(li);
@@ -152,15 +149,18 @@ function render(locale, content){
 
     const toggle = document.createElement("button");
     toggle.className = "accordion-toggle";
-    toggle.textContent = t(locale, "experience.readMore");
+    toggle.textContent = locale.langCode === "ar" ? "اقرأ المزيد" : "Read more";
 
     const full = document.createElement("div");
     full.className = "accordion-content";
-    full.innerHTML = x[`full_description_${lang}`] || x.full_description_en || "";
+    full.innerHTML =
+      locale.langCode === "ar"
+        ? (x.full_description_ar || "")
+        : (x.full_description_en || "");
 
-    toggle.addEventListener("click", () => {
+    toggle.addEventListener("click", ()=>{
       const open = full.classList.toggle("open");
-      toggle.textContent = open ? t(locale, "experience.hide") : t(locale, "experience.readMore");
+      toggle.textContent = open ? (locale.langCode === "ar" ? "إخفاء" : "Hide") : (locale.langCode === "ar" ? "اقرأ المزيد" : "Read more");
     });
 
     const stack = document.createElement("div");
@@ -169,10 +169,10 @@ function render(locale, content){
 
     div.appendChild(head);
     div.appendChild(ul);
+    div.appendChild(full);
     div.appendChild(toggle);
     div.appendChild(full);
     div.appendChild(stack);
-
     timeline.appendChild(div);
   });
 }
@@ -198,7 +198,7 @@ async function main(){
   const locales = {
     en: await loadJSON("./locales/en.json"),
     fr: await loadJSON("./locales/fr.json"),
-    ar: await loadJSON("./locales/ar.json")
+    ar: await loadJSON("./locales/ar.json"),
   };
 
   const setLang = async (code) => {
@@ -218,5 +218,5 @@ async function main(){
 
 main().catch(err=>{
   console.error(err);
-  document.body.innerHTML = "<div style='padding:24px;font-family:system-ui'>Failed to load site assets.</div>";
+  document.body.innerHTML = "<div style='padding:24px;font-family:system-ui;color:#111;background:#fff'>Failed to load site assets.</div>";
 });

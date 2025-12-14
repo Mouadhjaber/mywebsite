@@ -1,75 +1,278 @@
 {
   "name": "Mouadh Jaber",
+  "title_en": "Software Engineer",
+  "title_fr": "Ingénieur logiciel",
+  "title_ar": "مهندس برمجيات",
   "phone": "+216 58 201 430",
   "email": "mouadh.jaber@msn.com",
   "linkedin": "https://www.linkedin.com/in/mouadhjaber/",
   "skills": {
-    "methods": ["XP", "Scrum", "SAFe", "TDD", "BDD"],
-    "process": ["ITIL", "DevOps", "DevSecOps"],
-    "modeling": ["UML v2", "Merise"],
-    "patterns": ["Repository", "Unit of Work", "IoC", "DI", "Facade", "Proxy", "MVVM", "MVC", "DDD"],
-    "microsoft": [".NET (C#, VB.NET)", "ASP.NET", "WCF", "WebAPI / REST", "ADO.NET", "LINQ", "Entity Framework", "NHibernate", ".NET Core", "Blazor", "Kafka", "Docker", "SpecFlow", "Sonar"],
-    "other_langs": ["C", "C++", "Python"],
-    "scripting": ["VBScript", "PowerShell", "JavaScript", "jQuery", "AngularJS", "React"],
-    "tools": ["Visual Studio (2008–2022)", "TFS / Azure DevOps", "TeamCity", "CVS/SVN", "Eclipse", "MS Project / Project Server"]
+    "architecture": [
+      "Distributed, composite, and real-time applications",
+      "Layered models, microservices, mesh architecture, monolithic architecture"
+    ],
+    "methods": [
+      "XP",
+      "Scrum",
+      "SAFe",
+      "TDD",
+      "BDD"
+    ],
+    "process": [
+      "ITIL",
+      "DevOps",
+      "DevSecOps"
+    ],
+    "modeling": [
+      "UML v2",
+      "Merise"
+    ],
+    "communication": [
+      "Web",
+      "pipes",
+      "sockets",
+      "messaging systems",
+      "SOA",
+      "JSON"
+    ],
+    "patterns": [
+      "Repository",
+      "Unit of Work",
+      "IoC",
+      "DI",
+      "Facade",
+      "Proxy",
+      "MVVM",
+      "MVC",
+      "DDD"
+    ],
+    "microsoft": [
+      ".NET (C#, VB.NET)",
+      "ASP.NET",
+      "WCF",
+      "WebAPI / REST",
+      "ADO.NET",
+      "LINQ",
+      "Entity Framework",
+      "NHibernate",
+      ".NET Core",
+      "Blazor",
+      "Kafka",
+      "Docker",
+      "SpecFlow",
+      "Sonar"
+    ],
+    "other_langs": [
+      "C",
+      "C++",
+      "Python"
+    ],
+    "ibm": [
+      "Lotus Notes / Domino",
+      "Lotus Script",
+      "XPage",
+      "Sametime"
+    ],
+    "scripting": [
+      "VBScript",
+      "PowerShell",
+      "JavaScript",
+      "jQuery",
+      "AngularJS",
+      "React"
+    ],
+    "is": [
+      "Active Directory (2003/2008/2012)",
+      "SQL Server (2008/2014/2016)",
+      "SharePoint / MOSS / Office 365",
+      "Azure Service Bus",
+      "Azure Cloud"
+    ],
+    "tools": [
+      "Visual Studio (2008–2022)",
+      "TFS / Azure DevOps",
+      "TeamCity",
+      "CVS/SVN",
+      "Eclipse",
+      "MS Project / Project Server"
+    ]
+  },
+  "languages": {
+    "en": "English",
+    "fr": "French",
+    "ar": "Arabic / العربية"
   },
   "experience": [
     {
       "company": "NETCOM",
       "industry_en": "Telecommunication",
-      "industry_fr": "Télécommunications",
-      "industry_ar": "الاتصالات",
       "date_en": "Jul 2025 – Present",
-      "date_fr": "Juil 2025 – Présent",
-      "date_ar": "يوليو 2025 – الآن",
       "role_en": "Senior Software Engineer",
-      "role_fr": "Ingénieur logiciel senior",
-      "role_ar": "مهندس برمجيات أول",
-      "highlights_en": ["Mobile development (Flutter)", "Development around internal CRM", "Dockerization of ongoing projects", "Swagger & backend API development", "Urbanization / application modernization"],
-      "highlights_fr": ["Développement mobile (Flutter)", "Développement autour du CRM interne", "Dockerisation des projets en cours", "Développement Swagger et API backend", "Urbanisation / modernisation des applications"],
-      "highlights_ar": ["تطوير تطبيقات الهاتف باستخدام Flutter", "تطوير حول CRM الداخلي", "تحويل المشاريع إلى Docker", "تطوير Swagger وواجهات API الخلفية", "تحديث وتطوير التطبيقات"],
+      "highlights_en": [
+        "Mobile development (Flutter)",
+        "Development around internal CRM",
+        "Dockerization of ongoing projects",
+        "Swagger & backend API development",
+        "Urbanization / application modernization"
+      ],
       "stack": "C#, Flutter, JavaScript, Docker, Visual Studio (2019–2022)",
-      "full_description_en": "<p><strong>Senior Software Engineer</strong> working on large-scale telecommunication platforms.</p><p>Responsibilities include mobile development using Flutter, backend API design with Swagger / OpenAPI, Dockerization of projects, CRM integrations, and modernization of legacy applications.</p>",
-      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> travaillant sur des plateformes de télécommunications à grande échelle.</p><p>Les responsabilités incluent le développement mobile avec Flutter, la conception d’API backend avec Swagger/OpenAPI, la conteneurisation des projets, l’intégration de CRM et la modernisation des applications legacy.</p>",
-      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> يعمل على منصات الاتصالات واسعة النطاق.</p><p>تشمل المسؤوليات تطوير تطبيقات الهاتف باستخدام Flutter، تصميم واجهات API الخلفية باستخدام Swagger/OpenAPI، تحويل المشاريع باستخدام Docker، تكامل CRM، وتحديث الأنظمة القديمة.</p>"
+      "full_description_en": "\n<p><strong>Senior Software Engineer</strong> working on large-scale <a href=\"https://en.wikipedia.org/wiki/Telecommunication\" target=\"_blank\">telecommunication</a> platforms.</p>\n<p>Responsibilities include mobile development using <a href=\"https://flutter.dev\" target=\"_blank\">Flutter</a>, backend API design with <a href=\"https://swagger.io/specification/\" target=\"_blank\">Swagger / OpenAPI</a>, Dockerization of projects using <a href=\"https://www.docker.com\" target=\"_blank\">Docker</a>, CRM integrations, and modernization (urbanization) of legacy applications.</p>\n",
+      "full_description_ar": "\n<p><strong>مهندس برمجيات أول</strong> يعمل على منصات <a href=\"https://ar.wikipedia.org/wiki/اتصالات\" target=\"_blank\">الاتصالات</a>.</p>\n<p>تشمل المسؤوليات تطوير تطبيقات الهاتف باستخدام <a href=\"https://flutter.dev\" target=\"_blank\">Flutter</a>، تصميم واجهات API الخلفية باستخدام Swagger/OpenAPI، استخدام <a href=\"https://www.docker.com\" target=\"_blank\">Docker</a> لتحويل المشاريع، تكامل أنظمة CRM، وتحديث الأنظمة القديمة.</p>\n"
     },
     {
       "company": "MOWASALAT",
       "industry_en": "Transport",
-      "industry_fr": "Transport",
-      "industry_ar": "النقل",
       "date_en": "Nov 2024 – Jun 2025",
-      "date_fr": "Nov 2024 – Juin 2025",
-      "date_ar": "نوفمبر 2024 – يونيو 2025",
       "role_en": "Senior Software Engineer",
-      "role_fr": "Ingénieur logiciel senior",
-      "role_ar": "مهندس برمجيات أول",
-      "highlights_en": ["Vehicle fleet management system", "Back-end development in .NET Core (C#)", "Payment system update with supplier", "Back-office modules for tracking/monitoring performance", "API additions and general software development"],
-      "highlights_fr": ["Système de gestion de flotte de véhicules", "Développement backend en .NET Core (C#)", "Mise à jour du système de paiement avec le fournisseur", "Modules back-office pour le suivi/performance", "Ajouts d’API et développement logiciel général"],
-      "highlights_ar": ["نظام إدارة أسطول المركبات", "تطوير الخلفية باستخدام .NET Core (C#)", "تحديث نظام الدفع مع المورد", "وحدات back-office لمتابعة الأداء", "إضافات API والتطوير العام للبرمجيات"],
+      "highlights_en": [
+        "Vehicle fleet management system",
+        "Back-end development in .NET Core (C#)",
+        "Payment system update with supplier",
+        "Back-office modules for tracking/monitoring performance",
+        "API additions and general software development"
+      ],
       "stack": "C#, .NET Core, Visual Studio (2019–2022)",
-      "full_description_en": "<p><strong>Senior Software Engineer</strong> involved in a large-scale vehicle fleet management system.</p><p>Main responsibilities included backend development in .NET Core, integration with external payment providers, back-office monitoring modules, performance tracking, and API extensions.</p>",
-      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> impliqué dans un système de gestion de flotte de véhicules à grande échelle.</p><p>Les principales responsabilités incluent le développement backend en .NET Core, l’intégration avec des fournisseurs de paiement externes, les modules de suivi back-office, le suivi des performances et les extensions d’API.</p>",
-      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> مشارك في نظام إدارة أسطول مركبات واسع النطاق.</p><p>شملت المسؤوليات تطوير الخلفية باستخدام .NET Core، التكامل مع مزودي الدفع الخارجيين، وحدات متابعة back-office، تتبع الأداء، وإضافات API.</p>"
+      "full_description_en": "\n<p><strong>Senior Software Engineer</strong> involved in a large-scale <a href=\"https://en.wikipedia.org/wiki/Fleet_management\" target=\"_blank\">vehicle fleet management system</a>.</p>\n<p>Main responsibilities included backend development in <strong>.NET Core (C#)</strong>, integration with external payment providers, development of back-office monitoring modules, performance tracking tools, and continuous API extensions.</p>\n",
+      "full_description_ar": "\n<p><strong>مهندس برمجيات أول</strong> مشارك في نظام <a href=\"https://ar.wikipedia.org/wiki/إدارة_الأسطول\" target=\"_blank\">إدارة أساطيل المركبات</a>.</p>\n<p>شملت المهام تطوير الخلفية باستخدام ‎.NET Core‎، التكامل مع مزودي الدفع، تطوير وحدات Back‑Office للمتابعة، وتوسيع واجهات API وتحسين الأداء.</p>\n"
     },
     {
       "company": "VERMEG",
       "industry_en": "Banking",
-      "industry_fr": "Banque",
-      "industry_ar": "الخدمات المصرفية",
       "date_en": "Oct 2024 – Nov 2024",
-      "date_fr": "Oct 2024 – Nov 2024",
-      "date_ar": "أكتوبر 2024 – نوفمبر 2024",
       "role_en": "Senior Software Engineer",
-      "role_fr": "Ingénieur logiciel senior",
-      "role_ar": "مهندس برمجيات أول",
-      "highlights_en": ["Sell-side liquidation software engineering"],
-      "highlights_fr": ["Ingénierie logicielle de liquidation côté vente"],
-      "highlights_ar": ["هندسة برمجيات التصفية في الجانب البيعي"],
+      "highlights_en": [
+        "Sell-side liquidation software engineering"
+      ],
       "stack": "C++, Delphi, Visual Studio",
-      "full_description_en": "<p><strong>Senior Software Engineer</strong> contributing to sell-side banking liquidation software.</p><p>Worked on high-performance financial systems implemented in C++ and Delphi, emphasizing stability and performance.</p>",
-      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> contribuant au logiciel de liquidation côté vente bancaire.</p><p>Travail sur des systèmes financiers haute performance en C++ et Delphi, avec un accent sur la stabilité et la performance.</p>",
-      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> مساهم في تطوير أنظمة التصفية البنكية.</p><p>العمل على أنظمة مالية عالية الأداء باستخدام C++ وDelphi، مع التركيز على الاستقرار والأداء.</p>"
+      "full_description_en": "\n<p><strong>Senior Software Engineer</strong> contributing to <a href=\"https://en.wikipedia.org/wiki/Investment_banking\" target=\"_blank\">sell-side banking</a> liquidation software.</p>\n<p>Worked on high-performance financial systems implemented in <strong>C++</strong> and <strong>Delphi</strong>, with strong emphasis on stability and performance.</p>\n",
+      "full_description_ar": "\n<p><strong>مهندس برمجيات أول</strong> ساهم في تطوير أنظمة التصفية في المجال البنكي.</p>\n<p>العمل على أنظمة مالية عالية الأداء باستخدام <strong>C++</strong> و<strong>Delphi</strong> مع تركيز قوي على الاستقرار.</p>\n"
+    },
+    {
+      "company": "ASTERA",
+      "industry_en": "Pharmaceutical Supply",
+      "date_en": "May 2023 – Oct 2024",
+      "role_en": "Senior Software Engineer (Rouen, France)",
+      "highlights_en": [
+        "Implemented Identity Service with 2FA and QR code/SMS",
+        "Modernized workflow and authentication system post-COVID",
+        "Contributed to DevOps/DevSecOps and Azure migration"
+      ],
+      "stack": "C#, JavaScript, Gulp, Bootstrap, Azure components, Visual Studio (2019–2022)",
+      "full_description_en": "\n<p><strong>Senior Software Engineer</strong> working on pharmaceutical supply chain platforms.</p>\n<p>Implemented an <strong>Identity Service</strong> with <a href=\"https://en.wikipedia.org/wiki/Multi-factor_authentication\" target=\"_blank\">2FA</a> (QR code & SMS), modernized authentication workflows post-COVID, and contributed to <strong>DevOps / DevSecOps</strong> initiatives and <a href=\"https://azure.microsoft.com\" target=\"_blank\">Azure</a> cloud migration.</p>\n",
+      "full_description_ar": "\n<p><strong>مهندس برمجيات أول</strong> يعمل على منصات سلاسل الإمداد الدوائية.</p>\n<p>تنفيذ خدمة هوية مع المصادقة الثنائية (QR وSMS)، تحديث أنظمة المصادقة بعد كوفيد، والمساهمة في DevOps وDevSecOps وترحيل الأنظمة إلى <a href=\"https://azure.microsoft.com\" target=\"_blank\">Azure</a>.</p>\n"
+    },
+    {
+      "company": "ZIWO",
+      "industry_en": "Call-center System",
+      "date_en": "Mar 2023 – May 2023",
+      "role_en": "Senior Software Engineer (Dubai, UAE)",
+      "highlights_en": [
+        "Microservice architecture & component design",
+        "Docker, Protocol Buffers, Kafka",
+        "Automation & scripting"
+      ],
+      "stack": "C#, Oracle, PowerShell, Docker, Kafka, Azure components",
+      "full_description_en": "\n<p><strong>Senior Software Engineer</strong> on a cloud-based <a href=\"https://en.wikipedia.org/wiki/Call_centre\" target=\"_blank\">call-center</a> platform.</p>\n<p>Worked on <strong>microservice architecture</strong>, containerized deployments using Docker, messaging with <a href=\"https://kafka.apache.org\" target=\"_blank\">Apache Kafka</a>, <a href=\"https://protobuf.dev\" target=\"_blank\">Protocol Buffers</a>, and automation through scripting.</p>\n",
+      "full_description_ar": "\n<p><strong>مهندس برمجيات أول</strong> في منصة مركز اتصال سحابية.</p>\n<p>العمل على بنية Microservices، النشر باستخدام Docker، المراسلة عبر <a href=\"https://kafka.apache.org\" target=\"_blank\">Kafka</a>، Protocol Buffers، وأتمتة العمليات.</p>\n"
+    },
+    {
+      "company": "CANDRIAM",
+      "industry_en": "Asset Management",
+      "date_en": "May 2021 – Oct 2022",
+      "role_en": "Senior Software Engineer (Paris, France)",
+      "highlights_en": [
+        "Integrated new data flows (mapping multiple sources)",
+        "Refactoring and microservice architecture with bus",
+        "SSIS batch development; WCF services; Web API; DevOps"
+      ],
+      "stack": "C#, Oracle, PowerShell, SSIS, WCF, Web API, Azure, Visual Studio (2019–2022)",
+      "full_description_en": "\n<p><strong>Senior Software Engineer</strong> in <a href=\"https://en.wikipedia.org/wiki/Asset_management\" target=\"_blank\">asset management</a> systems.</p>\n<p>Integrated complex data flows from multiple sources, refactored applications toward <strong>microservices architecture</strong>, implemented <strong>SSIS</strong> batch processing, <strong>WCF</strong> services, <strong>Web APIs</strong>, and DevOps pipelines.</p>\n",
+      "full_description_ar": "\n<p><strong>مهندس برمجيات أول</strong> في أنظمة إدارة الأصول.</p>\n<p>دمج تدفقات بيانات معقدة من مصادر متعددة، إعادة هيكلة الأنظمة إلى Microservices، تطوير SSIS، خدمات WCF، Web APIs، وخطوط DevOps.</p>\n"
+    },
+    {
+      "company": "SOCIETE GENERALE",
+      "industry_en": "Banking",
+      "date_en": "Dec 2018 – May 2021",
+      "role_en": "Senior Engineer & Architect (Paris, France)",
+      "highlights_en": [
+        "IT provisioning infrastructures and annexed services",
+        "Architecture definition and connector updates",
+        "SSO preparation, middleware/server prep, reverse engineering",
+        "Technical liaison with admins and engineering teams"
+      ],
+      "stack": "C++, C#, Java, PowerShell, Visual Studio, TFS",
+      "full_description_en": "\n<p><strong>Senior Engineer & Architect</strong> working on IT provisioning infrastructures and annex services at <a href=\"https://www.societegenerale.com\" target=\"_blank\">Société Générale</a>.</p>\n<p>Defined system architecture, updated connectors, prepared <strong>SSO</strong> integration, performed reverse engineering, and acted as a technical liaison between engineering and infrastructure teams.</p>\n",
+      "full_description_ar": "\n<p><strong>مهندس ومعماري أول</strong> في <a href=\"https://www.societegenerale.com\" target=\"_blank\">سوسيتيه جنرال</a>.</p>\n<p>تعريف المعمارية، تحديث الموصلات، التحضير لتكامل SSO، تنفيذ هندسة عكسية، والعمل كحلقة وصل تقنية بين الفرق.</p>\n"
+    },
+    {
+      "company": "GENERALI (EA Holding)",
+      "industry_en": "Insurance",
+      "date_en": "Jun 2017 – Dec 2018",
+      "role_en": "Senior Software Engineer (Paris, France)",
+      "highlights_en": [
+        "Developed and maintained holding applications",
+        "Technical specs, unit tests, code reviews, release control",
+        "Worked with MVC5, SignalR, WebAPI and Azure"
+      ],
+      "stack": "ASP.NET MVC5, C#, jQuery, SignalR, WebAPI, Azure, Visual Studio, TFS",
+      "full_description_en": "\n<p><strong>Senior Software Engineer</strong> developing and maintaining insurance holding applications.</p>\n<p>Responsible for technical specifications, unit tests, code reviews, release management, and development using <strong>ASP.NET MVC5</strong>, <strong>SignalR</strong>, <strong>WebAPI</strong>, and <a href=\"https://azure.microsoft.com\" target=\"_blank\">Azure</a>.</p>\n",
+      "full_description_ar": "\n<p><strong>مهندس برمجيات أول</strong> مسؤول عن تطوير وصيانة تطبيقات التأمين.</p>\n<p>إعداد المواصفات التقنية، اختبارات الوحدات، مراجعة الكود، وإدارة الإصدارات باستخدام MVC وSignalR وAzure.</p>\n"
+    },
+    {
+      "company": "AXA",
+      "industry_en": "Insurance",
+      "date_en": "Mar 2016 – Mar 2017",
+      "role_en": "Consultant Engineer (Paris, France)",
+      "highlights_en": [
+        "Defined IARD model and integrated sales software",
+        "Led a team of 5 across multiple projects",
+        "Specs (DAT), integration, release control"
+      ],
+      "stack": "ASP.NET MVC5, C#, jQuery, SignalR, WebAPI, Azure, Visual Studio, TFS",
+      "full_description_en": "\n<p><strong>Consultant Engineer</strong> working on insurance systems at <a href=\"https://www.axa.com\" target=\"_blank\">AXA</a>.</p>\n<p>Defined <strong>IARD</strong> models, integrated sales software, led a team of five engineers, produced technical specifications (DAT), and supervised integration and releases.</p>\n",
+      "full_description_ar": "\n<p><strong>مهندس استشاري</strong> في مجال التأمين لدى <a href=\"https://www.axa.com\" target=\"_blank\">AXA</a>.</p>\n<p>تعريف نماذج IARD، دمج أنظمة المبيعات، قيادة فريق هندسي، إعداد المواصفات التقنية، والإشراف على الإصدارات.</p>\n"
+    },
+    {
+      "company": "SOCIETE GENERALE Investment Banking",
+      "industry_en": "Banking",
+      "date_en": "Sep 2014 – Mar 2016",
+      "role_en": "Senior Engineer (Paris, France)",
+      "highlights_en": [
+        "Trading application development (multithreaded)",
+        "Production maintenance and server configuration",
+        "Market data connectors; socket-layer parsing; services design"
+      ],
+      "stack": "C#, MVC5, SignalR, FIX protocol, Ultra messaging, TeamCity, SVN/CVS",
+      "full_description_en": "\n<p><strong>Senior Engineer</strong> developing <a href=\"https://en.wikipedia.org/wiki/Trading_software\" target=\"_blank\">trading applications</a> in a multithreaded environment.</p>\n<p>Maintained production systems, configured servers, implemented market data connectors, socket-layer parsing, and service-oriented architectures.</p>\n",
+      "full_description_ar": "\n<p><strong>مهندس أول</strong> مطور لتطبيقات تداول متعددة الخيوط.</p>\n<p>صيانة أنظمة الإنتاج، إعداد الخوادم، تطوير موصلات بيانات السوق، تحليل طبقة المقابس، وتصميم الخدمات.</p>\n"
+    },
+    {
+      "company": "INVIVO",
+      "industry_en": "Agriculture Cooperative",
+      "date_en": "Feb 2011 – Sep 2014",
+      "role_en": "Senior .NET Consultant (Paris, France)",
+      "highlights_en": [
+        "WPF modules using PRISM/MVVM; SQL Server & EF",
+        "WCF/REST calculation engine; reverse engineering from Pascal/Delphi",
+        "Silverlight repositories; MVC3 web service for SQL replication"
+      ],
+      "stack": "C#, WPF, MVVM, PRISM, WCF, REST, Silverlight, MVC3, SQL Server, TFS",
+      "full_description_en": "\n<p><strong>Senior .NET Consultant</strong> working on enterprise and industrial systems.</p>\n<p>Developed <strong>WPF</strong> applications using <strong>MVVM / PRISM</strong>, calculation engines via <strong>WCF / REST</strong>, reverse engineered legacy <strong>Pascal / Delphi</strong> systems, and built <strong>Silverlight</strong> and <strong>MVC</strong> services.</p>\n",
+      "full_description_ar": "\n<p><strong>استشاري ‎.NET‎ أول</strong> يعمل على أنظمة صناعية ومؤسسية.</p>\n<p>تطوير تطبيقات WPF باستخدام MVVM وPRISM، محركات حسابية عبر WCF/REST، هندسة عكسية لأنظمة Pascal/Delphi، وخدمات MVC وSilverlight.</p>\n"
+    },
+    {
+      "company": "ORANGE Business Services",
+      "industry_en": "Telecommunication",
+      "date_en": "Feb 2009 – Feb 2011",
+      "role_en": "Software Engineer (R&D, Paris, France)",
+      "highlights_en": [
+        "Messaging migration tooling (web portal + services)",
+        "Active Directory connectors; WCF callbacks",
+        "Lotus Notes conversion & automation scripting"
+      ],
+      "stack": "ASP.NET MVC2, WCF, AD/GPO, PowerShell, VB.NET, Lotus Script",
+      "full_description_en": "\n<p><strong>Software Engineer</strong> in R&D at <a href=\"https://www.orange-business.com\" target=\"_blank\">Orange Business Services</a>.</p>\n<p>Developed messaging migration tools (web portal and services), <strong>Active Directory</strong> connectors, <strong>WCF callbacks</strong>, and automated Lotus Notes migrations using scripting.</p>\n",
+      "full_description_ar": "\n<p><strong>مهندس برمجيات</strong> في البحث والتطوير لدى <a href=\"https://www.orange-business.com\" target=\"_blank\">Orange Business Services</a>.</p>\n<p>تطوير أدوات ترحيل أنظمة المراسلة، موصلات Active Directory، WCF callbacks، وأتمتة ترحيل Lotus Notes.</p>\n"
     }
   ]
 }
