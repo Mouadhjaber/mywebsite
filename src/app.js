@@ -66,6 +66,7 @@ function generatePDF(locale, content){
   doc.text(`${t(locale,"contact.email")}: ${content.email}`, 10, y); y += 6;
   doc.text(`${t(locale,"contact.linkedin")}: ${content.linkedin}`, 10, y); y += 10;
 
+
   content.experience.forEach(x=>{
     doc.setFontSize(14);
     const role = locale.langCode==="ar"?x.role_ar:locale.langCode==="fr"?x.role_fr:x.role_en;
@@ -114,7 +115,7 @@ function render(locale, content){
   $("#email").href = `mailto:${content.email}`;
   $("#linkedin").textContent = content.linkedin.replace("https://","").replace("http://","");
   $("#linkedin").href = content.linkedin;
-
+  $("#whatsapp").href = content.whatsapp;
   $("#cv-link").textContent = t(locale, "hero.ctaPrimary");
   $("#cv-link").addEventListener("click",(e)=>{
     e.preventDefault();
