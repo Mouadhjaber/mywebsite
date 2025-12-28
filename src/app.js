@@ -52,39 +52,50 @@ function t(locale, path){
 }
 
 // Generate PDF dynamically using jsPDF
-function generatePDF(locale, content){
+ function generatePDF(locale, content){
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF();
-  let y = 10;
+  
+  // Create a hidden container to render HTML content
+  const container = document.createElement("div");
+  container.style.width = "180mm"; // page width approximation
+  container.style.fontFamily = "helvetica, sans-serif";
 
-  doc.setFontSize(18);
-  doc.text(content.name, 10, y); y += 10;
-  doc.setFontSize(14);
-  doc.text(locale.hero.subtitle, 10, y); y += 10;
-  doc.setFontSize(12);
-  doc.text(`${t(locale,"contact.phone")}: ${content.phone}`, 10, y); y += 6;
-  doc.text(`${t(locale,"contact.email")}: ${content.email}`, 10, y); y += 6;
-  doc.text(`${t(locale,"contact.linkedin")}: ${content.linkedin}`, 10, y); y += 10;
+  // Header
+  container.innerHTML = `<h1>${content.name}</h1>
+                         <h2>${t(locale,"hero.subtitle")}</h2>
+                         <p>${t(locale,"contact.phone")}: ${content.phone}</p>
+                         <p>${t(locale,"contact.email")}: ${content.email}</p>
+                         <p>${t(locale,"contact.linkedin")}: ${content.linkedin}</p>`;
 
-
+  // Experience
   content.experience.forEach(x=>{
-    doc.setFontSize(14);
     const role = locale.langCode==="ar"?x.role_ar:locale.langCode==="fr"?x.role_fr:x.role_en;
     const company = x.company;
-    doc.text(`${role} — ${company}`, 10, y); y+=6;
-    doc.setFontSize(12);
     const dates = locale.langCode==="ar"?x.date_ar:locale.langCode==="fr"?x.date_fr:x.date_en;
     const industry = locale.langCode==="ar"?x.industry_ar:locale.langCode==="fr"?x.industry_fr:x.industry_en;
-    doc.text(`${industry} • ${dates}`, 10, y); y+=6;
     const desc = locale.langCode==="ar"?x.full_description_ar:locale.langCode==="fr"?x.full_description_fr:x.full_description_en;
-    const text = desc.replace(/<[^>]*>/g,'').replace(/\s+/g,' ');
-    doc.text(doc.splitTextToSize(text, 180), 10, y);
-    y+=text.length/2; // approximate
-    y+=5;
-    if(y>270){ doc.addPage(); y=10; }
+    const highlights = locale.langCode==="ar"?x.highlights_ar:locale.langCode==="fr"?x.highlights_fr:x.highlights_en;
+
+    container.innerHTML += `<div class="experience-item">
+      <h3>${role} — ${company}</h3>
+      <p><em>${industry} • ${dates}</em></p>
+      <div>${desc}</div>
+      ${highlights && highlights.length ? `<ul>${highlights.map(h=>`<li>${h}</li>`).join("")}</ul>` : ""}
+      <p><strong>Stack:</strong> ${x.stack}</p>
+    </div>`;
   });
 
-  return doc;
+  // Generate PDF from HTML
+  doc.html(container, {
+    callback: function (doc) {
+      doc.save(`${content.name}-${locale.langCode}.pdf`);
+    },
+    x: 10,
+    y: 10,
+    width: 180, // max width in mm
+    windowWidth: 800 // simulate viewport width for proper scaling
+  });
 }
 
 function render(locale, content){
