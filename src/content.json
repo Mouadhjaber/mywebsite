@@ -41,9 +41,9 @@
       "highlights_fr": ["Développement mobile (Flutter)","Développement autour du CRM interne","Dockerisation des projets en cours","Swagger & développement API backend","Urbanisation / modernisation des applications"],
       "highlights_ar": ["تطوير تطبيقات الهاتف باستخدام Flutter","تطوير حول CRM الداخلي","استخدام Docker للمشاريع الجارية","Swagger وتطوير API الخلفية","تحديث وتحديث التطبيقات"],
       "stack": "C#, Flutter, JavaScript, Docker, Visual Studio (2019–2022)",
-      "full_description_en": "<p><strong>Senior Software Engineer</strong> working on large-scale telecommunication platforms...</p>",
-      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> travaillant sur des plateformes de télécommunication à grande échelle...</p>",
-      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> يعمل على منصات الاتصالات الكبيرة...</p>"
+      "full_description_en": "<p><strong>Senior Software Engineer</strong> developing mobile applications with Flutter, enhancing and maintaining the internal CRM, dockerizing ongoing projects, creating backend APIs with Swagger, and modernizing/urbanizing applications. Tools: Visual Studio 2019–2022, C#, Flutter, JavaScript, Docker.</p>",
+      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> développant des applications mobiles avec Flutter, améliorant et maintenant le CRM interne, dockerisant les projets en cours, créant des API backend avec Swagger et modernisant/urbanisant les applications. Outils : Visual Studio 2019–2022, C#, Flutter, JavaScript, Docker.</p>",
+      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> تطوير تطبيقات الهاتف باستخدام Flutter، تطوير وصيانة CRM الداخلي، استخدام Docker للمشاريع الجارية، تطوير API الخلفية باستخدام Swagger، وتحديث وتحديث التطبيقات. الأدوات: Visual Studio 2019–2022، C#، Flutter، JavaScript، Docker.</p>"
     },
     {
       "company": "MOWASALAT",
