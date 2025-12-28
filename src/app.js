@@ -52,13 +52,13 @@ function t(locale, path){
 }
 
 // Generate PDF dynamically using jsPDF
- function generatePDF(locale, content){
+function generatePDF(locale, content){
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF();
-  
-  // Create a hidden container to render HTML content
+
+  // Create a hidden container
   const container = document.createElement("div");
-  container.style.width = "180mm"; // page width approximation
+  container.style.width = "180mm";
   container.style.fontFamily = "helvetica, sans-serif";
 
   // Header
@@ -88,15 +88,17 @@ function t(locale, path){
 
   // Generate PDF from HTML
   doc.html(container, {
-    callback: function (doc) {
-      doc.save(`${content.name}-${locale.langCode}.pdf`);
-    },
     x: 10,
     y: 10,
-    width: 180, // max width in mm
-    windowWidth: 800 // simulate viewport width for proper scaling
+    width: 180,
+    windowWidth: 800,
+    callback: function() {
+      // Use the same doc object here
+      doc.save(`${content.name}-${locale.langCode}.pdf`);
+    }
   });
 }
+
 
 function render(locale, content){
   $("#brand-name").textContent = content.name;
