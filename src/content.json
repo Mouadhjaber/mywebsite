@@ -99,7 +99,7 @@
       "highlights_ar": ["تنفيذ خدمة هوية مع المصادقة الثنائية (QR وSMS)","تحديث أنظمة المصادقة بعد كوفيد","المساهمة في DevOps وDevSecOps وترحيل Azure"],
       "stack": "C#, JavaScript, Gulp, Bootstrap, Azure components, Visual Studio (2019–2022)",
       "full_description_en": "<p><strong>Senior Software Engineer</strong> working on pharmaceutical supply chain platforms...</p>",
-      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> travaillant sur des plateformes de chaîne d'approvisionnement pharmaceutique...</p>",
+      "full_description_fr": "",
       "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> يعمل على منصات سلاسل الإمداد الدوائية...</p>"
     },
     {
@@ -117,9 +117,9 @@
       "highlights_fr": ["Architecture microservices et conception de composants","Docker, Protocol Buffers, Kafka","Automatisation et scripting"],
       "highlights_ar": ["بنية Microservices وتصميم المكونات","Docker، Protocol Buffers، Kafka","الأتمتة والبرمجة النصية"],
       "stack": "C#, Oracle, PowerShell, Docker, Kafka, Azure components",
-      "full_description_en": "<p><strong>Senior Software Engineer</strong> on a cloud-based call-center platform...</p>",
-      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> sur une plateforme de centre d'appels cloud...</p>",
-      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> في منصة مركز اتصال سحابية...</p>"
+      "full_description_en": "<p><strong>Senior Software Engineer</strong> assisting the company during its 10 years of existence, supporting legal name changes and integration with multiple financial providers, designing software architecture and microservice components, and implementing Docker, Protocol Buffers, microservices, and Kafka solutions.</p><ul><li>Software architecture and design of microservice components</li><li>Docker, Protocol Buffers, Microservices, Kafka</li><li>Integration with financial providers</li><li>Using Visual Studio 2019–2022, Azure components, and DevSecOps pipelines</li><li>Technologies: C#, Oracle, PowerShell as Batch</li></ul>",
+      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> accompagnant l'entreprise durant ses 10 années d'existence, soutenant le changement de nom légal et l'intégration de nombreux services financiers, conception de l'architecture logicielle et des composants microservices, et mise en œuvre de solutions Docker, Protocol Buffers et Microservices.</p><ul><li>Architecture logicielle et conception des composants microservices</li><li>Docker, Protocol Buffers, Microservices</li><li>Intégration avec les fournisseurs de services financiers</li><li>Utilisation de Visual Studio 2019–2022, composants Azure et pipelines DevSecOps</li><li>Technologies : C#, Oracle, PowerShell en Batch</li></ul>",
+      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> دعم الشركة خلال 10 سنوات من وجودها، المساهمة في تغيير الاسم القانوني ودمج العديد من مزودي الخدمات المالية، تصميم بنية البرمجيات ومكونات Microservices، وتنفيذ حلول Docker وProtocol Buffers وMicroservices.</p><ul><li>الهندسة المعمارية للبرمجيات وتصميم مكونات Microservices</li><li>Docker، Protocol Buffers، Microservices</li><li>التكامل مع مزودي الخدمات المالية</li><li>استخدام Visual Studio 2019–2022، مكونات Azure وخطوط DevSecOps</li><li>التقنيات: C#، Oracle، PowerShell كـ Batch</li></ul>"
     },
     {
     "company": "CANDRIAM",
