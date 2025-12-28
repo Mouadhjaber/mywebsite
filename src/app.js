@@ -52,6 +52,7 @@ function t(locale, path){
 }
 
 // Generate PDF dynamically using jsPDF
+// Generate PDF dynamically using jsPDF
 function generatePDF(locale, content){
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF();
@@ -60,6 +61,7 @@ function generatePDF(locale, content){
   const container = document.createElement("div");
   container.style.width = "180mm";
   container.style.fontFamily = "helvetica, sans-serif";
+  container.style.color = "#000000"; // Force text to black
 
   // Header
   container.innerHTML = `<h1>${content.name}</h1>
@@ -93,11 +95,11 @@ function generatePDF(locale, content){
     width: 180,
     windowWidth: 800,
     callback: function() {
-      // Use the same doc object here
       doc.save(`${content.name}-${locale.langCode}.pdf`);
     }
   });
 }
+
 
 
 function render(locale, content){
