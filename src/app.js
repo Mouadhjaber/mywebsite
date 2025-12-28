@@ -130,10 +130,9 @@ function render(locale, content){
   $("#linkedin").href = content.linkedin;
   $("#whatsapp").href = content.whatsapp;
   $("#cv-link").textContent = t(locale, "hero.ctaPrimary");
-  $("#cv-link").addEventListener("click",(e)=>{
+  $("#cv-link").addEventListener("click", (e) => {
     e.preventDefault();
-    const pdf = generatePDF(locale, content);
-    pdf.save(`${content.name}-${locale.langCode}.pdf`);
+    generatePDF(locale, content); // doc.save() happens inside generatePDF callback
   });
 
   $("#contact-link").textContent = t(locale, "hero.ctaSecondary");
