@@ -184,3 +184,26 @@ select option{
   background-color: #000000 !important;
   color: #ffffff !important;
 }
+/* =========================
+   Contact responsive order
+   ========================= */
+
+.contact-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Mobile behavior */
+@media (max-width: 680px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-phone {
+    order: 1;
+  }
+
+  .contact-email {
+    order: 2; /* email pushed to bottom */
+    margin-top: 12px;
+  }
+}
