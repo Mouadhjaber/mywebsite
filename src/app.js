@@ -63,11 +63,12 @@ function generatePDF(locale, content){
 
   const rtl = locale.langCode === "ar";
 
-  // Hidden container
+  // === PDF-safe container ===
   const container = document.createElement("div");
-  container.style.width = "800px";
-  container.style.padding = "24px";
-  container.style.background = "#fff";
+  container.style.width = "190mm";        // A4 safe width
+  container.style.padding = "15mm";
+  container.style.background = "#ffffff";
+  container.style.boxSizing = "border-box";
   container.style.direction = rtl ? "rtl" : "ltr";
   container.style.textAlign = rtl ? "right" : "left";
 
@@ -77,23 +78,68 @@ function generatePDF(locale, content){
         font-family: 'Amiri';
         src: url('https://fonts.gstatic.com/s/amiri/v27/J7aRnpd8CGxBHpUrtLMA7w.ttf') format('truetype');
       }
+
       * {
         font-family: 'Amiri', serif !important;
         color: #000 !important;
+        box-sizing: border-box;
+      }
+
+      h1 { font-size: 22px; margin-bottom: 6px }
+      h2 { font-size: 16px; margin: 18px 0 6px }
+      h3 { font-size: 14px; margin: 10px 0 4px }
+
+      p, li {
+        font-size: 11px;
         line-height: 1.6;
       }
-      h1,h2,h3 { margin-bottom: 8px }
-      ul { padding-${rtl ? "right" : "left"}: 20px }
+
+      ul {
+        padding-${rtl ? "right" : "left"}: 18px;
+        margin: 6px 0;
+      }
+
+      section {
+        page-break-inside: avoid;
+      }
+
+      .page-break {
+        page-break-before: always;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin: 10px 0;
+      }
     </style>
 
-    <h1>${content.name}</h1>
-    <h2>${t(locale,"hero.subtitle")}</h2>
+    <!-- HEADER -->
+    <section>
+      <h1>${content.name}</h1>
+      <p>${t(locale,"hero.subtitle")}</p>
 
-    <p>${t(locale,"contact.phone")}: ${content.phone}</p>
-    <p>${t(locale,"contact.email")}: ${content.email}</p>
-    <p>${t(locale,"contact.linkedin")}: ${content.linkedin}</p>
+      <p>
+        ${t(locale,"contact.phone")}: ${content.phone}<br/>
+        ${t(locale,"contact.email")}: ${content.email}<br/>
+        ${t(locale,"contact.linkedin")}: ${content.linkedin}
+      </p>
+    </section>
 
     <hr/>
+
+    <!-- ABOUT SECTION -->
+    <section>
+      <h2>${t(locale,"about.title")}</h2>
+      <p>${t(locale,"about.body")}</p>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- EXPERIENCE -->
+    <section>
+      <h2>${t(locale,"experience.title")}</h2>
+    </section>
   `;
 
   content.experience.forEach(x=>{
@@ -104,16 +150,18 @@ function generatePDF(locale, content){
     const highlights = locale.langCode==="ar"?x.highlights_ar:locale.langCode==="fr"?x.highlights_fr:x.highlights_en;
 
     container.innerHTML += `
-      <section style="margin-bottom:18px">
+      <section>
         <h3>${role} — ${x.company}</h3>
-        <em>${industry} • ${dates}</em>
+        <p><em>${industry} • ${dates}</em></p>
         <div>${desc}</div>
+
         ${
           highlights?.length
             ? `<ul>${highlights.map(h=>`<li>${h}</li>`).join("")}</ul>`
             : ""
         }
-        <small><b>Stack:</b> ${x.stack}</small>
+
+        <p><strong>Stack:</strong> ${x.stack}</p>
       </section>
     `;
   });
@@ -121,14 +169,13 @@ function generatePDF(locale, content){
   document.body.appendChild(container);
 
   doc.html(container, {
-    x: 10,
-    y: 10,
-    width: 190,
-    windowWidth: 800,
+    x: 0,
+    y: 0,
+    width: 210,              // A4 width
+    windowWidth: container.scrollWidth,
     html2canvas: {
       scale: 2,
-      useCORS: true,
-      letterRendering: true
+      useCORS: true
     },
     callback: () => {
       doc.save(`${content.name}-${locale.langCode}.pdf`);
@@ -136,6 +183,7 @@ function generatePDF(locale, content){
     }
   });
 }
+
 
 
 
