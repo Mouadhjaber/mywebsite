@@ -178,6 +178,7 @@ function generatePDF(locale, content) {
 
 
 
+
 function render(locale, content){
   $("#brand-name").textContent = content.name;
 
