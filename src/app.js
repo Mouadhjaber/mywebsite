@@ -55,30 +55,46 @@ function t(locale, path){
 function generatePDF(locale, content) {
   const rtl = locale.langCode === "ar";
 
-  // Create a container with HTML content
+  // Create container
   const container = document.createElement("div");
-  container.style.width = "180mm";  // inside A4 page width
+  container.style.width = "180mm";
   container.style.margin = "0 auto";
   container.style.direction = rtl ? "rtl" : "ltr";
   container.style.textAlign = rtl ? "right" : "left";
   container.style.fontFamily = "'Amiri', serif";
-  container.style.fontSize = "10px"; // smaller font to fit
+  container.style.fontSize = "10px";
   container.style.lineHeight = "1.3";
   container.style.color = "#000";
 
-  // Build the HTML
+  // Add CSS to prevent splitting
   container.innerHTML = `
-    <h1>${content.name}</h1>
-    <p>${t(locale,"hero.subtitle")}</p>
-    <p>
-      ${t(locale,"contact.phone")}: ${content.phone}<br/>
-      ${t(locale,"contact.email")}: ${content.email}<br/>
-      ${t(locale,"contact.linkedin")}: ${content.linkedin}
-    </p>
+    <style>
+      section { page-break-inside: avoid; margin-bottom: 8px; }
+      h1,h2,h3 { page-break-inside: avoid; }
+      p, ul, li { page-break-inside: avoid; }
+    </style>
+
+    <section>
+      <h1>${content.name}</h1>
+      <p>${t(locale,"hero.subtitle")}</p>
+      <p>
+        ${t(locale,"contact.phone")}: ${content.phone}<br/>
+        ${t(locale,"contact.email")}: ${content.email}<br/>
+        ${t(locale,"contact.linkedin")}: ${content.linkedin}
+      </p>
+    </section>
+
     <hr/>
-    <h2>${t(locale,"about.title")}</h2>
-    <p>${t(locale,"about.body")}</p>
-    <h2>${t(locale,"experience.title")}</h2>
+
+    <section>
+      <h2>${t(locale,"about.title")}</h2>
+      <p>${t(locale,"about.body")}</p>
+    </section>
+
+    <section>
+      <h2>${t(locale,"experience.title")}</h2>
+    </section>
+
     ${content.experience.map(x => {
       const role = rtl ? x.role_ar : locale.langCode==="fr"?x.role_fr:x.role_en;
       const industry = rtl ? x.industry_ar : locale.langCode==="fr"?x.industry_fr:x.industry_en;
@@ -88,7 +104,7 @@ function generatePDF(locale, content) {
         <section>
           <h3>${role} — ${x.company}</h3>
           <p><em>${industry} • ${dates}</em></p>
-          ${desc} <!-- Already HTML -->
+          ${desc} <!-- HTML already -->
           <p><strong>Stack:</strong> ${x.stack}</p>
         </section>
       `;
@@ -97,12 +113,11 @@ function generatePDF(locale, content) {
 
   document.body.appendChild(container);
 
-  // Generate PDF
   html2pdf().set({
-    margin: [15, 15, 15, 15], // top, left, bottom, right in mm
+    margin: [15, 15, 15, 15],
     filename: `${content.name}-${locale.langCode}.pdf`,
     image: { type: 'jpeg', quality: 0.98 },
-    html2canvas: { scale: 2, allowTaint: true },
+    html2canvas: { scale: 2, useCORS: true, allowTaint: true },
     jsPDF: { unit: 'mm', format: 'a4', orientation: 'p' }
   }).from(container).save().then(() => {
     document.body.removeChild(container);
