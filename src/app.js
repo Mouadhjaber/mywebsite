@@ -52,25 +52,24 @@ function t(locale, path){
 }
 
 // Generate PDF dynamically using jsPDF
-function generatePDF(locale, content){
+function generatePDF(locale, content) {
   const { jsPDF } = window.jspdf;
 
-  // Create jsPDF A4
   const doc = new jsPDF({
-    orientation: "p",
     unit: "mm",
-    format: "a4"
+    format: "a4",
+    orientation: "p"
   });
 
   const rtl = locale.langCode === "ar";
-  const pageWidth = 210;   // A4 width
-  const pageHeight = 297;  // A4 height
-  const margin = 15;       // 15mm margin
+  const pageWidth = 210;
+  const pageHeight = 297;
+  const margin = 15; // 15mm margin
 
-  // Container for html2canvas
+  // PDF-safe container
   const container = document.createElement("div");
-  container.style.width = `${pageWidth - 2 * margin}mm`; // fit inside margins
-  container.style.padding = "10px";
+  container.style.width = `${pageWidth - 2 * margin}mm`;
+  container.style.padding = "0 5px"; // small padding inside container
   container.style.boxSizing = "border-box";
   container.style.direction = rtl ? "rtl" : "ltr";
   container.style.textAlign = rtl ? "right" : "left";
@@ -78,21 +77,22 @@ function generatePDF(locale, content){
   container.style.color = "#000";
   container.style.background = "#fff";
 
-  // Add font via @font-face for Arabic
+  // Inject styles for scaling
   container.innerHTML = `
     <style>
       @font-face {
         font-family: 'Amiri';
         src: url('https://fonts.gstatic.com/s/amiri/v27/J7aRnpd8CGxBHpUrtLMA7w.ttf') format('truetype');
       }
-      * { font-family: 'Amiri', serif; color: #000; box-sizing: border-box; word-break: break-word; }
-      h1 { font-size: 20px; margin-bottom: 6px; }
-      h2 { font-size: 16px; margin: 12px 0 6px; }
-      h3 { font-size: 14px; margin: 10px 0 4px; }
-      p, li { font-size: 11px; line-height: 1.5; }
-      ul { padding-${rtl ? "right" : "left"}: 18px; margin: 6px 0; }
+      * { font-family: 'Amiri', serif; color: #000; word-break: break-word; }
+      h1 { font-size: 18px; margin-bottom: 6px; }
+      h2 { font-size: 14px; margin: 10px 0 4px; }
+      h3 { font-size: 12px; margin: 8px 0 2px; }
+      p, li { font-size: 10px; line-height: 1.4; }
+      ul { padding-${rtl ? "right" : "left"}: 15px; margin: 4px 0; }
       section { page-break-inside: avoid; }
       .page-break { page-break-before: always; }
+      hr { border: none; border-top: 1px solid #ccc; margin: 8px 0; }
     </style>
 
     <!-- HEADER -->
@@ -123,12 +123,12 @@ function generatePDF(locale, content){
   `;
 
   // Add experience items
-  content.experience.forEach(x=>{
-    const role = locale.langCode==="ar"?x.role_ar:locale.langCode==="fr"?x.role_fr:x.role_en;
-    const industry = locale.langCode==="ar"?x.industry_ar:locale.langCode==="fr"?x.industry_fr:x.industry_en;
-    const dates = locale.langCode==="ar"?x.date_ar:locale.langCode==="fr"?x.date_fr:x.date_en;
-    const desc = locale.langCode==="ar"?x.full_description_ar:locale.langCode==="fr"?x.full_description_fr:x.full_description_en;
-    const highlights = locale.langCode==="ar"?x.highlights_ar:locale.langCode==="fr"?x.highlights_fr:x.highlights_en;
+  content.experience.forEach(x => {
+    const role = locale.langCode === "ar" ? x.role_ar : locale.langCode === "fr" ? x.role_fr : x.role_en;
+    const industry = locale.langCode === "ar" ? x.industry_ar : locale.langCode === "fr" ? x.industry_fr : x.industry_en;
+    const dates = locale.langCode === "ar" ? x.date_ar : locale.langCode === "fr" ? x.date_fr : x.date_en;
+    const desc = locale.langCode === "ar" ? x.full_description_ar : locale.langCode === "fr" ? x.full_description_fr : x.full_description_en;
+    const highlights = locale.langCode === "ar" ? x.highlights_ar : locale.langCode === "fr" ? x.highlights_fr : x.highlights_en;
 
     container.innerHTML += `
       <section>
@@ -137,7 +137,7 @@ function generatePDF(locale, content){
         <div>${desc}</div>
         ${
           highlights?.length
-            ? `<ul>${highlights.map(h=>`<li>${h}</li>`).join("")}</ul>`
+            ? `<ul>${highlights.map(h => `<li>${h}</li>`).join("")}</ul>`
             : ""
         }
         <p><strong>Stack:</strong> ${x.stack}</p>
@@ -147,20 +147,22 @@ function generatePDF(locale, content){
 
   document.body.appendChild(container);
 
-  // Generate PDF
+  // Generate PDF with proper scaling
   doc.html(container, {
     x: margin,
     y: margin,
-    width: pageWidth - 2 * margin,   // Fit content inside page margins
-    windowWidth: container.offsetWidth, 
-    html2canvas: { scale: 2, useCORS: true },
+    width: pageWidth - 2 * margin, // force content to fit inside margins
+    html2canvas: {
+      scale: 1.5, // reduce scale for fitting
+      useCORS: true,
+      allowTaint: true
+    },
     callback: () => {
       doc.save(`${content.name}-${locale.langCode}.pdf`);
       document.body.removeChild(container);
     }
   });
 }
-
 
 
 
