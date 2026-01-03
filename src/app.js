@@ -62,37 +62,44 @@ function generatePDF(locale, content) {
   });
 
   const rtl = locale.langCode === "ar";
-  const pageWidth = 210;
-  const pageHeight = 297;
-  const margin = 15; // 15mm margin
+  const pageWidth = 210;  // A4 width in mm
+  const pageHeight = 297; // A4 height in mm
+  const margin = 15;      // 15mm margin
 
-  // PDF-safe container
+  // Container for html2canvas
   const container = document.createElement("div");
-  container.style.width = `${pageWidth - 2 * margin}mm`;
-  container.style.padding = "0 5px"; // small padding inside container
+  container.style.width = `${pageWidth - 2 * margin}mm`; // fit inside A4 margins
+  container.style.padding = "5px";                       // small internal padding
   container.style.boxSizing = "border-box";
   container.style.direction = rtl ? "rtl" : "ltr";
   container.style.textAlign = rtl ? "right" : "left";
   container.style.fontFamily = "'Amiri', serif";
+  container.style.fontSize = "10px";                    // smaller font
+  container.style.lineHeight = "1.3";                   // tighter line spacing
   container.style.color = "#000";
   container.style.background = "#fff";
 
-  // Inject styles for scaling
+  // CSS inside HTML
   container.innerHTML = `
     <style>
       @font-face {
         font-family: 'Amiri';
         src: url('https://fonts.gstatic.com/s/amiri/v27/J7aRnpd8CGxBHpUrtLMA7w.ttf') format('truetype');
       }
-      * { font-family: 'Amiri', serif; color: #000; word-break: break-word; }
-      h1 { font-size: 18px; margin-bottom: 6px; }
-      h2 { font-size: 14px; margin: 10px 0 4px; }
-      h3 { font-size: 12px; margin: 8px 0 2px; }
-      p, li { font-size: 10px; line-height: 1.4; }
-      ul { padding-${rtl ? "right" : "left"}: 15px; margin: 4px 0; }
+      * { 
+        font-family: 'Amiri', serif; 
+        color: #000; 
+        word-break: break-word; 
+        line-height: 1.3;
+      }
+      h1 { font-size: 16px; margin-bottom: 4px; }
+      h2 { font-size: 14px; margin: 8px 0 4px; }
+      h3 { font-size: 12px; margin: 6px 0 2px; }
+      p, li { font-size: 10px; margin: 2px 0; }
+      ul { padding-${rtl ? "right" : "left"}: 15px; margin: 2px 0; }
       section { page-break-inside: avoid; }
       .page-break { page-break-before: always; }
-      hr { border: none; border-top: 1px solid #ccc; margin: 8px 0; }
+      hr { border: none; border-top: 1px solid #ccc; margin: 6px 0; }
     </style>
 
     <!-- HEADER -->
@@ -147,13 +154,13 @@ function generatePDF(locale, content) {
 
   document.body.appendChild(container);
 
-  // Generate PDF with proper scaling
+  // Generate PDF with html2canvas scaling
   doc.html(container, {
     x: margin,
     y: margin,
-    width: pageWidth - 2 * margin, // force content to fit inside margins
+    width: pageWidth - 2 * margin, // ensure fit inside A4 margins
     html2canvas: {
-      scale: 1.5, // reduce scale for fitting
+      scale: 1.2,    // smaller scale to fit content
       useCORS: true,
       allowTaint: true
     },
@@ -163,6 +170,7 @@ function generatePDF(locale, content) {
     }
   });
 }
+
 
 
 
