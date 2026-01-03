@@ -52,53 +52,61 @@ function t(locale, path){
 }
 
 // Generate PDF dynamically using jsPDF
-// Generate PDF dynamically using jsPDF
 function generatePDF(locale, content){
   const { jsPDF } = window.jspdf;
-  const doc = new jsPDF();
 
-  // Create a hidden container
-  const container = document.createElement("div");
-  container.style.width = "180mm";
-  container.style.fontFamily = "helvetica, sans-serif";
-  container.style.color = "#000000"; // Force text to black
+  const doc = new jsPDF({ unit: "mm", format: "a4" });
 
-  // Header
-  container.innerHTML = `<h1>${content.name}</h1>
-                         <h2>${t(locale,"hero.subtitle")}</h2>
-                         <p>${t(locale,"contact.phone")}: ${content.phone}</p>
-                         <p>${t(locale,"contact.email")}: ${content.email}</p>
-                         <p>${t(locale,"contact.linkedin")}: ${content.linkedin}</p>`;
+  // 🔴 REQUIRED FOR ARABIC
+  doc.addFileToVFS("Amiri-Regular.ttf", AMIRI_BASE64);
+  doc.addFont("Amiri-Regular.ttf", "Amiri", "normal");
+  doc.setFont("Amiri");
+  doc.setFontSize(12);
+  doc.setTextColor(0,0,0); // real black text
 
-  // Experience
-  content.experience.forEach(x=>{
-    const role = locale.langCode==="ar"?x.role_ar:locale.langCode==="fr"?x.role_fr:x.role_en;
-    const company = x.company;
-    const dates = locale.langCode==="ar"?x.date_ar:locale.langCode==="fr"?x.date_fr:x.date_en;
-    const industry = locale.langCode==="ar"?x.industry_ar:locale.langCode==="fr"?x.industry_fr:x.industry_en;
-    const desc = locale.langCode==="ar"?x.full_description_ar:locale.langCode==="fr"?x.full_description_fr:x.full_description_en;
-    const highlights = locale.langCode==="ar"?x.highlights_ar:locale.langCode==="fr"?x.highlights_fr:x.highlights_en;
+  const rtl = locale.langCode === "ar";
+  const align = rtl ? "right" : "left";
+  const x = rtl ? 190 : 20;
+  let y = 20;
 
-    container.innerHTML += `<div class="experience-item">
-      <h3>${role} — ${company}</h3>
-      <p><em>${industry} • ${dates}</em></p>
-      <div>${desc}</div>
-      ${highlights && highlights.length ? `<ul>${highlights.map(h=>`<li>${h}</li>`).join("")}</ul>` : ""}
-      <p><strong>Stack:</strong> ${x.stack}</p>
-    </div>`;
+  const write = (text, extra={}) => {
+    doc.text(text, x, y, {
+      align,
+      maxWidth: 170,
+      ...extra
+    });
+    y += 8;
+  };
+
+  write(content.name);
+  write(t(locale,"hero.subtitle"));
+
+  write(`${t(locale,"contact.phone")}: ${content.phone}`);
+  write(`${t(locale,"contact.email")}: ${content.email}`);
+  write(`${t(locale,"contact.linkedin")}: ${content.linkedin}`);
+
+  y += 6;
+
+  content.experience.forEach(xp=>{
+    const role = locale.langCode==="ar"?xp.role_ar:locale.langCode==="fr"?xp.role_fr:xp.role_en;
+    const industry = locale.langCode==="ar"?xp.industry_ar:locale.langCode==="fr"?xp.industry_fr:xp.industry_en;
+    const dates = locale.langCode==="ar"?xp.date_ar:locale.langCode==="fr"?xp.date_fr:xp.date_en;
+    const desc = locale.langCode==="ar"?xp.full_description_ar:locale.langCode==="fr"?xp.full_description_fr:xp.full_description_en;
+
+    write(`${role} — ${xp.company}`);
+    write(`${industry} • ${dates}`, { fontSize: 10 });
+
+    doc.text(desc, x, y, {
+      align,
+      maxWidth: 170
+    });
+
+    y += 15;
   });
 
-  // Generate PDF from HTML
-  doc.html(container, {
-    x: 10,
-    y: 10,
-    width: 180,
-    windowWidth: 800,
-    callback: function() {
-      doc.save(`${content.name}-${locale.langCode}.pdf`);
-    }
-  });
+  doc.save(`${content.name}-${locale.langCode}.pdf`);
 }
+
 
 
 
