@@ -54,38 +54,45 @@ function t(locale, path){
 // Generate PDF dynamically using jsPDF
 function generatePDF(locale, content){
   const { jsPDF } = window.jspdf;
-  const doc = new jsPDF({ unit: "mm", format: "a4", orientation: "p" });
+
+  // Create jsPDF A4
+  const doc = new jsPDF({
+    orientation: "p",
+    unit: "mm",
+    format: "a4"
+  });
 
   const rtl = locale.langCode === "ar";
+  const pageWidth = 210;   // A4 width
+  const pageHeight = 297;  // A4 height
+  const margin = 15;       // 15mm margin
 
-  // Create PDF-safe container
+  // Container for html2canvas
   const container = document.createElement("div");
-  container.style.width = "180mm";           // Safe width
-  container.style.padding = "10mm";          // Margin inside page
+  container.style.width = `${pageWidth - 2 * margin}mm`; // fit inside margins
+  container.style.padding = "10px";
   container.style.boxSizing = "border-box";
   container.style.direction = rtl ? "rtl" : "ltr";
   container.style.textAlign = rtl ? "right" : "left";
+  container.style.fontFamily = "'Amiri', serif";
+  container.style.color = "#000";
   container.style.background = "#fff";
 
+  // Add font via @font-face for Arabic
   container.innerHTML = `
     <style>
       @font-face {
         font-family: 'Amiri';
         src: url('https://fonts.gstatic.com/s/amiri/v27/J7aRnpd8CGxBHpUrtLMA7w.ttf') format('truetype');
       }
-      * {
-        font-family: 'Amiri', serif !important;
-        color: #000 !important;
-        box-sizing: border-box;
-      }
-      h1 { font-size: 22px; margin-bottom: 8px }
-      h2 { font-size: 16px; margin: 16px 0 6px }
-      h3 { font-size: 14px; margin: 10px 0 4px }
-      p, li { font-size: 11px; line-height: 1.5; word-break: break-word; }
-      ul { padding-${rtl ? "right" : "left"}: 18px; margin: 6px 0 }
+      * { font-family: 'Amiri', serif; color: #000; box-sizing: border-box; word-break: break-word; }
+      h1 { font-size: 20px; margin-bottom: 6px; }
+      h2 { font-size: 16px; margin: 12px 0 6px; }
+      h3 { font-size: 14px; margin: 10px 0 4px; }
+      p, li { font-size: 11px; line-height: 1.5; }
+      ul { padding-${rtl ? "right" : "left"}: 18px; margin: 6px 0; }
       section { page-break-inside: avoid; }
       .page-break { page-break-before: always; }
-      hr { border: none; border-top: 1px solid #ddd; margin: 10px 0; }
     </style>
 
     <!-- HEADER -->
@@ -142,10 +149,10 @@ function generatePDF(locale, content){
 
   // Generate PDF
   doc.html(container, {
-    x: 0,
-    y: 0,
-    width: 180,                 // Fit inside A4 page
-    windowWidth: container.scrollWidth,
+    x: margin,
+    y: margin,
+    width: pageWidth - 2 * margin,   // Fit content inside page margins
+    windowWidth: container.offsetWidth, 
     html2canvas: { scale: 2, useCORS: true },
     callback: () => {
       doc.save(`${content.name}-${locale.langCode}.pdf`);
@@ -153,6 +160,7 @@ function generatePDF(locale, content){
     }
   });
 }
+
 
 
 
