@@ -55,57 +55,88 @@ function t(locale, path){
 function generatePDF(locale, content){
   const { jsPDF } = window.jspdf;
 
-  const doc = new jsPDF({ unit: "mm", format: "a4" });
-
-  // 🔴 REQUIRED FOR ARABIC
-  doc.addFileToVFS("Amiri-Regular.ttf", AMIRI_BASE64);
-  doc.addFont("Amiri-Regular.ttf", "Amiri", "normal");
-  doc.setFont("Amiri");
-  doc.setFontSize(12);
-  doc.setTextColor(0,0,0); // real black text
-
-  const rtl = locale.langCode === "ar";
-  const align = rtl ? "right" : "left";
-  const x = rtl ? 190 : 20;
-  let y = 20;
-
-  const write = (text, extra={}) => {
-    doc.text(text, x, y, {
-      align,
-      maxWidth: 170,
-      ...extra
-    });
-    y += 8;
-  };
-
-  write(content.name);
-  write(t(locale,"hero.subtitle"));
-
-  write(`${t(locale,"contact.phone")}: ${content.phone}`);
-  write(`${t(locale,"contact.email")}: ${content.email}`);
-  write(`${t(locale,"contact.linkedin")}: ${content.linkedin}`);
-
-  y += 6;
-
-  content.experience.forEach(xp=>{
-    const role = locale.langCode==="ar"?xp.role_ar:locale.langCode==="fr"?xp.role_fr:xp.role_en;
-    const industry = locale.langCode==="ar"?xp.industry_ar:locale.langCode==="fr"?xp.industry_fr:xp.industry_en;
-    const dates = locale.langCode==="ar"?xp.date_ar:locale.langCode==="fr"?xp.date_fr:xp.date_en;
-    const desc = locale.langCode==="ar"?xp.full_description_ar:locale.langCode==="fr"?xp.full_description_fr:xp.full_description_en;
-
-    write(`${role} — ${xp.company}`);
-    write(`${industry} • ${dates}`, { fontSize: 10 });
-
-    doc.text(desc, x, y, {
-      align,
-      maxWidth: 170
-    });
-
-    y += 15;
+  const doc = new jsPDF({
+    orientation: "p",
+    unit: "mm",
+    format: "a4"
   });
 
-  doc.save(`${content.name}-${locale.langCode}.pdf`);
+  const rtl = locale.langCode === "ar";
+
+  // Hidden container
+  const container = document.createElement("div");
+  container.style.width = "800px";
+  container.style.padding = "24px";
+  container.style.background = "#fff";
+  container.style.direction = rtl ? "rtl" : "ltr";
+  container.style.textAlign = rtl ? "right" : "left";
+
+  container.innerHTML = `
+    <style>
+      @font-face {
+        font-family: 'Amiri';
+        src: url('https://fonts.gstatic.com/s/amiri/v27/J7aRnpd8CGxBHpUrtLMA7w.ttf') format('truetype');
+      }
+      * {
+        font-family: 'Amiri', serif !important;
+        color: #000 !important;
+        line-height: 1.6;
+      }
+      h1,h2,h3 { margin-bottom: 8px }
+      ul { padding-${rtl ? "right" : "left"}: 20px }
+    </style>
+
+    <h1>${content.name}</h1>
+    <h2>${t(locale,"hero.subtitle")}</h2>
+
+    <p>${t(locale,"contact.phone")}: ${content.phone}</p>
+    <p>${t(locale,"contact.email")}: ${content.email}</p>
+    <p>${t(locale,"contact.linkedin")}: ${content.linkedin}</p>
+
+    <hr/>
+  `;
+
+  content.experience.forEach(x=>{
+    const role = locale.langCode==="ar"?x.role_ar:locale.langCode==="fr"?x.role_fr:x.role_en;
+    const industry = locale.langCode==="ar"?x.industry_ar:locale.langCode==="fr"?x.industry_fr:x.industry_en;
+    const dates = locale.langCode==="ar"?x.date_ar:locale.langCode==="fr"?x.date_fr:x.date_en;
+    const desc = locale.langCode==="ar"?x.full_description_ar:locale.langCode==="fr"?x.full_description_fr:x.full_description_en;
+    const highlights = locale.langCode==="ar"?x.highlights_ar:locale.langCode==="fr"?x.highlights_fr:x.highlights_en;
+
+    container.innerHTML += `
+      <section style="margin-bottom:18px">
+        <h3>${role} — ${x.company}</h3>
+        <em>${industry} • ${dates}</em>
+        <div>${desc}</div>
+        ${
+          highlights?.length
+            ? `<ul>${highlights.map(h=>`<li>${h}</li>`).join("")}</ul>`
+            : ""
+        }
+        <small><b>Stack:</b> ${x.stack}</small>
+      </section>
+    `;
+  });
+
+  document.body.appendChild(container);
+
+  doc.html(container, {
+    x: 10,
+    y: 10,
+    width: 190,
+    windowWidth: 800,
+    html2canvas: {
+      scale: 2,
+      useCORS: true,
+      letterRendering: true
+    },
+    callback: () => {
+      doc.save(`${content.name}-${locale.langCode}.pdf`);
+      document.body.removeChild(container);
+    }
+  });
 }
+
 
 
 
