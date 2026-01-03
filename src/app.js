@@ -54,23 +54,18 @@ function t(locale, path){
 // Generate PDF dynamically using jsPDF
 function generatePDF(locale, content){
   const { jsPDF } = window.jspdf;
-
-  const doc = new jsPDF({
-    orientation: "p",
-    unit: "mm",
-    format: "a4"
-  });
+  const doc = new jsPDF({ unit: "mm", format: "a4", orientation: "p" });
 
   const rtl = locale.langCode === "ar";
 
-  // === PDF-safe container ===
+  // Create PDF-safe container
   const container = document.createElement("div");
-  container.style.width = "190mm";        // A4 safe width
-  container.style.padding = "15mm";
-  container.style.background = "#ffffff";
+  container.style.width = "180mm";           // Safe width
+  container.style.padding = "10mm";          // Margin inside page
   container.style.boxSizing = "border-box";
   container.style.direction = rtl ? "rtl" : "ltr";
   container.style.textAlign = rtl ? "right" : "left";
+  container.style.background = "#fff";
 
   container.innerHTML = `
     <style>
@@ -78,47 +73,25 @@ function generatePDF(locale, content){
         font-family: 'Amiri';
         src: url('https://fonts.gstatic.com/s/amiri/v27/J7aRnpd8CGxBHpUrtLMA7w.ttf') format('truetype');
       }
-
       * {
         font-family: 'Amiri', serif !important;
         color: #000 !important;
         box-sizing: border-box;
       }
-
-      h1 { font-size: 22px; margin-bottom: 6px }
-      h2 { font-size: 16px; margin: 18px 0 6px }
+      h1 { font-size: 22px; margin-bottom: 8px }
+      h2 { font-size: 16px; margin: 16px 0 6px }
       h3 { font-size: 14px; margin: 10px 0 4px }
-
-      p, li {
-        font-size: 11px;
-        line-height: 1.6;
-      }
-
-      ul {
-        padding-${rtl ? "right" : "left"}: 18px;
-        margin: 6px 0;
-      }
-
-      section {
-        page-break-inside: avoid;
-      }
-
-      .page-break {
-        page-break-before: always;
-      }
-
-      hr {
-        border: none;
-        border-top: 1px solid #ddd;
-        margin: 10px 0;
-      }
+      p, li { font-size: 11px; line-height: 1.5; word-break: break-word; }
+      ul { padding-${rtl ? "right" : "left"}: 18px; margin: 6px 0 }
+      section { page-break-inside: avoid; }
+      .page-break { page-break-before: always; }
+      hr { border: none; border-top: 1px solid #ddd; margin: 10px 0; }
     </style>
 
     <!-- HEADER -->
     <section>
       <h1>${content.name}</h1>
       <p>${t(locale,"hero.subtitle")}</p>
-
       <p>
         ${t(locale,"contact.phone")}: ${content.phone}<br/>
         ${t(locale,"contact.email")}: ${content.email}<br/>
@@ -128,7 +101,7 @@ function generatePDF(locale, content){
 
     <hr/>
 
-    <!-- ABOUT SECTION -->
+    <!-- ABOUT -->
     <section>
       <h2>${t(locale,"about.title")}</h2>
       <p>${t(locale,"about.body")}</p>
@@ -136,12 +109,13 @@ function generatePDF(locale, content){
 
     <div class="page-break"></div>
 
-    <!-- EXPERIENCE -->
+    <!-- EXPERIENCE TITLE -->
     <section>
       <h2>${t(locale,"experience.title")}</h2>
     </section>
   `;
 
+  // Add experience items
   content.experience.forEach(x=>{
     const role = locale.langCode==="ar"?x.role_ar:locale.langCode==="fr"?x.role_fr:x.role_en;
     const industry = locale.langCode==="ar"?x.industry_ar:locale.langCode==="fr"?x.industry_fr:x.industry_en;
@@ -154,13 +128,11 @@ function generatePDF(locale, content){
         <h3>${role} — ${x.company}</h3>
         <p><em>${industry} • ${dates}</em></p>
         <div>${desc}</div>
-
         ${
           highlights?.length
             ? `<ul>${highlights.map(h=>`<li>${h}</li>`).join("")}</ul>`
             : ""
         }
-
         <p><strong>Stack:</strong> ${x.stack}</p>
       </section>
     `;
@@ -168,21 +140,20 @@ function generatePDF(locale, content){
 
   document.body.appendChild(container);
 
+  // Generate PDF
   doc.html(container, {
     x: 0,
     y: 0,
-    width: 210,              // A4 width
+    width: 180,                 // Fit inside A4 page
     windowWidth: container.scrollWidth,
-    html2canvas: {
-      scale: 2,
-      useCORS: true
-    },
+    html2canvas: { scale: 2, useCORS: true },
     callback: () => {
       doc.save(`${content.name}-${locale.langCode}.pdf`);
       document.body.removeChild(container);
     }
   });
 }
+
 
 
 
