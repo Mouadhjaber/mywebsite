@@ -55,53 +55,58 @@ function t(locale, path){
 function generatePDF(locale, content) {
   const rtl = locale.langCode === "ar";
 
-  // Build document definition
-  const docDefinition = {
-    pageSize: 'A4',
-    pageMargins: [15, 15, 15, 15], // [left, top, right, bottom] in mm
-    defaultStyle: {
-      fontSize: 10,
-      lineHeight: 1.3
-    },
-    content: [
-      // HEADER
-      { text: content.name, fontSize: 16, bold: true, margin: [0, 0, 0, 5], alignment: rtl ? 'right' : 'left' },
-      { text: t(locale, "hero.subtitle"), margin: [0,0,0,5], alignment: rtl ? 'right' : 'left' },
-      { 
-        text: `${t(locale,"contact.phone")}: ${content.phone}\n${t(locale,"contact.email")}: ${content.email}\n${t(locale,"contact.linkedin")}: ${content.linkedin}`,
-        margin: [0,0,0,5],
-        alignment: rtl ? 'right' : 'left'
-      },
-      { canvas: [{ type: 'line', x1:0, y1:0, x2:595, y2:0, lineWidth: 1 }] },
+  // Create a container with HTML content
+  const container = document.createElement("div");
+  container.style.width = "180mm";  // inside A4 page width
+  container.style.margin = "0 auto";
+  container.style.direction = rtl ? "rtl" : "ltr";
+  container.style.textAlign = rtl ? "right" : "left";
+  container.style.fontFamily = "'Amiri', serif";
+  container.style.fontSize = "10px"; // smaller font to fit
+  container.style.lineHeight = "1.3";
+  container.style.color = "#000";
 
-      // ABOUT
-      { text: t(locale,"about.title"), fontSize: 14, bold: true, margin: [0,5,0,2], alignment: rtl ? 'right' : 'left' },
-      { text: t(locale,"about.body"), margin: [0,0,0,5], alignment: rtl ? 'right' : 'left' },
+  // Build the HTML
+  container.innerHTML = `
+    <h1>${content.name}</h1>
+    <p>${t(locale,"hero.subtitle")}</p>
+    <p>
+      ${t(locale,"contact.phone")}: ${content.phone}<br/>
+      ${t(locale,"contact.email")}: ${content.email}<br/>
+      ${t(locale,"contact.linkedin")}: ${content.linkedin}
+    </p>
+    <hr/>
+    <h2>${t(locale,"about.title")}</h2>
+    <p>${t(locale,"about.body")}</p>
+    <h2>${t(locale,"experience.title")}</h2>
+    ${content.experience.map(x => {
+      const role = rtl ? x.role_ar : locale.langCode==="fr"?x.role_fr:x.role_en;
+      const industry = rtl ? x.industry_ar : locale.langCode==="fr"?x.industry_fr:x.industry_en;
+      const dates = rtl ? x.date_ar : locale.langCode==="fr"?x.date_fr:x.date_en;
+      const desc = rtl ? x.full_description_ar : locale.langCode==="fr"?x.full_description_fr:x.full_description_en;
+      return `
+        <section>
+          <h3>${role} — ${x.company}</h3>
+          <p><em>${industry} • ${dates}</em></p>
+          ${desc} <!-- Already HTML -->
+          <p><strong>Stack:</strong> ${x.stack}</p>
+        </section>
+      `;
+    }).join("")}
+  `;
 
-      // EXPERIENCE
-      { text: t(locale,"experience.title"), fontSize: 14, bold: true, margin: [0,5,0,2], alignment: rtl ? 'right' : 'left' },
-      ...content.experience.map(x => {
-        const role = rtl ? x.role_ar : locale.langCode === 'fr' ? x.role_fr : x.role_en;
-        const industry = rtl ? x.industry_ar : locale.langCode === 'fr' ? x.industry_fr : x.industry_en;
-        const dates = rtl ? x.date_ar : locale.langCode === 'fr' ? x.date_fr : x.date_en;
-        const desc = rtl ? x.full_description_ar : locale.langCode === 'fr' ? x.full_description_fr : x.full_description_en;
-        const highlights = rtl ? x.highlights_ar : locale.langCode === 'fr' ? x.highlights_fr : x.highlights_en;
+  document.body.appendChild(container);
 
-        return {
-          stack: [
-            { text: `${role} — ${x.company}`, fontSize: 12, bold: true, margin: [0,5,0,2], alignment: rtl ? 'right' : 'left' },
-            { text: `${industry} • ${dates}`, italics: true, margin: [0,0,0,2], alignment: rtl ? 'right' : 'left' },
-            { text: desc, margin: [0,0,0,2], alignment: rtl ? 'right' : 'left' },
-            ...(highlights?.length ? [{ ul: highlights, margin: [0,0,0,2], alignment: rtl ? 'right' : 'left' }] : []),
-            { text: `Stack: ${x.stack}`, margin: [0,0,0,2], italics: true, alignment: rtl ? 'right' : 'left' }
-          ]
-        };
-      })
-    ],
-    defaultStyle: { alignment: rtl ? 'right' : 'left' }
-  };
-
-  pdfMake.createPdf(docDefinition).download(`${content.name}-${locale.langCode}.pdf`);
+  // Generate PDF
+  html2pdf().set({
+    margin: [15, 15, 15, 15], // top, left, bottom, right in mm
+    filename: `${content.name}-${locale.langCode}.pdf`,
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2, allowTaint: true },
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'p' }
+  }).from(container).save().then(() => {
+    document.body.removeChild(container);
+  });
 }
 
 
