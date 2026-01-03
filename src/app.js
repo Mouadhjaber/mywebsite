@@ -53,122 +53,55 @@ function t(locale, path){
 
 // Generate PDF dynamically using jsPDF
 function generatePDF(locale, content) {
-  const { jsPDF } = window.jspdf;
-
-  const doc = new jsPDF({
-    unit: "mm",
-    format: "a4",
-    orientation: "p"
-  });
-
   const rtl = locale.langCode === "ar";
-  const pageWidth = 210;  // A4 width in mm
-  const pageHeight = 297; // A4 height in mm
-  const margin = 15;      // 15mm margin
 
-  // Container for html2canvas
-  const container = document.createElement("div");
-  container.style.width = `${pageWidth - 2 * margin}mm`; // fit inside A4 margins
-  container.style.padding = "5px";                       // small internal padding
-  container.style.boxSizing = "border-box";
-  container.style.direction = rtl ? "rtl" : "ltr";
-  container.style.textAlign = rtl ? "right" : "left";
-  container.style.fontFamily = "'Amiri', serif";
-  container.style.fontSize = "10px";                    // smaller font
-  container.style.lineHeight = "1.3";                   // tighter line spacing
-  container.style.color = "#000";
-  container.style.background = "#fff";
-
-  // CSS inside HTML
-  container.innerHTML = `
-    <style>
-      @font-face {
-        font-family: 'Amiri';
-        src: url('https://fonts.gstatic.com/s/amiri/v27/J7aRnpd8CGxBHpUrtLMA7w.ttf') format('truetype');
-      }
-      * { 
-        font-family: 'Amiri', serif; 
-        color: #000; 
-        word-break: break-word; 
-        line-height: 1.3;
-      }
-      h1 { font-size: 16px; margin-bottom: 4px; }
-      h2 { font-size: 14px; margin: 8px 0 4px; }
-      h3 { font-size: 12px; margin: 6px 0 2px; }
-      p, li { font-size: 10px; margin: 2px 0; }
-      ul { padding-${rtl ? "right" : "left"}: 15px; margin: 2px 0; }
-      section { page-break-inside: avoid; }
-      .page-break { page-break-before: always; }
-      hr { border: none; border-top: 1px solid #ccc; margin: 6px 0; }
-    </style>
-
-    <!-- HEADER -->
-    <section>
-      <h1>${content.name}</h1>
-      <p>${t(locale,"hero.subtitle")}</p>
-      <p>
-        ${t(locale,"contact.phone")}: ${content.phone}<br/>
-        ${t(locale,"contact.email")}: ${content.email}<br/>
-        ${t(locale,"contact.linkedin")}: ${content.linkedin}
-      </p>
-    </section>
-
-    <hr/>
-
-    <!-- ABOUT -->
-    <section>
-      <h2>${t(locale,"about.title")}</h2>
-      <p>${t(locale,"about.body")}</p>
-    </section>
-
-    <div class="page-break"></div>
-
-    <!-- EXPERIENCE TITLE -->
-    <section>
-      <h2>${t(locale,"experience.title")}</h2>
-    </section>
-  `;
-
-  // Add experience items
-  content.experience.forEach(x => {
-    const role = locale.langCode === "ar" ? x.role_ar : locale.langCode === "fr" ? x.role_fr : x.role_en;
-    const industry = locale.langCode === "ar" ? x.industry_ar : locale.langCode === "fr" ? x.industry_fr : x.industry_en;
-    const dates = locale.langCode === "ar" ? x.date_ar : locale.langCode === "fr" ? x.date_fr : x.date_en;
-    const desc = locale.langCode === "ar" ? x.full_description_ar : locale.langCode === "fr" ? x.full_description_fr : x.full_description_en;
-    const highlights = locale.langCode === "ar" ? x.highlights_ar : locale.langCode === "fr" ? x.highlights_fr : x.highlights_en;
-
-    container.innerHTML += `
-      <section>
-        <h3>${role} — ${x.company}</h3>
-        <p><em>${industry} • ${dates}</em></p>
-        <div>${desc}</div>
-        ${
-          highlights?.length
-            ? `<ul>${highlights.map(h => `<li>${h}</li>`).join("")}</ul>`
-            : ""
-        }
-        <p><strong>Stack:</strong> ${x.stack}</p>
-      </section>
-    `;
-  });
-
-  document.body.appendChild(container);
-
-  // Generate PDF with html2canvas scaling
-  doc.html(container, {
-    x: margin,
-    y: margin,
-    width: pageWidth - 2 * margin, // ensure fit inside A4 margins
-    html2canvas: {
-      scale: 1.2,    // smaller scale to fit content
-      useCORS: true,
-      allowTaint: true
+  // Build document definition
+  const docDefinition = {
+    pageSize: 'A4',
+    pageMargins: [15, 15, 15, 15], // [left, top, right, bottom] in mm
+    defaultStyle: {
+      fontSize: 10,
+      lineHeight: 1.3
     },
-    callback: () => {
-      doc.save(`${content.name}-${locale.langCode}.pdf`);
-      document.body.removeChild(container);
-    }
-  });
+    content: [
+      // HEADER
+      { text: content.name, fontSize: 16, bold: true, margin: [0, 0, 0, 5], alignment: rtl ? 'right' : 'left' },
+      { text: t(locale, "hero.subtitle"), margin: [0,0,0,5], alignment: rtl ? 'right' : 'left' },
+      { 
+        text: `${t(locale,"contact.phone")}: ${content.phone}\n${t(locale,"contact.email")}: ${content.email}\n${t(locale,"contact.linkedin")}: ${content.linkedin}`,
+        margin: [0,0,0,5],
+        alignment: rtl ? 'right' : 'left'
+      },
+      { canvas: [{ type: 'line', x1:0, y1:0, x2:595, y2:0, lineWidth: 1 }] },
+
+      // ABOUT
+      { text: t(locale,"about.title"), fontSize: 14, bold: true, margin: [0,5,0,2], alignment: rtl ? 'right' : 'left' },
+      { text: t(locale,"about.body"), margin: [0,0,0,5], alignment: rtl ? 'right' : 'left' },
+
+      // EXPERIENCE
+      { text: t(locale,"experience.title"), fontSize: 14, bold: true, margin: [0,5,0,2], alignment: rtl ? 'right' : 'left' },
+      ...content.experience.map(x => {
+        const role = rtl ? x.role_ar : locale.langCode === 'fr' ? x.role_fr : x.role_en;
+        const industry = rtl ? x.industry_ar : locale.langCode === 'fr' ? x.industry_fr : x.industry_en;
+        const dates = rtl ? x.date_ar : locale.langCode === 'fr' ? x.date_fr : x.date_en;
+        const desc = rtl ? x.full_description_ar : locale.langCode === 'fr' ? x.full_description_fr : x.full_description_en;
+        const highlights = rtl ? x.highlights_ar : locale.langCode === 'fr' ? x.highlights_fr : x.highlights_en;
+
+        return {
+          stack: [
+            { text: `${role} — ${x.company}`, fontSize: 12, bold: true, margin: [0,5,0,2], alignment: rtl ? 'right' : 'left' },
+            { text: `${industry} • ${dates}`, italics: true, margin: [0,0,0,2], alignment: rtl ? 'right' : 'left' },
+            { text: desc, margin: [0,0,0,2], alignment: rtl ? 'right' : 'left' },
+            ...(highlights?.length ? [{ ul: highlights, margin: [0,0,0,2], alignment: rtl ? 'right' : 'left' }] : []),
+            { text: `Stack: ${x.stack}`, margin: [0,0,0,2], italics: true, alignment: rtl ? 'right' : 'left' }
+          ]
+        };
+      })
+    ],
+    defaultStyle: { alignment: rtl ? 'right' : 'left' }
+  };
+
+  pdfMake.createPdf(docDefinition).download(`${content.name}-${locale.langCode}.pdf`);
 }
 
 
