@@ -20,7 +20,7 @@
     "microsoft": [".NET (C#, VB.NET)","ASP.NET","WCF","WebAPI / REST","ADO.NET","LINQ","Entity Framework","NHibernate",".NET Core","Blazor","Kafka","Docker","SpecFlow","Sonar"],
     "other_langs": ["C","C++","Python"],
     "ibm": ["Lotus Notes / Domino","Lotus Script","XPage","Sametime"],
-    "scripting": ["VBScript","PowerShell","JavaScript","jQuery","Angular","React"],
+    "scripting": ["VBScript","PowerShell","JavaScript","jQuery","AngularJS","React"],
     "is": ["Active Directory (2003/2008/2012)","SQL Server (2008/2014/2016)","SharePoint / MOSS / Office 365","Azure Service Bus","Azure Cloud"],
     "tools": ["Visual Studio (2008–2022)","TFS / Azure DevOps","TeamCity","CVS/SVN","Eclipse","MS Project / Project Server"]
   },
