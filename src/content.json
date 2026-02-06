@@ -20,7 +20,7 @@
     "microsoft": [".NET (C#, VB.NET)","ASP.NET","WCF","WebAPI / REST","ADO.NET","LINQ","Entity Framework","NHibernate",".NET Core","Blazor","Kafka","Docker","SpecFlow","Sonar"],
     "other_langs": ["C","C++","Python"],
     "ibm": ["Lotus Notes / Domino","Lotus Script","XPage","Sametime"],
-    "scripting": ["VBScript","PowerShell","JavaScript","jQuery","AngularJS","React"],
+    "scripting": ["VBScript","PowerShell","JavaScript","jQuery","Angular","React"],
     "is": ["Active Directory (2003/2008/2012)","SQL Server (2008/2014/2016)","SharePoint / MOSS / Office 365","Azure Service Bus","Azure Cloud"],
     "tools": ["Visual Studio (2008–2022)","TFS / Azure DevOps","TeamCity","CVS/SVN","Eclipse","MS Project / Project Server"]
   },
@@ -40,7 +40,7 @@
       "highlights_en": ["Mobile development (Flutter)","Development around internal CRM","Dockerization of ongoing projects","Swagger & backend API development","Urbanization / application modernization"],
       "highlights_fr": ["Développement mobile (Flutter)","Développement autour du CRM interne","Dockerisation des projets en cours","Swagger & développement API backend","Urbanisation / modernisation des applications"],
       "highlights_ar": ["تطوير تطبيقات الهاتف باستخدام Flutter","تطوير حول CRM الداخلي","استخدام Docker للمشاريع الجارية","Swagger وتطوير API الخلفية","تحديث وتحديث التطبيقات"],
-      "stack": "C#, Flutter, JavaScript, Docker, Visual Studio (2019–2022)",
+      "stack": "C#, Flutter, JavaScript,Angular, Docker, Visual Studio (2019–2022)",
       "full_description_en": "<p><strong>Senior Software Engineer</strong> developing mobile applications with Flutter, enhancing and maintaining the internal CRM, dockerizing ongoing projects, creating backend APIs with Swagger, and modernizing/urbanizing applications. Tools: Visual Studio 2019–2022, C#, Flutter, JavaScript, Docker.</p>",
       "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> développant des applications mobiles avec Flutter, améliorant et maintenant le CRM interne, dockerisant les projets en cours, créant des API backend avec Swagger et modernisant/urbanisant les applications. Outils : Visual Studio 2019–2022, C#, Flutter, JavaScript, Docker.</p>",
       "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> تطوير تطبيقات الهاتف باستخدام Flutter، تطوير وصيانة CRM الداخلي، استخدام Docker للمشاريع الجارية، تطوير API الخلفية باستخدام Swagger، وتحديث وتحديث التطبيقات. الأدوات: Visual Studio 2019–2022، C#، Flutter، JavaScript، Docker.</p>"
