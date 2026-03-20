@@ -81,7 +81,10 @@ function generatePDF(locale, content) {
         ${t(locale,"contact.phone")}: ${content.phone}<br/>
         ${t(locale,"contact.email")}: ${content.email}<br/>
         ${t(locale,"contact.linkedin")}: ${content.linkedin}<br/>
-        ${t(locale,"contact.website")}: ${content.website}
+        ${t(locale,"contact.website")}: 
+        <a href="${content.website}" target="_blank">
+          ${content.website.replace(/^https?:\/\//,'')}
+        </a>
       </p>
     </section>
 
