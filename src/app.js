@@ -80,7 +80,8 @@ function generatePDF(locale, content) {
       <p>
         ${t(locale,"contact.phone")}: ${content.phone}<br/>
         ${t(locale,"contact.email")}: ${content.email}<br/>
-        ${t(locale,"contact.linkedin")}: ${content.linkedin}
+        ${t(locale,"contact.linkedin")}: ${content.linkedin}<br/>
+        ${t(locale,"contact.website")}: ${content.website}
       </p>
     </section>
 
