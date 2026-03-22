@@ -18,7 +18,19 @@
     "body": "Senior Software Engineer with experience across telecommunications, banking, insurance, transport, asset management, and pharmaceutical supply. Strong background in software architecture, application development, infrastructure optimization, DevOps/DevSecOps, and enterprise integration. With extensive experience in software engineering, he has contributed to impactful projects in software design, infrastructure optimization, and engineering, focusing on delivering efficient solutions that enhance performance and support organizational objectives."
   },
   "skills": {
-    "title": "Skills"
+    "title": "Skills",
+    "architecture": "Architecture",
+    "methods": "Methods",
+    "process": "Processes",
+    "modeling": "Modeling",
+    "communication": "Communication",
+    "patterns": "Design Patterns",
+    "microsoft": "Microsoft Technologies",
+    "other_langs": "Other Languages",
+    "ibm": "IBM Technologies",
+    "scripting": "Scripting",
+    "is": "Information Systems",
+    "tools": "Tools"
   },
   "experience": {
     "title": "Professional Experience"
