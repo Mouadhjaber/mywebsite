@@ -118,7 +118,10 @@ function generatePDF(locale, content) {
       const desc = rtl ? x.full_description_ar : locale.langCode==="fr"?x.full_description_fr:x.full_description_en;
       return `
         <section>
-          <h3>${role} — ${x.company}</h3>
+          <h3 style="display:flex; justify-content: space-between;">
+            <span>${role}</span>
+            <span>${x.company}</span>
+          </h3>
           <p><em>${industry} • ${dates}</em></p>
           ${desc} <!-- HTML already -->
           <p><strong>Stack:</strong> ${x.stack}</p>
