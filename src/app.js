@@ -91,10 +91,17 @@ function generatePDF(locale, content) {
       <h2>${t(locale,"about.title")}</h2>
       <p>${t(locale,"about.body")}</p>
     </section>
+    <hr/>
+    <section>
+        <h2>${t(locale,"skills.title")}</h2>
+        ${renderSkills(content.skills, locale, rtl)}
+      </section>
+    <hr/>
 
     <section>
       <h2>${t(locale,"experience.title")}</h2>
     </section>
+    <hr/>
 
     ${content.experience.map(x => {
       const role = rtl ? x.role_ar : locale.langCode==="fr"?x.role_fr:x.role_en;
@@ -108,6 +115,7 @@ function generatePDF(locale, content) {
           ${desc} <!-- HTML already -->
           <p><strong>Stack:</strong> ${x.stack}</p>
         </section>
+        <hr/>
       `;
     }).join("")}
   `;
@@ -126,7 +134,31 @@ function generatePDF(locale, content) {
 }
 
 
+function renderSkills(skills, locale, rtl) {
+  const labels = {
+    architecture: t(locale,"skills.architecture"),
+    methods: t(locale,"skills.methods"),
+    process: t(locale,"skills.process"),
+    modeling: t(locale,"skills.modeling"),
+    communication: t(locale,"skills.communication"),
+    patterns: t(locale,"skills.patterns"),
+    microsoft: t(locale,"skills.microsoft"),
+    other_langs: t(locale,"skills.other_langs"),
+    ibm: t(locale,"skills.ibm"),
+    scripting: t(locale,"skills.scripting"),
+    is: t(locale,"skills.is"),
+    tools: t(locale,"skills.tools"),
+  };
 
+  return Object.keys(skills).map(key => {
+    return `
+      <div style="margin-bottom:6px;">
+        <strong>${labels[key]}:</strong>
+        <span>${skills[key].join(", ")}</span>
+      </div>
+    `;
+  }).join("");
+}
 
 
 
