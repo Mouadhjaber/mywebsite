@@ -136,7 +136,7 @@ function generatePDF(locale, content) {
   document.body.appendChild(container);
 
   html2pdf().set({
-    margin: [15, 15, 15, 15],
+    margin: [10, 10, 10, 10],
     filename: `${content.name}-${locale.langCode}.pdf`,
     image: { type: 'jpeg', quality: 0.98 },
     html2canvas: { scale: 2, useCORS: true, allowTaint: true },
