@@ -61,7 +61,7 @@ function generatePDF(locale, content) {
   container.style.margin = "0 auto";
   container.style.direction = rtl ? "rtl" : "ltr";
   container.style.textAlign = rtl ? "right" : "left";
-  container.style.fontFamily = "'Amiri', serif";
+  container.style.fontFamily = rtl ? "'Amiri', serif" : "Arial, Helvetica, sans-serif";
   container.style.fontSize = "10px";
   container.style.lineHeight = "1.3";
   container.style.color = "#000";
@@ -73,13 +73,13 @@ function generatePDF(locale, content) {
   container.innerHTML = `
     <style>
       section { page-break-inside: avoid; margin-bottom: 8px; }
-    h1,h2,h3 {
-      page-break-inside: avoid;
-      white-space: normal;        /* ensures titles wrap properly */
-      word-break: break-word;
-      overflow-wrap: break-word;
-    }
-    p, ul, li { page-break-inside: avoid; }
+      h1, h2, h3 {
+        page-break-inside: avoid;
+        white-space: normal !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+        }
+      p, ul, li { page-break-inside: avoid; }
     </style>
 
     <section>
