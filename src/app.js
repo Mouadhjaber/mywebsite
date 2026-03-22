@@ -118,10 +118,12 @@ function generatePDF(locale, content) {
       const desc = rtl ? x.full_description_ar : locale.langCode==="fr"?x.full_description_fr:x.full_description_en;
       return `
         <section>
-          <h3 style="display:flex; justify-content: space-between;">
-            <span>${role}</span>
-            <span>${x.company}</span>
-          </h3>
+          <table style="width:100%; border-collapse: collapse;">
+        <tr>
+          <td style="text-align:${rtl ? 'right' : 'left'}; font-weight:bold;">${role}</td>
+          <td style="text-align:${rtl ? 'left' : 'right'}; font-weight:bold;">${x.company}</td>
+        </tr>
+      </table>
           <p><em>${industry} • ${dates}</em></p>
           ${desc} <!-- HTML already -->
           <p><strong>Stack:</strong> ${x.stack}</p>
