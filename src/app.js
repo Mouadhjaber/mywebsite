@@ -120,7 +120,7 @@ function generatePDF(locale, content) {
         <section>
           <h3 style="display:flex; justify-content: space-between;">
             <span>${role}</span>
-            <span>${x.company}</span>
+            <span>${x.company}  </span>
           </h3>
           <p><em>${industry} • ${dates}</em></p>
           ${desc} <!-- HTML already -->
