@@ -65,13 +65,21 @@ function generatePDF(locale, content) {
   container.style.fontSize = "10px";
   container.style.lineHeight = "1.3";
   container.style.color = "#000";
+  container.style.whiteSpace = "normal";        // allow normal wrapping
+  container.style.wordBreak = "break-word";     // break long words if needed
+  container.style.overflowWrap = "break-word";  // fallback
 
   // Add CSS to prevent splitting
   container.innerHTML = `
     <style>
       section { page-break-inside: avoid; margin-bottom: 8px; }
-      h1,h2,h3 { page-break-inside: avoid; }
-      p, ul, li { page-break-inside: avoid; }
+    h1,h2,h3 {
+      page-break-inside: avoid;
+      white-space: normal;        /* ensures titles wrap properly */
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+    p, ul, li { page-break-inside: avoid; }
     </style>
 
     <section>
