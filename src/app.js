@@ -118,12 +118,10 @@ function generatePDF(locale, content) {
       const desc = rtl ? x.full_description_ar : locale.langCode==="fr"?x.full_description_fr:x.full_description_en;
       return `
         <section>
-          <table style="width:100%; border-collapse: collapse;">
-        <tr>
-          <td style="text-align:${rtl ? 'right' : 'left'}; font-weight:bold;">${role}</td>
-          <td style="text-align:${rtl ? 'left' : 'right'}; font-weight:bold;">${x.company}</td>
-        </tr>
-      </table>
+          <h3 style="display:flex; justify-content: space-between;">
+            <span>${role}</span>
+            <span>${x.company}</span>
+          </h3>
           <p><em>${industry} • ${dates}</em></p>
           ${desc} <!-- HTML already -->
           <p><strong>Stack:</strong> ${x.stack}</p>
@@ -136,7 +134,7 @@ function generatePDF(locale, content) {
   document.body.appendChild(container);
 
   html2pdf().set({
-    margin: [10, 10, 10, 10],
+    margin: [15, 15, 15, 15],
     filename: `${content.name}-${locale.langCode}.pdf`,
     image: { type: 'jpeg', quality: 0.98 },
     html2canvas: { scale: 2, useCORS: true, allowTaint: true },
