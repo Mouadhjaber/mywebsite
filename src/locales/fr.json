@@ -12,14 +12,14 @@
   "hero": {
     "title": "Mouadh Jaber",
     "subtitle": "Ingénieur .NET Senior — Systèmes scalables & solutions cloud",
-    "tagline": "J'aide les entreprises à construire des systèmes backend haute performance avec .NET, C# et les technologies cloud.",
+    "tagline": "J'aide les entreprises à concevoir et livrer des systèmes logiciels scalables — de l'architecture cloud et des pipelines DevOps aux agents IA et aux intégrations d'entreprise.",
     "ctaPrimary": "Télécharger le CV (PDF)",
     "ctaSecondary": "Voir les projets",
     "ctaHire": "Me recruter"
   },
   "about": {
     "title": "À propos",
-    "body": "15+ ans d'ingénierie logicielle dans la finance, les télécoms, l'assurance, le transport et la pharmacie. Je me spécialise dans la création de backends .NET scalables, de systèmes cloud-native sur Azure et de pipelines DevOps fiables — de l'architecture à la production."
+    "body": "15+ ans d'ingénierie logicielle dans la finance, les télécoms, l'assurance, le transport et la pharmacie. Je conçois et livre des systèmes scalables — architectures cloud-native sur Azure, pipelines DevOps/DevSecOps, agents IA et microservices robustes — de l'architecture jusqu'à la production."
   },
   "skills": {
     "title": "Compétences",
