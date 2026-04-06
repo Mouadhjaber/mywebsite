@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Primary SEO -->
-  <title>Mouadh Jaber — Senior Software Engineer | .NET, C#, Azure, DevOps</title>
-  <meta id="meta-desc" name="description" content="Mouadh Jaber — Senior Software Engineer specializing in .NET, C#, Microservices, Azure, DevOps/DevSecOps. Available for freelance and consulting. 15+ years experience across telecom, banking, transport." />
+  <title>Mouadh Jaber — Senior .NET Engineer | .NET, C#, Azure, DevOps</title>
+  <meta id="meta-desc" name="description" content="Mouadh Jaber — Senior .NET Engineer specializing in .NET, C#, Microservices, Azure, DevOps/DevSecOps. Available for freelance and consulting. 15+ years experience across telecom, banking, transport." />
   <meta id="meta-keywords" name="keywords" content="Mouadh Jaber, Senior Software Engineer, .NET, C#, Microservices, DevOps, DevSecOps, Azure, Web API, Flutter, freelance developer, software consultant" />
   <meta name="author" content="Mouadh Jaber" />
   <meta name="robots" content="index, follow" />
@@ -18,17 +18,17 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta id="og-title" property="og:title" content="Mouadh Jaber — Senior Software Engineer" />
-  <meta id="og-desc" property="og:description" content="Senior Software Engineer specializing in .NET, C#, Microservices, Azure, DevOps/DevSecOps. Available for freelance and consulting." />
+  <meta id="og-title" property="og:title" content="Mouadh Jaber — Senior .NET Engineer" />
+  <meta id="og-desc" property="og:description" content="Senior .NET Engineer specializing in .NET, C#, Microservices, Azure, DevOps/DevSecOps. Available for freelance and consulting." />
   <meta property="og:url" content="https://mouadhjaber.com/" />
   <meta property="og:image" content="https://mouadhjaber.com/assets/profile.jpg" />
-  <meta property="og:image:alt" content="Mouadh Jaber — Senior Software Engineer" />
+  <meta property="og:image:alt" content="Mouadh Jaber — Senior .NET Engineer" />
   <meta property="og:site_name" content="Mouadh Jaber" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mouadh Jaber — Senior Software Engineer" />
-  <meta name="twitter:description" content="Senior Software Engineer specializing in .NET, C#, Microservices, Azure, DevOps/DevSecOps. Available for freelance and consulting." />
+  <meta name="twitter:title" content="Mouadh Jaber — Senior .NET Engineer" />
+  <meta name="twitter:description" content="Senior .NET Engineer specializing in .NET, C#, Microservices, Azure, DevOps/DevSecOps. Available for freelance and consulting." />
   <meta name="twitter:image" content="https://mouadhjaber.com/assets/profile.jpg" />
 
   <!-- hreflang -->
@@ -48,13 +48,13 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Mouadh Jaber",
-    "jobTitle": "Senior Software Engineer",
+    "jobTitle": "Senior .NET Engineer",
     "url": "https://mouadhjaber.com/",
     "email": "mouadh.jaber@msn.com",
     "telephone": "+21658201430",
     "sameAs": ["https://www.linkedin.com/in/mouadhjaber/"],
     "knowsAbout": [".NET", "C#", "Microservices", "Azure", "DevOps", "DevSecOps", "Docker", "Flutter", "Web API"],
-    "description": "Senior Software Engineer with 15+ years of experience across telecommunications, banking, insurance, transport, and pharmaceutical supply."
+    "description": "Senior .NET Engineer with 15+ years of experience across telecommunications, banking, insurance, transport, and pharmaceutical supply."
   }</script>
 </head>
 <body>
@@ -67,12 +67,15 @@
 
       <nav class="nav" id="nav" aria-label="Primary">
         <a href="#about" data-i18n="nav.about"></a>
+        <a href="#services" data-i18n="nav.services"></a>
+        <a href="#projects" data-i18n="nav.projects"></a>
         <a href="#skills" data-i18n="nav.skills"></a>
         <a href="#experience" data-i18n="nav.experience"></a>
         <a href="#contact" data-i18n="nav.contact"></a>
       </nav>
 
       <div class="controls">
+        <a class="btn hire-btn" id="hire-btn" href="#contact" data-i18n="hero.ctaHire"></a>
         <input class="search" id="search" type="search" placeholder="" aria-label="Search" />
         <select class="select" id="lang" aria-label="Language">
           <option value="en">EN</option>
@@ -84,26 +87,31 @@
   </header>
 
   <main class="container" id="top">
+
+    <!-- ─── HERO ─── -->
     <section class="hero">
       <div class="avatar" aria-hidden="true">
-        <img src="./assets/profile.jpg" alt="Mouadh Jaber — Senior Software Engineer" width="120" height="120" />
+        <img src="./assets/profile.jpg" alt="Mouadh Jaber — Senior .NET Engineer" width="140" height="140" />
       </div>
 
       <div>
         <h1 id="hero-title"></h1>
-        <p id="hero-subtitle"></p>
+        <p id="hero-subtitle" class="hero-subtitle"></p>
+        <p id="hero-tagline" class="hero-tagline"></p>
 
         <div class="hero-actions">
           <a class="btn primary" id="cv-link" href="./">Download CV</a>
-          <a class="btn" id="contact-link" href="#contact">Contact</a>
+          <a class="btn" id="contact-link" href="#projects">View Projects</a>
         </div>
 
-        <div class="small" style="margin-top:12px">
-          <span id="availability-label" style="opacity:.9">Available for freelance &amp; consulting</span>
+        <div class="hero-availability" id="availability-label">
+          <span class="availability-dot"></span>
+          <span id="availability-text">Available for freelance &amp; consulting</span>
         </div>
       </div>
     </section>
 
+    <!-- ─── ABOUT + SKILLS ─── -->
     <section class="grid" style="margin-top:18px">
       <article class="card" id="about">
         <h2 id="about-title"></h2>
@@ -116,19 +124,34 @@
       </article>
     </section>
 
+    <!-- ─── SERVICES ─── -->
+    <section class="card" id="services" style="margin-top:16px">
+      <h2 id="services-title"></h2>
+      <div class="services-grid" id="services-grid"></div>
+    </section>
+
+    <!-- ─── PROJECTS ─── -->
+    <section class="card" id="projects" style="margin-top:16px">
+      <h2 id="projects-title"></h2>
+      <div class="projects-grid" id="projects-grid"></div>
+    </section>
+
+    <!-- ─── EXPERIENCE ─── -->
     <section class="card" id="experience" style="margin-top:16px">
       <h2 id="exp-title"></h2>
       <div class="timeline" id="timeline"></div>
     </section>
 
-    <section class="card" id="contact" style="margin-top:16px">
+    <!-- ─── CONTACT ─── -->
+    <section class="card contact-card" id="contact" style="margin-top:16px">
       <h2 id="contact-title"></h2>
+      <p id="contact-subtitle" class="contact-subtitle"></p>
 
-      <div class="grid contact-grid" style="margin-top:10px">
+      <div class="grid contact-grid" style="margin-top:14px">
         <div class="contact-phone">
           <div class="small"><span id="contact-phone-label"></span></div>
           <a class="btn" id="phone" dir="ltr" href="#"></a>
-          <a  id="whatsapp" href="#" style="display:inline-block;padding:10px 16px; background:#25D366;color:#fff;border-radius:6px;text-decoration:none;">💬 WhatsApp <span dir="ltr"></span></a>
+          <a id="whatsapp" href="#" style="display:inline-block;padding:10px 16px;background:#25D366;color:#fff;border-radius:6px;text-decoration:none;margin-top:8px;">💬 WhatsApp</a>
         </div>
         <div class="contact-email">
           <div class="small"><span id="contact-email-label"></span></div>
@@ -136,15 +159,18 @@
         </div>
       </div>
 
-      <div style="margin-top:12px">
+      <div style="margin-top:14px">
         <div class="small"><span id="contact-linkedin-label"></span></div>
         <a class="btn" id="linkedin" href="#" target="_blank" rel="noopener"></a>
       </div>
 
+      <div style="margin-top:18px">
+        <a class="btn primary large-cta" id="contact-cta" href="mailto:mouadh.jaber@msn.com"></a>
+      </div>
     </section>
 
     <div class="footer">
-      © <span id="year"></span>• Mouadh Jaber •
+      © <span id="year"></span> • Mouadh Jaber •
     </div>
   </main>
 

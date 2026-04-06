@@ -1,21 +1,25 @@
 {
   "langCode": "fr",
-  "siteTitle": "Mouadh Jaber — Ingénieur logiciel",
+  "siteTitle": "Mouadh Jaber — Ingénieur .NET Senior",
   "nav": {
     "about": "Profil",
+    "services": "Services",
+    "projects": "Projets",
     "skills": "Compétences",
     "experience": "Expérience",
     "contact": "Contact"
   },
   "hero": {
     "title": "Mouadh Jaber",
-    "subtitle": "Ingénieur logiciel",
+    "subtitle": "Ingénieur .NET Senior — Systèmes scalables & solutions cloud",
+    "tagline": "J'aide les entreprises à construire des systèmes backend haute performance avec .NET, C# et les technologies cloud.",
     "ctaPrimary": "Télécharger le CV (PDF)",
-    "ctaSecondary": "Contact"
+    "ctaSecondary": "Voir les projets",
+    "ctaHire": "Me recruter"
   },
   "about": {
-    "title": "Profil",
-    "body": "Ingénieur logiciel senior avec une expérience dans les secteurs des télécommunications, de la banque, de l’assurance, du transport, de la gestion d’actifs et de l’approvisionnement pharmaceutique. Solide expertise en architecture logicielle, développement applicatif, optimisation des infrastructures, DevOps/DevSecOps et intégration des systèmes d’entreprise. Fort d’une vaste expérience en ingénierie logicielle, il a contribué à des projets à fort impact en conception logicielle, optimisation des infrastructures et ingénierie, en mettant l’accent sur la mise en œuvre de solutions efficaces améliorant les performances et soutenant les objectifs organisationnels."
+    "title": "À propos",
+    "body": "15+ ans d'ingénierie logicielle dans la finance, les télécoms, l'assurance, le transport et la pharmacie. Je me spécialise dans la création de backends .NET scalables, de systèmes cloud-native sur Azure et de pipelines DevOps fiables — de l'architecture à la production."
   },
   "skills": {
     "title": "Compétences",
@@ -25,27 +29,36 @@
     "modeling": "Modélisation",
     "communication": "Communication",
     "patterns": "Design Patterns",
-    "microsoft": "Technologies Microsoft",
+    "microsoft": "Microsoft / .NET",
     "other_langs": "Autres langages",
     "ibm": "Technologies IBM",
-    "scripting": "Scripts",
-    "is": "Systèmes d’information",
-    "tools": "Outils"
+    "scripting": "Scripts & Frontend",
+    "is": "Systèmes d'information",
+    "tools": "Outils & DevOps"
+  },
+  "services": {
+    "title": "Ce que je peux faire pour vous"
+  },
+  "projects_section": {
+    "title": "Projets phares",
+    "sector": "Secteur"
   },
   "experience": {
     "title": "Expériences professionnelles"
   },
   "contact": {
-    "title": "Contact",
+    "title": "Travaillons ensemble",
+    "subtitle": "Disponible pour du freelance, du conseil et des opportunités à temps plein.",
     "phone": "Téléphone",
     "email": "Email",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "cta": "Envoyez-moi un message"
   },
   "seo": {
-    "description": "Mouadh Jaber — Ingénieur logiciel senior disponible pour freelance & consulting. 15+ ans en .NET, C#, Microservices, Azure, DevOps/DevSecOps dans les télécoms, banque, transport et plus.",
+    "description": "Mouadh Jaber — Ingénieur .NET Senior disponible pour freelance & consulting. 15+ ans en .NET, C#, Microservices, Azure, DevOps/DevSecOps dans les télécoms, banque, transport et plus.",
     "keywords": "Mouadh Jaber, Ingénieur logiciel senior, développeur .NET, développeur C#, Microservices, DevOps, DevSecOps, Azure, Web API, Flutter, consultant logiciel, développeur freelance"
   },
   "search": {
-    "placeholder": "Rechercher dans l’expérience & compétences…"
+    "placeholder": "Rechercher dans l'expérience & compétences…"
   }
 }

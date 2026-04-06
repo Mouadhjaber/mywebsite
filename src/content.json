@@ -256,6 +256,115 @@
     "full_description_fr": "<p><strong>Projet « Système de pilotage des migrations » :</strong> Pour piloter les migrations des systèmes de messagerie, des applications clientes installées sur les postes communiquent avec un portail Web et déclenchent les actions nécessaires en arrière-plan afin d’assurer une migration transparente de Lotus vers Outlook. Le projet consiste à concevoir un portail Web permettant de superviser l’ensemble du processus de migration.</p><ul><li>Analyse de besoin</li><li>Conception et architecture des composants logiciels<ul><li>Conception des bases de données</li><li>Réalisation des diagrammes des composants</li><li>Rédaction des spécifications techniques</li></ul></li><li>Développement du portail Web<ul><li>Création des services web</li><li>Développement des connecteurs Active Directory</li></ul></li></ul><p><strong>Outils :</strong> Visual Studio 2008, Visual Studio 2010, Fiddler</p><p><strong>Technologies :</strong> ASP.NET (MVC2), jQuery, WCF (callbacks), Windows Services, Active Directory (GPO)</p><p><strong>Projet « Client Wizard for Lotus Notes » :</strong> Mise à jour d’un outil de conversion de données pour les projets de migration, permettant de convertir les données d’Outlook vers une base Lotus Notes.</p><ul><li>Analyse de besoins</li><li>Conception<ul><li>Conception des interfaces utilisateurs</li><li>Conception des modèles objets</li><li>Rédaction des spécifications techniques</li></ul></li><li>Développement</li></ul><p><strong>Technologies :</strong> VB.NET, WinForms, composants COM</p><p><strong>Projet « WaveBox » :</strong> Développement d’un outil centralisé permettant l’automatisation du processus de migration.</p><ul><li>Maintenance de l’application</li><li>Ajout de fonctionnalités</li></ul><p><strong>Technologies :</strong> Lotus Script, composants COM</p><p><strong>Projet :</strong> Création de scripts pour automatiser les migrations.</p><p><strong>Technologies :</strong> Active Directory, GPO, Microsoft Exchange, PowerShell, VBScript</p>",
     "full_description_ar": "<p><strong>مشروع « نظام إدارة عمليات الترحيل »:</strong> يهدف المشروع إلى إدارة عمليات ترحيل أنظمة المراسلة، حيث تتواصل تطبيقات العملاء المثبّتة على أجهزة المستخدمين مع بوابة ويب مركزية لتنفيذ الإجراءات اللازمة في الخلفية، بما يضمن ترحيلاً سلسًا وشفافًا من Lotus إلى Outlook. يتمثل الهدف في تصميم بوابة ويب للإشراف الكامل على عملية الترحيل.</p><ul><li>تحليل المتطلبات</li><li>تصميم وبنية مكونات البرمجيات<ul><li>تصميم قواعد البيانات</li><li>إعداد مخططات مكونات النظام</li><li>إعداد المواصفات التقنية</li></ul></li><li>تطوير بوابة الويب<ul><li>إنشاء خدمات الويب</li><li>تطوير موصلات Active Directory</li></ul></li></ul><p><strong>الأدوات:</strong> Visual Studio 2008، Visual Studio 2010، Fiddler</p><p><strong>التقنيات:</strong> ASP.NET (MVC2)، jQuery، WCF (callbacks)، Windows Services، Active Directory (GPO)</p><p><strong>مشروع « Client Wizard for Lotus Notes »:</strong> تحديث أداة لتحويل البيانات ضمن مشاريع الترحيل، تُمكّن من تحويل بيانات Outlook إلى قاعدة بيانات Lotus Notes.</p><ul><li>تحليل المتطلبات</li><li>التصميم<ul><li>تصميم واجهات المستخدم</li><li>تصميم نماذج الكائنات</li><li>إعداد المواصفات التقنية</li></ul></li><li>التطوير</li></ul><p><strong>التقنيات:</strong> VB.NET، WinForms، مكونات COM</p><p><strong>مشروع « WaveBox »:</strong> تطوير أداة مركزية تتيح أتمتة عملية الترحيل.</p><ul><li>صيانة التطبيق</li><li>إضافة ميزات جديدة</li></ul><p><strong>التقنيات:</strong> Lotus Script، مكونات COM</p><p><strong>مشروع:</strong> إنشاء سكربتات لأتمتة عمليات الترحيل.</p><p><strong>التقنيات:</strong> Active Directory، GPO، Microsoft Exchange، PowerShell، VBScript</p>"
   }
-    
+
+  ],
+
+  "services": [
+    {
+      "icon": "⚙️",
+      "key": "api",
+      "title_en": "API & Backend Development",
+      "title_fr": "Développement API & Backend",
+      "title_ar": "تطوير API والخدمات الخلفية",
+      "desc_en": "Design and build reliable, high-performance REST APIs and backend systems that scale with your business.",
+      "desc_fr": "Conception et développement d'APIs REST et de systèmes backend fiables et performants qui s'adaptent à votre activité.",
+      "desc_ar": "تصميم وبناء واجهات REST APIs وأنظمة خلفية موثوقة وعالية الأداء تنمو مع عملك.",
+      "stack": ".NET Core · C# · Web API · REST · SQL Server"
+    },
+    {
+      "icon": "☁️",
+      "key": "cloud",
+      "title_en": "Cloud Architecture & Migration",
+      "title_fr": "Architecture Cloud & Migration",
+      "title_ar": "هندسة السحابة والترحيل",
+      "desc_en": "Architect and migrate your systems to Azure — microservices, serverless, containers, and cloud-native infrastructure.",
+      "desc_fr": "Conception et migration de vos systèmes vers Azure — microservices, serverless, conteneurs et infrastructure cloud.",
+      "desc_ar": "تصميم وترحيل أنظمتك إلى Azure — خدمات مصغّرة، Serverless، حاويات، وبنية تحتية سحابية.",
+      "stack": "Azure · Docker · Kubernetes · Microservices · Service Bus"
+    },
+    {
+      "icon": "🔒",
+      "key": "devops",
+      "title_en": "DevOps & DevSecOps",
+      "title_fr": "DevOps & DevSecOps",
+      "title_ar": "DevOps وDevSecOps",
+      "desc_en": "Set up CI/CD pipelines, automate deployments, enforce security policies, and improve delivery speed and reliability.",
+      "desc_fr": "Mise en place de pipelines CI/CD, automatisation des déploiements, politiques de sécurité et amélioration de la fiabilité.",
+      "desc_ar": "إعداد CI/CD Pipelines، أتمتة النشر، تطبيق سياسات الأمان، وتحسين سرعة وموثوقية التسليم.",
+      "stack": "Azure DevOps · Docker · TeamCity · SonarQube · ITIL"
+    },
+    {
+      "icon": "🔄",
+      "key": "modernization",
+      "title_en": "System Modernization",
+      "title_fr": "Modernisation des systèmes",
+      "title_ar": "تحديث الأنظمة",
+      "desc_en": "Transform legacy monolithic applications into modern, maintainable microservices architectures without disrupting your business.",
+      "desc_fr": "Transformation d'applications monolithiques en architectures microservices modernes et maintenables.",
+      "desc_ar": "تحويل التطبيقات القديمة إلى معماريات Microservices حديثة وقابلة للصيانة دون تعطيل عملك.",
+      "stack": ".NET · C# · Microservices · DDD · CQRS"
+    },
+    {
+      "icon": "🎯",
+      "key": "consulting",
+      "title_en": "Technical Consulting",
+      "title_fr": "Conseil technique",
+      "title_ar": "الاستشارات التقنية",
+      "desc_en": "Architecture reviews, code audits, team guidance, and technical roadmaps to help your project move faster and smarter.",
+      "desc_fr": "Revues d'architecture, audits de code, accompagnement d'équipes et feuilles de route techniques.",
+      "desc_ar": "مراجعات المعمارية، تدقيق الكود، توجيه الفرق، وخرائط الطريق التقنية لتسريع مشروعك.",
+      "stack": "UML · Architecture · Code Review · Agile · Scrum"
+    }
+  ],
+
+  "projects": [
+    {
+      "title_en": "Fleet Management System",
+      "title_fr": "Système de gestion de flotte",
+      "title_ar": "نظام إدارة أسطول المركبات",
+      "desc_en": "Full back-end of a vehicle fleet tracking platform — real-time monitoring, payment integration, and performance dashboards.",
+      "desc_fr": "Backend complet d'une plateforme de suivi de flotte — surveillance temps réel, intégration paiement et tableaux de bord.",
+      "desc_ar": "تطوير خلفي كامل لمنصة تتبع أسطول مركبات — مراقبة فورية، دمج الدفع، ولوحات أداء.",
+      "stack": "C# · .NET Core · SQL Server · REST API",
+      "sector_en": "Transport",
+      "sector_fr": "Transport",
+      "sector_ar": "النقل"
+    },
+    {
+      "title_en": "Identity & Authentication Service",
+      "title_fr": "Service d'identité et d'authentification",
+      "title_ar": "خدمة الهوية والمصادقة",
+      "desc_en": "Centralised IdentityServer platform with 2FA (QR code + SMS) deployed across all company applications, replacing legacy authentication.",
+      "desc_fr": "Plateforme IdentityServer centralisée avec 2FA (QR + SMS) déployée sur toutes les applications de l'entreprise.",
+      "desc_ar": "منصة IdentityServer مركزية مع مصادقة ثنائية (QR + SMS) مُدمجة في جميع تطبيقات الشركة.",
+      "stack": "C# · IdentityServer · Azure · 2FA · Bootstrap",
+      "sector_en": "Pharmaceutical",
+      "sector_fr": "Pharmaceutique",
+      "sector_ar": "الصناعة الدوائية"
+    },
+    {
+      "title_en": "Cloud Microservices Platform",
+      "title_fr": "Plateforme microservices cloud",
+      "title_ar": "منصة Microservices السحابية",
+      "desc_en": "High-throughput microservices for a cloud call-centre — event streaming with Kafka, Docker containers, financial provider integrations.",
+      "desc_fr": "Microservices haute performance pour un centre d'appels cloud — Kafka, Docker, intégration de fournisseurs financiers.",
+      "desc_ar": "Microservices عالي الأداء لمركز اتصال سحابي — بث أحداث Kafka، حاويات Docker، دمج مزودي الخدمات.",
+      "stack": "C# · Kafka · Docker · Protocol Buffers · Azure",
+      "sector_en": "Call-Centre / Telecom",
+      "sector_fr": "Centre d'appels / Télécom",
+      "sector_ar": "مركز الاتصال / الاتصالات"
+    },
+    {
+      "title_en": "Investment Data Pipeline",
+      "title_fr": "Pipeline de données d'investissement",
+      "title_ar": "خط أنابيب بيانات الاستثمار",
+      "desc_en": "Multi-source financial data flows for a buy-side asset manager — SSIS batches, WCF services, Web API, and Azure infrastructure for retirement funds.",
+      "desc_fr": "Flux de données financières multi-sources pour un gestionnaire d'actifs — SSIS, WCF, Web API et Azure pour les fonds de retraite.",
+      "desc_ar": "تدفقات بيانات مالية متعددة المصادر لمدير أصول — دفعات SSIS، خدمات WCF، Web API، وبنية Azure لصناديق التقاعد.",
+      "stack": "C# · SSIS · WCF · Web API · Azure · Oracle",
+      "sector_en": "Asset Management / Finance",
+      "sector_fr": "Gestion d'actifs / Finance",
+      "sector_ar": "إدارة الأصول / المالية"
+    }
   ]
 }
