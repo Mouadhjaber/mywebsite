@@ -342,7 +342,8 @@ function render(locale, content){
     badgeContainer.appendChild(span);
   });
 
-  // Services & Projects
+  // Certifications, Services & Projects
+  renderCertifications(locale, content);
   renderServices(locale, content);
   renderProjects(locale, content);
 

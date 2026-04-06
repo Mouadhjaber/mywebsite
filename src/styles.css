@@ -280,6 +280,54 @@ select option{
 .project-stack { font-family: var(--mono); font-size: 11px; color: var(--accent); opacity: .8; }
 
 /* =========================
+   Diploma button
+   ========================= */
+.diploma-btn {
+  border-color: rgba(250,204,21,.35) !important;
+  background: rgba(250,204,21,.08) !important;
+  color: #fbbf24 !important;
+  font-weight: 600;
+}
+.diploma-btn:hover {
+  background: rgba(250,204,21,.15) !important;
+}
+
+/* =========================
+   Certifications
+   ========================= */
+.cert-heading {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  margin-bottom: 8px;
+}
+.cert-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.02);
+  margin-bottom: 8px;
+}
+.cert-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.cert-meta {
+  font-size: 12px;
+  color: var(--muted);
+}
+.cert-id {
+  font-family: var(--mono);
+  color: var(--accent);
+}
+
+/* =========================
    Contact improvements
    ========================= */
 .contact-subtitle { color: var(--muted); font-size: 14px; margin: 4px 0 0; }
