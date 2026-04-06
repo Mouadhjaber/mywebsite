@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(curl -sL \"https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js\" -o src/vendor/html2pdf.bundle.min.js)"
+      "Bash(curl -sL \"https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js\" -o src/vendor/html2pdf.bundle.min.js)",
+      "WebFetch(domain:fr.wikipedia.org)",
+      "Bash(node -e ':*)"
     ]
   }
 }
