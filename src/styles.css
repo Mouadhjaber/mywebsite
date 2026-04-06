@@ -493,10 +493,16 @@ select option { background-color: #0C1228 !important; color: #ffffff !important;
    RTL SUPPORT
    ============================================================ */
 .rtl { direction: rtl; }
-.rtl .hero { grid-template-columns: 1fr 150px; }
-.rtl .avatar { justify-self: end; }
+/* Grid columns stay 150px 1fr — RTL direction automatically mirrors them:
+   column-1 (avatar, 150px) → right side  |  column-2 (text, 1fr) → left side */
 .rtl .item ul { padding-right: 18px; padding-left: 0; }
 .rtl .nav { direction: rtl; }
+/* Hero text block: align start = right in RTL */
+.rtl .hero-tagline { text-align: right; }
+.rtl .hero h1,
+.rtl .hero-subtitle { text-align: right; }
+.rtl .hero-actions { justify-content: flex-start; }
+.rtl .hero-availability { justify-content: flex-start; }
 
 /* ============================================================
    RESPONSIVE

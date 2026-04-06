@@ -13,7 +13,9 @@
       "Bash(mkdir -p \"C:/Users/Administrator/source/repos/yourdeals/src/Client/Mobile/NPComplet.YourDeals.Client.MAUI/Platforms/Android/Resources/xml\")",
       "Bash(mkdir -p \"C:/Users/Administrator/source/repos/yourdeals/src/Client/Mobile/NPComplet.YourDeals.Client.MAUI/Handlers\")",
       "Bash(mkdir -p \"C:/Users/Administrator/source/repos/yourdeals/src/Client/Mobile/NPComplet.YourDeals.Client.MAUI/wwwroot\")",
-      "Bash(find \"C:\\\\Users\\\\Administrator\\\\source\\\\repos\\\\yourdeals\\\\src\\\\Client\\\\Mobile\\\\NPComplet.YourDeals.Client.Android\\\\Resources\\\\mipmap-\"* -type f)"
+      "Bash(find \"C:\\\\Users\\\\Administrator\\\\source\\\\repos\\\\yourdeals\\\\src\\\\Client\\\\Mobile\\\\NPComplet.YourDeals.Client.Android\\\\Resources\\\\mipmap-\"* -type f)",
+      "Bash(git -C \"C:/Users/Administrator/OneDrive/Documents/mywebsite\" status)",
+      "Bash(git -C \"c:/Users/Administrator/OneDrive/Documents/mywebsite\" status)"
     ]
   }
 }
