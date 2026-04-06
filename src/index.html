@@ -3,50 +3,59 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta id="meta-desc" name="description" content="" />
-  <meta id="meta-keywords" name="keywords" content="" />
 
-  <!-- Search Console / Bing Webmaster Tools verification (replace with your codes) -->
+  <!-- Primary SEO -->
+  <title>Mouadh Jaber — Senior Software Engineer | .NET, C#, Azure, DevOps</title>
+  <meta id="meta-desc" name="description" content="Mouadh Jaber — Senior Software Engineer specializing in .NET, C#, Microservices, Azure, DevOps/DevSecOps. Available for freelance and consulting. 15+ years experience across telecom, banking, transport." />
+  <meta id="meta-keywords" name="keywords" content="Mouadh Jaber, Senior Software Engineer, .NET, C#, Microservices, DevOps, DevSecOps, Azure, Web API, Flutter, freelance developer, software consultant" />
+  <meta name="author" content="Mouadh Jaber" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mouadhjaber.com/" />
+
+  <!-- Search Console / Bing Webmaster Tools verification -->
   <meta name="google-site-verification" content="REPLACE_WITH_GOOGLE_VERIFICATION_CODE" />
   <meta name="msvalidate.01" content="REPLACE_WITH_BING_VERIFICATION_CODE" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta id="og-title" property="og:title" content="" />
-  <meta id="og-desc" property="og:description" content="" />
-  <meta property="og:image" content="./assets/profile.jpg" />
-<!-- Basic SEO -->
-<meta name="description" content="Your site description here">
-<meta name="keywords" content="Software Engineer, Portfolio, Mouadh Jaber, .NET, C#, JavaScript">
-<meta name="robots" content="index, follow">
+  <meta id="og-title" property="og:title" content="Mouadh Jaber — Senior Software Engineer" />
+  <meta id="og-desc" property="og:description" content="Senior Software Engineer specializing in .NET, C#, Microservices, Azure, DevOps/DevSecOps. Available for freelance and consulting." />
+  <meta property="og:url" content="https://mouadhjaber.com/" />
+  <meta property="og:image" content="https://mouadhjaber.com/assets/profile.jpg" />
+  <meta property="og:image:alt" content="Mouadh Jaber — Senior Software Engineer" />
+  <meta property="og:site_name" content="Mouadh Jaber" />
 
-<!-- Open Graph / Social -->
-<meta property="og:title" content="Mouadh Jaber - Software Engineer">
-<meta property="og:description" content="Portfolio of Mouadh Jaber, Software Engineer">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://mouadhjaber.com/">
-<meta property="og:image" content="https://mouadhjaber.com/assets/profile.jpg">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mouadh Jaber — Senior Software Engineer" />
+  <meta name="twitter:description" content="Senior Software Engineer specializing in .NET, C#, Microservices, Azure, DevOps/DevSecOps. Available for freelance and consulting." />
+  <meta name="twitter:image" content="https://mouadhjaber.com/assets/profile.jpg" />
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Mouadh Jaber - Software Engineer">
-<meta name="twitter:description" content="Portfolio of Mouadh Jaber, Software Engineer">
-<meta name="twitter:image" content="https://mouadhjaber.com/assets/profile.jpg">
   <!-- hreflang -->
-  <link rel="alternate" href="./?lang=en" hreflang="en" />
-  <link rel="alternate" href="./?lang=fr" hreflang="fr" />
-  <link rel="alternate" href="./?lang=ar" hreflang="ar" />
-  <link rel="alternate" href="./" hreflang="x-default" />
+  <link rel="alternate" href="https://mouadhjaber.com/?lang=en" hreflang="en" />
+  <link rel="alternate" href="https://mouadhjaber.com/?lang=fr" hreflang="fr" />
+  <link rel="alternate" href="https://mouadhjaber.com/?lang=ar" hreflang="ar" />
+  <link rel="alternate" href="https://mouadhjaber.com/" hreflang="x-default" />
 
   <link rel="icon" href="./assets/profile.jpg" />
   <link rel="stylesheet" href="./styles.css" />
-  <!-- jsPDF -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
-  <script type="application/ld+json" id="jsonld"></script>
-  <title></title>
+  <!-- PDF generation (self-hosted) -->
+  <script src="./vendor/html2pdf.bundle.min.js"></script>
+
+  <!-- Schema.org structured data (updated dynamically by app.js) -->
+  <script type="application/ld+json" id="jsonld">{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mouadh Jaber",
+    "jobTitle": "Senior Software Engineer",
+    "url": "https://mouadhjaber.com/",
+    "email": "mouadh.jaber@msn.com",
+    "telephone": "+21658201430",
+    "sameAs": ["https://www.linkedin.com/in/mouadhjaber/"],
+    "knowsAbout": [".NET", "C#", "Microservices", "Azure", "DevOps", "DevSecOps", "Docker", "Flutter", "Web API"],
+    "description": "Senior Software Engineer with 15+ years of experience across telecommunications, banking, insurance, transport, and pharmaceutical supply."
+  }</script>
 </head>
 <body>
   <header class="topbar">
@@ -77,7 +86,7 @@
   <main class="container" id="top">
     <section class="hero">
       <div class="avatar" aria-hidden="true">
-        <img src="./assets/profile.jpg" alt="Profile photo" />
+        <img src="./assets/profile.jpg" alt="Mouadh Jaber — Senior Software Engineer" width="120" height="120" />
       </div>
 
       <div>
@@ -90,8 +99,7 @@
         </div>
 
         <div class="small" style="margin-top:12px">
-          <span style="opacity:.9">SEO-ready:</span>
-          sitemap.xml • robots.txt • OpenGraph • Schema.org • hreflang
+          <span id="availability-label" style="opacity:.9">Available for freelance &amp; consulting</span>
         </div>
       </div>
     </section>

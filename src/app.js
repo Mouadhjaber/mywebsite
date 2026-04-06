@@ -38,6 +38,29 @@ function applySEO(locale, content){
   $("#meta-keywords").setAttribute("content", keywords);
   $("#og-title").setAttribute("content", locale.siteTitle);
   $("#og-desc").setAttribute("content", desc);
+
+  // Update Schema.org JSON-LD with full structured data
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": content.name,
+    "jobTitle": locale.langCode === "ar" ? "مهندس برمجيات أول" : locale.langCode === "fr" ? "Ingénieur logiciel senior" : "Senior Software Engineer",
+    "url": content.website,
+    "email": content.email,
+    "telephone": content.phone.replace(/\s+/g, ""),
+    "sameAs": [content.linkedin],
+    "description": locale.seo?.description || "",
+    "knowsAbout": [
+      ...content.skills.microsoft,
+      ...content.skills.methods,
+      ...content.skills.process
+    ].slice(0, 15),
+    "worksFor": content.experience.length > 0 ? {
+      "@type": "Organization",
+      "name": content.experience[0].company
+    } : undefined
+  };
+  $("#jsonld").textContent = JSON.stringify(schema);
 }
 
 function setDirAndRTL(locale){
