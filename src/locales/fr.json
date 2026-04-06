@@ -36,6 +36,13 @@
     "is": "Systèmes d'information",
     "tools": "Outils & DevOps"
   },
+  "diploma": {
+    "label": "Voir le diplôme",
+    "cert_title": "Certifications",
+    "issued": "Délivré",
+    "credential": "ID de certification",
+    "verify": "Vérifier"
+  },
   "services": {
     "title": "Ce que je peux faire pour vous"
   },

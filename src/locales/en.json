@@ -36,6 +36,13 @@
     "is": "Information Systems",
     "tools": "Tools & DevOps"
   },
+  "diploma": {
+    "label": "View Diploma",
+    "cert_title": "Certifications",
+    "issued": "Issued",
+    "credential": "Credential ID",
+    "verify": "Verify"
+  },
   "services": {
     "title": "What I Can Do For You"
   },

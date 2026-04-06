@@ -202,6 +202,39 @@ function renderServices(locale, content){
   });
 }
 
+function renderCertifications(locale, content){
+  const list = $("#cert-list");
+  if(!list) return;
+  list.innerHTML = "";
+  const certs = content.certifications || [];
+  if(!certs.length) return;
+
+  const heading = document.createElement("div");
+  heading.className = "cert-heading";
+  heading.textContent = t(locale, "diploma.cert_title");
+  list.appendChild(heading);
+
+  certs.forEach(cert => {
+    const item = document.createElement("div");
+    item.className = "cert-item";
+    const hasId = cert.credential_id && !cert.credential_id.startsWith("REPLACE");
+    item.innerHTML = `
+      <div class="cert-name">🏅 ${cert.title}</div>
+      <div class="cert-meta">
+        ${cert.issuer} · ${t(locale,"diploma.issued")} ${cert.date}
+        ${hasId ? `· <span class="cert-id">${t(locale,"diploma.credential")}: <strong>${cert.credential_id}</strong></span>` : ""}
+      </div>
+    `;
+    list.appendChild(item);
+  });
+
+  // Update diploma button labels
+  const d1 = $("#diploma-label");
+  const d2 = $("#diploma-label2");
+  if(d1) d1.textContent = t(locale, "diploma.label");
+  if(d2) d2.textContent = t(locale, "diploma.label");
+}
+
 function renderProjects(locale, content){
   const grid = $("#projects-grid");
   if(!grid) return;
