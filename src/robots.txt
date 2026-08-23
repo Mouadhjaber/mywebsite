@@ -1,4 +1,25 @@
+# robots.txt for mouadhjaber.com
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://mouadhjaber.com/sitemap.xml
+
+# Host
+Host: https://mouadhjaber.com
+
+# Crawl-delay (optional, for polite crawling)
+Crawl-delay: 10
+
+# Disallow admin/private areas if any
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /api/
+
+# Allow all important resources
+Allow: /assets/
+Allow: /locales/
+Allow: /vendor/
+Allow: /styles.css
+Allow: /app.js
+Allow: /content.json

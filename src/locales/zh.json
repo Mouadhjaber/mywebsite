@@ -1,0 +1,72 @@
+{
+  "langCode": "zh",
+  "siteTitle": "Mouadh Jaber — 资深 .NET 工程师 | .NET、C#、Azure、DevOps",
+  "nav": {
+    "about": "关于我",
+    "services": "服务",
+    "projects": "项目",
+    "skills": "技能",
+    "experience": "经历",
+    "contact": "联系"
+  },
+  "hero": {
+    "title": "Mouadh Jaber",
+    "subtitle": "资深 .NET 工程师 — 构建可扩展系统与云解决方案",
+    "tagline": "帮助企业设计并交付可扩展的软件系统 — 从云架构和 DevOps/DevSecOps 流水线到 AI 智能代理和企业级集成，端到端全流程支持。",
+    "ctaPrimary": "下载简历 (PDF)",
+    "ctaSecondary": "查看项目",
+    "ctaHire": "雇佣我"
+  },
+  "about": {
+    "title": "关于我",
+    "body": "拥有 15+ 年企业级软件工程经验，涵盖金融、电信、保险、运输和制药等行业。专注于设计和交付可扩展系统 — 基于 Azure 的云原生架构、DevOps/DevSecOps 流水线、AI 智能代理和微服务 — 从架构设计到生产部署全生命周期。"
+  },
+  "skills": {
+    "title": "技能",
+    "architecture": "架构设计",
+    "methods": "方法论",
+    "process": "流程",
+    "modeling": "建模",
+    "communication": "通信",
+    "patterns": "设计模式",
+    "microsoft": "Microsoft / .NET",
+    "other_langs": "其他语言",
+    "ibm": "IBM 技术",
+    "scripting": "脚本与前端",
+    "is": "信息系统",
+    "tools": "工具与 DevOps"
+  },
+  "diploma": {
+    "label": "查看学位",
+    "cert_title": "认证证书",
+    "issued": "颁发日期",
+    "credential": "证书编号",
+    "verify": "验证"
+  },
+  "services": {
+    "title": "我能为您做什么"
+  },
+  "projects_section": {
+    "title": "精选项目",
+    "sector": "行业"
+  },
+  "experience": {
+    "title": "工作经历"
+  },
+  "contact": {
+    "title": "合作共赢",
+    "subtitle": "可提供自由职业、咨询顾问及全职工作机会。",
+    "phone": "电话",
+    "email": "邮箱",
+    "linkedin": "领英",
+    "profiles": "专业档案",
+    "cta": "发送消息"
+  },
+  "seo": {
+    "description": "Mouadh Jaber — 资深 .NET 工程师，提供自由职业和咨询服务。15+ 年 .NET、C#、微服务、Azure、DevOps/DevSecOps 经验，涵盖电信、银行、运输等行业。",
+    "keywords": "Mouadh Jaber, 资深软件工程师, .NET 开发者, C# 开发者, 微服务, DevOps, DevSecOps, Azure, Web API, Flutter, 软件顾问, 自由职业开发者, 招聘软件工程师"
+  },
+  "search": {
+    "placeholder": "搜索经历与技能…"
+  }
+}

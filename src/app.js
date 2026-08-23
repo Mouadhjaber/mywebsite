@@ -40,15 +40,22 @@ function applySEO(locale, content){
   $("#og-desc").setAttribute("content", desc);
 
   // Update Schema.org JSON-LD with full structured data
+  const jobTitles = {
+    en: "Senior .NET Engineer",
+    fr: "Ingénieur .NET Senior",
+    ar: "مهندس .NET أول",
+    es: "Ingeniero .NET Senior",
+    zh: "资深 .NET 工程师"
+  };
   const schema = {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": content.name,
-    "jobTitle": locale.langCode === "ar" ? "مهندس .NET أول" : locale.langCode === "fr" ? "Ingénieur .NET Senior" : "Senior .NET Engineer",
+    "jobTitle": jobTitles[locale.langCode] || jobTitles.en,
     "url": content.website,
     "email": content.email,
     "telephone": content.phone.replace(/\s+/g, ""),
-    "sameAs": [content.linkedin],
+    "sameAs": [content.linkedin, "https://www.crunchbase.com/organization/vermeg", "https://www.crunchbase.com/organization/aswat", "https://en.wikipedia.org/wiki/Alternative_trading_system", "https://en.wikipedia.org/wiki/Precision_agriculture"],
     "description": locale.seo?.description || "",
     "knowsAbout": [
       ...content.skills.microsoft,
@@ -293,6 +300,8 @@ function render(locale, content){
   $("#contact-phone-label").textContent   = t(locale, "contact.phone");
   $("#contact-email-label").textContent   = t(locale, "contact.email");
   $("#contact-linkedin-label").textContent = t(locale, "contact.linkedin");
+  const profilesLabel = $("#contact-profiles-label");
+  if (profilesLabel) profilesLabel.textContent = t(locale, "contact.profiles");
 
   $("#phone").textContent = content.phone;
   $("#phone").href = `tel:${content.phone.replace(/\s+/g,'')}`;
@@ -382,19 +391,35 @@ function render(locale, content){
       ul.appendChild(li);
     });
 
+    const readMoreText = {
+      en: "Read more",
+      fr: "Lire la suite",
+      ar: "اقرأ المزيد",
+      es: "Leer más",
+      zh: "阅读更多"
+    };
+    const hideText = {
+      en: "Hide",
+      fr: "Masquer",
+      ar: "إخفاء",
+      es: "Ocultar",
+      zh: "收起"
+    };
+
     const toggle = document.createElement("button");
     toggle.className = "accordion-toggle";
-    toggle.textContent = locale.langCode==="ar" ? "اقرأ المزيد" : locale.langCode==="fr" ? "Lire la suite" : "Read more";
+    toggle.textContent = readMoreText[locale.langCode] || readMoreText.en;
 
     const full = document.createElement("div");
     full.className = "accordion-content";
-    full.innerHTML = locale.langCode==="ar"?x.full_description_ar:locale.langCode==="fr"?x.full_description_fr:x.full_description_en;
+    const descKey = locale.langCode === "ar" ? "full_description_ar" : locale.langCode === "fr" ? "full_description_fr" : locale.langCode === "es" ? "full_description_en" : locale.langCode === "zh" ? "full_description_en" : "full_description_en";
+    full.innerHTML = x[descKey];
 
     toggle.addEventListener("click", () => {
       const open = full.classList.toggle("open");
       toggle.textContent = open
-        ? (locale.langCode==="ar" ? "إخفاء" : locale.langCode==="fr" ? "Masquer" : "Hide")
-        : (locale.langCode==="ar" ? "اقرأ المزيد" : locale.langCode==="fr" ? "Lire la suite" : "Read more");
+        ? (hideText[locale.langCode] || hideText.en)
+        : (readMoreText[locale.langCode] || readMoreText.en);
     });
 
     const stack = document.createElement("div");
@@ -432,7 +457,9 @@ async function main(){
   const locales = {
     en: await loadJSON("./locales/en.json"),
     fr: await loadJSON("./locales/fr.json"),
-    ar: await loadJSON("./locales/ar.json")
+    ar: await loadJSON("./locales/ar.json"),
+    es: await loadJSON("./locales/es.json"),
+    zh: await loadJSON("./locales/zh.json")
   };
 
   const setLang = async (code) => {

@@ -1,0 +1,72 @@
+{
+  "langCode": "es",
+  "siteTitle": "Mouadh Jaber — Ingeniero .NET Senior | .NET, C#, Azure, DevOps",
+  "nav": {
+    "about": "Sobre mí",
+    "services": "Servicios",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Mouadh Jaber",
+    "subtitle": "Ingeniero .NET Senior — Sistemas escalables y soluciones cloud",
+    "tagline": "Ayudo a las empresas a diseñar y entregar sistemas de software escalables — desde arquitectura cloud y pipelines DevOps/DevSecOps hasta agentes de IA e integraciones empresariales.",
+    "ctaPrimary": "Descargar CV (PDF)",
+    "ctaSecondary": "Ver proyectos",
+    "ctaHire": "Contrátame"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "body": "15+ años de ingeniería de software empresarial en finanzas, telecomunicaciones, seguros, transporte y sector farmacéutico. Diseño y entrego sistemas escalables — arquitecturas cloud-native en Azure, pipelines DevOps/DevSecOps, agentes de IA y microservicios robustos — de principio a fin, desde la arquitectura hasta la producción."
+  },
+  "skills": {
+    "title": "Habilidades",
+    "architecture": "Arquitectura",
+    "methods": "Metodologías",
+    "process": "Procesos",
+    "modeling": "Modelado",
+    "communication": "Comunicación",
+    "patterns": "Patrones de diseño",
+    "microsoft": "Microsoft / .NET",
+    "other_langs": "Otros lenguajes",
+    "ibm": "Tecnologías IBM",
+    "scripting": "Scripting y Frontend",
+    "is": "Sistemas de información",
+    "tools": "Herramientas y DevOps"
+  },
+  "diploma": {
+    "label": "Ver diploma",
+    "cert_title": "Certificaciones",
+    "issued": "Emitido",
+    "credential": "ID de credencial",
+    "verify": "Verificar"
+  },
+  "services": {
+    "title": "Qué puedo hacer por ti"
+  },
+  "projects_section": {
+    "title": "Proyectos destacados",
+    "sector": "Sector"
+  },
+  "experience": {
+    "title": "Experiencia profesional"
+  },
+  "contact": {
+    "title": "Trabajemos juntos",
+    "subtitle": "Disponible para freelance, consultoría y oportunidades a tiempo completo.",
+    "phone": "Teléfono",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "profiles": "Perfiles profesionales",
+    "cta": "Envíame un mensaje"
+  },
+  "seo": {
+    "description": "Mouadh Jaber — Ingeniero .NET Senior disponible para freelance y consultoría. 15+ años en .NET, C#, Microservicios, Azure, DevOps/DevSecOps en telecomunicaciones, banca, transporte y más.",
+    "keywords": "Mouadh Jaber, Ingeniero de software senior, desarrollador .NET, desarrollador C#, Microservicios, DevOps, DevSecOps, Azure, Web API, Flutter, consultor de software, desarrollador freelance, contratar ingeniero de software"
+  },
+  "search": {
+    "placeholder": "Buscar en experiencia y habilidades…"
+  }
+}
