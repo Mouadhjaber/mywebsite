@@ -109,28 +109,50 @@ function generatePDF(locale, content) {
   const rtl = locale.langCode === "ar";
 
   const container = document.createElement("div");
+  // A4 = 210mm x 297mm, with 15mm margins = 180mm x 267mm printable area
   container.style.width = "180mm";
+  container.style.maxWidth = "180mm";
   container.style.margin = "0 auto";
   container.style.direction = rtl ? "rtl" : "ltr";
   container.style.textAlign = rtl ? "right" : "left";
-  container.style.fontFamily = rtl ? "'Amiri', serif" : "Arial, Helvetica, sans-serif";
+  container.style.fontFamily = rtl ? "'Amiri', 'Noto Sans Arabic', serif" : "Arial, Helvetica, sans-serif";
   container.style.fontSize = "10px";
-  container.style.lineHeight = "1.3";
+  container.style.lineHeight = "1.4";
   container.style.color = "#000";
   container.style.whiteSpace = "normal";
   container.style.wordBreak = "break-word";
   container.style.overflowWrap = "break-word";
+  container.style.overflow = "hidden";
+  container.style.boxSizing = "border-box";
+  container.style.padding = "0 5mm";
 
   container.innerHTML = `
     <style>
-      section { page-break-inside: avoid; margin-bottom: 8px; }
+      * {
+        box-sizing: border-box;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+      }
+      section { page-break-inside: avoid; margin-bottom: 10px; }
       h1, h2, h3 {
         page-break-inside: avoid;
         white-space: normal !important;
-        word-break: normal !important;
-        overflow-wrap: normal !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto !important;
+        max-width: 100%;
       }
-      p, ul, li { page-break-inside: avoid; }
+      p, ul, li { 
+        page-break-inside: avoid; 
+        max-width: 100%;
+        word-break: break-word;
+        overflow-wrap: break-word;
+      }
+      a { word-break: break-all; overflow-wrap: break-word; }
+      .stack-text { word-break: break-all; overflow-wrap: break-word; }
+      .company-row { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+      .company-row span { flex: 1; min-width: 0; word-break: break-word; }
     </style>
 
     <section>
@@ -138,26 +160,26 @@ function generatePDF(locale, content) {
       <p>${t(locale,"hero.subtitle")}</p>
       <p>
         ${t(locale,"contact.phone")}: ${content.phone}<br/>
-        ${t(locale,"contact.email")}: ${content.email}<br/>
-        ${t(locale,"contact.linkedin")}: ${content.linkedin}<br/>
-        Website: ${content.website}
+        ${t(locale,"contact.email")}: <a href="mailto:${content.email}">${content.email}</a><br/>
+        ${t(locale,"contact.linkedin")}: <a href="${content.linkedin}" target="_blank">${content.linkedin}</a><br/>
+        Website: <a href="${content.website}" target="_blank">${content.website}</a>
       </p>
     </section>
-    <hr/>
+    <hr style="margin: 8px 0; border: 0; border-top: 1px solid #ccc;"/>
     <section>
       <h2>${t(locale,"about.title")}</h2>
       <p>${t(locale,"about.body")}</p>
     </section>
-    <hr/>
+    <hr style="margin: 8px 0; border: 0; border-top: 1px solid #ccc;"/>
     <section>
       <h2>${t(locale,"skills.title")}</h2>
       ${renderSkillsPDF(content.skills, locale, rtl)}
     </section>
-    <hr/>
+    <hr style="margin: 8px 0; border: 0; border-top: 1px solid #ccc;"/>
     <section>
       <h2>${t(locale,"experience.title")}</h2>
     </section>
-    <hr/>
+    <hr style="margin: 8px 0; border: 0; border-top: 1px solid #ccc;"/>
     ${content.experience.map(x => {
       const role     = rtl ? x.role_ar     : locale.langCode==="fr" ? x.role_fr     : x.role_en;
       const industry = rtl ? x.industry_ar : locale.langCode==="fr" ? x.industry_fr : x.industry_en;
@@ -165,14 +187,14 @@ function generatePDF(locale, content) {
       const desc     = rtl ? x.full_description_ar : locale.langCode==="fr" ? x.full_description_fr : x.full_description_en;
       return `
         <section>
-          <h3 style="display:flex;justify-content:space-between;">
+          <h3 class="company-row">
             <span>${role}</span><span>${x.company}</span>
           </h3>
           <p><em>${industry} • ${dates}</em></p>
           ${desc}
-          <p><strong>Stack:</strong> ${x.stack}</p>
+          <p><strong>Stack:</strong> <span class="stack-text">${x.stack}</span></p>
         </section>
-        <hr/>
+        <hr style="margin: 8px 0; border: 0; border-top: 1px solid #ccc;"/>
       `;
     }).join("")}
   `;
@@ -183,8 +205,15 @@ function generatePDF(locale, content) {
     margin: [15, 15, 15, 15],
     filename: `${content.name}-${locale.langCode}.pdf`,
     image: { type: 'jpeg', quality: 0.98 },
-    html2canvas: { scale: 2, useCORS: true, allowTaint: true },
-    jsPDF: { unit: 'mm', format: 'a4', orientation: 'p' }
+    html2canvas: { 
+      scale: 2, 
+      useCORS: true, 
+      allowTaint: true,
+      width: 720,  // Fixed width for consistent rendering
+      windowWidth: 720
+    },
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'p' },
+    pagebreak: { mode: 'avoid-all', avoid: ['section', 'h1', 'h2', 'h3', 'p', 'ul', 'li'] }
   }).from(container).save().then(() => {
     document.body.removeChild(container);
   });
