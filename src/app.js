@@ -12,9 +12,20 @@ function setQueryParam(name, value){
   history.replaceState({}, "", u.toString());
 }
 
+function getBasePath(){
+  const script = document.querySelector('script[src*="app.js"]');
+  if(script && script.src){
+    const url = new URL(script.src, window.location.href);
+    return url.pathname.replace(/\/[^/]*$/, '/');
+  }
+  return window.location.pathname.replace(/\/[^/]*$/, '/') + '/';
+}
+
 async function loadJSON(path){
-  const res = await fetch(path);
-  if(!res.ok) throw new Error(`Failed to load ${path}`);
+  const base = getBasePath();
+  const url = new URL(path, base).href;
+  const res = await fetch(url);
+  if(!res.ok) throw new Error(`Failed to load ${url}`);
   return await res.json();
 }
 
