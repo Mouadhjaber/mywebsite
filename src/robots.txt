@@ -1,20 +1,15 @@
-# robots.txt for mouadhjaber.com
+# robots.txt for mouadhjaber.github.io/mywebsite
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://mouadhjaber.com/sitemap.xml
+Sitemap: https://mouadhjaber.github.io/mywebsite/sitemap.xml
 
 # Host
-Host: https://mouadhjaber.com
+Host: https://mouadhjaber.github.io/mywebsite
 
 # Crawl-delay (optional, for polite crawling)
 Crawl-delay: 10
-
-# Disallow admin/private areas if any
-# Disallow: /admin/
-# Disallow: /private/
-# Disallow: /api/
 
 # Allow all important resources
 Allow: /assets/
