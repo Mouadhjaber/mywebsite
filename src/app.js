@@ -104,27 +104,35 @@ function t(locale, path){
   return path.split(".").reduce((acc, k) => acc && acc[k], locale) ?? "";
 }
 
-// Generate PDF dynamically using html2pdf
+// Generate PDF dynamically using html2pdf - Oxford-style professional CV format
 function generatePDF(locale, content) {
   const rtl = locale.langCode === "ar";
 
   const container = document.createElement("div");
-  // A4 = 210mm x 297mm, with 15mm margins = 180mm x 267mm printable area
-  container.style.width = "180mm";
-  container.style.maxWidth = "180mm";
+  // A4 = 210mm x 297mm, with 20mm margins = 170mm x 257mm printable area
+  container.style.width = "170mm";
+  container.style.maxWidth = "170mm";
   container.style.margin = "0 auto";
   container.style.direction = rtl ? "rtl" : "ltr";
   container.style.textAlign = rtl ? "right" : "left";
-  container.style.fontFamily = rtl ? "'Amiri', 'Noto Sans Arabic', serif" : "Arial, Helvetica, sans-serif";
-  container.style.fontSize = "10px";
-  container.style.lineHeight = "1.4";
-  container.style.color = "#000";
+  container.style.fontFamily = rtl ? "'Amiri', 'Noto Sans Arabic', serif" : "'Helvetica Neue', Helvetica, Arial, sans-serif";
+  container.style.fontSize = "10.5pt";
+  container.style.lineHeight = "1.5";
+  container.style.color = "#1a1a1a";
   container.style.whiteSpace = "normal";
   container.style.wordBreak = "break-word";
   container.style.overflowWrap = "break-word";
   container.style.overflow = "hidden";
   container.style.boxSizing = "border-box";
-  container.style.padding = "0 5mm";
+  container.style.padding = "0";
+  container.style.background = "#fff";
+
+  const primaryColor = "#1a3c5e";
+  const secondaryColor = "#2c5f8a";
+  const accentColor = "#3a7cb8";
+  const textColor = "#1a1a1a";
+  const mutedColor = "#555555";
+  const lineColor = "#d0d0d0";
 
   container.innerHTML = `
     <style>
@@ -134,86 +142,328 @@ function generatePDF(locale, content) {
         overflow-wrap: break-word;
         hyphens: auto;
       }
-      section { page-break-inside: avoid; margin-bottom: 10px; }
-      h1, h2, h3 {
+      @page { margin: 20mm; }
+      
+      /* Page break controls */
+      section { page-break-inside: avoid; }
+      h1, h2, h3 { page-break-after: avoid; page-break-inside: avoid; }
+      p, ul, li { page-break-inside: avoid; orphans: 3; widows: 3; }
+      
+      /* Header / Name block */
+      .cv-header {
+        border-bottom: 3px solid ${primaryColor};
+        padding-bottom: 12px;
+        margin-bottom: 18px;
+      }
+      .cv-name {
+        font-size: 24pt;
+        font-weight: 700;
+        color: ${primaryColor};
+        letter-spacing: -0.5px;
+        margin: 0 0 4px 0;
+        line-height: 1.2;
+      }
+      .cv-title {
+        font-size: 12pt;
+        font-weight: 400;
+        color: ${secondaryColor};
+        margin: 0 0 8px 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .cv-contact {
+        font-size: 9pt;
+        color: ${mutedColor};
+        line-height: 1.6;
+      }
+      .cv-contact a { color: ${accentColor}; text-decoration: none; }
+      .cv-contact a:hover { text-decoration: underline; }
+      .contact-item { display: inline-block; margin-right: 16px; }
+      .contact-item:last-child { margin-right: 0; }
+      .contact-label { font-weight: 600; color: ${textColor}; margin-right: 4px; }
+      
+      /* Section headers */
+      .cv-section {
+        margin-bottom: 16px;
+      }
+      .cv-section-title {
+        font-size: 11pt;
+        font-weight: 700;
+        color: ${primaryColor};
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-bottom: 2px solid ${primaryColor};
+        padding-bottom: 4px;
+        margin: 0 0 12px 0;
+      }
+      
+      /* Profile / Summary */
+      .cv-profile {
+        font-size: 10pt;
+        line-height: 1.6;
+        color: ${textColor};
+        text-align: justify;
+      }
+      
+      /* Experience */
+      .experience-item {
+        margin-bottom: 16px;
         page-break-inside: avoid;
-        white-space: normal !important;
-        word-break: break-word !important;
-        overflow-wrap: break-word !important;
-        hyphens: auto !important;
-        max-width: 100%;
       }
-      p, ul, li { 
-        page-break-inside: avoid; 
-        max-width: 100%;
-        word-break: break-word;
-        overflow-wrap: break-word;
+      .experience-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 4px;
       }
-      a { word-break: break-all; overflow-wrap: break-word; }
-      .stack-text { word-break: break-all; overflow-wrap: break-word; }
-      .company-row { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
-      .company-row span { flex: 1; min-width: 0; word-break: break-word; }
+      .experience-role {
+        font-size: 10.5pt;
+        font-weight: 700;
+        color: ${textColor};
+        flex: 1;
+        min-width: 0;
+      }
+      .experience-company {
+        font-size: 10.5pt;
+        font-weight: 600;
+        color: ${primaryColor};
+        white-space: nowrap;
+      }
+      .experience-meta {
+        font-size: 9pt;
+        color: ${mutedColor};
+        margin-bottom: 6px;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .experience-meta span { display: inline-flex; align-items: center; }
+      .experience-description {
+        font-size: 10pt;
+        line-height: 1.55;
+        color: ${textColor};
+        margin-bottom: 6px;
+      }
+      .experience-bullets {
+        margin: 6px 0 0 0;
+        padding-left: ${rtl ? '0' : '18px'};
+        padding-right: ${rtl ? '18px' : '0'};
+      }
+      .experience-bullets li {
+        font-size: 9.5pt;
+        line-height: 1.5;
+        color: ${textColor};
+        margin-bottom: 3px;
+        position: relative;
+      }
+      .experience-bullets li::before {
+        content: "▸ ";
+        color: ${accentColor};
+        font-weight: bold;
+        position: absolute;
+        left: ${rtl ? 'auto' : '-18px'};
+        right: ${rtl ? '-18px' : 'auto'};
+      }
+      .experience-stack {
+        font-size: 9pt;
+        color: ${mutedColor};
+        margin-top: 6px;
+        padding-top: 6px;
+        border-top: 1px solid ${lineColor};
+      }
+      .experience-stack strong { color: ${textColor}; }
+      
+      /* Skills */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 8px;
+      }
+      .skill-category {
+        background: #f8f9fa;
+        border: 1px solid ${lineColor};
+        border-radius: 4px;
+        padding: 8px 10px;
+        page-break-inside: avoid;
+      }
+      .skill-category-title {
+        font-size: 8.5pt;
+        font-weight: 700;
+        color: ${primaryColor};
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        margin: 0 0 6px 0;
+        padding-bottom: 4px;
+        border-bottom: 1px solid ${lineColor};
+      }
+      .skill-items {
+        font-size: 9pt;
+        color: ${textColor};
+        line-height: 1.5;
+      }
+      
+      /* Education / Certifications */
+      .education-item {
+        margin-bottom: 10px;
+        page-break-inside: avoid;
+      }
+      .education-title {
+        font-size: 10pt;
+        font-weight: 700;
+        color: ${textColor};
+        margin: 0 0 2px 0;
+      }
+      .education-institution {
+        font-size: 9.5pt;
+        font-weight: 600;
+        color: ${primaryColor};
+        margin: 0 0 2px 0;
+      }
+      .education-meta {
+        font-size: 9pt;
+        color: ${mutedColor};
+        margin: 0;
+      }
+      
+      /* Footer */
+      .cv-footer {
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: 1px solid ${lineColor};
+        font-size: 8pt;
+        color: ${mutedColor};
+        text-align: center;
+      }
+      
+      /* RTL adjustments */
+      ${rtl ? `
+        .experience-bullets li::before { right: -18px; left: auto; }
+        .contact-item { margin-left: 16px; margin-right: 0; }
+      ` : ''}
     </style>
 
-    <section>
-      <h1>${content.name}</h1>
-      <p>${t(locale,"hero.subtitle")}</p>
-      <p>
-        ${t(locale,"contact.phone")}: ${content.phone}<br/>
-        ${t(locale,"contact.email")}: <a href="mailto:${content.email}">${content.email}</a><br/>
-        ${t(locale,"contact.linkedin")}: <a href="${content.linkedin}" target="_blank">${content.linkedin}</a><br/>
-        Website: <a href="${content.website}" target="_blank">${content.website}</a>
-      </p>
+    <div class="cv-header">
+      <h1 class="cv-name">${content.name}</h1>
+      <p class="cv-title">${t(locale, "hero.subtitle")}</p>
+      <div class="cv-contact">
+        <span class="contact-item"><span class="contact-label">${t(locale,"contact.phone")}:</span> ${content.phone}</span>
+        <span class="contact-item"><span class="contact-label">${t(locale,"contact.email")}:</span> <a href="mailto:${content.email}">${content.email}</a></span>
+        <span class="contact-item"><span class="contact-label">${t(locale,"contact.linkedin")}:</span> <a href="${content.linkedin}" target="_blank">linkedin.com/in/mouadhjaber</a></span>
+        <span class="contact-item"><span class="contact-label">Website:</span> <a href="${content.website}" target="_blank">mouadhjaber.com</a></span>
+      </div>
+    </div>
+
+    <!-- PROFILE -->
+    <section class="cv-section">
+      <h2 class="cv-section-title">${t(locale, "about.title")}</h2>
+      <p class="cv-profile">${t(locale, "about.body")}</p>
     </section>
-    <hr style="margin: 8px 0; border: 0; border-top: 1px solid #ccc;"/>
-    <section>
-      <h2>${t(locale,"about.title")}</h2>
-      <p>${t(locale,"about.body")}</p>
+
+    <!-- EXPERIENCE -->
+    <section class="cv-section">
+      <h2 class="cv-section-title">${t(locale, "experience.title")}</h2>
+      ${content.experience.map(x => {
+        const role     = rtl ? x.role_ar     : locale.langCode==="fr" ? x.role_fr     : x.role_en;
+        const industry = rtl ? x.industry_ar : locale.langCode==="fr" ? x.industry_fr : x.industry_en;
+        const dates    = rtl ? x.date_ar     : locale.langCode==="fr" ? x.date_fr     : x.date_en;
+        const desc     = rtl ? x.full_description_ar : locale.langCode==="fr" ? x.full_description_fr : x.full_description_en;
+        
+        // Extract bullet points from description
+        const bullets = [];
+        const descDiv = document.createElement('div');
+        descDiv.innerHTML = desc;
+        const lists = descDiv.querySelectorAll('ul');
+        lists.forEach(ul => {
+          Array.from(ul.querySelectorAll('li')).forEach(li => {
+            bullets.push(li.textContent.trim());
+          });
+        });
+        // If no bullets, use highlights
+        if (bullets.length === 0) {
+          const highlights = locale.langCode==="ar" ? x.highlights_ar : locale.langCode==="fr" ? x.highlights_fr : x.highlights_en;
+          if (highlights) highlights.forEach(h => bullets.push(h));
+        }
+        
+        // Get clean description text (first paragraph or summary)
+        const firstP = descDiv.querySelector('p');
+        const summaryText = firstP ? firstP.textContent.trim() : '';
+        
+        return `
+          <div class="experience-item">
+            <div class="experience-header">
+              <span class="experience-role">${role}</span>
+              <span class="experience-company">${x.company}</span>
+            </div>
+            <div class="experience-meta">
+              <span>${industry}</span>
+              <span>${dates}</span>
+            </div>
+            ${summaryText ? `<p class="experience-description">${summaryText}</p>` : ''}
+            ${bullets.length > 0 ? `
+              <ul class="experience-bullets">
+                ${bullets.map(b => `<li>${b}</li>`).join('')}
+              </ul>
+            ` : ''}
+            <div class="experience-stack"><strong>${t(locale, "skills.tools") || 'Technologies'}:</strong> ${x.stack}</div>
+          </div>
+        `;
+      }).join("")}
     </section>
-    <hr style="margin: 8px 0; border: 0; border-top: 1px solid #ccc;"/>
-    <section>
-      <h2>${t(locale,"skills.title")}</h2>
-      ${renderSkillsPDF(content.skills, locale, rtl)}
+
+    <!-- SKILLS -->
+    <section class="cv-section">
+      <h2 class="cv-section-title">${t(locale, "skills.title")}</h2>
+      <div class="skills-grid">
+        ${renderSkillsPDF(content.skills, locale, rtl)}
+      </div>
     </section>
-    <hr style="margin: 8px 0; border: 0; border-top: 1px solid #ccc;"/>
-    <section>
-      <h2>${t(locale,"experience.title")}</h2>
+
+    <!-- CERTIFICATIONS -->
+    ${content.certifications && content.certifications.length > 0 ? `
+    <section class="cv-section">
+      <h2 class="cv-section-title">${t(locale, "diploma.cert_title") || 'Certifications'}</h2>
+      ${content.certifications.map(cert => `
+        <div class="education-item">
+          <p class="education-title">${cert.title}</p>
+          <p class="education-institution">${cert.issuer}</p>
+          <p class="education-meta">${t(locale, "diploma.issued") || 'Issued'} ${cert.date}${cert.credential_id && !cert.credential_id.startsWith("REPLACE") ? ` · ${t(locale, "diploma.credential") || 'Credential'}: ${cert.credential_id}` : ''}</p>
+        </div>
+      `).join('')}
     </section>
-    <hr style="margin: 8px 0; border: 0; border-top: 1px solid #ccc;"/>
-    ${content.experience.map(x => {
-      const role     = rtl ? x.role_ar     : locale.langCode==="fr" ? x.role_fr     : x.role_en;
-      const industry = rtl ? x.industry_ar : locale.langCode==="fr" ? x.industry_fr : x.industry_en;
-      const dates    = rtl ? x.date_ar     : locale.langCode==="fr" ? x.date_fr     : x.date_en;
-      const desc     = rtl ? x.full_description_ar : locale.langCode==="fr" ? x.full_description_fr : x.full_description_en;
-      return `
-        <section>
-          <h3 class="company-row">
-            <span>${role}</span><span>${x.company}</span>
-          </h3>
-          <p><em>${industry} • ${dates}</em></p>
-          ${desc}
-          <p><strong>Stack:</strong> <span class="stack-text">${x.stack}</span></p>
-        </section>
-        <hr style="margin: 8px 0; border: 0; border-top: 1px solid #ccc;"/>
-      `;
-    }).join("")}
+    ` : ''}
+
+    <!-- EDUCATION -->
+    <section class="cv-section">
+      <h2 class="cv-section-title">${t(locale, "diploma.label") || 'Education'}</h2>
+      <div class="education-item">
+        <p class="education-title">${t(locale, "diploma.label") || 'Engineering Degree'}</p>
+        <p class="education-institution">${t(locale, "diploma.cert_title") || 'Engineering School'}</p>
+        <p class="education-meta">${content.diploma ? `<a href="${content.diploma}" target="_blank">${t(locale, "diploma.verify") || 'View Diploma'}</a>` : ''}</p>
+      </div>
+    </section>
+
+    <div class="cv-footer">
+      ${content.name} — ${t(locale, "hero.subtitle")} — ${new Date().getFullYear()} — Generated from mouadhjaber.com
+    </div>
   `;
 
   document.body.appendChild(container);
 
   html2pdf().set({
-    margin: [15, 15, 15, 15],
-    filename: `${content.name}-${locale.langCode}.pdf`,
+    margin: [20, 20, 20, 20],
+    filename: `${content.name.replace(/\s+/g, '_')}_CV_${locale.langCode}.pdf`,
     image: { type: 'jpeg', quality: 0.98 },
     html2canvas: { 
       scale: 2, 
       useCORS: true, 
       allowTaint: true,
-      width: 720,  // Fixed width for consistent rendering
+      width: 720,
       windowWidth: 720
     },
     jsPDF: { unit: 'mm', format: 'a4', orientation: 'p' },
-    pagebreak: { mode: 'avoid-all', avoid: ['section', 'h1', 'h2', 'h3', 'p', 'ul', 'li'] }
+    pagebreak: { mode: 'avoid-all', avoid: ['section', 'h1', 'h2', 'h3', '.experience-item', '.skill-category', '.education-item'] }
   }).from(container).save().then(() => {
     document.body.removeChild(container);
   });
@@ -235,9 +485,9 @@ function renderSkillsPDF(skills, locale, rtl) {
     tools:        t(locale,"skills.tools"),
   };
   return Object.keys(skills).map(key => `
-    <div style="margin-bottom:6px;">
-      <strong>${labels[key]}:</strong>
-      <span>${skills[key].join(", ")}</span>
+    <div class="skill-category">
+      <div class="skill-category-title">${labels[key]}</div>
+      <div class="skill-items">${skills[key].join(", ")}</div>
     </div>
   `).join("");
 }
