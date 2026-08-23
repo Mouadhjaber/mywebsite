@@ -15,15 +15,27 @@ function setQueryParam(name, value){
 function getBasePath(){
   const script = document.querySelector('script[src*="app.js"]');
   if(script && script.src){
-    const url = new URL(script.src, window.location.href);
-    return url.pathname.replace(/\/[^/]*$/, '/');
+    try {
+      const url = new URL(script.src);
+      return url.pathname.replace(/\/[^/]*$/, '/');
+    } catch {}
   }
-  return window.location.pathname.replace(/\/[^/]*$/, '/') + '/';
+  try {
+    const url = new URL(window.location.href);
+    return url.pathname.replace(/\/[^/]*$/, '/') + '/';
+  } catch {
+    return '/';
+  }
 }
 
 async function loadJSON(path){
   const base = getBasePath();
-  const url = new URL(path, base).href;
+  let url;
+  try {
+    url = new URL(path, base).href;
+  } catch {
+    url = new URL(path, window.location.origin + base).href;
+  }
   const res = await fetch(url);
   if(!res.ok) throw new Error(`Failed to load ${url}`);
   return await res.json();
