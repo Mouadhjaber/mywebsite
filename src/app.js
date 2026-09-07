@@ -105,7 +105,7 @@ function t(locale, path){
 }
 
 // Generate PDF dynamically using html2pdf - Oxford-style professional CV format
-function generatePDF(locale, content) {
+async function generatePDF(locale, content) {
   const rtl = locale.langCode === "ar";
 
   const container = document.createElement("div");
@@ -449,24 +449,33 @@ function generatePDF(locale, content) {
     </div>
   `;
 
+  container.style.position = "fixed";
+  container.style.top = "0";
+  container.style.left = "0";
+  container.style.zIndex = "-1";
+  container.style.opacity = "0";
   document.body.appendChild(container);
 
-  html2pdf().set({
-    margin: [20, 20, 20, 20],
-    filename: `${content.name.replace(/\s+/g, '_')}_CV_${locale.langCode}.pdf`,
-    image: { type: 'jpeg', quality: 0.98 },
-    html2canvas: { 
-      scale: 2, 
-      useCORS: true, 
-      allowTaint: true,
-      width: 720,
-      windowWidth: 720
-    },
-    jsPDF: { unit: 'mm', format: 'a4', orientation: 'p' },
-    pagebreak: { mode: 'avoid-all', avoid: ['section', 'h1', 'h2', 'h3', '.experience-item', '.skill-category', '.education-item'] }
-  }).from(container).save().then(() => {
+  await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+
+  try {
+    await html2pdf().set({
+      margin: [20, 20, 20, 20],
+      filename: `${content.name.replace(/\s+/g, '_')}_CV_${locale.langCode}.pdf`,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { 
+        scale: 2, 
+        useCORS: true, 
+        allowTaint: true,
+        width: 720,
+        windowWidth: 720
+      },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'p' },
+      pagebreak: { mode: 'avoid-all', avoid: ['section', 'h1', 'h2', 'h3', '.experience-item', '.skill-category', '.education-item'] }
+    }).from(container).save();
+  } finally {
     document.body.removeChild(container);
-  });
+  }
 }
 
 function renderSkillsPDF(skills, locale, rtl) {
