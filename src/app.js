@@ -449,14 +449,13 @@ async function generatePDF(locale, content) {
     </div>
   `;
 
-  container.style.position = "fixed";
-  container.style.top = "0";
-  container.style.left = "0";
-  container.style.zIndex = "-1";
-  container.style.opacity = "0";
+  container.style.position = "absolute";
+  container.style.top = "-9999px";
+  container.style.left = "-9999px";
+  container.style.opacity = "1";
   document.body.appendChild(container);
 
-  await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+  await new Promise(r => setTimeout(r, 100));
 
   try {
     await html2pdf().set({
