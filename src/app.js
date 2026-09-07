@@ -374,7 +374,7 @@ function renderCaseStudies(locale, content){
       <div class="case-study-tech">
         <span class="case-study-label">${t(locale, "case_studies.technologies")}</span>
         <div class="case-study-badges">
-          ${(study.technologies||study.highlights||[]).map(t => `<span class="badge">${t}</span>`).join("")}
+          ${((Array.isArray(study.technologies) ? study.technologies : (study.technologies||"").split(",").map(s=>s.trim()).filter(Boolean)) || study.highlights || []).map(t => `<span class="badge">${t}</span>`).join("")}
         </div>
       </div>
     `;
