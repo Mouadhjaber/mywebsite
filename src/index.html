@@ -20,6 +20,14 @@
   <meta name="naver-site-verification" content="REPLACE_WITH_NAVER_VERIFICATION_CODE" />
   <meta name="seobility-verification" content="REPLACE_WITH_SEOBILITY_VERIFICATION_CODE" />
 
+  <!-- Yandex-specific -->
+  <meta name="yandex-Locale" content="en_US" />
+  <meta name="yandex-region" content="worldwide" />
+  <meta name="yandex-media-id" content="mouadhjaber-com" />
+
+  <!-- Arabic search engine (Google Arabic) -->
+  <meta name="google-translate-customization" content="mouadhjaber-com" />
+
   <!-- Geo-targeting / International -->
   <meta name="geo.region" content="FR" />
   <meta name="geo.placename" content="Paris" />
@@ -62,8 +70,12 @@
 
   <!-- Additional link relations -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="https://www.linkedin.com" />
   <link rel="dns-prefetch" href="https://github.com" />
+  <link rel="dns-prefetch" href="https://yandex.ru" />
+  <link rel="dns-prefetch" href="https://www.google.com" />
 
   <link rel="icon" href="./assets/profile.jpg" />
   <link rel="stylesheet" href="./styles.css" />
@@ -76,6 +88,12 @@
     "@type": "Person",
     "name": "Mouadh Jaber",
     "jobTitle": "Senior .NET Engineer",
+    "alternateName": [
+      "المهدى جابر",
+      "Ingénieur .NET Senior",
+      "Ingeniero .NET Senior",
+      "资深 .NET 工程师"
+    ],
     "url": "https://mouadhjaber.com/",
     "email": "mouadh.jaber@msn.com",
     "telephone": "+21658201430",
@@ -132,6 +150,41 @@
   }</script>
 </head>
 <body>
+  <!-- Pre-rendered content for crawlers (Yandex, Baidu, etc.) -->
+  <noscript>
+    <div style="max-width:800px;margin:0 auto;padding:20px;font-family:system-ui,sans-serif;color:#1a1a1a;">
+      <h1>Mouadh Jaber — Senior .NET Engineer</h1>
+      <p><strong>Specializing in .NET, C#, Microservices, Azure, DevOps/DevSecOps.</strong> Available for freelance and consulting. 15+ years experience across telecom, banking, transport.</p>
+      
+      <h2>About</h2>
+      <p>Senior .NET Engineer with 15+ years of experience in software architecture, cloud solutions, and DevOps practices. Currently at NETCOM, delivering enterprise-grade solutions across telecommunications, banking, insurance, and pharmaceutical industries.</p>
+      
+      <h2>Experience</h2>
+      <p><strong>NETCOM</strong> — Senior .NET Engineer · Telecom · 2022-Present</p>
+      <p>Architecting microservices infrastructure with .NET 8, Azure Kubernetes Service, and CI/CD pipelines. Reduced deployment time by 60% and improved system reliability to 99.9%.</p>
+      
+      <p><strong>VERMEG</strong> — Senior Software Engineer · Insurance/Banking · 2018-2022</p>
+      <p>Led development of enterprise insurance platforms using .NET Core, Event Sourcing, and CQRS patterns. Managed team of 8 developers.</p>
+      
+      <h2>Skills</h2>
+      <p><strong>Architecture:</strong> .NET, C#, ASP.NET Core, Microservices, Event Sourcing, CQRS, DDD</p>
+      <p><strong>Cloud:</strong> Azure, AWS, Docker, Kubernetes, Terraform</p>
+      <p><strong>DevOps:</strong> CI/CD, Azure DevOps, Jenkins, GitHub Actions</p>
+      <p><strong>Methods:</strong> Agile, Scrum, SAFe, TDD, BDD</p>
+      
+      <h2>Contact</h2>
+      <p>Email: mouadh.jaber@msn.com</p>
+      <p>Phone: +216 58 201 430</p>
+      <p>LinkedIn: linkedin.com/in/mouadhjaber</p>
+      <p>Website: mouadhjaber.com</p>
+      
+      <h2>Languages</h2>
+      <p><a href="https://mouadhjaber.com/?lang=fr">French Version</a></p>
+      <p><a href="https://mouadhjaber.com/?lang=ar">Arabic Version (العربية)</a></p>
+      <p><a href="https://mouadhjaber.com/?lang=es">Spanish Version</a></p>
+      <p><a href="https://mouadhjaber.com/?lang=zh">Chinese Version (中文)</a></p>
+    </div>
+  </noscript>
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="#top">
@@ -167,24 +220,29 @@
     <!-- ─── HERO ─── -->
     <section class="hero">
       <div class="avatar" aria-hidden="true">
-        <img src="./assets/profile.jpg" alt="Mouadh Jaber — Senior .NET Engineer" width="140" height="140" />
+        <img src="./assets/profile.jpg" alt="Mouadh Jaber — Senior Software Engineer & Solution Architect" width="140" height="140" />
       </div>
 
       <div>
         <h1 id="hero-title"></h1>
-        <noscript><h1>Mouadh Jaber — Senior .NET Engineer</h1></noscript>
+        <noscript><h1>Mouadh Jaber — Senior Software Engineer & Solution Architect</h1></noscript>
         <p id="hero-subtitle" class="hero-subtitle"></p>
         <p id="hero-tagline" class="hero-tagline"></p>
+        <p id="hero-value" class="hero-value"></p>
 
         <div class="hero-actions">
           <a class="btn primary" id="cv-link" href="./">Download CV</a>
-          <a class="btn" id="contact-link" href="#projects">View Projects</a>
+          <a class="btn" id="contact-link" href="#case-studies">View Case Studies</a>
           <a class="btn diploma-btn" id="diploma-link" href="./diploma.pdf" target="_blank" rel="noopener" download>🎓 <span id="diploma-label">Diploma</span></a>
         </div>
 
         <div class="hero-availability" id="availability-label">
           <span class="availability-dot"></span>
           <span id="availability-text">Available for freelance &amp; consulting</span>
+        </div>
+
+        <div class="trust-bar" id="trust-bar">
+          <span class="trust-item" id="trust-industries">Finance · Telecom · Insurance · Transport · Pharmaceuticals</span>
         </div>
       </div>
     </section>
@@ -202,20 +260,26 @@
 
       <article class="card" id="skills">
         <h2 id="skills-title"></h2>
-        <div class="badges" id="skills-badges"></div>
+        <div class="skills-categorized" id="skills-categorized"></div>
       </article>
     </section>
 
-    <!-- ─── SERVICES ─── -->
+    <!-- ─── SERVICES / EXPERTISE ─── -->
     <section class="card" id="services" style="margin-top:16px">
       <h2 id="services-title"></h2>
       <div class="services-grid" id="services-grid"></div>
     </section>
 
-    <!-- ─── PROJECTS ─── -->
-    <section class="card" id="projects" style="margin-top:16px">
-      <h2 id="projects-title"></h2>
-      <div class="projects-grid" id="projects-grid"></div>
+    <!-- ─── CAREER PHASES ─── -->
+    <section class="card" id="career-phases" style="margin-top:16px">
+      <h2 id="career-title"></h2>
+      <div class="career-timeline" id="career-timeline"></div>
+    </section>
+
+    <!-- ─── CASE STUDIES ─── -->
+    <section class="card" id="case-studies" style="margin-top:16px">
+      <h2 id="case-studies-title"></h2>
+      <div class="case-studies-grid" id="case-studies-grid"></div>
     </section>
 
     <!-- ─── EXPERIENCE ─── -->
@@ -247,13 +311,16 @@
       </div>
 
       <div style="margin-top:14px">
-        <div class="small"><span id="contact-profiles-label">Professional Profiles</span></div>
+        <div class="small"><span id="contact-profiles-label">Selected Companies &amp; Projects</span></div>
         <div class="profile-links" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:8px">
-          <a class="btn" id="crunchbase-vermeg" href="https://www.crunchbase.com/organization/vermeg" target="_blank" rel="noopener noreferrer">🏢 VERMEG (Crunchbase)</a>
-          <a class="btn" id="crunchbase-ziwo" href="https://www.crunchbase.com/organization/aswat" target="_blank" rel="noopener noreferrer">🏢 ZIWO/Aswat (Crunchbase)</a>
-          <a class="btn" id="github-profile" href="https://github.com/Mouadhjaber" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
-          <a class="btn" id="wikipedia-ats" href="https://en.wikipedia.org/wiki/Alternative_trading_system" target="_blank" rel="noopener noreferrer">📖 ATS (Wikipedia)</a>
-          <a class="btn" id="wikipedia-precision-ag" href="https://en.wikipedia.org/wiki/Precision_agriculture" target="_blank" rel="noopener noreferrer">📖 Precision Agriculture (Wikipedia)</a>
+          <div style="margin-bottom:6px;width:100%;font-weight:600;font-size:0.85em;color:var(--accent,#2c5f8a);">Financial Services</div>
+          <a class="btn" href="https://www.crunchbase.com/organization/vermeg" target="_blank" rel="noopener noreferrer">🏢 VERMEG</a>
+          <a class="btn" href="https://en.wikipedia.org/wiki/Alternative_trading_system" target="_blank" rel="noopener noreferrer">📊 Trading Systems</a>
+          <div style="margin-bottom:6px;margin-top:8px;width:100%;font-weight:600;font-size:0.85em;color:var(--accent,#2c5f8a);">Technology / Telecom</div>
+          <a class="btn" href="https://www.crunchbase.com/organization/aswat" target="_blank" rel="noopener noreferrer">🏢 ZIWO/Aswat</a>
+          <a class="btn" href="https://github.com/Mouadhjaber" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
+          <div style="margin-bottom:6px;margin-top:8px;width:100%;font-weight:600;font-size:0.85em;color:var(--accent,#2c5f8a);">Other Industries</div>
+          <a class="btn" href="https://en.wikipedia.org/wiki/Precision_agriculture" target="_blank" rel="noopener noreferrer">🌾 Precision Agriculture</a>
         </div>
       </div>
 

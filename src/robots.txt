@@ -11,10 +11,25 @@ Host: https://mouadhjaber.com
 # Crawl-delay (optional, for polite crawling)
 Crawl-delay: 1
 
-# Disallow admin/private areas if any
-# Disallow: /admin/
-# Disallow: /private/
-# Disallow: /api/
+# Yandex-specific
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+# Googlebot (all versions)
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Baidu (Arabic/Chinese search)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# Naver (Korean/Asian search)
+User-agent: Yeti
+Allow: /
+Crawl-delay: 2
 
 # Allow all important resources
 Allow: /assets/

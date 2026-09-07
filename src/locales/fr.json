@@ -1,40 +1,105 @@
 {
   "langCode": "fr",
-  "siteTitle": "Mouadh Jaber — Ingénieur Senior",
+  "siteTitle": "Mouadh Jaber — Ingénieur Logiciel Senior & Architecte Solution",
   "nav": {
     "about": "Profil",
-    "services": "Services",
-    "projects": "Projets",
-    "skills": "Compétences",
-    "experience": "Expérience",
+    "services": "Expertise",
+    "projects": "Études de cas",
+    "skills": "Technologies",
+    "experience": "Parcours",
     "contact": "Contact"
   },
   "hero": {
     "title": "Mouadh Jaber",
-    "subtitle": "Ingénieur Senior — Systèmes scalables & solutions cloud",
-    "tagline": "J'aide les entreprises à concevoir et livrer des systèmes logiciels scalables — de l'architecture cloud et des pipelines DevOps aux agents IA et aux intégrations d'entreprise.",
-    "ctaPrimary": "Télécharger le CV (PDF)",
-    "ctaSecondary": "Voir les projets",
+    "subtitle": "Ingénieur Logiciel Senior & Architecte Solution",
+    "tagline": "15+ ans à concevoir des logiciels d'entreprise, des plateformes cloud et des systèmes .NET scalables dans la finance, les télécoms, l'assurance, le transport et la pharmacie.",
+    "valueProp": "J'aide les entreprises à moderniser leurs applications legacy, concevoir des architectures cloud-native et livrer des logiciels fiables de l'architecture à la production.",
+    "ctaPrimary": "Télécharger le CV",
+    "ctaSecondary": "Études de cas",
     "ctaHire": "Me recruter"
   },
   "about": {
-    "title": "À propos",
-    "body": "15+ ans d'ingénierie logicielle dans la finance, les télécoms, l'assurance, le transport et la pharmacie. Je conçois et livre des systèmes scalables — architectures cloud-native sur Azure, pipelines DevOps/DevSecOps, agents IA et microservices robustes — de l'architecture jusqu'à la production."
+    "title": "Profil",
+    "body": "Ingénieur logiciel senior avec 15+ ans d'expérience dans les télécoms, la banque, l'assurance, le transport et la pharmacie. Je me spécialise dans la modernisation .NET d'entreprise, l'architecture cloud sur Azure, les pipelines DevOps/DevSecOps, les microservices et le leadership technique — des systèmes complexes de l'architecture à la production."
+  },
+  "trust": {
+    "industries": "Finance · Télécoms · Assurance · Transport · Pharmacie",
+    "years": "15+ ans",
+    "phases": "Entreprise → Architecture → Cloud & DevOps"
+  },
+  "case_studies": {
+    "title": "Études de cas sélectionnées",
+    "challenge": "Défi",
+    "solution": "Solution",
+    "impact": "Impact",
+    "technologies": "Technologies",
+    "items": [
+      {
+        "title": "Plateforme d'Identité d'Entreprise",
+        "industry": "Fourniture pharmaceutique",
+        "company": "ASTERA",
+        "role": "Ingénieur logiciel senior",
+        "challenge": "Moderniser l'authentification de l'ensemble des applications pharmaceutiques post-COVID, permettant l'accès sécurisé à distance pour des centaines d'utilisateurs.",
+        "solution": "Implémentation d'IdentityServer avec authentification 2-Factor (QR/SMS), unification de l'authentification et migration vers Microsoft Azure.",
+        "impact": "Sécurisation de l'accès à distance pour l'ensemble de l'organisation, réduction des tickets support liés à l'authentification.",
+        "technologies": "C#, IdentityServer, Azure, JavaScript, 2FA, DevOps",
+        "highlights": ["2FA QR/SMS", "IdentityServer", "Azure", "DevOps/DevSecOps"]
+      },
+      {
+        "title": "Architecture Cloud pour la Gestion d'Actifs",
+        "industry": "Gestion d'actifs",
+        "company": "CANDRIAM",
+        "role": "Ingénieur logiciel senior (Paris, France)",
+        "challenge": "Intégrer plusieurs sources de données financières pour la liquidation de fonds de retraite, nécessitant du mapping en temps réel et une architecture cloud-native.",
+        "solution": "Architecture microservices avec Azure Service Bus, intégration des flux Belfius depuis Bruxelles, traitement batch SSIS, services WCF/Web API.",
+        "impact": "Unification des données de sources multiples en une plateforme unique, automatisation du traitement des fonds.",
+        "technologies": "C#, Oracle, SSIS, WCF, Web API, Azure, DevOps",
+        "highlights": ["Intégration données", "Microservices", "Azure", "DevOps"]
+      },
+      {
+        "title": "Systèmes de Trading Haute Performance",
+        "industry": "Banque d'investissement",
+        "company": "Société Générale",
+        "role": "Ingénieur senior (Paris, France)",
+        "challenge": "Construire et maintenir des applications de trading pour les dark pools et réseaux de croisement dans un environnement multi-thread.",
+        "solution": "Applications C# multi-threadées, intégration FIX protocol, connecteurs de données de marché avec parsing socket, migration des automates de trading.",
+        "impact": "Infrastructure de trading critique traitant des données de marché en temps réel, fiabilité système à zéro temps d'arrêt.",
+        "technologies": "C#, C++, FIX Protocol, SignalR, Ultra Messaging",
+        "highlights": ["Multi-threading", "FIX protocol", "Données marché", "Reverse engineering"]
+      },
+      {
+        "title": "Microservices de Centre d'Appels",
+        "industry": "Télécom / SaaS",
+        "company": "ZIWO",
+        "role": "Ingénieur logiciel senior (Dubaï, ÉAU)",
+        "challenge": "Moderniser une plateforme de centre d'appels de 10 ans, introduire l'architecture orientée services et intégrer plusieurs fournisseurs de paiement.",
+        "solution": "Architecture microservices avec Docker, Protocol Buffers, Kafka pour le messaging event-driven, pipelines d'automatisation.",
+        "impact": "Transformation d'une application monolithique en plateforme microservices scalable, déploiement indépendant des services.",
+        "technologies": "C#, Docker, Kafka, Protocol Buffers, Oracle, PowerShell",
+        "highlights": ["Microservices", "Docker", "Kafka", "Protocol Buffers"]
+      },
+      {
+        "title": "Plateforme de Gestion de Flotte",
+        "industry": "Transport",
+        "company": "MOWASALAT",
+        "role": "Ingénieur logiciel senior",
+        "challenge": "Développer les systèmes backend d'une plateforme de gestion de flotte, incluant l'intégration de paiement et le suivi de performance.",
+        "solution": "Services backend .NET Core, intégration de paiement avec les fournisseurs, modules back-office pour le suivi en temps réel.",
+        "impact": "Monitoring opérationnel des véhicules, traitement de paiement rationalisé, tableaux de bord de performance en temps réel.",
+        "technologies": "C#, .NET Core, API Development, Visual Studio",
+        "highlights": ["Gestion flotte", "Intégration paiement", ".NET Core", "API design"]
+      }
+    ]
   },
   "skills": {
-    "title": "Compétences",
+    "title": "Technologies",
+    "core": "Cœur",
     "architecture": "Architecture",
-    "methods": "Méthodes",
-    "process": "Processus",
-    "modeling": "Modélisation",
-    "communication": "Communication",
-    "patterns": "Design Patterns",
-    "microsoft": "Microsoft / .NET",
-    "other_langs": "Autres langages",
-    "ibm": "Technologies IBM",
-    "scripting": "Scripts & Frontend",
-    "is": "Systèmes d'information",
-    "tools": "Outils & DevOps"
+    "cloud": "Cloud",
+    "devops": "DevOps",
+    "messaging": "Messaging & Distribué",
+    "modern": "Développement Moderne",
+    "additional": "Expérience Complémentaire"
   },
   "diploma": {
     "label": "Voir le diplôme",
@@ -44,7 +109,62 @@
     "verify": "Vérifier"
   },
   "services": {
-    "title": "Ce que je peux faire pour vous"
+    "title": "Comment je peux vous aider",
+    "items": [
+      {
+        "icon": "🏗️",
+        "title": "Architecture Logicielle",
+        "desc": "Concevoir des systèmes d'entreprise scalables, des API et des architectures distribuées pour des domaines métier complexes."
+      },
+      {
+        "icon": "⚙️",
+        "title": "Développement .NET",
+        "desc": "Construire et moderniser des applications avec C#, .NET et ASP.NET Core selon des patterns d'architecture propre."
+      },
+      {
+        "icon": "☁️",
+        "title": "Cloud & Azure",
+        "desc": "Concevoir, migrer et optimiser des systèmes cloud-native sur Microsoft Azure avec sécurité et conformité."
+      },
+      {
+        "icon": "🔧",
+        "title": "Microservices",
+        "desc": "Décomposer les monolithes et concevoir des services distribués fiables avec messaging event-driven."
+      },
+      {
+        "icon": "🚀",
+        "title": "DevOps & DevSecOps",
+        "desc": "Construire des pipelines CI/CD, des stratégies de conteneurisation et améliorer les processus de livraison."
+      },
+      {
+        "icon": "🔄",
+        "title": "Modernisation Legacy",
+        "desc": "Moderniser les systèmes .NET, WCF et d'entreprise plus anciens sans réécrire aveuglément."
+      }
+    ]
+  },
+  "career_phases": {
+    "title": "Parcours",
+    "phases": [
+      {
+        "period": "2009 – 2014",
+        "title": "Ingénierie Logicielle d'Entreprise",
+        "desc": "Développement d'applications d'entreprise chez Orange Business Services et INVIVO — WPF, WCF, SQL Server, Active Directory, agriculture de précision.",
+        "companies": "Orange · INVIVO"
+      },
+      {
+        "period": "2014 – 2021",
+        "title": "Architecture & Systèmes Financiers",
+        "desc": "Conception de systèmes de trading chez Société Générale, plateformes d'assurance chez AXA et Generali, et leadership technique en environnement d'entreprise.",
+        "companies": "Société Générale · AXA · Generali"
+      },
+      {
+        "period": "2021 – Présent",
+        "title": "Cloud & Modernisation",
+        "desc": "Migrations cloud chez CANDRIAM, microservices chez ZIWO et NETCOM, DevSecOps et conteneurisation.",
+        "companies": "CANDRIAM · ZIWO · ASTERA · NETCOM"
+      }
+    ]
   },
   "projects_section": {
     "title": "Projets phares",
@@ -54,17 +174,17 @@
     "title": "Expériences professionnelles"
   },
   "contact": {
-    "title": "Travaillons ensemble",
-    "subtitle": "Disponible pour du freelance, du conseil et des opportunités à temps plein.",
+    "title": "Discutons de votre projet",
+    "subtitle": "Besoin d'aide pour l'architecture .NET, la migration Azure, la modernisation legacy ou le logiciel d'entreprise ? Disponible pour freelance et consulting.",
     "phone": "Téléphone",
     "email": "Email",
     "linkedin": "LinkedIn",
-    "profiles": "Profils professionnels",
+    "profiles": "Entreprises & projets sélectionnés",
     "cta": "Envoyez-moi un message"
   },
   "seo": {
-    "description": "Mouadh Jaber — Ingénieur .NET Senior disponible pour freelance & consulting. 15+ ans en .NET, C#, Microservices, Azure, DevOps/DevSecOps dans les télécoms, banque, transport et plus.",
-    "keywords": "Mouadh Jaber, Ingénieur logiciel senior, développeur .NET, développeur C#, Microservices, DevOps, DevSecOps, Azure, Web API, Flutter, consultant logiciel, développeur freelance"
+    "description": "Mouadh Jaber — Ingénieur Logiciel Senior & Architecte Solution. 15+ ans en .NET, C#, Azure, Microservices, DevOps/DevSecOps dans les télécoms, banque, assurance, transport et pharmacie. Disponible pour consulting freelance.",
+    "keywords": "Mouadh Jaber, Ingénieur .NET Senior, Architecte Logiciel, Développeur C#, Consultant Azure, Microservices, DevOps, DevSecOps, Modernisation Legacy, développeur .NET freelance Tunisie France"
   },
   "search": {
     "placeholder": "Rechercher dans l'expérience & compétences…"

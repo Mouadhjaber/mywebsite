@@ -477,6 +477,163 @@ select option { background-color: #0C1228 !important; color: #ffffff !important;
 .contact-grid     { grid-template-columns: 1fr 1fr; }
 
 /* ============================================================
+   HERO VALUE PROPOSITION & TRUST BAR
+   ============================================================ */
+.hero-value {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: clamp(13px, 1.8vw, 14.5px);
+  line-height: 1.6;
+  max-width: 560px;
+  font-style: italic;
+}
+.trust-bar {
+  margin-top: 14px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.trust-item {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent2);
+  letter-spacing: 0.5px;
+}
+
+/* ============================================================
+   SKILLS CATEGORIZED
+   ============================================================ */
+.skills-categorized { display: flex; flex-direction: column; gap: 14px; }
+.skill-group { }
+.skill-group-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+.skill-group-items { display: flex; flex-wrap: wrap; gap: 6px; }
+
+/* ============================================================
+   CAREER PHASES
+   ============================================================ */
+.career-timeline { display: flex; flex-direction: column; gap: 16px; }
+.career-phase {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  transition: border-color .2s, transform .15s;
+}
+.career-phase:hover {
+  border-color: rgba(99,102,241,.4);
+  transform: translateY(-1px);
+}
+.career-period {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent2);
+  white-space: nowrap;
+  min-width: 90px;
+}
+.career-content { flex: 1; }
+.career-phase-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+.career-phase-desc {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0 0 6px;
+}
+.career-companies {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ============================================================
+   CASE STUDIES
+   ============================================================ */
+.case-studies-grid { display: flex; flex-direction: column; gap: 20px; }
+.case-study-card {
+  padding: 20px;
+  border-radius: 14px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  transition: border-color .2s, transform .15s;
+}
+.case-study-card:hover {
+  border-color: rgba(99,102,241,.4);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-h);
+}
+.case-study-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.case-study-company {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.case-study-industry {
+  font-size: 11px;
+  color: var(--muted);
+  background: var(--glass-h);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.case-study-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+.case-study-role {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.case-study-section {
+  margin-bottom: 10px;
+}
+.case-study-section p {
+  font-size: 13.5px;
+  color: var(--text);
+  line-height: 1.6;
+  margin: 4px 0 0;
+}
+.case-study-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+}
+.case-study-tech {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+.case-study-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+/* ============================================================
    FOOTER
    ============================================================ */
 .small  { color: var(--muted); font-size: 13px; margin-top: 10px; }

@@ -308,18 +308,104 @@ function renderServices(locale, content){
   const grid = $("#services-grid");
   if(!grid) return;
   grid.innerHTML = "";
-  (content.services || []).forEach(svc => {
-    const title = locale.langCode === "ar" ? svc.title_ar : locale.langCode === "fr" ? svc.title_fr : svc.title_en;
-    const desc  = locale.langCode === "ar" ? svc.desc_ar  : locale.langCode === "fr" ? svc.desc_fr  : svc.desc_en;
+  const items = t(locale, "services.items") || [];
+  items.forEach(svc => {
     const card = document.createElement("div");
     card.className = "service-card";
     card.innerHTML = `
       <div class="service-icon">${svc.icon}</div>
-      <h3 class="service-title">${title}</h3>
-      <p class="service-desc">${desc}</p>
-      <div class="service-stack">${svc.stack}</div>
+      <h3 class="service-title">${svc.title}</h3>
+      <p class="service-desc">${svc.desc}</p>
     `;
     grid.appendChild(card);
+  });
+}
+
+function renderCareerPhases(locale, content){
+  const container = $("#career-timeline");
+  if(!container) return;
+  container.innerHTML = "";
+  const phases = t(locale, "career_phases.phases") || [];
+  phases.forEach(phase => {
+    const div = document.createElement("div");
+    div.className = "career-phase";
+    div.innerHTML = `
+      <div class="career-period">${phase.period}</div>
+      <div class="career-content">
+        <h3 class="career-phase-title">${phase.title}</h3>
+        <p class="career-phase-desc">${phase.desc}</p>
+        <div class="career-companies">${phase.companies}</div>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+function renderCaseStudies(locale, content){
+  const grid = $("#case-studies-grid");
+  if(!grid) return;
+  grid.innerHTML = "";
+  const studies = t(locale, "case_studies.items") || [];
+  studies.forEach(study => {
+    const div = document.createElement("div");
+    div.className = "case-study-card";
+    div.innerHTML = `
+      <div class="case-study-header">
+        <div class="case-study-company">${study.company}</div>
+        <div class="case-study-industry">${study.industry}</div>
+      </div>
+      <h3 class="case-study-title">${study.title}</h3>
+      <div class="case-study-role">${study.role}</div>
+      <div class="case-study-section">
+        <div class="case-study-label">${t(locale, "case_studies.challenge")}</div>
+        <p>${study.challenge}</p>
+      </div>
+      <div class="case-study-section">
+        <div class="case-study-label">${t(locale, "case_studies.solution")}</div>
+        <p>${study.solution}</p>
+      </div>
+      <div class="case-study-section">
+        <div class="case-study-label">${t(locale, "case_studies.impact")}</div>
+        <p>${study.impact}</p>
+      </div>
+      <div class="case-study-tech">
+        <span class="case-study-label">${t(locale, "case_studies.technologies")}</span>
+        <div class="case-study-badges">
+          ${(study.technologies||study.highlights||[]).map(t => `<span class="badge">${t}</span>`).join("")}
+        </div>
+      </div>
+    `;
+    grid.appendChild(div);
+  });
+}
+
+function renderSkillsCategorized(locale, content){
+  const container = $("#skills-categorized");
+  if(!container) return;
+  container.innerHTML = "";
+  
+  const groups = {
+    core: [".NET (C#, VB.NET)","ASP.NET","Web API / REST","Entity Framework","LINQ"],
+    architecture: ["Software Architecture","DDD","Microservices","Event-driven","API Design","Legacy Modernization"],
+    cloud: ["Microsoft Azure","Cloud Architecture","Azure Service Bus","Identity & Security"],
+    devops: ["Azure DevOps","CI/CD","Docker","DevSecOps","Sonar"],
+    messaging: ["Kafka","Protocol Buffers","WCF","REST","Ultra Messaging"],
+    modern: ["Flutter","JavaScript","Angular","React","Python","AI / Agents"],
+    additional: ["SQL Server","Oracle","C","C++","PowerShell","VBScript","Visual Studio","TeamCity","TFS/Azure DevOps"]
+  };
+  
+  Object.keys(groups).forEach(key => {
+    const label = t(locale, `skills.${key}`);
+    const items = groups[key];
+    const section = document.createElement("div");
+    section.className = "skill-group";
+    section.innerHTML = `
+      <div class="skill-group-title">${label}</div>
+      <div class="skill-group-items">
+        ${items.map(s => `<span class="badge">${s}</span>`).join("")}
+      </div>
+    `;
+    container.appendChild(section);
   });
 }
 
@@ -390,6 +476,12 @@ function render(locale, content){
   $("#hero-subtitle").textContent = t(locale, "hero.subtitle");
   const taglineEl = $("#hero-tagline");
   if(taglineEl) taglineEl.textContent = t(locale, "hero.tagline");
+  const valueEl = $("#hero-value");
+  if(valueEl) valueEl.textContent = t(locale, "hero.valueProp");
+  
+  // Trust bar
+  const trustIndustries = $("#trust-industries");
+  if(trustIndustries) trustIndustries.textContent = t(locale, "trust.industries");
 
   // About / Skills
   $("#about-title").textContent  = t(locale, "about.title");
@@ -399,8 +491,10 @@ function render(locale, content){
   // Section headings
   const servicesTitle = $("#services-title");
   if(servicesTitle) servicesTitle.textContent = t(locale, "services.title");
-  const projectsTitle = $("#projects-title");
-  if(projectsTitle) projectsTitle.textContent = t(locale, "projects_section.title");
+  const careerTitle = $("#career-title");
+  if(careerTitle) careerTitle.textContent = t(locale, "career_phases.title");
+  const caseStudiesTitle = $("#case-studies-title");
+  if(caseStudiesTitle) caseStudiesTitle.textContent = t(locale, "case_studies.title");
   $("#exp-title").textContent    = t(locale, "experience.title");
 
   // Contact
@@ -439,36 +533,14 @@ function render(locale, content){
   });
   const contactLink = $("#contact-link");
   contactLink.textContent = t(locale, "hero.ctaSecondary");
-  contactLink.href = "#projects";
+  contactLink.href = "#case-studies";
 
-  // Skills badges
-  const badgeContainer = $("#skills-badges");
-  badgeContainer.innerHTML = "";
-  const skillBuckets = [
-    ...content.skills.methods,
-    ...content.skills.process,
-    ...content.skills.modeling,
-    ...content.skills.patterns,
-    ...content.skills.microsoft,
-    ...content.skills.other_langs,
-    ...content.skills.scripting,
-    ...content.skills.tools
-  ];
-  const seen = new Set();
-  skillBuckets.forEach(s => {
-    const k = normalizeSearch(s);
-    if(seen.has(k)) return;
-    seen.add(k);
-    const span = document.createElement("span");
-    span.className = "badge";
-    span.textContent = s;
-    badgeContainer.appendChild(span);
-  });
-
-  // Certifications, Services & Projects
+  // Render all sections
+  renderSkillsCategorized(locale, content);
   renderCertifications(locale, content);
   renderServices(locale, content);
-  renderProjects(locale, content);
+  renderCareerPhases(locale, content);
+  renderCaseStudies(locale, content);
 
   // Experience timeline
   const timeline = $("#timeline");
