@@ -54,13 +54,13 @@ function normalizeSearch(s){
 }
 
 function applySEO(locale, content){
-  document.title = locale.siteTitle;
+  document.title = locale.siteTitle || "";
   const desc = locale.seo?.description || "";
   const keywords = locale.seo?.keywords || "";
-  $("#meta-desc").setAttribute("content", desc);
-  $("#meta-keywords").setAttribute("content", keywords);
-  $("#og-title").setAttribute("content", locale.siteTitle);
-  $("#og-desc").setAttribute("content", desc);
+  const md = $("#meta-desc"); if(md) md.setAttribute("content", desc);
+  const mk = $("#meta-keywords"); if(mk) mk.setAttribute("content", keywords);
+  const ot = $("#og-title"); if(ot) ot.setAttribute("content", locale.siteTitle);
+  const od = $("#og-desc"); if(od) od.setAttribute("content", desc);
 
   // Update Schema.org JSON-LD with full structured data
   const jobTitles = {
@@ -467,7 +467,7 @@ function renderProjects(locale, content){
 }
 
 function render(locale, content){
-  $("#brand-name").textContent = content.name;
+  const bn = $("#brand-name"); if(bn) bn.textContent = content.name;
 
   $$("#nav a").forEach(a => {
     const key = a.getAttribute("data-i18n");
@@ -475,8 +475,8 @@ function render(locale, content){
   });
 
   // Hero
-  $("#hero-title").textContent   = t(locale, "hero.title");
-  $("#hero-subtitle").textContent = t(locale, "hero.subtitle");
+  const ht = $("#hero-title"); if(ht) ht.textContent = t(locale, "hero.title");
+  const hs = $("#hero-subtitle"); if(hs) hs.textContent = t(locale, "hero.subtitle");
   const taglineEl = $("#hero-tagline");
   if(taglineEl) taglineEl.textContent = t(locale, "hero.tagline");
   const valueEl = $("#hero-value");
@@ -487,9 +487,9 @@ function render(locale, content){
   if(trustIndustries) trustIndustries.textContent = t(locale, "trust.industries");
 
   // About / Skills
-  $("#about-title").textContent  = t(locale, "about.title");
-  $("#about-body").textContent   = t(locale, "about.body");
-  $("#skills-title").textContent = t(locale, "skills.title");
+  const at = $("#about-title"); if(at) at.textContent = t(locale, "about.title");
+  const ab = $("#about-body"); if(ab) ab.textContent = t(locale, "about.body");
+  const st = $("#skills-title"); if(st) st.textContent = t(locale, "skills.title");
 
   // Section headings
   const servicesTitle = $("#services-title");
@@ -498,29 +498,26 @@ function render(locale, content){
   if(careerTitle) careerTitle.textContent = t(locale, "career_phases.title");
   const caseStudiesTitle = $("#case-studies-title");
   if(caseStudiesTitle) caseStudiesTitle.textContent = t(locale, "case_studies.title");
-  $("#exp-title").textContent    = t(locale, "experience.title");
+  const et = $("#exp-title"); if(et) et.textContent = t(locale, "experience.title");
 
   // Contact
-  $("#contact-title").textContent = t(locale, "contact.title");
+  const ct = $("#contact-title"); if(ct) ct.textContent = t(locale, "contact.title");
   const sub = $("#contact-subtitle");
   if(sub) sub.textContent = t(locale, "contact.subtitle");
   const cta = $("#contact-cta");
   if(cta){ cta.textContent = t(locale, "contact.cta"); cta.href = `mailto:${content.email}`; }
 
-  $("#search").setAttribute("placeholder", t(locale, "search.placeholder"));
-  $("#contact-phone-label").textContent   = t(locale, "contact.phone");
-  $("#contact-email-label").textContent   = t(locale, "contact.email");
-  $("#contact-linkedin-label").textContent = t(locale, "contact.linkedin");
+  const si = $("#search"); if(si) si.setAttribute("placeholder", t(locale, "search.placeholder"));
+  const cpl = $("#contact-phone-label"); if(cpl) cpl.textContent = t(locale, "contact.phone");
+  const cel = $("#contact-email-label"); if(cel) cel.textContent = t(locale, "contact.email");
+  const cll = $("#contact-linkedin-label"); if(cll) cll.textContent = t(locale, "contact.linkedin");
   const profilesLabel = $("#contact-profiles-label");
   if (profilesLabel) profilesLabel.textContent = t(locale, "contact.profiles");
 
-  $("#phone").textContent = content.phone;
-  $("#phone").href = `tel:${content.phone.replace(/\s+/g,'')}`;
-  $("#email").textContent = content.email;
-  $("#email").href = `mailto:${content.email}`;
-  $("#linkedin").textContent = content.linkedin.replace(/https?:\/\//,"");
-  $("#linkedin").href = content.linkedin;
-  $("#whatsapp").href = content.whatsapp;
+  const ph = $("#phone"); if(ph){ ph.textContent = content.phone; ph.href = `tel:${content.phone.replace(/\s+/g,'')}`; }
+  const em = $("#email"); if(em){ em.textContent = content.email; em.href = `mailto:${content.email}`; }
+  const li = $("#linkedin"); if(li){ li.textContent = content.linkedin.replace(/https?:\/\//,""); li.href = content.linkedin; }
+  const wa = $("#whatsapp"); if(wa) wa.href = content.whatsapp;
 
   // Hire Me button
   const hireBtn = $("#hire-btn");
@@ -528,15 +525,19 @@ function render(locale, content){
 
   // CV / Projects buttons
   const cvLink = $("#cv-link");
-  cvLink.textContent = t(locale, "hero.ctaPrimary");
-  cvLink.onclick = null;
-  cvLink.addEventListener("click", (e) => {
-    e.preventDefault();
-    generatePDF(locale, content);
-  });
+  if(cvLink){
+    cvLink.textContent = t(locale, "hero.ctaPrimary");
+    cvLink.onclick = null;
+    cvLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      generatePDF(locale, content);
+    });
+  }
   const contactLink = $("#contact-link");
-  contactLink.textContent = t(locale, "hero.ctaSecondary");
-  contactLink.href = "#case-studies";
+  if(contactLink){
+    contactLink.textContent = t(locale, "hero.ctaSecondary");
+    contactLink.href = "#case-studies";
+  }
 
   // Render all sections
   renderSkillsCategorized(locale, content);
@@ -547,8 +548,9 @@ function render(locale, content){
 
   // Experience timeline
   const timeline = $("#timeline");
-  timeline.innerHTML = "";
-  content.experience.forEach(x => {
+  if(timeline){
+    timeline.innerHTML = "";
+    content.experience.forEach(x => {
     const div = document.createElement("div");
     div.className = "item";
     div.setAttribute("data-search", normalizeSearch([
@@ -622,10 +624,12 @@ function render(locale, content){
     div.appendChild(stack);
     timeline.appendChild(div);
   });
+  }
 }
 
 function bindSearch(){
   const input = $("#search");
+  if(!input) return;
   const items = $$("#timeline .item");
   const update = () => {
     const q = normalizeSearch(input.value.trim());
@@ -655,18 +659,18 @@ async function main(){
     const locale = locales[code] || locales.en;
     setQueryParam("lang", locale.langCode);
     localStorage.setItem("lang", locale.langCode);
-    langSelect.value = locale.langCode;
+    if(langSelect) langSelect.value = locale.langCode;
     setDirAndRTL(locale);
     applySEO(locale, content);
     render(locale, content);
     bindSearch();
   };
 
-  langSelect.addEventListener("change", (e) => setLang(e.target.value));
+  if(langSelect) langSelect.addEventListener("change", (e) => setLang(e.target.value));
   await setLang(requested);
 }
 
 main().catch(err => {
-  console.error(err);
-  document.body.innerHTML = "<div style='padding:24px;font-family:system-ui;color:#111;background:#fff'>Failed to load site assets.</div>";
+  console.error("Site load error:", err);
+  document.body.innerHTML = "<div style='padding:24px;font-family:system-ui;color:#111;background:#fff'><h2>Failed to load site assets.</h2><pre>" + (err && err.message ? err.message : "Unknown error") + "</pre></div>";
 });
