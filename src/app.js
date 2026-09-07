@@ -234,28 +234,19 @@ async function generatePDF(locale, content) {
   </div>`;
 
   const container = document.createElement("div");
-  container.style.cssText = `width:720px;margin:0;direction:${rtl?"rtl":"ltr"};text-align:${rtl?"right":"left"};font-family:${ff};font-size:10.5pt;line-height:1.5;color:${tc};background:#fff;padding:20px;box-sizing:border-box;position:fixed;top:0;left:0;z-index:99999;opacity:1;`;
+  container.style.cssText = `width:720px;margin:0;direction:${rtl?"rtl":"ltr"};text-align:${rtl?"right":"left"};font-family:${ff};font-size:10.5pt;line-height:1.5;color:${tc};background:#fff;padding:20px;box-sizing:border-box;position:fixed;top:0;left:0;z-index:-1;opacity:0;pointer-events:none;`;
   container.innerHTML = html;
-  container.setAttribute("id","pdf-render-container");
   document.body.appendChild(container);
 
-  // Force layout reflow
   container.offsetHeight;
-  await new Promise(r => setTimeout(r, 500));
+  await new Promise(r => setTimeout(r, 300));
 
   try {
     await html2pdf().set({
       margin: [10, 10, 10, 10],
       filename: `${content.name.replace(/\s+/g, '_')}_CV_${locale.langCode}.pdf`,
       image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { 
-        scale: 2, 
-        useCORS: true, 
-        allowTaint: true,
-        logging: true,
-        width: 720,
-        windowWidth: 720
-      },
+      html2canvas: { scale: 2, useCORS: true, allowTaint: true, logging: false },
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'p' }
     }).from(container).save();
   } finally {
