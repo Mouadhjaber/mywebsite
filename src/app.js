@@ -234,11 +234,10 @@ async function generatePDF(locale, content) {
   </div>`;
 
   const container = document.createElement("div");
-  container.style.cssText = `width:720px;margin:0;direction:${rtl?"rtl":"ltr"};text-align:${rtl?"right":"left"};font-family:${ff};font-size:10.5pt;line-height:1.5;color:${tc};background:#fff;padding:20px;box-sizing:border-box;position:fixed;top:0;left:0;z-index:-1;opacity:0;pointer-events:none;`;
+  container.style.cssText = `width:720px;margin:0;direction:${rtl?"rtl":"ltr"};text-align:${rtl?"right":"left"};font-family:${ff};font-size:10.5pt;line-height:1.5;color:${tc};background:#fff;padding:20px;box-sizing:border-box;position:fixed;top:0;left:0;opacity:1;pointer-events:none;z-index:9999;`;
   container.innerHTML = html;
   document.body.appendChild(container);
 
-  container.offsetHeight;
   await new Promise(r => setTimeout(r, 300));
 
   try {
