@@ -238,16 +238,44 @@ async function generatePDF(locale, content) {
   container.innerHTML = html;
   document.body.appendChild(container);
 
-  await new Promise(r => setTimeout(r, 300));
+  await new Promise(r => setTimeout(r, 500));
 
   try {
-    await html2pdf().set({
-      margin: [10, 10, 10, 10],
-      filename: `${content.name.replace(/\s+/g, '_')}_CV_${locale.langCode}.pdf`,
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true, allowTaint: true, logging: false },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'p' }
-    }).from(container).save();
+    const canvas = await html2canvas(container, { scale: 2, useCORS: true, allowTaint: true });
+    const imgData = canvas.toDataURL('image/jpeg', 0.98);
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait' });
+    const pdfW = pdf.internal.pageSize.getWidth();
+    const pdfH = pdf.internal.pageSize.getHeight();
+    const margin = 10;
+    const availW = pdfW - margin * 2;
+    const imgW = availW;
+    const imgH = (canvas.height * imgW) / canvas.width;
+    let y = margin;
+
+    if (imgH <= pdfH - margin * 2) {
+      pdf.addImage(imgData, 'JPEG', margin, margin, imgW, imgH);
+    } else {
+      let remaining = canvas.height;
+      let srcY = 0;
+      const sliceH = canvas.width * (pdfH - margin * 2) / imgW;
+      while (remaining > 0) {
+        if (srcY > 0) pdf.addPage();
+        const actualSliceH = Math.min(sliceH, remaining);
+        const sliceCanvas = document.createElement('canvas');
+        sliceCanvas.width = canvas.width;
+        sliceCanvas.height = actualSliceH;
+        const ctx = sliceCanvas.getContext('2d');
+        ctx.drawImage(canvas, 0, srcY, canvas.width, actualSliceH, 0, 0, canvas.width, actualSliceH);
+        const sliceData = sliceCanvas.toDataURL('image/jpeg', 0.98);
+        const slicePdfH = (actualSliceH * imgW) / canvas.width;
+        pdf.addImage(sliceData, 'JPEG', margin, margin, imgW, slicePdfH);
+        srcY += actualSliceH;
+        remaining -= actualSliceH;
+      }
+    }
+
+    pdf.save(`${content.name.replace(/\s+/g, '_')}_CV_${locale.langCode}.pdf`);
   } finally {
     document.body.removeChild(container);
   }
