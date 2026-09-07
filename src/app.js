@@ -234,14 +234,14 @@ async function generatePDF(locale, content) {
   </div>`;
 
   const container = document.createElement("div");
-  container.style.cssText = `width:720px;margin:0;direction:${rtl?"rtl":"ltr"};text-align:${rtl?"right":"left"};font-family:${ff};font-size:10.5pt;line-height:1.5;color:${tc};background:#fff;padding:20px;box-sizing:border-box;`;
+  container.style.cssText = `width:720px;margin:0;direction:${rtl?"rtl":"ltr"};text-align:${rtl?"right":"left"};font-family:${ff};font-size:10.5pt;line-height:1.5;color:${tc};background:#fff;padding:20px;box-sizing:border-box;position:fixed;top:0;left:0;z-index:99999;opacity:1;`;
   container.innerHTML = html;
-  container.style.position = "absolute";
-  container.style.top = "-9999px";
-  container.style.left = "-9999px";
+  container.setAttribute("id","pdf-render-container");
   document.body.appendChild(container);
 
-  await new Promise(r => setTimeout(r, 200));
+  // Force layout reflow
+  container.offsetHeight;
+  await new Promise(r => setTimeout(r, 500));
 
   try {
     await html2pdf().set({
@@ -252,10 +252,11 @@ async function generatePDF(locale, content) {
         scale: 2, 
         useCORS: true, 
         allowTaint: true,
-        logging: false
+        logging: true,
+        width: 720,
+        windowWidth: 720
       },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'p' },
-      pagebreak: { mode: 'avoid-all', avoid: ['section'] }
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'p' }
     }).from(container).save();
   } finally {
     document.body.removeChild(container);
