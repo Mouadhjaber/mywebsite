@@ -308,14 +308,15 @@ function renderServices(locale, content){
   const grid = $("#services-grid");
   if(!grid) return;
   grid.innerHTML = "";
-  const items = t(locale, "services.items") || [];
+  const items = t(locale, "services.items") || t(locale, "services") || [];
+  if(!Array.isArray(items)) return;
   items.forEach(svc => {
     const card = document.createElement("div");
     card.className = "service-card";
     card.innerHTML = `
-      <div class="service-icon">${svc.icon}</div>
-      <h3 class="service-title">${svc.title}</h3>
-      <p class="service-desc">${svc.desc}</p>
+      <div class="service-icon">${svc.icon || ""}</div>
+      <h3 class="service-title">${svc.title || ""}</h3>
+      <p class="service-desc">${svc.desc || ""}</p>
     `;
     grid.appendChild(card);
   });
@@ -326,6 +327,7 @@ function renderCareerPhases(locale, content){
   if(!container) return;
   container.innerHTML = "";
   const phases = t(locale, "career_phases.phases") || [];
+  if(!Array.isArray(phases)) return;
   phases.forEach(phase => {
     const div = document.createElement("div");
     div.className = "career-phase";
@@ -346,6 +348,7 @@ function renderCaseStudies(locale, content){
   if(!grid) return;
   grid.innerHTML = "";
   const studies = t(locale, "case_studies.items") || [];
+  if(!Array.isArray(studies)) return;
   studies.forEach(study => {
     const div = document.createElement("div");
     div.className = "case-study-card";

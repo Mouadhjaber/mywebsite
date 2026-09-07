@@ -1,40 +1,100 @@
 {
   "langCode": "zh",
-  "siteTitle": "Mouadh Jaber — 资深 .NET 工程师 | .NET、C#、Azure、DevOps",
+  "siteTitle": "Mouadh Jaber — 资深软件工程师 & 解决方案架构师",
   "nav": {
     "about": "关于我",
-    "services": "服务",
-    "projects": "项目",
-    "skills": "技能",
-    "experience": "经历",
+    "services": "专业领域",
+    "projects": "案例研究",
+    "skills": "技术栈",
+    "experience": "职业历程",
     "contact": "联系"
   },
   "hero": {
     "title": "Mouadh Jaber",
-    "subtitle": "资深 .NET 工程师 — 构建可扩展系统与云解决方案",
-    "tagline": "帮助企业设计并交付可扩展的软件系统 — 从云架构和 DevOps/DevSecOps 流水线到 AI 智能代理和企业级集成，端到端全流程支持。",
-    "ctaPrimary": "下载简历 (PDF)",
-    "ctaSecondary": "查看项目",
+    "subtitle": "资深软件工程师 & 解决方案架构师",
+    "tagline": "15+ 年构建企业软件、云平台和可扩展 .NET 系统，覆盖金融、电信、保险、运输和制药行业。",
+    "valueProp": "帮助企业现代化遗留应用、设计云原生架构，从架构设计到生产部署交付可靠软件。",
+    "ctaPrimary": "下载简历",
+    "ctaSecondary": "案例研究",
     "ctaHire": "雇佣我"
   },
   "about": {
     "title": "关于我",
-    "body": "拥有 15+ 年企业级软件工程经验，涵盖金融、电信、保险、运输和制药等行业。专注于设计和交付可扩展系统 — 基于 Azure 的云原生架构、DevOps/DevSecOps 流水线、AI 智能代理和微服务 — 从架构设计到生产部署全生命周期。"
+    "body": "资深软件工程师，拥有 15+ 年电信、银行、保险、运输和制药供应链经验。专注于 .NET 企业现代化、Azure 云架构、DevOps/DevSecOps 流水线、微服务和技术领导力。"
+  },
+  "trust": {
+    "industries": "金融 · 电信 · 保险 · 运输 · 制药",
+    "years": "15+ 年",
+    "phases": "企业 → 架构 → 云 & DevOps"
+  },
+  "case_studies": {
+    "title": "精选案例研究",
+    "challenge": "挑战",
+    "solution": "解决方案",
+    "impact": "成果",
+    "technologies": "技术栈",
+    "items": [
+      {
+        "title": "企业身份认证平台",
+        "industry": "制药供应链",
+        "company": "ASTERA",
+        "role": "资深软件工程师",
+        "challenge": "在 COVID 后现代化整套制药应用的认证系统，为数百名用户提供安全远程访问。",
+        "solution": "实现 IdentityServer 双因素认证（QR/SMS），统一所有应用认证，迁移至 Microsoft Azure。",
+        "impact": "为整个组织提供安全远程访问，减少认证相关支持工单。",
+        "technologies": "C#, IdentityServer, Azure, JavaScript, 2FA, DevOps"
+      },
+      {
+        "title": "资产管理云数据架构",
+        "industry": "资产管理",
+        "company": "CANDRIAM",
+        "role": "资深软件工程师（巴黎，法国）",
+        "challenge": "整合多个金融数据源用于退休基金清算，需要实时数据映射和云原生架构。",
+        "solution": "设计微服务架构与 Azure Service Bus，整合布鲁塞尔 Belfius 数据流，SSIS 批处理。",
+        "impact": "将多源数据统一到单一平台，实现基金自动化处理。",
+        "technologies": "C#, Oracle, SSIS, WCF, Web API, Azure, DevOps"
+      },
+      {
+        "title": "高性能交易系统",
+        "industry": "投资银行",
+        "company": "Société Générale",
+        "role": "高级工程师（巴黎，法国）",
+        "challenge": "在多线程环境中构建和维护暗池交易和交叉网络系统的高性能交易应用。",
+        "solution": "多线程 C# 应用，FIX 协议集成，市场数据连接器与 socket 层解析。",
+        "impact": "处理实时市场数据的关键交易基础设施，零停机时间。",
+        "technologies": "C#, C++, FIX Protocol, SignalR, Ultra Messaging"
+      },
+      {
+        "title": "呼叫中心微服务",
+        "industry": "电信 / SaaS",
+        "company": "ZIWO",
+        "role": "资深软件工程师（迪拜，阿联酋）",
+        "challenge": "现代化一个 10 年历史的呼叫中心平台，引入面向服务架构并集成多个支付提供商。",
+        "solution": "Docker 容器微服务架构，Protocol Buffers 高效序列化，Kafka 事件驱动消息。",
+        "impact": "将单体应用转变为可扩展微服务平台，实现独立部署和水平扩展。",
+        "technologies": "C#, Docker, Kafka, Protocol Buffers, Oracle, PowerShell"
+      },
+      {
+        "title": "车队管理平台",
+        "industry": "运输",
+        "company": "MOWASALAT",
+        "role": "资深软件工程师",
+        "challenge": "为车辆车队管理平台开发后端系统，包括支付集成和性能监控。",
+        "solution": ".NET Core 后端服务，供应商支付集成，实时车队跟踪和性能监控模块。",
+        "impact": "车辆运营监控，支付处理优化，实时性能仪表板。",
+        "technologies": "C#, .NET Core, API Development, Visual Studio"
+      }
+    ]
   },
   "skills": {
-    "title": "技能",
-    "architecture": "架构设计",
-    "methods": "方法论",
-    "process": "流程",
-    "modeling": "建模",
-    "communication": "通信",
-    "patterns": "设计模式",
-    "microsoft": "Microsoft / .NET",
-    "other_langs": "其他语言",
-    "ibm": "IBM 技术",
-    "scripting": "脚本与前端",
-    "is": "信息系统",
-    "tools": "工具与 DevOps"
+    "title": "技术栈",
+    "core": "核心技术",
+    "architecture": "架构",
+    "cloud": "云",
+    "devops": "DevOps",
+    "messaging": "消息与分布式",
+    "modern": "现代开发",
+    "additional": "其他经验"
   },
   "diploma": {
     "label": "查看学位",
@@ -44,29 +104,36 @@
     "verify": "验证"
   },
   "services": {
-    "title": "我能为您做什么"
+    "title": "我能为您提供的帮助",
+    "items": [
+      { "icon": "🏗️", "title": "软件架构", "desc": "设计可扩展的企业系统、API 和分布式架构。" },
+      { "icon": "⚙️", "title": ".NET 开发", "desc": "使用 C#、.NET 和 ASP.NET Core 构建和现代化应用。" },
+      { "icon": "☁️", "title": "云 & Azure", "desc": "设计、迁移和优化 Microsoft Azure 上的云原生系统。" },
+      { "icon": "🔧", "title": "微服务", "desc": "拆分单体应用，设计事件驱动的可靠分布式服务。" },
+      { "icon": "🚀", "title": "DevOps & DevSecOps", "desc": "构建 CI/CD 流水线和容器化策略。" },
+      { "icon": "🔄", "title": "遗留系统现代化", "desc": "现代化 .NET、WCF 和企业系统。" }
+    ]
   },
-  "projects_section": {
-    "title": "精选项目",
-    "sector": "行业"
+  "career_phases": {
+    "title": "职业历程",
+    "phases": [
+      { "period": "2009 – 2014", "title": "企业软件工程", "desc": "在 Orange Business Services 和 INVIVO 构建企业应用 — WPF、WCF、SQL Server。", "companies": "Orange · INVIVO" },
+      { "period": "2014 – 2021", "title": "架构与金融系统", "desc": "在 Société Générale 设计交易系统，在 AXA 和 Generali 构建保险平台。", "companies": "Société Générale · AXA · Generali" },
+      { "period": "2021 – 至今", "title": "云与现代化", "desc": "在 CANDRIAM 进行云迁移，在 ZIWO 和 NETCOM 构建微服务，实施 DevSecOps。", "companies": "CANDRIAM · ZIWO · ASTERA · NETCOM" }
+    ]
   },
-  "experience": {
-    "title": "工作经历"
-  },
+  "projects_section": { "title": "精选项目", "sector": "行业" },
+  "experience": { "title": "工作经历" },
   "contact": {
-    "title": "合作共赢",
-    "subtitle": "可提供自由职业、咨询顾问及全职工作机会。",
-    "phone": "电话",
-    "email": "邮箱",
-    "linkedin": "领英",
-    "profiles": "专业档案",
+    "title": "讨论您的项目",
+    "subtitle": "需要 .NET 架构、Azure 迁移、遗留系统现代化或企业软件方面的帮助？提供自由职业和咨询服务。",
+    "phone": "电话", "email": "邮箱", "linkedin": "领英",
+    "profiles": "精选企业与项目",
     "cta": "发送消息"
   },
   "seo": {
-    "description": "Mouadh Jaber — 资深 .NET 工程师，提供自由职业和咨询服务。15+ 年 .NET、C#、微服务、Azure、DevOps/DevSecOps 经验，涵盖电信、银行、运输等行业。",
-    "keywords": "Mouadh Jaber, 资深软件工程师, .NET 开发者, C# 开发者, 微服务, DevOps, DevSecOps, Azure, Web API, Flutter, 软件顾问, 自由职业开发者, 招聘软件工程师"
+    "description": "Mouadh Jaber — 资深软件工程师 & 解决方案架构师。15+ 年 .NET、C#、Azure、微服务、DevOps/DevSecOps 经验。",
+    "keywords": "Mouadh Jaber, 资深 .NET 工程师, 软件架构师, C# 开发者, Azure 顾问, 微服务, DevOps"
   },
-  "search": {
-    "placeholder": "搜索经历与技能…"
-  }
+  "search": { "placeholder": "搜索经历与技能…" }
 }
