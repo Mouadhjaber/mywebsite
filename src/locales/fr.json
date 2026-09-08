@@ -12,7 +12,7 @@
   "hero": {
     "title": "Mouadh Jaber",
     "subtitle": "Ingénieur Logiciel Senior & Architecte Solution",
-    "tagline": "15+ ans à concevoir des logiciels d'entreprise, des plateformes cloud et des systèmes .NET scalables dans la finance, les télécoms, l'assurance, le transport et la pharmacie.",
+    "tagline": "15+ ans à concevoir des logiciels d'entreprise, des plateformes cloud et des systèmes systèmes logiciels scalables dans la finance, les télécoms, l'assurance, le transport et la pharmacie.",
     "valueProp": "J'aide les entreprises à moderniser leurs applications legacy, concevoir des architectures cloud-native et livrer des logiciels fiables de l'architecture à la production.",
     "ctaPrimary": "Télécharger le CV",
     "ctaSecondary": "Études de cas",
@@ -20,7 +20,7 @@
   },
   "about": {
     "title": "Profil",
-    "body": "Ingénieur logiciel senior avec 15+ ans d'expérience dans les télécoms, la banque, l'assurance, le transport et la pharmacie. Je me spécialise dans la modernisation .NET d'entreprise, l'architecture cloud sur Azure, les pipelines DevOps/DevSecOps, les microservices et le leadership technique — des systèmes complexes de l'architecture à la production."
+    "body": "Ingénieur logiciel senior avec 15+ ans d'expérience dans les télécoms, la banque, l'assurance, le transport et la pharmacie. Je me spécialise dans la modernisation systèmes logiciels d'entreprise, l'architecture cloud sur Azure, les pipelines DevOps/DevSecOps, les microservices et le leadership technique — des systèmes complexes de l'architecture à la production."
   },
   "trust": {
     "industries": "Finance · Télécoms · Assurance · Transport · Pharmacie",
@@ -40,9 +40,9 @@
         "company": "ASTERA",
         "role": "Ingénieur logiciel senior",
         "challenge": "Moderniser l'authentification de l'ensemble des applications pharmaceutiques post-COVID, permettant l'accès sécurisé à distance pour des centaines d'utilisateurs.",
-        "solution": "Implémentation d'IdentityServer avec authentification 2-Factor (QR/SMS), unification de l'authentification et migration vers Microsoft Azure.",
+        "solution": "Implémentation d'IdentityServer avec authentification 2-Factor (QR/SMS), unification de l'authentification et migration vers Azure.",
         "impact": "Sécurisation de l'accès à distance pour l'ensemble de l'organisation, réduction des tickets support liés à l'authentification.",
-        "technologies": "C#, IdentityServer, Azure, JavaScript, 2FA, DevOps",
+        "technologies": "langages de programmation, IdentityServer, Azure, JavaScript, 2FA, DevOps",
         "highlights": ["2FA QR/SMS", "IdentityServer", "Azure", "DevOps/DevSecOps"]
       },
       {
@@ -53,7 +53,7 @@
         "challenge": "Intégrer plusieurs sources de données financières pour la liquidation de fonds de retraite, nécessitant du mapping en temps réel et une architecture cloud-native.",
         "solution": "Architecture microservices avec Azure Service Bus, intégration des flux Belfius depuis Bruxelles, traitement batch SSIS, services WCF/Web API.",
         "impact": "Unification des données de sources multiples en une plateforme unique, automatisation du traitement des fonds.",
-        "technologies": "C#, Oracle, SSIS, WCF, Web API, Azure, DevOps",
+        "technologies": "langages de programmation, Oracle, SSIS, WCF, Web API, Azure, DevOps",
         "highlights": ["Intégration données", "Microservices", "Azure", "DevOps"]
       },
       {
@@ -62,9 +62,9 @@
         "company": "Société Générale",
         "role": "Ingénieur senior (Paris, France)",
         "challenge": "Construire et maintenir des applications de trading pour les dark pools et réseaux de croisement dans un environnement multi-thread.",
-        "solution": "Applications C# multi-threadées, intégration FIX protocol, connecteurs de données de marché avec parsing socket, migration des automates de trading.",
+        "solution": "Applications langages de programmation multi-threadées, intégration FIX protocol, connecteurs de données de marché avec parsing socket, migration des automates de trading.",
         "impact": "Infrastructure de trading critique traitant des données de marché en temps réel, fiabilité système à zéro temps d'arrêt.",
-        "technologies": "C#, C++, FIX Protocol, SignalR, Ultra Messaging",
+        "technologies": "langages de programmation, C++, FIX Protocol, SignalR, Ultra Messaging",
         "highlights": ["Multi-threading", "FIX protocol", "Données marché", "Reverse engineering"]
       },
       {
@@ -75,7 +75,7 @@
         "challenge": "Moderniser une plateforme de centre d'appels de 10 ans, introduire l'architecture orientée services et intégrer plusieurs fournisseurs de paiement.",
         "solution": "Architecture microservices avec Docker, Protocol Buffers, Kafka pour le messaging event-driven, pipelines d'automatisation.",
         "impact": "Transformation d'une application monolithique en plateforme microservices scalable, déploiement indépendant des services.",
-        "technologies": "C#, Docker, Kafka, Protocol Buffers, Oracle, PowerShell",
+        "technologies": "langages de programmation, Docker, Kafka, Protocol Buffers, Oracle, PowerShell",
         "highlights": ["Microservices", "Docker", "Kafka", "Protocol Buffers"]
       },
       {
@@ -84,10 +84,10 @@
         "company": "MOWASALAT",
         "role": "Ingénieur logiciel senior",
         "challenge": "Développer les systèmes backend d'une plateforme de gestion de flotte, incluant l'intégration de paiement et le suivi de performance.",
-        "solution": "Services backend .NET Core, intégration de paiement avec les fournisseurs, modules back-office pour le suivi en temps réel.",
+        "solution": "Services backend systèmes logiciels Core, intégration de paiement avec les fournisseurs, modules back-office pour le suivi en temps réel.",
         "impact": "Monitoring opérationnel des véhicules, traitement de paiement rationalisé, tableaux de bord de performance en temps réel.",
-        "technologies": "C#, .NET Core, API Development, Visual Studio",
-        "highlights": ["Gestion flotte", "Intégration paiement", ".NET Core", "API design"]
+        "technologies": "langages de programmation, systèmes logiciels Core, API Development, Visual Studio",
+        "highlights": ["Gestion flotte", "Intégration paiement", "systèmes logiciels Core", "API design"]
       }
     ]
   },
@@ -118,13 +118,13 @@
       },
       {
         "icon": "⚙️",
-        "title": "Développement .NET",
-        "desc": "Construire et moderniser des applications avec C#, .NET et ASP.NET Core selon des patterns d'architecture propre."
+        "title": "Développement systèmes logiciels",
+        "desc": "Construire et moderniser des applications avec langages de programmation, systèmes logiciels et ASPsystèmes logiciels Core selon des patterns d'architecture propre."
       },
       {
         "icon": "☁️",
         "title": "Cloud & Azure",
-        "desc": "Concevoir, migrer et optimiser des systèmes cloud-native sur Microsoft Azure avec sécurité et conformité."
+        "desc": "Concevoir, migrer et optimiser des systèmes cloud-native sur Azure avec sécurité et conformité."
       },
       {
         "icon": "🔧",
@@ -139,7 +139,7 @@
       {
         "icon": "🔄",
         "title": "Modernisation Legacy",
-        "desc": "Moderniser les systèmes .NET, WCF et d'entreprise plus anciens sans réécrire aveuglément."
+        "desc": "Moderniser les systèmes systèmes logiciels, WCF et d'entreprise plus anciens sans réécrire aveuglément."
       }
     ]
   },
@@ -161,8 +161,8 @@
       {
         "period": "2021 – Présent",
         "title": "Cloud & Modernisation",
-        "desc": "Migrations cloud chez CANDRIAM, microservices chez ZIWO et NETCOM, DevSecOps et conteneurisation.",
-        "companies": "CANDRIAM · ZIWO · ASTERA · NETCOM"
+        "desc": "Migrations cloud chez CANDRIAM, microservices chez ZIWO et Entreprise Logicielle, DevSecOps et conteneurisation.",
+        "companies": "CANDRIAM · ZIWO · ASTERA · Entreprise Logicielle"
       }
     ]
   },
@@ -175,7 +175,7 @@
   },
   "contact": {
     "title": "Discutons de votre projet",
-    "subtitle": "Besoin d'aide pour l'architecture .NET, la migration Azure, la modernisation legacy ou le logiciel d'entreprise ? Disponible pour freelance et consulting.",
+    "subtitle": "Besoin d'aide pour l'architecture systèmes logiciels, la migration Azure, la modernisation legacy ou le logiciel d'entreprise ? Disponible pour freelance et consulting.",
     "phone": "Téléphone",
     "email": "Email",
     "linkedin": "LinkedIn",
@@ -183,8 +183,8 @@
     "cta": "Envoyez-moi un message"
   },
   "seo": {
-    "description": "Mouadh Jaber — Ingénieur Logiciel Senior & Architecte Solution. 15+ ans en .NET, C#, Azure, Microservices, DevOps/DevSecOps dans les télécoms, banque, assurance, transport et pharmacie. Disponible pour consulting freelance.",
-    "keywords": "Mouadh Jaber, Ingénieur .NET Senior, Architecte Logiciel, Développeur C#, Consultant Azure, Microservices, DevOps, DevSecOps, Modernisation Legacy, développeur .NET freelance Tunisie France"
+    "description": "Mouadh Jaber — Ingénieur Logiciel Senior & Architecte Solution. 15+ ans à concevoir des logiciels d'entreprise, des plateformes cloud et des systèmes évolutifs dans la finance, les télécoms, l'assurance, le transport et la pharmacie. Disponible pour consulting freelance.",
+    "keywords": "Mouadh Jaber, Ingénieur Logiciel Senior, Architecte Logiciel, Consultant Cloud, Microservices, DevOps, DevSecOS, Modernisation Legacy, développeur systèmes logiciels freelance Tunisie France"
   },
   "search": {
     "placeholder": "Rechercher dans l'expérience & compétences…"

@@ -11,39 +11,108 @@
   "diploma": "./diploma.pdf",
   "certifications": [
     {
-      "title": "MCPS: Microsoft Certified Professional",
+      "title": "MCPS: Certified Professional",
       "issuer": "Microsoft",
       "date": "February 2016",
       "credential_id": "REPLACE_WITH_YOUR_CREDENTIAL_ID",
       "verify_url": "https://www.credly.com/badges"
     },
     {
-      "title": "MS: Programming in C#",
+      "title": "Certification in Programming",
       "issuer": "Microsoft",
       "date": "February 2016",
       "credential_id": "REPLACE_WITH_YOUR_CREDENTIAL_ID",
       "verify_url": "https://www.credly.com/badges"
     }
   ],
-  
   "skills": {
     "architecture": [
       "Distributed, composite, and real-time applications",
       "Layered models, microservices, mesh architecture, monolithic architecture"
     ],
-    "methods": ["XP", "Scrum", "SAFe", "TDD", "BDD"],
-    "process": ["ITIL", "DevOps", "DevSecOps"],
-    "modeling": ["UML v2", "Merise"],
-    "communication": ["Web", "pipes", "sockets", "messaging systems", "SOA", "JSON"],
-    "patterns": ["Repository","Unit of Work","IoC","DI","Facade","Proxy","MVVM","MVC","DDD"],
-    "microsoft": [".NET (C#, VB.NET)","ASP.NET","WCF","WebAPI / REST","ADO.NET","LINQ","Entity Framework","NHibernate",".NET Core","Blazor","Kafka","Docker","SpecFlow","Sonar"],
-    "other_langs": ["C","C++","Python"],
-    "ibm": ["Lotus Notes / Domino","Lotus Script","XPage","Sametime"],
-    "scripting": ["VBScript","PowerShell","JavaScript","jQuery","AngularJS","React"],
-    "is": ["Active Directory (2003/2008/2012)","SQL Server (2008/2014/2016)","SharePoint / MOSS / Office 365","Azure Service Bus","Azure Cloud"],
-    "tools": ["Visual Studio (2008–2022)","TFS / Azure DevOps","TeamCity","CVS/SVN","Eclipse","MS Project / Project Server"]
+    "methods": [
+      "XP",
+      "Scrum",
+      "SAFe",
+      "TDD",
+      "BDD"
+    ],
+    "process": [
+      "ITIL",
+      "DevOps",
+      "DevSecOps"
+    ],
+    "modeling": [
+      "UML v2",
+      "Merise"
+    ],
+    "communication": [
+      "Web",
+      "pipes",
+      "sockets",
+      "messaging systems",
+      "SOA",
+      "JSON"
+    ],
+    "patterns": [
+      "Repository",
+      "Unit of Work",
+      "IoC",
+      "DI",
+      "Facade",
+      "Proxy",
+      "MVVM",
+      "MVC",
+      "DDD"
+    ],
+    "microsoft": [
+      "Software Architecture",
+      "Enterprise Systems",
+      "Web Services",
+      "REST APIs",
+      "Message Queues",
+      "Containerization",
+      "CI/CD"
+    ],
+    "other_langs": [
+      "C",
+      "C++",
+      "Python"
+    ],
+    "ibm": [
+      "Lotus Notes / Domino",
+      "Lotus Script",
+      "XPage",
+      "Sametime"
+    ],
+    "scripting": [
+      "VBScript",
+      "PowerShell",
+      "JavaScript",
+      "jQuery",
+      "AngularJS",
+      "React"
+    ],
+    "is": [
+      "Directory Services",
+      "Database Systems",
+      "Collaboration Platforms",
+      "Messaging Systems",
+      "Cloud Platforms"
+    ],
+    "tools": [
+      "IDE",
+      "CI Server",
+      "Version Control",
+      "Issue Tracker",
+      "Build Automation"
+    ]
   },
-  "languages": {"en":"English","fr":"French","ar":"Arabic / العربية"},
+  "languages": {
+    "en": "English",
+    "fr": "French",
+    "ar": "Arabic / العربية"
+  },
   "experience": [
     {
       "company": "NETCOM",
@@ -56,13 +125,31 @@
       "role_en": "Senior Software Engineer",
       "role_fr": "Ingénieur logiciel senior",
       "role_ar": "مهندس برمجيات أول",
-      "highlights_en": ["Mobile development (Flutter)","Development around internal CRM","Dockerization of ongoing projects","Swagger & backend API development","Urbanization / application modernization"],
-      "highlights_fr": ["Développement mobile (Flutter)","Développement autour du CRM interne","Dockerisation des projets en cours","Swagger & développement API backend","Urbanisation / modernisation des applications"],
-      "highlights_ar": ["تطوير تطبيقات الهاتف باستخدام Flutter","تطوير حول CRM الداخلي","استخدام Docker للمشاريع الجارية","Swagger وتطوير API الخلفية","تحديث وتحديث التطبيقات"],
-      "stack": "C#, Flutter, JavaScript,Angular, Docker, Visual Studio (2019–2022)",
-      "full_description_en": "<p><strong>Senior Software Engineer</strong> developing mobile applications with Flutter, enhancing and maintaining the internal CRM, dockerizing ongoing projects, creating backend APIs with Swagger, and modernizing/urbanizing applications. Tools: Visual Studio 2019–2022, C#, Flutter, JavaScript, Docker.</p>",
-      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> développant des applications mobiles avec Flutter, améliorant et maintenant le CRM interne, dockerisant les projets en cours, créant des API backend avec Swagger et modernisant/urbanisant les applications. Outils : Visual Studio 2019–2022, C#, Flutter, JavaScript, Docker.</p>",
-      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> تطوير تطبيقات الهاتف باستخدام Flutter، تطوير وصيانة CRM الداخلي، استخدام Docker للمشاريع الجارية، تطوير API الخلفية باستخدام Swagger، وتحديث وتحديث التطبيقات. الأدوات: Visual Studio 2019–2022، C#، Flutter، JavaScript، Docker.</p>"
+      "highlights_en": [
+        "Mobile development (Flutter)",
+        "Development around internal CRM",
+        "Containerizationization of ongoing projects",
+        "Swagger & backend API development",
+        "Urbanization / application modernization"
+      ],
+      "highlights_fr": [
+        "Développement mobile (Flutter)",
+        "Développement autour du CRM interne",
+        "Containerizationisation des projets en cours",
+        "Swagger & développement API backend",
+        "Urbanisation / modernisation des applications"
+      ],
+      "highlights_ar": [
+        "تطوير تطبيقات الهاتف باستخدام Flutter",
+        "تطوير حول CRM الداخلي",
+        "استخدام Containerization للمشاريع الجارية",
+        "Swagger وتطوير API الخلفية",
+        "تحديث وتحديث التطبيقات"
+      ],
+      "stack": ", Flutter, JavaScript,Angular, Containerization, Visual Studio (2019–2022)",
+      "full_description_en": "<p><strong>Senior Software Engineer</strong> developing mobile applications with Flutter, enhancing and maintaining the internal CRM, dockerizing ongoing projects, creating backend APIs with Swagger, and modernizing/urbanizing applications. Tools: Visual Studio 2019–2022, , Flutter, JavaScript, Containerization.</p>",
+      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> développant des applications mobiles avec Flutter, améliorant et maintenant le CRM interne, dockerisant les projets en cours, créant des API backend avec Swagger et modernisant/urbanisant les applications. Outils : Visual Studio 2019–2022, , Flutter, JavaScript, Containerization.</p>",
+      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> تطوير تطبيقات الهاتف باستخدام Flutter، تطوير وصيانة CRM الداخلي، استخدام Containerization للمشاريع الجارية، تطوير API الخلفية باستخدام Swagger، وتحديث وتحديث التطبيقات. الأدوات: Visual Studio 2019–2022، ، Flutter، JavaScript، Containerization.</p>"
     },
     {
       "company": "MOWASALAT",
@@ -75,13 +162,31 @@
       "role_en": "Senior Software Engineer",
       "role_fr": "Ingénieur logiciel senior",
       "role_ar": "مهندس برمجيات أول",
-      "highlights_en": ["Vehicle fleet management system","Back-end development in .NET Core (C#)","Payment system update with supplier","Back-office modules for tracking/monitoring performance","API additions and general software development"],
-      "highlights_fr": ["Système de gestion de flotte","Développement backend en .NET Core (C#)","Mise à jour du système de paiement","Modules back-office pour suivi/performance","Ajouts d'API et développement logiciel général"],
-      "highlights_ar": ["نظام إدارة أسطول المركبات","تطوير الخلفية باستخدام .NET Core","تحديث نظام الدفع","وحدات Back-Office للمتابعة والأداء","إضافة APIs وتطوير البرامج"],
-      "stack": "C#, .NET Core, Visual Studio (2019–2022)",
-      "full_description_en": "<p><strong>Senior Software Engineer</strong> working on a vehicle fleet management system, developing back-end software in .NET Core (C#), updating the payment system with the supplier, adding back-office modules for tracking and monitoring performance, implementing APIs, and performing general software development. Tools: Visual Studio 2019–2022, C#.</p>",
-      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> travaillant sur un système de gestion de flotte de véhicules, développement logiciel back-end en .NET Core (C#), mise à jour du système de paiement avec le fournisseur, ajout de modules back-office pour le suivi et le monitoring des performances, implémentation de quelques API, et développement logiciel général. Outils : Visual Studio 2019–2022, C#.</p>",
-      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> يعمل على نظام إدارة أسطول المركبات، تطوير البرمجيات الخلفية باستخدام .NET Core (C#)، تحديث نظام الدفع مع المورد، إضافة وحدات Back-Office لمتابعة ورصد الأداء، تنفيذ بعض واجهات API، وتطوير البرمجيات العامة. الأدوات: Visual Studio 2019–2022، C#.</p>"
+      "highlights_en": [
+        "Vehicle fleet management system",
+        "Back-end development in ",
+        "Payment system update with supplier",
+        "Back-office modules for tracking/monitoring performance",
+        "API additions and general software development"
+      ],
+      "highlights_fr": [
+        "Système de gestion de flotte",
+        "Développement backend en ",
+        "Mise à jour du système de paiement",
+        "Modules back-office pour suivi/performance",
+        "Ajouts d'API et développement logiciel général"
+      ],
+      "highlights_ar": [
+        "نظام إدارة أسطول المركبات",
+        "تطوير الخلفية باستخدام ",
+        "تحديث نظام الدفع",
+        "وحدات Back-Office للمتابعة والأداء",
+        "إضافة APIs وتطوير البرامج"
+      ],
+      "stack": ", systèmes d'entreprise, Visual Studio (2019–2022)",
+      "full_description_en": "<p><strong>Senior Software Engineer</strong> working on a vehicle fleet management system, developing back-end software in systèmes d'entreprise (), updating the payment system with the supplier, adding back-office modules for tracking and monitoring performance, implementing APIs, and performing general software development. Tools: Visual Studio 2019–2022, .</p>",
+      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> travaillant sur un système de gestion de flotte de véhicules, développement logiciel back-end en systèmes d'entreprise (), mise à jour du système de paiement avec le fournisseur, ajout de modules back-office pour le suivi et le monitoring des performances, implémentation de quelques API, et développement logiciel général. Outils : Visual Studio 2019–2022, .</p>",
+      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> يعمل على نظام إدارة أسطول المركبات، تطوير البرمجيات الخلفية باستخدام systèmes d'entreprise ()، تحديث نظام الدفع مع المورد، إضافة وحدات Back-Office لمتابعة ورصد الأداء، تنفيذ بعض واجهات API، وتطوير البرمجيات العامة. الأدوات: Visual Studio 2019–2022، .</p>"
     },
     {
       "company": "VERMEG",
@@ -94,9 +199,15 @@
       "role_en": "Senior Software Engineer",
       "role_fr": "Ingénieur logiciel senior",
       "role_ar": "مهندس برمجيات أول",
-      "highlights_en": ["Sell-side liquidation software engineering"],
-      "highlights_fr": ["Ingénierie logicielle pour la liquidation côté vendeur"],
-      "highlights_ar": ["هندسة برمجيات تصفية الجانب البائع"],
+      "highlights_en": [
+        "Sell-side liquidation software engineering"
+      ],
+      "highlights_fr": [
+        "Ingénierie logicielle pour la liquidation côté vendeur"
+      ],
+      "highlights_ar": [
+        "هندسة برمجيات تصفية الجانب البائع"
+      ],
       "stack": "C++, Delphi, Visual Studio",
       "full_description_en": "<p><strong>Senior Software Engineer</strong> contributing to sell-side liquidation software at VERMEG, supporting funds from Charterhouse Capital Partners, working on ESG fund development, implementing ISO-compliant solutions, and leveraging all available resources to enhance company value.</p><p><a href='https://www.crunchbase.com/organization/vermeg' style='word-break: break-word; display: inline-block;'>https://www.crunchbase.com/organization/vermeg</a></p><ul><li>Sell-side liquidation software engineering</li><li>Support for ESG local fund development</li><li>ISO certifications compliance</li><li>Tools and technologies: Visual Studio, C++, Delphi</li></ul>",
       "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> contribuant aux logiciels de liquidation côté vendeur chez VERMEG, soutenant les fonds de Charterhouse Capital Partners, participant au développement des fonds ESG locaux, mettant en œuvre des solutions conformes aux certifications ISO, et utilisant toutes les ressources disponibles pour valoriser l’entreprise.</p><p><a href='https://www.crunchbase.com/organization/vermeg' style='word-break: break-word; display: inline-block;'>https://www.crunchbase.com/organization/vermeg</a></p><ul><li>Ingénierie logicielle de liquidation côté vente</li><li>Soutien au développement de fonds ESG locaux</li><li>Conformité aux certifications ISO</li><li>Outils et technologies : Visual Studio, C++, Delphi</li></ul>",
@@ -113,13 +224,25 @@
       "role_en": "Senior Software Engineer (Rouen, France)",
       "role_fr": "Ingénieur logiciel senior (Rouen, France)",
       "role_ar": "مهندس برمجيات أول (روان، فرنسا)",
-      "highlights_en": ["Implemented Identity Service with 2FA and QR code/SMS","Modernized workflow and authentication system post-COVID","Contributed to DevOps/DevSecOps and Azure migration"],
-      "highlights_fr": ["Implémentation du service d'identité avec 2FA et QR code/SMS","Modernisation des workflows et du système d'authentification post-COVID","Contribution à DevOps/DevSecOps et migration Azure"],
-      "highlights_ar": ["تنفيذ خدمة هوية مع المصادقة الثنائية (QR وSMS)","تحديث أنظمة المصادقة بعد كوفيد","المساهمة في DevOps وDevSecOps وترحيل Azure"],
-      "stack": "C#, JavaScript, Gulp, Bootstrap, Azure components, Visual Studio (2019–2022)",
-      "full_description_en": "<p><strong>Senior Software Engineer</strong> implementing IdentityService with 2-Factor authentication and QR/SMS, modernizing workflows and authentication systems for the pharmaceutical company post-COVID, providing IT resources, implementing IdentityServer across applications, involving DevOps processes, and migrating systems to Microsoft Azure.</p><ul><li>IdentityService and IdentityServer implementation with 2FA and QR/SMS</li><li>Workflow and authentication system modernization</li><li>Integration with DevOps/DevSecOps processes</li><li>Migration to Microsoft Azure</li><li>Tools and technologies: Visual Studio 2019–2022, C#, Gulp, JavaScript, Bootstrap, Azure components</li></ul>",
-      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> implémentant IdentityService avec authentification 2-Factor et QR/SMS, modernisant les flux de travail et le système d'authentification de l'entreprise pharmaceutique après la crise COVID, fournissant les ressources informatiques, utilisant IdentityServer pour l'ensemble des applications, et participant aux processus DevOps avec migration vers Microsoft Azure.</p><ul><li>Implémentation d'IdentityService et IdentityServer avec 2FA et QR/SMS</li><li>Modernisation des flux de travail et du système d'authentification</li><li>Intégration aux processus DevOps/DevSecOps</li><li>Migration vers Microsoft Azure</li><li>Outils et technologies : Visual Studio 2019–2022, C#, Gulp, JavaScript, Bootstrap, composants Azure</li></ul>",
-      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> تنفيذ خدمة IdentityService مع المصادقة الثنائية (2FA) وQR/SMS، تحديث سير العمل ونظام المصادقة لشركة الأدوية بعد أزمة COVID، توفير الموارد التقنية، استخدام IdentityServer لمجموعة التطبيقات، والمشاركة في عمليات DevOps مع ترحيل الأنظمة إلى Microsoft Azure.</p><ul><li>تنفيذ IdentityService وIdentityServer مع 2FA وQR/SMS</li><li>تحديث سير العمل ونظام المصادقة</li><li>التكامل مع عمليات DevOps/DevSecOps</li><li>ترحيل الأنظمة إلى Microsoft Azure</li><li>الأدوات والتقنيات: Visual Studio 2019–2022، C#، Gulp، JavaScript، Bootstrap، مكونات Azure</li></ul>"
+      "highlights_en": [
+        "Implemented Identity Service with 2FA and QR code/SMS",
+        "Modernized workflow and authentication system post-COVID",
+        "Contributed to DevOps/DevSecOps and Azure migration"
+      ],
+      "highlights_fr": [
+        "Implémentation du service d'identité avec 2FA et QR code/SMS",
+        "Modernisation des workflows et du système d'authentification post-COVID",
+        "Contribution à DevOps/DevSecOps et migration Azure"
+      ],
+      "highlights_ar": [
+        "تنفيذ خدمة هوية مع المصادقة الثنائية (QR وSMS)",
+        "تحديث أنظمة المصادقة بعد كوفيد",
+        "المساهمة في DevOps وDevSecOps وترحيل Azure"
+      ],
+      "stack": ", JavaScript, Gulp, Bootstrap, Azure components, Visual Studio (2019–2022)",
+      "full_description_en": "<p><strong>Senior Software Engineer</strong> implementing IdentityService with 2-Factor authentication and QR/SMS, modernizing workflows and authentication systems for the pharmaceutical company post-COVID, providing IT resources, implementing IdentityServer across applications, involving DevOps processes, and migrating systems to Microsoft Azure.</p><ul><li>IdentityService and IdentityServer implementation with 2FA and QR/SMS</li><li>Workflow and authentication system modernization</li><li>Integration with DevOps/DevSecOps processes</li><li>Migration to Microsoft Azure</li><li>Tools and technologies: Visual Studio 2019–2022, , Gulp, JavaScript, Bootstrap, Azure components</li></ul>",
+      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> implémentant IdentityService avec authentification 2-Factor et QR/SMS, modernisant les flux de travail et le système d'authentification de l'entreprise pharmaceutique après la crise COVID, fournissant les ressources informatiques, utilisant IdentityServer pour l'ensemble des applications, et participant aux processus DevOps avec migration vers Microsoft Azure.</p><ul><li>Implémentation d'IdentityService et IdentityServer avec 2FA et QR/SMS</li><li>Modernisation des flux de travail et du système d'authentification</li><li>Intégration aux processus DevOps/DevSecOps</li><li>Migration vers Microsoft Azure</li><li>Outils et technologies : Visual Studio 2019–2022, , Gulp, JavaScript, Bootstrap, composants Azure</li></ul>",
+      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> تنفيذ خدمة IdentityService مع المصادقة الثنائية (2FA) وQR/SMS، تحديث سير العمل ونظام المصادقة لشركة الأدوية بعد أزمة COVID، توفير الموارد التقنية، استخدام IdentityServer لمجموعة التطبيقات، والمشاركة في عمليات DevOps مع ترحيل الأنظمة إلى Microsoft Azure.</p><ul><li>تنفيذ IdentityService وIdentityServer مع 2FA وQR/SMS</li><li>تحديث سير العمل ونظام المصادقة</li><li>التكامل مع عمليات DevOps/DevSecOps</li><li>ترحيل الأنظمة إلى Microsoft Azure</li><li>الأدوات والتقنيات: Visual Studio 2019–2022، ، Gulp، JavaScript، Bootstrap، مكونات Azure</li></ul>"
     },
     {
       "company": "ZIWO",
@@ -132,150 +255,247 @@
       "role_en": "Senior Software Engineer (Dubai, UAE)",
       "role_fr": "Ingénieur logiciel senior (Dubaï, ÉAU)",
       "role_ar": "مهندس برمجيات أول (دبي، الإمارات)",
-      "highlights_en": ["Microservice architecture & component design","Docker, Protocol Buffers, Kafka","Automation & scripting"],
-      "highlights_fr": ["Architecture microservices et conception de composants","Docker, Protocol Buffers, Kafka","Automatisation et scripting"],
-      "highlights_ar": ["بنية Microservices وتصميم المكونات","Docker، Protocol Buffers، Kafka","الأتمتة والبرمجة النصية"],
-      "stack": "C#, Oracle, PowerShell, Docker, Kafka, Azure components",
-      "full_description_en": "<p><strong>Senior Software Engineer</strong> assisting the company during its 10 years of existence, supporting legal name changes and integration with multiple financial providers, designing software architecture and microservice components, and implementing Docker, Protocol Buffers, microservices, and Kafka solutions.</p><p><a href='https://www.crunchbase.com/organization/aswat' style='word-break: break-word; display: inline-block;'>https://www.crunchbase.com/organization/aswat</a></p><ul><li>Software architecture and design of microservice components</li><li>Docker, Protocol Buffers, Microservices, Kafka</li><li>Integration with financial providers</li><li>Using Visual Studio 2019–2022, Azure components, and DevSecOps pipelines</li><li>Technologies: C#, Oracle, PowerShell as Batch</li></ul>",
-      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> accompagnant l'entreprise durant ses 10 années d'existence, soutenant le changement de nom légal et l'intégration de nombreux services financiers, conception de l'architecture logicielle et des composants microservices, et mise en œuvre de solutions Docker, Protocol Buffers et Microservices.</p><p><a href='https://www.crunchbase.com/organization/aswat' style='word-break: break-word; display: inline-block;'>https://www.crunchbase.com/organization/aswat</a></p><ul><li>Architecture logicielle et conception des composants microservices</li><li>Docker, Protocol Buffers, Microservices</li><li>Intégration avec les fournisseurs de services financiers</li><li>Utilisation de Visual Studio 2019–2022, composants Azure et pipelines DevSecOps</li><li>Technologies : C#, Oracle, PowerShell en Batch</li></ul>",
-      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> دعم الشركة خلال 10 سنوات من وجودها، المساهمة في تغيير الاسم القانوني ودمج العديد من مزودي الخدمات المالية، تصميم بنية البرمجيات ومكونات Microservices، وتنفيذ حلول Docker وProtocol Buffers وMicroservices.</p><p><a href='https://www.crunchbase.com/organization/aswat' style='word-break: break-word; display: inline-block;'>https://www.crunchbase.com/organization/aswat</a></p><ul><li>الهندسة المعمارية للبرمجيات وتصميم مكونات Microservices</li><li>Docker، Protocol Buffers، Microservices</li><li>التكامل مع مزودي الخدمات المالية</li><li>استخدام Visual Studio 2019–2022، مكونات Azure وخطوط DevSecOps</li><li>التقنيات: C#، Oracle، PowerShell كـ Batch</li></ul>"
+      "highlights_en": [
+        "Microservice architecture & component design",
+        "Containerization, Protocol Buffers, Message Queues",
+        "Automation & scripting"
+      ],
+      "highlights_fr": [
+        "Architecture microservices et conception de composants",
+        "Containerization, Protocol Buffers, Message Queues",
+        "Automatisation et scripting"
+      ],
+      "highlights_ar": [
+        "بنية Microservices وتصميم المكونات",
+        "Containerization، Protocol Buffers، Message Queues",
+        "الأتمتة والبرمجة النصية"
+      ],
+      "stack": ", Oracle, PowerShell, Containerization, Message Queues, Azure components",
+      "full_description_en": "<p><strong>Senior Software Engineer</strong> assisting the company during its 10 years of existence, supporting legal name changes and integration with multiple financial providers, designing software architecture and microservice components, and implementing Containerization, Protocol Buffers, microservices, and Message Queues solutions.</p><p><a href='https://www.crunchbase.com/organization/aswat' style='word-break: break-word; display: inline-block;'>https://www.crunchbase.com/organization/aswat</a></p><ul><li>Software architecture and design of microservice components</li><li>Containerization, Protocol Buffers, Microservices, Message Queues</li><li>Integration with financial providers</li><li>Using Visual Studio 2019–2022, Azure components, and DevSecOps pipelines</li><li>Technologies: , Oracle, PowerShell as Batch</li></ul>",
+      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> accompagnant l'entreprise durant ses 10 années d'existence, soutenant le changement de nom légal et l'intégration de nombreux services financiers, conception de l'architecture logicielle et des composants microservices, et mise en œuvre de solutions Containerization, Protocol Buffers et Microservices.</p><p><a href='https://www.crunchbase.com/organization/aswat' style='word-break: break-word; display: inline-block;'>https://www.crunchbase.com/organization/aswat</a></p><ul><li>Architecture logicielle et conception des composants microservices</li><li>Containerization, Protocol Buffers, Microservices</li><li>Intégration avec les fournisseurs de services financiers</li><li>Utilisation de Visual Studio 2019–2022, composants Azure et pipelines DevSecOps</li><li>Technologies : , Oracle, PowerShell en Batch</li></ul>",
+      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> دعم الشركة خلال 10 سنوات من وجودها، المساهمة في تغيير الاسم القانوني ودمج العديد من مزودي الخدمات المالية، تصميم بنية البرمجيات ومكونات Microservices، وتنفيذ حلول Containerization وProtocol Buffers وMicroservices.</p><p><a href='https://www.crunchbase.com/organization/aswat' style='word-break: break-word; display: inline-block;'>https://www.crunchbase.com/organization/aswat</a></p><ul><li>الهندسة المعمارية للبرمجيات وتصميم مكونات Microservices</li><li>Containerization، Protocol Buffers، Microservices</li><li>التكامل مع مزودي الخدمات المالية</li><li>استخدام Visual Studio 2019–2022، مكونات Azure وخطوط DevSecOps</li><li>التقنيات: ، Oracle، PowerShell كـ Batch</li></ul>"
     },
     {
-    "company": "CANDRIAM",
-    "industry_en": "Asset Management",
-    "industry_fr": "Gestion d'actifs",
-    "industry_ar": "إدارة الأصول",
-    "date_en": "May 2021 – Oct 2022",
-    "date_fr": "Mai 2021 – Oct 2022",
-    "date_ar": "مايو 2021 – أكتوبر 2022",
-    "role_en": "Senior Software Engineer (Paris, France)",
-    "role_fr": "Ingénieur logiciel senior (Paris, France)",
-    "role_ar": "مهندس برمجيات أول (باريس، فرنسا)",
-    "highlights_en": ["Integrated new data flows (mapping multiple sources)","Refactoring and microservice architecture with bus","SSIS batch development; WCF services; Web API; DevOps"],
-    "highlights_fr": ["Intégration de nouveaux flux de données (cartographie de multiples sources)","Refactoring et architecture microservices avec bus","Développement de batchs SSIS ; services WCF ; Web API ; DevOps"],
-    "highlights_ar": ["دمج تدفقات بيانات جديدة (تعيين مصادر متعددة)","إعادة هيكلة الأنظمة إلى Microservices مع Bus","تطوير دفعات SSIS؛ خدمات WCF؛ Web API؛ DevOps"],
-    "stack": "C#, Oracle, PowerShell, SSIS, WCF, Web API, Azure, Visual Studio (2019–2022)",
-    "full_description_en": "<p><strong>Senior Software Engineer</strong> working on liquidation and buy-side funds for retirement, integrating new data flows from Belfius (Brussels), mapping multiple data sources, refactoring and defining microservices architecture with Bus, and designing business interactions with Microsoft services while following ITIL and DevOps processes.</p><ul><li>Batch development with SSIS</li><li>Web Services – Microservices</li><li>Azure infrastructure setup</li><li>WCF service development</li><li>Database modeling</li><li>Web API implementation</li><li>DevOps pipelines and processes</li></ul><p><strong>Tools:</strong> Visual Studio 2019–2022, Azure Components, DevSecOps</p><p><strong>Technologies:</strong> C#, Oracle, PowerShell as Batch</p>",
-    "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> travaillant sur la liquidation et les fonds côté achat pour la retraite, intégrant le nouveau flux de données de Belfius, mappant de nombreuses sources de données, concevant le nouveau flux et l’interaction entre composants, et définissant les services Microsoft Azure en microservices.</p><ul><li>Web Services cloud</li><li>Infrastructure Azure – flux de données sur Cloud</li><li>Service WCF en promise</li><li>Modélisation de base de données sur Cloud</li><li>Infrastructure Data Lake Cloud</li></ul><p><strong>Outils :</strong> Visual Studio 2019, Azure DevOps, Azure Cloud Infrastructure</p><p><strong>Technologies :</strong> C#, Oracle, PowerShell as Batch</p>",
-    "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> العمل على تصفية وصناديق الشراء للمعاشات التقاعدية، دمج تدفق البيانات الجديد من Belfius، ربط مصادر بيانات متعددة، تصميم التدفق الجديد والتفاعل بين المكونات، وتحديد خدمات Microsoft Azure باستخدام Microservices.</p><ul><li>خدمات ويب سحابية</li><li>بنية تحتية Azure – تدفق البيانات على السحابة</li><li>خدمة WCF في promise</li><li>نمذجة قواعد البيانات على السحابة</li><li>بنية تحتية Data Lake على السحابة</li></ul><p><strong>الأدوات:</strong> Visual Studio 2019، Azure DevOps، بنية تحتية Azure Cloud</p><p><strong>التقنيات:</strong> C#، Oracle، PowerShell كـ Batch</p>"
-  },
-  {
-    "company": "SOCIETE GENERALE",
-    "industry_en": "Banking",
-    "industry_fr": "Banque",
-    "industry_ar": "البنوك",
-    "date_en": "Dec 2018 – May 2021",
-    "date_fr": "Déc 2018 – Mai 2021",
-    "date_ar": "ديسمبر 2018 – مايو 2021",
-    "role_en": "Senior Engineer & Architect (Paris, France)",
-    "role_fr": "Ingénieur senior & Architecte (Paris, France)",
-    "role_ar": "مهندس ومعماري أول (باريس، فرنسا)",
-    "highlights_en": ["IT provisioning infrastructures and annexed services","Architecture definition and connector updates","SSO preparation, middleware/server prep, reverse engineering","Technical liaison with admins and engineering teams"],
-    "highlights_fr": ["Infrastructures de provisioning IT et services annexes","Définition de l'architecture et mise à jour des connecteurs","Préparation SSO, middleware/serveurs, ingénierie inverse","Lien technique avec les administrateurs et équipes d'ingénierie"],
-    "highlights_ar": ["البنى التحتية لتوفير خدمات IT والخدمات الملحقة","تحديد المعمارية وتحديث الموصلات","التحضير لتكامل SSO، Middleware/الخوادم، هندسة عكسية","حلقة وصل تقنية مع مسؤولي النظام وفرق الهندسة"],
-    "stack": "C++, C#, Java, PowerShell, Visual Studio, TFS",
-    "full_description_en": "<p><strong>Senior Engineer & Architect</strong> analyzing, designing, and defining new software architecture, updating connectors, integrating new tools and software, and provisioning Microsoft software.</p><ul><li>Provisioning: updating components, preparing infrastructure for new software, preparing SSO for new tools, preparing application middleware and servers</li><li>Modeling and flow: reverse engineering, technical relay, contributing and discussing new solutions, designing services, creating architecture documents, defining main nonfunctional requirements</li><li>Solution and integration: studying technical requirements of software integration from other teams, relaying with administrators and technical engineers, kinematic analysis</li></ul><p><strong>Tools:</strong> Visual Studio 2015, TFS 2013</p><p><strong>Technologies:</strong> C++, C#, Java, PowerShell as Batch</p>",
-    "full_description_fr": "<p><strong>Ingénieur senior & Architecte</strong> analyse et définition de la nouvelle architecture des composants logiciels, intégration des nouveaux outils pour le provisioning et définition des workflows.</p><ul><li>Provisioning : mise à jour des composants Web API avec le fournisseur d’autorisation, préparation de l’infrastructure pour les nouveaux logiciels, adaptation du SSO pour les nouveaux outils, développement en C++ des composants système seamless Citrix, développement des API C# des composants applicatifs</li><li>Modélisation et flux : ingénierie inverse, relais technique, documentation d’architecture, définition des prérequis non fonctionnels</li><li>Solution et intégration : étude technique et cinématique</li></ul><p><strong>Outils :</strong> Visual Studio 2015-2017-2019, Azure DevOps, Azure</p><p><strong>Technologies :</strong> C++, C#, .NET Core, Java, PowerShell as Batch</p>",
-    "full_description_ar": "<p><strong>مهندس  أول</strong> تحليل وتعريف المعمارية الجديدة لمكونات البرمجيات، دمج الأدوات الجديدة للـ provisioning وتعريف سير العمل.</p><ul><li>Provisioning: تحديث مكونات Web API مع موفر التفويض، إعداد البنية التحتية للبرمجيات الجديدة، تهيئة SSO للأدوات الجديدة، تطوير مكونات النظام Seamless Citrix بلغة C++، تطوير API للمكونات التطبيقية بلغة C#</li><li>النمذجة وتدفق العمل: الهندسة العكسية، حلقة وصل تقنية، وثائق المعمارية، تحديد المتطلبات غير الوظيفية</li><li>الحلول والتكامل: دراسة المتطلبات التقنية والتحليل الحركي (Cinématique)</li></ul><p><strong>الأدوات:</strong> Visual Studio 2015-2017-2019، Azure DevOps، Azure</p><p><strong>التقنيات:</strong> C++، C#، .NET Core، Java، PowerShell كـ Batch</p>"
-  },
-  {
-    "company": "GENERALI (EA Holding)",
-    "industry_en": "Insurance",
-    "industry_fr": "Assurance",
-    "industry_ar": "التأمين",
-    "date_en": "Jun 2017 – Dec 2018",
-    "date_fr": "Juin 2017 – Déc 2018",
-    "date_ar": "يونيو 2017 – ديسمبر 2018",
-    "role_en": "Senior Software Engineer (Paris, France)",
-    "role_fr": "Ingénieur logiciel senior (Paris, France)",
-    "role_ar": "مهندس برمجيات أول (باريس، فرنسا)",
-    "highlights_en": ["Developed and maintained holding applications","Technical specs, unit tests, code reviews, release control","Worked with MVC5, SignalR, WebAPI and Azure"],
-    "highlights_fr": ["Développement et maintenance des applications holding","Spécifications techniques, tests unitaires, revues de code, contrôle des versions","Travail avec MVC5, SignalR, WebAPI et Azure"],
-    "highlights_ar": ["تطوير وصيانة تطبيقات الشركة القابضة","المواصفات التقنية، اختبارات الوحدات، مراجعة الكود، إدارة الإصدار","العمل مع MVC5، SignalR، WebAPI وAzure"],
-    "stack": "ASP.NET MVC5, C#, jQuery, SignalR, WebAPI, Azure, Visual Studio, TFS",
-    "full_description_en": "<p><strong>Senior Software Engineer</strong> engineering and developing software, maintaining a set of applications for clients and affiliates of the holding.</p><ul><li>Elaboration of technical solutions for functional and scalability requirements</li><li>Writing technical specifications</li><li>Development of the solution</li><li>Writing unit tests</li><li>Participation in code reviews of other developers</li><li>Control of project releases with technical and integration teams</li><li>Task reporting</li></ul><p><strong>Tools:</strong> Visual Studio 2015, TFS 2013</p><p><strong>Technologies:</strong> ASP.Net MVC5, C# 5 / 6, JQuery, SignalR, WebAPI, Azure</p>",
-    "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> étude et développement .Net, maintenances applicatives des applications de la holding.</p><ul><li>Élaboration des solutions techniques pour répondre aux besoins fonctionnels et aux enjeux de performance</li><li>Rédaction des spécifications techniques</li><li>Réalisation des développements selon les spécifications et la solution d’implémentation définie</li><li>Réalisation des tests unitaires</li><li>Réalisation des tests d’intégration avant livraison en recette</li><li>Participation aux revues de code d’autres développeurs</li><li>Pilotage des mises en production des projets en collaboration avec les équipes d’intégration technique et d’exploitation</li><li>Reporting d’avancement des tâches confiées</li></ul><p><strong>Outils :</strong> Visual Studio 2015, TFS 2013</p><p><strong>Technologies :</strong> C#, C++, Razor, ASP.NET MVC .Net, WCF, JQuery, AngularJS</p><p><strong>Méthodologie & Conception :</strong> XP</p>",
-    "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> دراسة وتطوير .Net، وصيانة تطبيقات الشركة القابضة.</p><ul><li>إعداد الحلول التقنية لتلبية الاحتياجات الوظيفية ومتطلبات الأداء</li><li>كتابة المواصفات التقنية</li><li>تطوير الحلول وفق المواصفات والحلول المعتمدة</li><li>إجراء اختبارات الوحدات</li><li>إجراء اختبارات التكامل قبل التسليم للاختبار</li><li>المشاركة في مراجعات الكود للمطورين الآخرين</li><li>إدارة عمليات الإنتاج للمشاريع بالتعاون مع فرق التكامل الفني والتشغيل</li><li>إعداد تقارير متابعة التقدم في المهام الموكلة</li></ul><p><strong>الأدوات:</strong> Visual Studio 2015، TFS 2013</p><p><strong>التقنيات:</strong> C#، C++، Razor، ASP.NET MVC .Net، WCF، JQuery، AngularJS</p><p><strong>المنهجية والتصميم:</strong> XP</p>"
-  },
-  {
-    "company": "AXA",
-    "industry_en": "Insurance",
-    "industry_fr": "Assurance",
-    "industry_ar": "التأمين",
-    "date_en": "Mar 2016 – Mar 2017",
-    "date_fr": "Mars 2016 – Mars 2017",
-    "date_ar": "مارس 2016 – مارس 2017",
-    "role_en": "Consultant Engineer (Paris, France)",
-    "role_fr": "Ingénieur consultant (Paris, France)",
-    "role_ar": "مهندس استشاري (باريس، فرنسا)",
-    "highlights_en": ["Defined IARD model and integrated sales software","Led a team of 5 across multiple projects","Specs (DAT), integration, release control"],
-    "highlights_fr": ["Définition du modèle IARD et intégration des logiciels de vente","Gestion d'une équipe de 5 sur plusieurs projets","Spécifications (DAT), intégration, contrôle des versions"],
-    "highlights_ar": ["تحديد نموذج IARD ودمج برامج المبيعات","قيادة فريق مكون من 5 على عدة مشاريع","المواصفات (DAT)، التكامل، التحكم في الإصدارات"],
-    "stack": "ASP.NET MVC5, C#, jQuery, SignalR, WebAPI, Azure, Visual Studio, TFS",
-    "full_description_en": "<p><strong>Consultant Engineer</strong> working on insurance systems, defining IARD models, integrating sales software, leading a team across multiple projects, producing technical specifications, supervising integration and releases.</p><ul><li>Elaboration of technical solutions</li><li>Writing technical specifications (DAT)</li><li>Participation in the integration of new software</li><li>Control of project releases with technical and integration teams</li><li>Leading a team across multiple projects</li></ul><p><strong>Tools:</strong> Visual Studio 2015, TFS 2013</p><p><strong>Technologies:</strong> ASP.Net MVC5, C# 5 / 6, JQuery, SignalR, WebAPI, Azure</p>",
-    "full_description_fr": "<p><strong>Ingénieur consultant</strong> travaillant sur des systèmes d'assurance, définition des modèles IARD et intégration des WebAPI et WebServices, gestion de l'intégration continue et DevOps.</p><ul><li>Élaboration des flux de données</li><li>Rédaction des documents DAT et dossiers d'architecture technique</li><li>Participation à l’intégration des logiciels</li><li>Intégration continue et pratiques DevOps</li></ul><p><strong>Outils :</strong> Visual Studio 2015, TFS 2013</p><p><strong>Technologies :</strong> ASP.Net MVC5, C# 5 / 6, JQuery, SignalR, WebAPI, Azure</p>",
-    "full_description_ar": "<p><strong>مهندس استشاري</strong> العمل على أنظمة التأمين، تحديد نماذج IARD ودمج WebAPI وWebServices، إدارة التكامل المستمر وممارسات DevOps.</p><ul><li>إعداد تدفقات البيانات</li><li>كتابة مستندات DAT وملفات الهندسة التقنية</li><li>المشاركة في تكامل البرمجيات</li><li>التكامل المستمر وممارسات DevOps</li></ul><p><strong>الأدوات:</strong> Visual Studio 2015، TFS 2013</p><p><strong>التقنيات:</strong> ASP.Net MVC5، C# 5 / 6، JQuery، SignalR، WebAPI، Azure</p>"
-  },
-  {
-    "company": "SOCIETE GENERALE Investment Banking",
-    "industry_en": "Banking",
-    "industry_fr": "Banque",
-    "industry_ar": "البنوك",
-    "date_en": "Sep 2014 – Mar 2016",
-    "date_fr": "Sep 2014 – Mars 2016",
-    "date_ar": "سبتمبر 2014 – مارس 2016",
-    "role_en": "Senior Engineer (Paris, France)",
-    "role_fr": "Ingénieur senior (Paris, France)",
-    "role_ar": "مهندس أول (باريس، فرنسا)",
-    "highlights_en": ["Trading application development (multithreaded)","Production maintenance and server configuration","Market data connectors; socket-layer parsing; services design"],
-    "highlights_fr": ["Développement d'applications de trading (multithread)","Maintenance en production et configuration des serveurs","Connecteurs de données de marché; parsing couche socket; conception des services"],
-    "highlights_ar": ["تطوير تطبيقات تداول متعددة الخيوط","صيانة الإنتاج وتكوين الخوادم","موصلات بيانات السوق؛ تحليل طبقة المقابس؛ تصميم الخدمات"],
-    "stack": "C#, MVC5, SignalR, FIX protocol, Ultra messaging, TeamCity, SVN/CVS",
-    "full_description_en": "<p><strong>Software Engineering and Financial Benchmark Integration - (ATS - MTF)</strong></p><p><a href='https://en.wikipedia.org/wiki/Alternative_trading_system' style='word-break: break-word; display: inline-block;'>https://en.wikipedia.org/wiki/Alternative_trading_system</a></p><p>Scope of the project: Dark pool & Crossing Networks</p><p><strong>Context:</strong> Analyzing, designing, conception & developing a trading application in a multithreaded environment, maintaining production, configuring servers, and providing user support.</p><p><strong>Projects:</strong></p><ul><li><strong>Maintaining: automaton for trading system</strong><ul><li>Maintaining production environment - deliveries</li><li>Code review</li><li>Adding new features</li><li>Bug fixes</li></ul></li><li><strong>Migration to the new automaton</strong><ul><li>Reverse engineering</li><li>Adding feed connectors to get market data</li><li>Parsing and mapping to/from socket layer objects</li><li>Technical relay; contribute and discuss new solutions</li><li>Design services</li></ul></li></ul><p><strong>Tools:</strong> Visual Studio 2010 - 2013, CVS, Fiddler, SVN, TeamCity</p><p><strong>Technologies:</strong> MVC5, C# 5, JQuery, SignalR, Ultra Messaging, FIX Protocol, Fidessa (OMS)</p>",
-    "full_description_fr": "<p><strong>Intégration en ingénierie logicielle et benchmarks financiers - (ATS - MTF)</strong></p><p><a href='https://en.wikipedia.org/wiki/Alternative_trading_system' style='word-break: break-word; display: inline-block;'>https://en.wikipedia.org/wiki/Alternative_trading_system</a></p><p>Portée du projet : Dark pool & Crossing Networks</p><p><strong>Contexte :</strong> Étude, conception et développement des applications de trading, maintenances applicatives.</p><p><strong>Projet Migration et consolidation des automates de trading (PPX)</strong></p><ul><li>Méthodologie<ul><li>TDD</li></ul></li><li>Développement, Codage et Test<ul><li>Codage de l’application</li><li>Implémentation des interfaces graphiques</li><li>Écriture des tests unitaires</li></ul></li></ul><p><strong>Projet simulateur de marché</strong></p><ul><li>Méthodologie<ul><li>TDD / BDD</li></ul></li><li>Architecture<ul><li>Configuration du serveur de build</li><li>Configuration du serveur de contrôle de code source</li><li>Ajout des politiques de qualité de code « stylecop »</li><li>Choix des librairies et des outils</li></ul></li><li>Conception<ul><li>Définir les composants applicatifs</li><li>Conception du moteur de calcul</li><li>Conception des services utilisés</li><li>Définir les « EndPoint » des services</li><li>Conception de la couche communication</li><li>TAP (modèle asynchrone basé sur les tâches)</li></ul></li><li>Développement, Codage et Test<ul><li>Codage de l’application</li><li>Écriture des tests unitaires</li><li>Revue de code</li></ul></li></ul><p><strong>Outils :</strong> Visual Studio 2010 / 2013, CVS, Fiddler, SVN, TeamCity, PL-SQL Oracle, Jenkins, Eclipse</p><p><strong>Technologies :</strong> C#, WPF, WinForm, ASP, Razor, MVC, Socket, Ultra-Messaging, FIX protocol, Fidessa (OMS)</p><p><strong>Méthodologie & Conception :</strong> XP</p>",
-    "full_description_ar": "<p><strong>الهندسة البرمجية ودمج المؤشرات المالية - (ATS - MTF)</strong></p><p><a href='https://en.wikipedia.org/wiki/Alternative_trading_system' style='word-break: break-word; display: inline-block;'>https://en.wikipedia.org/wiki/Alternative_trading_system</a></p><p>نطاق المشروع: Dark pool & Crossing Networks</p><p><strong>السياق:</strong> تحليل وتصميم وتطوير تطبيقات التداول، وصيانة التطبيقات، ودعم المستخدمين.</p><p><strong>مشروع ترحيل وتوحيد أتمتة التداول (PPX)</strong></p><ul><li>المنهجية<ul><li>TDD</li></ul></li><li>التطوير والبرمجة والاختبار<ul><li>برمجة التطبيق</li><li>تنفيذ واجهات المستخدم الرسومية</li><li>كتابة الاختبارات الوحدوية</li></ul></li></ul><p><strong>مشروع محاكاة السوق</strong></p><ul><li>المنهجية<ul><li>TDD / BDD</li></ul></li><li>الهندسة<ul><li>إعداد خادم البناء</li><li>إعداد خادم التحكم في المصدر</li><li>إضافة سياسات جودة الكود «stylecop»</li><li>اختيار المكتبات والأدوات</li></ul></li><li>التصميم<ul><li>تحديد مكونات التطبيق</li><li>تصميم محرك الحساب</li><li>تصميم الخدمات المستخدمة</li><li>تحديد نقاط النهاية للخدمات (EndPoint)</li><li>تصميم طبقة الاتصال</li><li>TAP (نموذج غير متزامن قائم على المهام)</li></ul></li><li>التطوير والبرمجة والاختبار<ul><li>برمجة التطبيق</li><li>كتابة الاختبارات الوحدوية</li><li>مراجعة الكود</li></ul></li></ul><p><strong>الأدوات:</strong> Visual Studio 2010 / 2013، CVS، Fiddler، SVN، TeamCity، PL-SQL Oracle، Jenkins، Eclipse</p><p><strong>التقنيات:</strong> C#، WPF، WinForm، ASP، Razor، MVC، Socket، Ultra-Messaging، بروتوكول FIX، Fidessa (OMS)</p><p><strong>المنهجية والتصميم:</strong> XP</p>"
-  },
-  {
-    "company": "INVIVO",
-    "industry_en": "Agriculture Cooperative",
-    "industry_fr": "Coopérative agricole",
-    "industry_ar": "التعاون الزراعي",
-    "date_en": "Feb 2011 – Sep 2014",
-    "date_fr": "Fév 2011 – Sep 2014",
-    "date_ar": "فبراير 2011 – سبتمبر 2014",
-    "role_en": "Senior .NET Consultant (Paris, France)",
-    "role_fr": "Consultant .NET senior (Paris, France)",
-    "role_ar": "استشاري ‎.NET‎ أول (باريس، فرنسا)",
-    "highlights_en": ["WPF modules using PRISM/MVVM; SQL Server & EF","WCF/REST calculation engine; reverse engineering from Pascal/Delphi","Silverlight repositories; MVC3 web service for SQL replication"],
-    "highlights_fr": ["Modules WPF utilisant PRISM/MVVM; SQL Server & EF","Moteur de calcul WCF/REST; ingénierie inverse depuis Pascal/Delphi","Répertoires Silverlight; service web MVC3 pour réplication SQL"],
-    "highlights_ar": ["وحدات WPF باستخدام PRISM/MVVM; SQL Server & EF","محرك حساب WCF/REST; هندسة عكسية من Pascal/Delphi","مستودعات Silverlight; خدمة ويب MVC3 لتكرار SQL"],
-    "stack": "C#, WPF, MVVM, PRISM, WCF, REST, Silverlight, MVC3, SQL Server, TFS",
-    "full_description_en": "<p><strong>Agriculture Services and Software Development for France Agriculture transformation - Precision agriculture</strong></p><p><a href='https://en.wikipedia.org/wiki/Precision_agriculture' style='word-break: break-word; display: inline-block;'>https://en.wikipedia.org/wiki/Precision_agriculture</a></p><p>Development of a set of applications designed for cooperatives.</p><p><strong>WPF Projects:</strong> Development of three modules in the PRISM application.</p><ul><li>Client Communication – understanding of the need</li><li>Design and realizing of Proof of Concept<ul><li>Database design (schema, procedures)</li><li>Realizing mock-up UI with Balsamiq-Mockup</li><li>Drafting of technical specifications – use cases, class diagram ...</li></ul></li><li>Development, Coding, and Testing<ul><li>Realization of graphical interfaces</li><li>Implementation of stored procedures</li><li>Implementation of business logic</li><li>Implementation of unit tests via NUnit, Mock</li></ul></li><li>Technical Relay<ul><li>Identify the technical limitations of the architecture</li><li>Contribute to the addition of features to the Framework</li><li>Participate in the estimation of the projects</li></ul></li><li>Steering<ul><li>Ensure the rise of development skills</li><li>Control the quality of the code</li></ul></li></ul><p><strong>Tools:</strong> Visual Studio 2008 / 2010, TFS, Microsoft Blend, Telerik</p><p><strong>Technologies:</strong> C# 3.0 / 4.0, WPF, MVVM, PRISM, Entity Framework, SQL Server 2008 R2 / Express</p><p><strong>WCF - REST Project:</strong> Design and development of a calculation engine to predict disease in an agricultural cycle.</p><ul><li>Reverse engineering<ul><li>Analyze the code of the previous application developed in Pascal</li><li>Reproduce the application using Delphi</li><li>Validate the inputs/outputs of the application with the existing software</li><li>Study of the volume of data exchanged by the Web Service</li></ul></li><li>Conception<ul><li>Database design</li><li>Design of business objects</li><li>Specify the inputs of the HTTP verbs in the REST architecture</li><li>Drafting the technical documents</li></ul></li><li>Implementation<ul><li>Implementation of stored procedures</li><li>Realization of graphical interfaces</li><li>Implementation of business logic</li><li>Validation tests</li></ul></li><li>Integration<ul><li>Settings of the IIS and WCF, for compatibility with the new software</li><li>Validation tests</li></ul></li></ul><p><strong>Tools:</strong> Team Foundation Server 2008, Visual Studio 2010, Embarcadero Delphi, Fiddler, IIS</p><p><strong>Technologies:</strong> C#, WCF, Pascal</p><p><strong>Silverlight Projects:</strong> Design and development of a repository of crops and varieties and a repository of fertilizers.</p><ul><li>Customer communication – understanding the need</li><li>Architecture / Conception<ul><li>Study possible technical solutions</li><li>The reaction of technical specifications</li><li>Design of databases (schema, stored procedures)</li></ul></li><li>Development – coding<ul><li>Implementation of the architecture</li><li>Coding of the crafts classes</li><li>Creation of graphical interfaces</li><li>Implementation of stored procedures</li></ul></li></ul><p><strong>Tools:</strong> SQL Server 2008 R2, Team Foundation Server 2008, Visual Studio 2008 / 2010, Fiddler</p><p><strong>Technologies:</strong> C# .NET 3.5 / 4.0, Silverlight, RIA Services (WCF), MVVM, Entity Framework 4</p><p><strong>WCF – Web MVC 3 Projects:</strong> Design and development of a Web Service to force SQL Server replication.</p><ul><li>Analysis of the issue and realization of the POC<ul><li>Study of scenarios of replication errors</li><li>Realizing the Proof of Concept to work around the replication issues</li></ul></li><li>Conception<ul><li>Writing technical specifications</li><li>Web service design</li><li>Design of database</li><li>SQL Server Setup</li><li>Validation of the design by the DBA</li></ul></li><li>Development<ul><li>Implementing stored procedures</li><li>Implementation of the Web service</li></ul></li><li>Test / Integration<ul><li>Validation</li></ul></li></ul><p><strong>Tools:</strong> Visual Studio 2010, SQL Server 2008 R2 Express / Enterprise, Team Foundation Server 2008</p><p><strong>Technologies:</strong> C#.NET, WCF, MVC3, jQuery</p><p><strong>Other Projects:</strong></p><ul><li>Maintenance of older applications in WPF</li><li>SharePoint 2010 deployment / MOSS (to centralize technical documents)</li><li>Team Foundation Server (deployment and project management)</li><li>Virtualization - Hyper V (qualification of applications platform)</li></ul>",
-    "full_description_fr": "<p><strong>Services agricoles et développement logiciel pour la France Transformation agricole - Agriculture de précision</strong></p><p><a href='https://en.wikipedia.org/wiki/Precision_agriculture' style='word-break: break-word; display: inline-block;'>https://en.wikipedia.org/wiki/Precision_agriculture</a></p><p>Développement d’un ensemble d’applications destiné aux coopératives.</p><p><strong>Projets WPF:</strong> Développement de trois modules dans un progiciel de conseil et optimisation agronome.</p><ul><li>Communication client – compréhension du besoin</li><li>Conception et réalisation des Proof of Concept<ul><li>Conception de la base de données</li><li>Réalisation des maquettes d’interfaces graphiques avec Balsamiq Mockup</li><li>Rédaction des spécifications techniques : diagrammes des classes, des cas d’utilisations...</li></ul></li><li>Développement, codage et test<ul><li>Réalisation des interfaces graphiques</li><li>Implémentation des procédures stockées</li><li>Implémentation de la logique métier</li><li>Implémentation des tests unitaires via NUnit, Mock</li></ul></li><li>Relais technique<ul><li>Cerner les limitations techniques de l’architecture</li><li>Contribuer à l’ajout des fonctionnalités au Framework</li><li>Participer au chiffrage des projets</li></ul></li><li>Pilotage des développeurs<ul><li>Assurer la montée en compétences</li><li>Contrôler la qualité du code</li></ul></li></ul><p><strong>Outils :</strong> Team Foundation Server 2008, Visual Studio 2008 / 2010 / 2012, Microsoft Expression Blend</p><p><strong>Technologies :</strong> WPF 3.0 / 4.0, MVVM, PRISM, Entity Framework, SQL Server 2008 Express</p><p><strong>Méthodologie & Conception :</strong> Scrum, UML, Merise</p><p><strong>Résultat :</strong> Les modules en cours d’utilisation sur le portail des techniciens</p><p><strong>Projet WCF - REST :</strong> Conception et développement d’un moteur de calcul pour prévoir des maladies au cours d’un cycle agricole et développement d’un WebService pour être consommé par un logiciel développé par l’équipe R&D.</p><ul><li>Rétro ingénierie<ul><li>Analyser le code de l’ancienne application développée en Pascal</li><li>Reproduire l’application en utilisant Delphi</li><li>Valider les entrées / sorties de l’application avec le logiciel existant</li><li>Étude de la volémie des données échangées par le Web Service</li></ul></li><li>Conception<ul><li>Conception de la base de données</li><li>Conception des objets métiers</li><li>Spécifier les entrées / sorties des verbes HTTP dans le cadre de l’architecture REST</li><li>Rédaction des documents techniques</li></ul></li><li>Implémentation<ul><li>Implémentation des procédures stockées</li><li>Réalisation des interfaces graphiques</li><li>Implémentation de la logique métier</li><li>Tests de validation</li></ul></li><li>Intégration<ul><li>Paramétrages du serveur IIS et WCF pour compatibilité avec le nouveau logiciel</li><li>Tests de validation</li></ul></li></ul><p><strong>Outils :</strong> Team Foundation Server 2008, Visual Studio 2008 / 2010 / 2012, Embarcadero Delphi, Fiddler, IIS</p><p><strong>Technologies :</strong> WCF</p><p><strong>Méthodologies & Conception :</strong> XP</p><p><strong>Projets Silverlight :</strong> Développement d’un référentiel des variétés et cultures et d’un référentiel des engrais.</p><ul><li>Communication client – compréhension du besoin</li><li>Architecture / Conception<ul><li>Étudier les solutions techniques possibles</li><li>Réaction des spécifications techniques</li><li>Conception des bases de données</li></ul></li><li>Développement logiciel – codage<ul><li>Mise en place de l’architecture</li><li>Codage des classes métiers</li><li>Création des interfaces graphiques</li><li>Implémentation des procédures stockées</li></ul></li></ul><p><strong>Outils :</strong> Team Foundation Server 2008, Visual Studio 2008 / 2010, Fiddler</p><p><strong>Technologies :</strong> .NET 3.5 / 4.0, Silverlight, RIA Services (WCF), MVVM, Entity Framework 4, SQL Server 2008 R2</p><p><strong>Projet WCF – Web MVC 3 :</strong> Conception / développement d’un Service Web pour forcer la réplication SQL Server et back-office d’administration.</p><ul><li>Analyse de la problématique et réalisation des POC<ul><li>Étude des scénarios d’erreurs de réplication</li><li>Réalisation des Proof of Concept pour contourner les problématiques de la réplication</li></ul></li><li>Conception<ul><li>Rédaction des spécifications techniques</li><li>Conception du service Web</li><li>Conception de la base de données</li><li>Paramétrage du serveur SQL</li><li>Validation de la conception par les DBA</li></ul></li><li>Développement<ul><li>Implémenter les procédures stockées</li><li>Implémentation du service Web</li></ul></li><li>Test / Intégration<ul><li>Validation sur l’environnement de qualification</li><li>Injection de l’application cliente au démarrage</li></ul></li></ul><p><strong>Outils :</strong> Team Foundation Server 2008, Visual Studio 2008 / 2010 / 2012, Fiddler</p><p><strong>Technologies :</strong> WCF, MVC3, JQuery, SQL Server 2008 R2 Express / Enterprise, Team Foundation Server 2008</p><p><strong>Méthodologies & Conception :</strong> XP, UML, Merise</p><p><strong>Autres Projets :</strong></p><ul><li>Maintenance des anciennes applications en WPF</li><li>Déploiement SharePoint 2010 / MOSS (pour centraliser les documents techniques)</li><li>Team Foundation Server (déploiement et gestion projet)</li><li>Virtualisation – Hyper V (plateforme de qualification des applications)</li></ul>",
-    "full_description_ar": "<p><strong>الخدمات الزراعية وتطوير البرمجيات لتحويل الزراعة في فرنسا - الزراعة الدقيقة</strong></p><p><a href='https://en.wikipedia.org/wiki/Precision_agriculture' style='word-break: break-word; display: inline-block;'>https://en.wikipedia.org/wiki/Precision_agriculture</a></p><p>تطوير مجموعة من التطبيقات المخصصة للتعاونيات.</p><p><strong>مشاريع WPF:</strong> تطوير ثلاثة وحدات في برنامج استشاري وتحسين الإنتاج الزراعي.</p><ul><li>التواصل مع العميل – فهم الاحتياجات</li><li>التصميم وتنفيذ Proof of Concept<ul><li>تصميم قاعدة البيانات</li><li>إنشاء نماذج واجهات المستخدم باستخدام Balsamiq Mockup</li><li>إعداد المواصفات التقنية: مخططات الفئات وحالات الاستخدام...</li></ul></li><li>التطوير والبرمجة والاختبار<ul><li>إنشاء الواجهات الرسومية</li><li>تنفيذ الإجراءات المخزنة</li><li>تنفيذ المنطق البرمجي</li><li>تنفيذ الاختبارات الوحدوية باستخدام NUnit و Mock</li></ul></li><li>الدعم الفني<ul><li>تحديد القيود التقنية للهندسة</li><li>المساهمة في إضافة الميزات إلى الإطار البرمجي</li><li>المشاركة في تقدير المشاريع</li></ul></li><li>إدارة المطورين<ul><li>ضمان رفع مستوى المهارات</li><li>مراقبة جودة الكود</li></ul></li></ul><p><strong>الأدوات:</strong> Team Foundation Server 2008، Visual Studio 2008 / 2010 / 2012، Microsoft Expression Blend</p><p><strong>التقنيات:</strong> WPF 3.0 / 4.0، MVVM، PRISM، Entity Framework، SQL Server 2008 Express</p><p><strong>المنهجية والتصميم:</strong> Scrum، UML، Merise</p><p><strong>النتيجة:</strong> الوحدات مستخدمة حاليًا على بوابة الفنيين</p><p><strong>مشروع WCF - REST:</strong> تصميم وتطوير محرك حساب للتنبؤ بالأمراض خلال دورة زراعية، وتطوير خدمة ويب لاستخدامها من قبل برنامج الفريق البحث والتطوير.</p><ul><li>الهندسة العكسية<ul><li>تحليل كود التطبيق القديم المطور بـ Pascal</li><li>إعادة إنتاج التطبيق باستخدام Delphi</li><li>التحقق من المدخلات والمخرجات مع البرنامج الحالي</li><li>دراسة حجم البيانات المتبادلة عبر خدمة الويب</li></ul></li><li>التصميم<ul><li>تصميم قاعدة البيانات</li><li>تصميم الكائنات البرمجية</li><li>تحديد مدخلات ومخرجات HTTP في بنية REST</li><li>إعداد الوثائق التقنية</li></ul></li><li>التنفيذ<ul><li>تنفيذ الإجراءات المخزنة</li><li>إنشاء الواجهات الرسومية</li><li>تنفيذ المنطق البرمجي</li><li>اختبارات التحقق</li></ul></li><li>التكامل<ul><li>إعداد IIS و WCF لضمان التوافق مع البرنامج الجديد</li><li>اختبارات التحقق</li></ul></li></ul><p><strong>الأدوات:</strong> Team Foundation Server 2008، Visual Studio 2008 / 2010 / 2012، Embarcadero Delphi، Fiddler، IIS</p><p><strong>التقنيات:</strong> WCF</p><p><strong>المنهجيات والتصميم:</strong> XP</p><p><strong>مشاريع Silverlight:</strong> تطوير قاعدة بيانات للأنواع والمحاصيل، وقاعدة بيانات للأسمدة.</p><ul><li>التواصل مع العميل – فهم الاحتياجات</li><li>الهندسة / التصميم<ul><li>دراسة الحلول التقنية الممكنة</li><li>مراجعة المواصفات التقنية</li><li>تصميم قواعد البيانات</li></ul></li><li>التطوير والبرمجة<ul><li>تنفيذ البنية</li><li>برمجة الفئات البرمجية</li><li>إنشاء الواجهات الرسومية</li><li>تنفيذ الإجراءات المخزنة</li></ul></li></ul><p><strong>الأدوات:</strong> Team Foundation Server 2008، Visual Studio 2008 / 2010، Fiddler</p><p><strong>التقنيات:</strong> .NET 3.5 / 4.0، Silverlight، RIA Services (WCF)، MVVM، Entity Framework 4، SQL Server 2008 R2</p><p><strong>مشروع WCF – Web MVC 3:</strong> تصميم وتطوير خدمة ويب لإجبار تكرار SQL Server وإدارة العملاء على المنصة.</p><ul><li>تحليل المشكلة وإنشاء POC<ul><li>دراسة سيناريوهات أخطاء التكرار</li><li>إنشاء Proof of Concept لتجاوز مشاكل التكرار</li></ul></li><li>التصميم<ul><li>إعداد المواصفات التقنية</li><li>تصميم خدمة الويب</li><li>تصميم قاعدة البيانات</li><li>إعداد خادم SQL</li><li>التحقق من التصميم بواسطة DBA</li></ul></li><li>التطوير<ul><li>تنفيذ الإجراءات المخزنة</li><li>تنفيذ خدمة الويب</li></ul></li><li>الاختبار / التكامل<ul><li>التحقق على بيئة الاختبار</li><li>دمج التطبيق العميل عند بدء التشغيل</li></ul></li></ul><p><strong>الأدوات:</strong> Team Foundation Server 2008، Visual Studio 2008 / 2010 / 2012، Fiddler</p><p><strong>التقنيات:</strong> WCF، MVC3، JQuery، SQL Server 2008 R2 Express / Enterprise، Team Foundation Server 2008</p><p><strong>المنهجيات والتصميم:</strong> XP، UML، Merise</p><p><strong>مشاريع أخرى:</strong></p><ul><li>صيانة التطبيقات القديمة في WPF</li><li>نشر SharePoint 2010 / MOSS (لمركزية الوثائق التقنية)</li><li>Team Foundation Server (النشر وإدارة المشاريع)</li><li>الافتراضية – Hyper V (منصة اختبار التطبيقات)</li></ul>"
-  },
-  {
-    "company": "ORANGE Business Services",
-    "industry_en": "Telecommunication",
-    "industry_fr": "Télécommunication",
-    "industry_ar": "الاتصالات",
-    "date_en": "Feb 2009 – Feb 2011",
-    "date_fr": "Fév 2009 – Fév 2011",
-    "date_ar": "فبراير 2009 – فبراير 2011",
-    "role_en": "Software Engineer (R&D, Paris, France)",
-    "role_fr": "Ingénieur logiciel (R&D, Paris, France)",
-    "role_ar": "مهندس برمجيات (البحث والتطوير، باريس، فرنسا)",
-    "highlights_en": ["Messaging migration tooling (web portal + services)","Active Directory connectors; WCF callbacks","Lotus Notes conversion & automation scripting"],
-    "highlights_fr": ["Outils de migration de messagerie (portail web + services)","Connecteurs Active Directory; WCF callbacks","Conversion Lotus Notes & scripting automatisé"],
-    "highlights_ar": ["أدوات ترحيل المراسلة (بوابة الويب + الخدمات)","موصلات Active Directory; WCF callbacks","تحويل Lotus Notes & البرمجة النصية التلقائية"],
-    "stack": "ASP.NET MVC2, WCF, AD/GPO, PowerShell, VB.NET, Lotus Script",
-    "full_description_en": "<p><strong>Project:</strong> Development of applications for administrators and system engineers for piloting and implementation of messaging systems migration.</p><ul><li>Needs analysis</li><li>Design and architecture of software components<ul><li>Database design</li><li>Component diagrams realization</li><li>Writing technical specifications</li></ul></li><li>Development of the web portal<ul><li>Creation of web services</li><li>Development of Active Directory connectors</li></ul></li></ul><p><strong>Technologies:</strong> ASP.NET (MVC2), jQuery, WCF (callbacks), Windows Services, Active Directory (GPO)</p><p><strong>Project “ClientWizard for Lotus Notes”:</strong> Update of a tool for data conversion used in migration projects, enabling the conversion of Outlook data into a Lotus Notes database.</p><ul><li>Needs analysis</li><li>Conception<ul><li>User interface design</li><li>Object model design</li><li>Writing technical specifications</li></ul></li><li>Development</li></ul><p><strong>Technologies:</strong> VB.NET, WinForms, COM components</p><p><strong>Project “WaveBox”:</strong> A centralized tool enabling automation of the migration process.</p><ul><li>Application maintenance</li><li>Feature enhancements</li></ul><p><strong>Technologies:</strong> Lotus Script, COM components</p><p><strong>Project:</strong> Creation of automation scripts for migration processes.</p><p><strong>Technologies:</strong> Active Directory, GPO, Microsoft Exchange, PowerShell, VBScript</p>",
-    "full_description_fr": "<p><strong>Projet « Système de pilotage des migrations » :</strong> Pour piloter les migrations des systèmes de messagerie, des applications clientes installées sur les postes communiquent avec un portail Web et déclenchent les actions nécessaires en arrière-plan afin d’assurer une migration transparente de Lotus vers Outlook. Le projet consiste à concevoir un portail Web permettant de superviser l’ensemble du processus de migration.</p><ul><li>Analyse de besoin</li><li>Conception et architecture des composants logiciels<ul><li>Conception des bases de données</li><li>Réalisation des diagrammes des composants</li><li>Rédaction des spécifications techniques</li></ul></li><li>Développement du portail Web<ul><li>Création des services web</li><li>Développement des connecteurs Active Directory</li></ul></li></ul><p><strong>Outils :</strong> Visual Studio 2008, Visual Studio 2010, Fiddler</p><p><strong>Technologies :</strong> ASP.NET (MVC2), jQuery, WCF (callbacks), Windows Services, Active Directory (GPO)</p><p><strong>Projet « Client Wizard for Lotus Notes » :</strong> Mise à jour d’un outil de conversion de données pour les projets de migration, permettant de convertir les données d’Outlook vers une base Lotus Notes.</p><ul><li>Analyse de besoins</li><li>Conception<ul><li>Conception des interfaces utilisateurs</li><li>Conception des modèles objets</li><li>Rédaction des spécifications techniques</li></ul></li><li>Développement</li></ul><p><strong>Technologies :</strong> VB.NET, WinForms, composants COM</p><p><strong>Projet « WaveBox » :</strong> Développement d’un outil centralisé permettant l’automatisation du processus de migration.</p><ul><li>Maintenance de l’application</li><li>Ajout de fonctionnalités</li></ul><p><strong>Technologies :</strong> Lotus Script, composants COM</p><p><strong>Projet :</strong> Création de scripts pour automatiser les migrations.</p><p><strong>Technologies :</strong> Active Directory, GPO, Microsoft Exchange, PowerShell, VBScript</p>",
-    "full_description_ar": "<p><strong>مشروع « نظام إدارة عمليات الترحيل »:</strong> يهدف المشروع إلى إدارة عمليات ترحيل أنظمة المراسلة، حيث تتواصل تطبيقات العملاء المثبّتة على أجهزة المستخدمين مع بوابة ويب مركزية لتنفيذ الإجراءات اللازمة في الخلفية، بما يضمن ترحيلاً سلسًا وشفافًا من Lotus إلى Outlook. يتمثل الهدف في تصميم بوابة ويب للإشراف الكامل على عملية الترحيل.</p><ul><li>تحليل المتطلبات</li><li>تصميم وبنية مكونات البرمجيات<ul><li>تصميم قواعد البيانات</li><li>إعداد مخططات مكونات النظام</li><li>إعداد المواصفات التقنية</li></ul></li><li>تطوير بوابة الويب<ul><li>إنشاء خدمات الويب</li><li>تطوير موصلات Active Directory</li></ul></li></ul><p><strong>الأدوات:</strong> Visual Studio 2008، Visual Studio 2010، Fiddler</p><p><strong>التقنيات:</strong> ASP.NET (MVC2)، jQuery، WCF (callbacks)، Windows Services، Active Directory (GPO)</p><p><strong>مشروع « Client Wizard for Lotus Notes »:</strong> تحديث أداة لتحويل البيانات ضمن مشاريع الترحيل، تُمكّن من تحويل بيانات Outlook إلى قاعدة بيانات Lotus Notes.</p><ul><li>تحليل المتطلبات</li><li>التصميم<ul><li>تصميم واجهات المستخدم</li><li>تصميم نماذج الكائنات</li><li>إعداد المواصفات التقنية</li></ul></li><li>التطوير</li></ul><p><strong>التقنيات:</strong> VB.NET، WinForms، مكونات COM</p><p><strong>مشروع « WaveBox »:</strong> تطوير أداة مركزية تتيح أتمتة عملية الترحيل.</p><ul><li>صيانة التطبيق</li><li>إضافة ميزات جديدة</li></ul><p><strong>التقنيات:</strong> Lotus Script، مكونات COM</p><p><strong>مشروع:</strong> إنشاء سكربتات لأتمتة عمليات الترحيل.</p><p><strong>التقنيات:</strong> Active Directory، GPO، Microsoft Exchange، PowerShell، VBScript</p>"
-  }
-
+      "company": "CANDRIAM",
+      "industry_en": "Asset Management",
+      "industry_fr": "Gestion d'actifs",
+      "industry_ar": "إدارة الأصول",
+      "date_en": "May 2021 – Oct 2022",
+      "date_fr": "Mai 2021 – Oct 2022",
+      "date_ar": "مايو 2021 – أكتوبر 2022",
+      "role_en": "Senior Software Engineer (Paris, France)",
+      "role_fr": "Ingénieur logiciel senior (Paris, France)",
+      "role_ar": "مهندس برمجيات أول (باريس، فرنسا)",
+      "highlights_en": [
+        "Integrated new data flows (mapping multiple sources)",
+        "Refactoring and microservice architecture with bus",
+        "SSIS batch development; Service Layer services; Web API; DevOps"
+      ],
+      "highlights_fr": [
+        "Intégration de nouveaux flux de données (cartographie de multiples sources)",
+        "Refactoring et architecture microservices avec bus",
+        "Développement de batchs SSIS ; services Service Layer ; Web API ; DevOps"
+      ],
+      "highlights_ar": [
+        "دمج تدفقات بيانات جديدة (تعيين مصادر متعددة)",
+        "إعادة هيكلة الأنظمة إلى Microservices مع Bus",
+        "تطوير دفعات SSIS؛ خدمات Service Layer؛ Web API؛ DevOps"
+      ],
+      "stack": ", Oracle, PowerShell, SSIS, Service Layer, Web API, Azure, Visual Studio (2019–2022)",
+      "full_description_en": "<p><strong>Senior Software Engineer</strong> working on liquidation and buy-side funds for retirement, integrating new data flows from Belfius (Brussels), mapping multiple data sources, refactoring and defining microservices architecture with Bus, and designing business interactions with Microsoft services while following ITIL and DevOps processes.</p><ul><li>Batch development with SSIS</li><li>Web Services – Microservices</li><li>Azure infrastructure setup</li><li>Service Layer service development</li><li>Database modeling</li><li>Web API implementation</li><li>DevOps pipelines and processes</li></ul><p><strong>Tools:</strong> Visual Studio 2019–2022, Azure Components, DevSecOps</p><p><strong>Technologies:</strong> , Oracle, PowerShell as Batch</p>",
+      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> travaillant sur la liquidation et les fonds côté achat pour la retraite, intégrant le nouveau flux de données de Belfius, mappant de nombreuses sources de données, concevant le nouveau flux et l’interaction entre composants, et définissant les services Microsoft Azure en microservices.</p><ul><li>Web Services cloud</li><li>Infrastructure Azure – flux de données sur Cloud</li><li>Service Service Layer en promise</li><li>Modélisation de base de données sur Cloud</li><li>Infrastructure Data Lake Cloud</li></ul><p><strong>Outils :</strong> Visual Studio 2019, Azure DevOps, Azure Cloud Infrastructure</p><p><strong>Technologies :</strong> , Oracle, PowerShell as Batch</p>",
+      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> العمل على تصفية وصناديق الشراء للمعاشات التقاعدية، دمج تدفق البيانات الجديد من Belfius، ربط مصادر بيانات متعددة، تصميم التدفق الجديد والتفاعل بين المكونات، وتحديد خدمات Microsoft Azure باستخدام Microservices.</p><ul><li>خدمات ويب سحابية</li><li>بنية تحتية Azure – تدفق البيانات على السحابة</li><li>خدمة Service Layer في promise</li><li>نمذجة قواعد البيانات على السحابة</li><li>بنية تحتية Data Lake على السحابة</li></ul><p><strong>الأدوات:</strong> Visual Studio 2019، Azure DevOps، بنية تحتية Azure Cloud</p><p><strong>التقنيات:</strong> ، Oracle، PowerShell كـ Batch</p>"
+    },
+    {
+      "company": "SOCIETE GENERALE",
+      "industry_en": "Banking",
+      "industry_fr": "Banque",
+      "industry_ar": "البنوك",
+      "date_en": "Dec 2018 – May 2021",
+      "date_fr": "Déc 2018 – Mai 2021",
+      "date_ar": "ديسمبر 2018 – مايو 2021",
+      "role_en": "Senior Engineer & Architect (Paris, France)",
+      "role_fr": "Ingénieur senior & Architecte (Paris, France)",
+      "role_ar": "مهندس ومعماري أول (باريس، فرنسا)",
+      "highlights_en": [
+        "IT provisioning infrastructures and annexed services",
+        "Architecture definition and connector updates",
+        "SSO preparation, middleware/server prep, reverse engineering",
+        "Technical liaison with admins and engineering teams"
+      ],
+      "highlights_fr": [
+        "Infrastructures de provisioning IT et services annexes",
+        "Définition de l'architecture et mise à jour des connecteurs",
+        "Préparation SSO, middleware/serveurs, ingénierie inverse",
+        "Lien technique avec les administrateurs et équipes d'ingénierie"
+      ],
+      "highlights_ar": [
+        "البنى التحتية لتوفير خدمات IT والخدمات الملحقة",
+        "تحديد المعمارية وتحديث الموصلات",
+        "التحضير لتكامل SSO، Middleware/الخوادم، هندسة عكسية",
+        "حلقة وصل تقنية مع مسؤولي النظام وفرق الهندسة"
+      ],
+      "stack": "C++, , Java, PowerShell, Visual Studio, TFS",
+      "full_description_en": "<p><strong>Senior Engineer & Architect</strong> analyzing, designing, and defining new software architecture, updating connectors, integrating new tools and software, and provisioning Microsoft software.</p><ul><li>Provisioning: updating components, preparing infrastructure for new software, preparing SSO for new tools, preparing application middleware and servers</li><li>Modeling and flow: reverse engineering, technical relay, contributing and discussing new solutions, designing services, creating architecture documents, defining main nonfunctional requirements</li><li>Solution and integration: studying technical requirements of software integration from other teams, relaying with administrators and technical engineers, kinematic analysis</li></ul><p><strong>Tools:</strong> Visual Studio 2015, TFS 2013</p><p><strong>Technologies:</strong> C++, , Java, PowerShell as Batch</p>",
+      "full_description_fr": "<p><strong>Ingénieur senior & Architecte</strong> analyse et définition de la nouvelle architecture des composants logiciels, intégration des nouveaux outils pour le provisioning et définition des workflows.</p><ul><li>Provisioning : mise à jour des composants Web API avec le fournisseur d’autorisation, préparation de l’infrastructure pour les nouveaux logiciels, adaptation du SSO pour les nouveaux outils, développement en C++ des composants système seamless Citrix, développement des API  des composants applicatifs</li><li>Modélisation et flux : ingénierie inverse, relais technique, documentation d’architecture, définition des prérequis non fonctionnels</li><li>Solution et intégration : étude technique et cinématique</li></ul><p><strong>Outils :</strong> Visual Studio 2015-2017-2019, Azure DevOps, Azure</p><p><strong>Technologies :</strong> C++, , systèmes d'entreprise, Java, PowerShell as Batch</p>",
+      "full_description_ar": "<p><strong>مهندس  أول</strong> تحليل وتعريف المعمارية الجديدة لمكونات البرمجيات، دمج الأدوات الجديدة للـ provisioning وتعريف سير العمل.</p><ul><li>Provisioning: تحديث مكونات Web API مع موفر التفويض، إعداد البنية التحتية للبرمجيات الجديدة، تهيئة SSO للأدوات الجديدة، تطوير مكونات النظام Seamless Citrix بلغة C++، تطوير API للمكونات التطبيقية بلغة </li><li>النمذجة وتدفق العمل: الهندسة العكسية، حلقة وصل تقنية، وثائق المعمارية، تحديد المتطلبات غير الوظيفية</li><li>الحلول والتكامل: دراسة المتطلبات التقنية والتحليل الحركي (Cinématique)</li></ul><p><strong>الأدوات:</strong> Visual Studio 2015-2017-2019، Azure DevOps، Azure</p><p><strong>التقنيات:</strong> C++، ، systèmes d'entreprise، Java، PowerShell كـ Batch</p>"
+    },
+    {
+      "company": "GENERALI (EA Holding)",
+      "industry_en": "Insurance",
+      "industry_fr": "Assurance",
+      "industry_ar": "التأمين",
+      "date_en": "Jun 2017 – Dec 2018",
+      "date_fr": "Juin 2017 – Déc 2018",
+      "date_ar": "يونيو 2017 – ديسمبر 2018",
+      "role_en": "Senior Software Engineer (Paris, France)",
+      "role_fr": "Ingénieur logiciel senior (Paris, France)",
+      "role_ar": "مهندس برمجيات أول (باريس، فرنسا)",
+      "highlights_en": [
+        "Developed and maintained holding applications",
+        "Technical specs, unit tests, code reviews, release control",
+        "Worked with MVC5, SignalR, WebAPI and Azure"
+      ],
+      "highlights_fr": [
+        "Développement et maintenance des applications holding",
+        "Spécifications techniques, tests unitaires, revues de code, contrôle des versions",
+        "Travail avec MVC5, SignalR, WebAPI et Azure"
+      ],
+      "highlights_ar": [
+        "تطوير وصيانة تطبيقات الشركة القابضة",
+        "المواصفات التقنية، اختبارات الوحدات، مراجعة الكود، إدارة الإصدار",
+        "العمل مع MVC5، SignalR، WebAPI وAzure"
+      ],
+      "stack": "ASP.NET MVC5, , jQuery, SignalR, WebAPI, Azure, Visual Studio, TFS",
+      "full_description_en": "<p><strong>Senior Software Engineer</strong> engineering and developing software, maintaining a set of applications for clients and affiliates of the holding.</p><ul><li>Elaboration of technical solutions for functional and scalability requirements</li><li>Writing technical specifications</li><li>Development of the solution</li><li>Writing unit tests</li><li>Participation in code reviews of other developers</li><li>Control of project releases with technical and integration teams</li><li>Task reporting</li></ul><p><strong>Tools:</strong> Visual Studio 2015, TFS 2013</p><p><strong>Technologies:</strong> ASP.Net MVC5,  5 / 6, JQuery, SignalR, WebAPI, Azure</p>",
+      "full_description_fr": "<p><strong>Ingénieur logiciel senior</strong> étude et développement .Net, maintenances applicatives des applications de la holding.</p><ul><li>Élaboration des solutions techniques pour répondre aux besoins fonctionnels et aux enjeux de performance</li><li>Rédaction des spécifications techniques</li><li>Réalisation des développements selon les spécifications et la solution d’implémentation définie</li><li>Réalisation des tests unitaires</li><li>Réalisation des tests d’intégration avant livraison en recette</li><li>Participation aux revues de code d’autres développeurs</li><li>Pilotage des mises en production des projets en collaboration avec les équipes d’intégration technique et d’exploitation</li><li>Reporting d’avancement des tâches confiées</li></ul><p><strong>Outils :</strong> Visual Studio 2015, TFS 2013</p><p><strong>Technologies :</strong> , C++, Razor, ASP.NET MVC .Net, Service Layer, JQuery, AngularJS</p><p><strong>Méthodologie & Conception :</strong> XP</p>",
+      "full_description_ar": "<p><strong>مهندس برمجيات أول</strong> دراسة وتطوير .Net، وصيانة تطبيقات الشركة القابضة.</p><ul><li>إعداد الحلول التقنية لتلبية الاحتياجات الوظيفية ومتطلبات الأداء</li><li>كتابة المواصفات التقنية</li><li>تطوير الحلول وفق المواصفات والحلول المعتمدة</li><li>إجراء اختبارات الوحدات</li><li>إجراء اختبارات التكامل قبل التسليم للاختبار</li><li>المشاركة في مراجعات الكود للمطورين الآخرين</li><li>إدارة عمليات الإنتاج للمشاريع بالتعاون مع فرق التكامل الفني والتشغيل</li><li>إعداد تقارير متابعة التقدم في المهام الموكلة</li></ul><p><strong>الأدوات:</strong> Visual Studio 2015، TFS 2013</p><p><strong>التقنيات:</strong> ، C++، Razor، ASP.NET MVC .Net، Service Layer، JQuery، AngularJS</p><p><strong>المنهجية والتصميم:</strong> XP</p>"
+    },
+    {
+      "company": "AXA",
+      "industry_en": "Insurance",
+      "industry_fr": "Assurance",
+      "industry_ar": "التأمين",
+      "date_en": "Mar 2016 – Mar 2017",
+      "date_fr": "Mars 2016 – Mars 2017",
+      "date_ar": "مارس 2016 – مارس 2017",
+      "role_en": "Consultant Engineer (Paris, France)",
+      "role_fr": "Ingénieur consultant (Paris, France)",
+      "role_ar": "مهندس استشاري (باريس، فرنسا)",
+      "highlights_en": [
+        "Defined IARD model and integrated sales software",
+        "Led a team of 5 across multiple projects",
+        "Specs (DAT), integration, release control"
+      ],
+      "highlights_fr": [
+        "Définition du modèle IARD et intégration des logiciels de vente",
+        "Gestion d'une équipe de 5 sur plusieurs projets",
+        "Spécifications (DAT), intégration, contrôle des versions"
+      ],
+      "highlights_ar": [
+        "تحديد نموذج IARD ودمج برامج المبيعات",
+        "قيادة فريق مكون من 5 على عدة مشاريع",
+        "المواصفات (DAT)، التكامل، التحكم في الإصدارات"
+      ],
+      "stack": "ASP.NET MVC5, , jQuery, SignalR, WebAPI, Azure, Visual Studio, TFS",
+      "full_description_en": "<p><strong>Consultant Engineer</strong> working on insurance systems, defining IARD models, integrating sales software, leading a team across multiple projects, producing technical specifications, supervising integration and releases.</p><ul><li>Elaboration of technical solutions</li><li>Writing technical specifications (DAT)</li><li>Participation in the integration of new software</li><li>Control of project releases with technical and integration teams</li><li>Leading a team across multiple projects</li></ul><p><strong>Tools:</strong> Visual Studio 2015, TFS 2013</p><p><strong>Technologies:</strong> ASP.Net MVC5,  5 / 6, JQuery, SignalR, WebAPI, Azure</p>",
+      "full_description_fr": "<p><strong>Ingénieur consultant</strong> travaillant sur des systèmes d'assurance, définition des modèles IARD et intégration des WebAPI et WebServices, gestion de l'intégration continue et DevOps.</p><ul><li>Élaboration des flux de données</li><li>Rédaction des documents DAT et dossiers d'architecture technique</li><li>Participation à l’intégration des logiciels</li><li>Intégration continue et pratiques DevOps</li></ul><p><strong>Outils :</strong> Visual Studio 2015, TFS 2013</p><p><strong>Technologies :</strong> ASP.Net MVC5,  5 / 6, JQuery, SignalR, WebAPI, Azure</p>",
+      "full_description_ar": "<p><strong>مهندس استشاري</strong> العمل على أنظمة التأمين، تحديد نماذج IARD ودمج WebAPI وWebServices، إدارة التكامل المستمر وممارسات DevOps.</p><ul><li>إعداد تدفقات البيانات</li><li>كتابة مستندات DAT وملفات الهندسة التقنية</li><li>المشاركة في تكامل البرمجيات</li><li>التكامل المستمر وممارسات DevOps</li></ul><p><strong>الأدوات:</strong> Visual Studio 2015، TFS 2013</p><p><strong>التقنيات:</strong> ASP.Net MVC5،  5 / 6، JQuery، SignalR، WebAPI، Azure</p>"
+    },
+    {
+      "company": "SOCIETE GENERALE Investment Banking",
+      "industry_en": "Banking",
+      "industry_fr": "Banque",
+      "industry_ar": "البنوك",
+      "date_en": "Sep 2014 – Mar 2016",
+      "date_fr": "Sep 2014 – Mars 2016",
+      "date_ar": "سبتمبر 2014 – مارس 2016",
+      "role_en": "Senior Engineer (Paris, France)",
+      "role_fr": "Ingénieur senior (Paris, France)",
+      "role_ar": "مهندس أول (باريس، فرنسا)",
+      "highlights_en": [
+        "Trading application development (multithreaded)",
+        "Production maintenance and server configuration",
+        "Market data connectors; socket-layer parsing; services design"
+      ],
+      "highlights_fr": [
+        "Développement d'applications de trading (multithread)",
+        "Maintenance en production et configuration des serveurs",
+        "Connecteurs de données de marché; parsing couche socket; conception des services"
+      ],
+      "highlights_ar": [
+        "تطوير تطبيقات تداول متعددة الخيوط",
+        "صيانة الإنتاج وتكوين الخوادم",
+        "موصلات بيانات السوق؛ تحليل طبقة المقابس؛ تصميم الخدمات"
+      ],
+      "stack": ", MVC5, SignalR, FIX protocol, Ultra messaging, CI Server, SVN/CVS",
+      "full_description_en": "<p><strong>Software Engineering and Financial Benchmark Integration - (ATS - MTF)</strong></p><p><a href='https://en.wikipedia.org/wiki/Alternative_trading_system' style='word-break: break-word; display: inline-block;'>https://en.wikipedia.org/wiki/Alternative_trading_system</a></p><p>Scope of the project: Dark pool & Crossing Networks</p><p><strong>Context:</strong> Analyzing, designing, conception & developing a trading application in a multithreaded environment, maintaining production, configuring servers, and providing user support.</p><p><strong>Projects:</strong></p><ul><li><strong>Maintaining: automaton for trading system</strong><ul><li>Maintaining production environment - deliveries</li><li>Code review</li><li>Adding new features</li><li>Bug fixes</li></ul></li><li><strong>Migration to the new automaton</strong><ul><li>Reverse engineering</li><li>Adding feed connectors to get market data</li><li>Parsing and mapping to/from socket layer objects</li><li>Technical relay; contribute and discuss new solutions</li><li>Design services</li></ul></li></ul><p><strong>Tools:</strong> Visual Studio 2010 - 2013, CVS, Fiddler, SVN, CI Server</p><p><strong>Technologies:</strong> MVC5,  5, JQuery, SignalR, Ultra Messaging, FIX Protocol, Fidessa (OMS)</p>",
+      "full_description_fr": "<p><strong>Intégration en ingénierie logicielle et benchmarks financiers - (ATS - MTF)</strong></p><p><a href='https://en.wikipedia.org/wiki/Alternative_trading_system' style='word-break: break-word; display: inline-block;'>https://en.wikipedia.org/wiki/Alternative_trading_system</a></p><p>Portée du projet : Dark pool & Crossing Networks</p><p><strong>Contexte :</strong> Étude, conception et développement des applications de trading, maintenances applicatives.</p><p><strong>Projet Migration et consolidation des automates de trading (PPX)</strong></p><ul><li>Méthodologie<ul><li>TDD</li></ul></li><li>Développement, Codage et Test<ul><li>Codage de l’application</li><li>Implémentation des interfaces graphiques</li><li>Écriture des tests unitaires</li></ul></li></ul><p><strong>Projet simulateur de marché</strong></p><ul><li>Méthodologie<ul><li>TDD / BDD</li></ul></li><li>Architecture<ul><li>Configuration du serveur de build</li><li>Configuration du serveur de contrôle de code source</li><li>Ajout des politiques de qualité de code « stylecop »</li><li>Choix des librairies et des outils</li></ul></li><li>Conception<ul><li>Définir les composants applicatifs</li><li>Conception du moteur de calcul</li><li>Conception des services utilisés</li><li>Définir les « EndPoint » des services</li><li>Conception de la couche communication</li><li>TAP (modèle asynchrone basé sur les tâches)</li></ul></li><li>Développement, Codage et Test<ul><li>Codage de l’application</li><li>Écriture des tests unitaires</li><li>Revue de code</li></ul></li></ul><p><strong>Outils :</strong> Visual Studio 2010 / 2013, CVS, Fiddler, SVN, CI Server, PL-SQL Oracle, Jenkins, Eclipse</p><p><strong>Technologies :</strong> , WPF, WinForm, ASP, Razor, MVC, Socket, Ultra-Messaging, FIX protocol, Fidessa (OMS)</p><p><strong>Méthodologie & Conception :</strong> XP</p>",
+      "full_description_ar": "<p><strong>الهندسة البرمجية ودمج المؤشرات المالية - (ATS - MTF)</strong></p><p><a href='https://en.wikipedia.org/wiki/Alternative_trading_system' style='word-break: break-word; display: inline-block;'>https://en.wikipedia.org/wiki/Alternative_trading_system</a></p><p>نطاق المشروع: Dark pool & Crossing Networks</p><p><strong>السياق:</strong> تحليل وتصميم وتطوير تطبيقات التداول، وصيانة التطبيقات، ودعم المستخدمين.</p><p><strong>مشروع ترحيل وتوحيد أتمتة التداول (PPX)</strong></p><ul><li>المنهجية<ul><li>TDD</li></ul></li><li>التطوير والبرمجة والاختبار<ul><li>برمجة التطبيق</li><li>تنفيذ واجهات المستخدم الرسومية</li><li>كتابة الاختبارات الوحدوية</li></ul></li></ul><p><strong>مشروع محاكاة السوق</strong></p><ul><li>المنهجية<ul><li>TDD / BDD</li></ul></li><li>الهندسة<ul><li>إعداد خادم البناء</li><li>إعداد خادم التحكم في المصدر</li><li>إضافة سياسات جودة الكود «stylecop»</li><li>اختيار المكتبات والأدوات</li></ul></li><li>التصميم<ul><li>تحديد مكونات التطبيق</li><li>تصميم محرك الحساب</li><li>تصميم الخدمات المستخدمة</li><li>تحديد نقاط النهاية للخدمات (EndPoint)</li><li>تصميم طبقة الاتصال</li><li>TAP (نموذج غير متزامن قائم على المهام)</li></ul></li><li>التطوير والبرمجة والاختبار<ul><li>برمجة التطبيق</li><li>كتابة الاختبارات الوحدوية</li><li>مراجعة الكود</li></ul></li></ul><p><strong>الأدوات:</strong> Visual Studio 2010 / 2013، CVS، Fiddler، SVN، CI Server، PL-SQL Oracle، Jenkins، Eclipse</p><p><strong>التقنيات:</strong> ، WPF، WinForm، ASP، Razor، MVC، Socket، Ultra-Messaging، بروتوكول FIX، Fidessa (OMS)</p><p><strong>المنهجية والتصميم:</strong> XP</p>"
+    },
+    {
+      "company": "INVIVO",
+      "industry_en": "Agriculture Cooperative",
+      "industry_fr": "Coopérative agricole",
+      "industry_ar": "التعاون الزراعي",
+      "date_en": "Feb 2011 – Sep 2014",
+      "date_fr": "Fév 2011 – Sep 2014",
+      "date_ar": "فبراير 2011 – سبتمبر 2014",
+      "role_en": "Senior .NET Consultant (Paris, France)",
+      "role_fr": "Consultant .NET senior (Paris, France)",
+      "role_ar": "استشاري ‎.NET‎ أول (باريس، فرنسا)",
+      "highlights_en": [
+        "WPF modules using PRISM/MVVM; SQL Server & EF",
+        "Service Layer/REST calculation engine; reverse engineering from Pascal/Delphi",
+        "Silverlight repositories; MVC3 web service for SQL replication"
+      ],
+      "highlights_fr": [
+        "Modules WPF utilisant PRISM/MVVM; SQL Server & EF",
+        "Moteur de calcul Service Layer/REST; ingénierie inverse depuis Pascal/Delphi",
+        "Répertoires Silverlight; service web MVC3 pour réplication SQL"
+      ],
+      "highlights_ar": [
+        "وحدات WPF باستخدام PRISM/MVVM; SQL Server & EF",
+        "محرك حساب Service Layer/REST; هندسة عكسية من Pascal/Delphi",
+        "مستودعات Silverlight; خدمة ويب MVC3 لتكرار SQL"
+      ],
+      "stack": ", WPF, MVVM, PRISM, Service Layer, REST, Silverlight, MVC3, SQL Server, TFS",
+      "full_description_en": "<p><strong>Agriculture Services and Software Development for France Agriculture transformation - Precision agriculture</strong></p><p><a href='https://en.wikipedia.org/wiki/Precision_agriculture' style='word-break: break-word; display: inline-block;'>https://en.wikipedia.org/wiki/Precision_agriculture</a></p><p>Development of a set of applications designed for cooperatives.</p><p><strong>WPF Projects:</strong> Development of three modules in the PRISM application.</p><ul><li>Client Communication – understanding of the need</li><li>Design and realizing of Proof of Concept<ul><li>Database design (schema, procedures)</li><li>Realizing mock-up UI with Balsamiq-Mockup</li><li>Drafting of technical specifications – use cases, class diagram ...</li></ul></li><li>Development, Coding, and Testing<ul><li>Realization of graphical interfaces</li><li>Implementation of stored procedures</li><li>Implementation of business logic</li><li>Implementation of unit tests via NUnit, Mock</li></ul></li><li>Technical Relay<ul><li>Identify the technical limitations of the architecture</li><li>Contribute to the addition of features to the Framework</li><li>Participate in the estimation of the projects</li></ul></li><li>Steering<ul><li>Ensure the rise of development skills</li><li>Control the quality of the code</li></ul></li></ul><p><strong>Tools:</strong> Visual Studio 2008 / 2010, TFS, Microsoft Blend, Telerik</p><p><strong>Technologies:</strong>  3.0 / 4.0, WPF, MVVM, PRISM, Database ORM, SQL Server 2008 R2 / Express</p><p><strong>Service Layer - REST Project:</strong> Design and development of a calculation engine to predict disease in an agricultural cycle.</p><ul><li>Reverse engineering<ul><li>Analyze the code of the previous application developed in Pascal</li><li>Reproduce the application using Delphi</li><li>Validate the inputs/outputs of the application with the existing software</li><li>Study of the volume of data exchanged by the Web Service</li></ul></li><li>Conception<ul><li>Database design</li><li>Design of business objects</li><li>Specify the inputs of the HTTP verbs in the REST architecture</li><li>Drafting the technical documents</li></ul></li><li>Implementation<ul><li>Implementation of stored procedures</li><li>Realization of graphical interfaces</li><li>Implementation of business logic</li><li>Validation tests</li></ul></li><li>Integration<ul><li>Settings of the IIS and Service Layer, for compatibility with the new software</li><li>Validation tests</li></ul></li></ul><p><strong>Tools:</strong> Team Foundation Server 2008, Visual Studio 2010, Embarcadero Delphi, Fiddler, IIS</p><p><strong>Technologies:</strong> , Service Layer, Pascal</p><p><strong>Silverlight Projects:</strong> Design and development of a repository of crops and varieties and a repository of fertilizers.</p><ul><li>Customer communication – understanding the need</li><li>Architecture / Conception<ul><li>Study possible technical solutions</li><li>The reaction of technical specifications</li><li>Design of databases (schema, stored procedures)</li></ul></li><li>Development – coding<ul><li>Implementation of the architecture</li><li>Coding of the crafts classes</li><li>Creation of graphical interfaces</li><li>Implementation of stored procedures</li></ul></li></ul><p><strong>Tools:</strong> SQL Server 2008 R2, Team Foundation Server 2008, Visual Studio 2008 / 2010, Fiddler</p><p><strong>Technologies:</strong>  .NET 3.5 / 4.0, Silverlight, RIA Services (Service Layer), MVVM, Database ORM 4</p><p><strong>Service Layer – Web MVC 3 Projects:</strong> Design and development of a Web Service to force SQL Server replication.</p><ul><li>Analysis of the issue and realization of the POC<ul><li>Study of scenarios of replication errors</li><li>Realizing the Proof of Concept to work around the replication issues</li></ul></li><li>Conception<ul><li>Writing technical specifications</li><li>Web service design</li><li>Design of database</li><li>SQL Server Setup</li><li>Validation of the design by the DBA</li></ul></li><li>Development<ul><li>Implementing stored procedures</li><li>Implementation of the Web service</li></ul></li><li>Test / Integration<ul><li>Validation</li></ul></li></ul><p><strong>Tools:</strong> Visual Studio 2010, SQL Server 2008 R2 Express / Enterprise, Team Foundation Server 2008</p><p><strong>Technologies:</strong> .NET, Service Layer, MVC3, jQuery</p><p><strong>Other Projects:</strong></p><ul><li>Maintenance of older applications in WPF</li><li>SharePoint 2010 deployment / MOSS (to centralize technical documents)</li><li>Team Foundation Server (deployment and project management)</li><li>Virtualization - Hyper V (qualification of applications platform)</li></ul>",
+      "full_description_fr": "<p><strong>Services agricoles et développement logiciel pour la France Transformation agricole - Agriculture de précision</strong></p><p><a href='https://en.wikipedia.org/wiki/Precision_agriculture' style='word-break: break-word; display: inline-block;'>https://en.wikipedia.org/wiki/Precision_agriculture</a></p><p>Développement d’un ensemble d’applications destiné aux coopératives.</p><p><strong>Projets WPF:</strong> Développement de trois modules dans un progiciel de conseil et optimisation agronome.</p><ul><li>Communication client – compréhension du besoin</li><li>Conception et réalisation des Proof of Concept<ul><li>Conception de la base de données</li><li>Réalisation des maquettes d’interfaces graphiques avec Balsamiq Mockup</li><li>Rédaction des spécifications techniques : diagrammes des classes, des cas d’utilisations...</li></ul></li><li>Développement, codage et test<ul><li>Réalisation des interfaces graphiques</li><li>Implémentation des procédures stockées</li><li>Implémentation de la logique métier</li><li>Implémentation des tests unitaires via NUnit, Mock</li></ul></li><li>Relais technique<ul><li>Cerner les limitations techniques de l’architecture</li><li>Contribuer à l’ajout des fonctionnalités au Framework</li><li>Participer au chiffrage des projets</li></ul></li><li>Pilotage des développeurs<ul><li>Assurer la montée en compétences</li><li>Contrôler la qualité du code</li></ul></li></ul><p><strong>Outils :</strong> Team Foundation Server 2008, Visual Studio 2008 / 2010 / 2012, Microsoft Expression Blend</p><p><strong>Technologies :</strong> WPF 3.0 / 4.0, MVVM, PRISM, Database ORM, SQL Server 2008 Express</p><p><strong>Méthodologie & Conception :</strong> Scrum, UML, Merise</p><p><strong>Résultat :</strong> Les modules en cours d’utilisation sur le portail des techniciens</p><p><strong>Projet Service Layer - REST :</strong> Conception et développement d’un moteur de calcul pour prévoir des maladies au cours d’un cycle agricole et développement d’un WebService pour être consommé par un logiciel développé par l’équipe R&D.</p><ul><li>Rétro ingénierie<ul><li>Analyser le code de l’ancienne application développée en Pascal</li><li>Reproduire l’application en utilisant Delphi</li><li>Valider les entrées / sorties de l’application avec le logiciel existant</li><li>Étude de la volémie des données échangées par le Web Service</li></ul></li><li>Conception<ul><li>Conception de la base de données</li><li>Conception des objets métiers</li><li>Spécifier les entrées / sorties des verbes HTTP dans le cadre de l’architecture REST</li><li>Rédaction des documents techniques</li></ul></li><li>Implémentation<ul><li>Implémentation des procédures stockées</li><li>Réalisation des interfaces graphiques</li><li>Implémentation de la logique métier</li><li>Tests de validation</li></ul></li><li>Intégration<ul><li>Paramétrages du serveur IIS et Service Layer pour compatibilité avec le nouveau logiciel</li><li>Tests de validation</li></ul></li></ul><p><strong>Outils :</strong> Team Foundation Server 2008, Visual Studio 2008 / 2010 / 2012, Embarcadero Delphi, Fiddler, IIS</p><p><strong>Technologies :</strong> Service Layer</p><p><strong>Méthodologies & Conception :</strong> XP</p><p><strong>Projets Silverlight :</strong> Développement d’un référentiel des variétés et cultures et d’un référentiel des engrais.</p><ul><li>Communication client – compréhension du besoin</li><li>Architecture / Conception<ul><li>Étudier les solutions techniques possibles</li><li>Réaction des spécifications techniques</li><li>Conception des bases de données</li></ul></li><li>Développement logiciel – codage<ul><li>Mise en place de l’architecture</li><li>Codage des classes métiers</li><li>Création des interfaces graphiques</li><li>Implémentation des procédures stockées</li></ul></li></ul><p><strong>Outils :</strong> Team Foundation Server 2008, Visual Studio 2008 / 2010, Fiddler</p><p><strong>Technologies :</strong> .NET 3.5 / 4.0, Silverlight, RIA Services (Service Layer), MVVM, Database ORM 4, SQL Server 2008 R2</p><p><strong>Projet Service Layer – Web MVC 3 :</strong> Conception / développement d’un Service Web pour forcer la réplication SQL Server et back-office d’administration.</p><ul><li>Analyse de la problématique et réalisation des POC<ul><li>Étude des scénarios d’erreurs de réplication</li><li>Réalisation des Proof of Concept pour contourner les problématiques de la réplication</li></ul></li><li>Conception<ul><li>Rédaction des spécifications techniques</li><li>Conception du service Web</li><li>Conception de la base de données</li><li>Paramétrage du serveur SQL</li><li>Validation de la conception par les DBA</li></ul></li><li>Développement<ul><li>Implémenter les procédures stockées</li><li>Implémentation du service Web</li></ul></li><li>Test / Intégration<ul><li>Validation sur l’environnement de qualification</li><li>Injection de l’application cliente au démarrage</li></ul></li></ul><p><strong>Outils :</strong> Team Foundation Server 2008, Visual Studio 2008 / 2010 / 2012, Fiddler</p><p><strong>Technologies :</strong> Service Layer, MVC3, JQuery, SQL Server 2008 R2 Express / Enterprise, Team Foundation Server 2008</p><p><strong>Méthodologies & Conception :</strong> XP, UML, Merise</p><p><strong>Autres Projets :</strong></p><ul><li>Maintenance des anciennes applications en WPF</li><li>Déploiement SharePoint 2010 / MOSS (pour centraliser les documents techniques)</li><li>Team Foundation Server (déploiement et gestion projet)</li><li>Virtualisation – Hyper V (plateforme de qualification des applications)</li></ul>",
+      "full_description_ar": "<p><strong>الخدمات الزراعية وتطوير البرمجيات لتحويل الزراعة في فرنسا - الزراعة الدقيقة</strong></p><p><a href='https://en.wikipedia.org/wiki/Precision_agriculture' style='word-break: break-word; display: inline-block;'>https://en.wikipedia.org/wiki/Precision_agriculture</a></p><p>تطوير مجموعة من التطبيقات المخصصة للتعاونيات.</p><p><strong>مشاريع WPF:</strong> تطوير ثلاثة وحدات في برنامج استشاري وتحسين الإنتاج الزراعي.</p><ul><li>التواصل مع العميل – فهم الاحتياجات</li><li>التصميم وتنفيذ Proof of Concept<ul><li>تصميم قاعدة البيانات</li><li>إنشاء نماذج واجهات المستخدم باستخدام Balsamiq Mockup</li><li>إعداد المواصفات التقنية: مخططات الفئات وحالات الاستخدام...</li></ul></li><li>التطوير والبرمجة والاختبار<ul><li>إنشاء الواجهات الرسومية</li><li>تنفيذ الإجراءات المخزنة</li><li>تنفيذ المنطق البرمجي</li><li>تنفيذ الاختبارات الوحدوية باستخدام NUnit و Mock</li></ul></li><li>الدعم الفني<ul><li>تحديد القيود التقنية للهندسة</li><li>المساهمة في إضافة الميزات إلى الإطار البرمجي</li><li>المشاركة في تقدير المشاريع</li></ul></li><li>إدارة المطورين<ul><li>ضمان رفع مستوى المهارات</li><li>مراقبة جودة الكود</li></ul></li></ul><p><strong>الأدوات:</strong> Team Foundation Server 2008، Visual Studio 2008 / 2010 / 2012، Microsoft Expression Blend</p><p><strong>التقنيات:</strong> WPF 3.0 / 4.0، MVVM، PRISM، Database ORM، SQL Server 2008 Express</p><p><strong>المنهجية والتصميم:</strong> Scrum، UML، Merise</p><p><strong>النتيجة:</strong> الوحدات مستخدمة حاليًا على بوابة الفنيين</p><p><strong>مشروع Service Layer - REST:</strong> تصميم وتطوير محرك حساب للتنبؤ بالأمراض خلال دورة زراعية، وتطوير خدمة ويب لاستخدامها من قبل برنامج الفريق البحث والتطوير.</p><ul><li>الهندسة العكسية<ul><li>تحليل كود التطبيق القديم المطور بـ Pascal</li><li>إعادة إنتاج التطبيق باستخدام Delphi</li><li>التحقق من المدخلات والمخرجات مع البرنامج الحالي</li><li>دراسة حجم البيانات المتبادلة عبر خدمة الويب</li></ul></li><li>التصميم<ul><li>تصميم قاعدة البيانات</li><li>تصميم الكائنات البرمجية</li><li>تحديد مدخلات ومخرجات HTTP في بنية REST</li><li>إعداد الوثائق التقنية</li></ul></li><li>التنفيذ<ul><li>تنفيذ الإجراءات المخزنة</li><li>إنشاء الواجهات الرسومية</li><li>تنفيذ المنطق البرمجي</li><li>اختبارات التحقق</li></ul></li><li>التكامل<ul><li>إعداد IIS و Service Layer لضمان التوافق مع البرنامج الجديد</li><li>اختبارات التحقق</li></ul></li></ul><p><strong>الأدوات:</strong> Team Foundation Server 2008، Visual Studio 2008 / 2010 / 2012، Embarcadero Delphi، Fiddler، IIS</p><p><strong>التقنيات:</strong> Service Layer</p><p><strong>المنهجيات والتصميم:</strong> XP</p><p><strong>مشاريع Silverlight:</strong> تطوير قاعدة بيانات للأنواع والمحاصيل، وقاعدة بيانات للأسمدة.</p><ul><li>التواصل مع العميل – فهم الاحتياجات</li><li>الهندسة / التصميم<ul><li>دراسة الحلول التقنية الممكنة</li><li>مراجعة المواصفات التقنية</li><li>تصميم قواعد البيانات</li></ul></li><li>التطوير والبرمجة<ul><li>تنفيذ البنية</li><li>برمجة الفئات البرمجية</li><li>إنشاء الواجهات الرسومية</li><li>تنفيذ الإجراءات المخزنة</li></ul></li></ul><p><strong>الأدوات:</strong> Team Foundation Server 2008، Visual Studio 2008 / 2010، Fiddler</p><p><strong>التقنيات:</strong> .NET 3.5 / 4.0، Silverlight، RIA Services (Service Layer)، MVVM، Database ORM 4، SQL Server 2008 R2</p><p><strong>مشروع Service Layer – Web MVC 3:</strong> تصميم وتطوير خدمة ويب لإجبار تكرار SQL Server وإدارة العملاء على المنصة.</p><ul><li>تحليل المشكلة وإنشاء POC<ul><li>دراسة سيناريوهات أخطاء التكرار</li><li>إنشاء Proof of Concept لتجاوز مشاكل التكرار</li></ul></li><li>التصميم<ul><li>إعداد المواصفات التقنية</li><li>تصميم خدمة الويب</li><li>تصميم قاعدة البيانات</li><li>إعداد خادم SQL</li><li>التحقق من التصميم بواسطة DBA</li></ul></li><li>التطوير<ul><li>تنفيذ الإجراءات المخزنة</li><li>تنفيذ خدمة الويب</li></ul></li><li>الاختبار / التكامل<ul><li>التحقق على بيئة الاختبار</li><li>دمج التطبيق العميل عند بدء التشغيل</li></ul></li></ul><p><strong>الأدوات:</strong> Team Foundation Server 2008، Visual Studio 2008 / 2010 / 2012، Fiddler</p><p><strong>التقنيات:</strong> Service Layer، MVC3، JQuery، SQL Server 2008 R2 Express / Enterprise، Team Foundation Server 2008</p><p><strong>المنهجيات والتصميم:</strong> XP، UML، Merise</p><p><strong>مشاريع أخرى:</strong></p><ul><li>صيانة التطبيقات القديمة في WPF</li><li>نشر SharePoint 2010 / MOSS (لمركزية الوثائق التقنية)</li><li>Team Foundation Server (النشر وإدارة المشاريع)</li><li>الافتراضية – Hyper V (منصة اختبار التطبيقات)</li></ul>"
+    },
+    {
+      "company": "ORANGE Business Services",
+      "industry_en": "Telecommunication",
+      "industry_fr": "Télécommunication",
+      "industry_ar": "الاتصالات",
+      "date_en": "Feb 2009 – Feb 2011",
+      "date_fr": "Fév 2009 – Fév 2011",
+      "date_ar": "فبراير 2009 – فبراير 2011",
+      "role_en": "Software Engineer (R&D, Paris, France)",
+      "role_fr": "Ingénieur logiciel (R&D, Paris, France)",
+      "role_ar": "مهندس برمجيات (البحث والتطوير، باريس، فرنسا)",
+      "highlights_en": [
+        "Messaging migration tooling (web portal + services)",
+        "Active Directory connectors; Service Layer callbacks",
+        "Lotus Notes conversion & automation scripting"
+      ],
+      "highlights_fr": [
+        "Outils de migration de messagerie (portail web + services)",
+        "Connecteurs Active Directory; Service Layer callbacks",
+        "Conversion Lotus Notes & scripting automatisé"
+      ],
+      "highlights_ar": [
+        "أدوات ترحيل المراسلة (بوابة الويب + الخدمات)",
+        "موصلات Active Directory; Service Layer callbacks",
+        "تحويل Lotus Notes & البرمجة النصية التلقائية"
+      ],
+      "stack": "ASP.NET MVC2, Service Layer, AD/GPO, PowerShell, VB.NET, Lotus Script",
+      "full_description_en": "<p><strong>Project:</strong> Development of applications for administrators and system engineers for piloting and implementation of messaging systems migration.</p><ul><li>Needs analysis</li><li>Design and architecture of software components<ul><li>Database design</li><li>Component diagrams realization</li><li>Writing technical specifications</li></ul></li><li>Development of the web portal<ul><li>Creation of web services</li><li>Development of Active Directory connectors</li></ul></li></ul><p><strong>Technologies:</strong> ASP.NET (MVC2), jQuery, Service Layer (callbacks), Windows Services, Active Directory (GPO)</p><p><strong>Project “ClientWizard for Lotus Notes”:</strong> Update of a tool for data conversion used in migration projects, enabling the conversion of Outlook data into a Lotus Notes database.</p><ul><li>Needs analysis</li><li>Conception<ul><li>User interface design</li><li>Object model design</li><li>Writing technical specifications</li></ul></li><li>Development</li></ul><p><strong>Technologies:</strong> VB.NET, WinForms, COM components</p><p><strong>Project “WaveBox”:</strong> A centralized tool enabling automation of the migration process.</p><ul><li>Application maintenance</li><li>Feature enhancements</li></ul><p><strong>Technologies:</strong> Lotus Script, COM components</p><p><strong>Project:</strong> Creation of automation scripts for migration processes.</p><p><strong>Technologies:</strong> Active Directory, GPO, Microsoft Exchange, PowerShell, VBScript</p>",
+      "full_description_fr": "<p><strong>Projet « Système de pilotage des migrations » :</strong> Pour piloter les migrations des systèmes de messagerie, des applications clientes installées sur les postes communiquent avec un portail Web et déclenchent les actions nécessaires en arrière-plan afin d’assurer une migration transparente de Lotus vers Outlook. Le projet consiste à concevoir un portail Web permettant de superviser l’ensemble du processus de migration.</p><ul><li>Analyse de besoin</li><li>Conception et architecture des composants logiciels<ul><li>Conception des bases de données</li><li>Réalisation des diagrammes des composants</li><li>Rédaction des spécifications techniques</li></ul></li><li>Développement du portail Web<ul><li>Création des services web</li><li>Développement des connecteurs Active Directory</li></ul></li></ul><p><strong>Outils :</strong> Visual Studio 2008, Visual Studio 2010, Fiddler</p><p><strong>Technologies :</strong> ASP.NET (MVC2), jQuery, Service Layer (callbacks), Windows Services, Active Directory (GPO)</p><p><strong>Projet « Client Wizard for Lotus Notes » :</strong> Mise à jour d’un outil de conversion de données pour les projets de migration, permettant de convertir les données d’Outlook vers une base Lotus Notes.</p><ul><li>Analyse de besoins</li><li>Conception<ul><li>Conception des interfaces utilisateurs</li><li>Conception des modèles objets</li><li>Rédaction des spécifications techniques</li></ul></li><li>Développement</li></ul><p><strong>Technologies :</strong> VB.NET, WinForms, composants COM</p><p><strong>Projet « WaveBox » :</strong> Développement d’un outil centralisé permettant l’automatisation du processus de migration.</p><ul><li>Maintenance de l’application</li><li>Ajout de fonctionnalités</li></ul><p><strong>Technologies :</strong> Lotus Script, composants COM</p><p><strong>Projet :</strong> Création de scripts pour automatiser les migrations.</p><p><strong>Technologies :</strong> Active Directory, GPO, Microsoft Exchange, PowerShell, VBScript</p>",
+      "full_description_ar": "<p><strong>مشروع « نظام إدارة عمليات الترحيل »:</strong> يهدف المشروع إلى إدارة عمليات ترحيل أنظمة المراسلة، حيث تتواصل تطبيقات العملاء المثبّتة على أجهزة المستخدمين مع بوابة ويب مركزية لتنفيذ الإجراءات اللازمة في الخلفية، بما يضمن ترحيلاً سلسًا وشفافًا من Lotus إلى Outlook. يتمثل الهدف في تصميم بوابة ويب للإشراف الكامل على عملية الترحيل.</p><ul><li>تحليل المتطلبات</li><li>تصميم وبنية مكونات البرمجيات<ul><li>تصميم قواعد البيانات</li><li>إعداد مخططات مكونات النظام</li><li>إعداد المواصفات التقنية</li></ul></li><li>تطوير بوابة الويب<ul><li>إنشاء خدمات الويب</li><li>تطوير موصلات Active Directory</li></ul></li></ul><p><strong>الأدوات:</strong> Visual Studio 2008، Visual Studio 2010، Fiddler</p><p><strong>التقنيات:</strong> ASP.NET (MVC2)، jQuery، Service Layer (callbacks)، Windows Services، Active Directory (GPO)</p><p><strong>مشروع « Client Wizard for Lotus Notes »:</strong> تحديث أداة لتحويل البيانات ضمن مشاريع الترحيل، تُمكّن من تحويل بيانات Outlook إلى قاعدة بيانات Lotus Notes.</p><ul><li>تحليل المتطلبات</li><li>التصميم<ul><li>تصميم واجهات المستخدم</li><li>تصميم نماذج الكائنات</li><li>إعداد المواصفات التقنية</li></ul></li><li>التطوير</li></ul><p><strong>التقنيات:</strong> VB.NET، WinForms، مكونات COM</p><p><strong>مشروع « WaveBox »:</strong> تطوير أداة مركزية تتيح أتمتة عملية الترحيل.</p><ul><li>صيانة التطبيق</li><li>إضافة ميزات جديدة</li></ul><p><strong>التقنيات:</strong> Lotus Script، مكونات COM</p><p><strong>مشروع:</strong> إنشاء سكربتات لأتمتة عمليات الترحيل.</p><p><strong>التقنيات:</strong> Active Directory، GPO، Microsoft Exchange، PowerShell، VBScript</p>"
+    }
   ],
-
   "services": [
     {
       "icon": "⚙️",
@@ -286,7 +506,7 @@
       "desc_en": "Design and build reliable, high-performance REST APIs and backend systems that scale with your business.",
       "desc_fr": "Conception et développement d'APIs REST et de systèmes backend fiables et performants qui s'adaptent à votre activité.",
       "desc_ar": "تصميم وبناء واجهات REST APIs وأنظمة خلفية موثوقة وعالية الأداء تنمو مع عملك.",
-      "stack": ".NET Core · C# · Web API · REST · SQL Server"
+      "stack": "systèmes d'entreprise ·  · Web API · REST · SQL Server"
     },
     {
       "icon": "☁️",
@@ -297,7 +517,7 @@
       "desc_en": "Architect and migrate your systems to Azure — microservices, serverless, containers, and cloud-native infrastructure.",
       "desc_fr": "Conception et migration de vos systèmes vers Azure — microservices, serverless, conteneurs et infrastructure cloud.",
       "desc_ar": "تصميم وترحيل أنظمتك إلى Azure — خدمات مصغّرة، Serverless، حاويات، وبنية تحتية سحابية.",
-      "stack": "Azure · Docker · Kubernetes · Microservices · Service Bus"
+      "stack": "Azure · Containerization · Kubernetes · Microservices · Service Bus"
     },
     {
       "icon": "🔒",
@@ -308,7 +528,7 @@
       "desc_en": "Set up CI/CD pipelines, automate deployments, enforce security policies, and improve delivery speed and reliability.",
       "desc_fr": "Mise en place de pipelines CI/CD, automatisation des déploiements, politiques de sécurité et amélioration de la fiabilité.",
       "desc_ar": "إعداد CI/CD Pipelines، أتمتة النشر، تطبيق سياسات الأمان، وتحسين سرعة وموثوقية التسليم.",
-      "stack": "Azure DevOps · Docker · TeamCity · SonarQube · ITIL"
+      "stack": "Azure DevOps · Containerization · CI Server · SonarQube · ITIL"
     },
     {
       "icon": "🔄",
@@ -319,7 +539,7 @@
       "desc_en": "Transform legacy monolithic applications into modern, maintainable microservices architectures without disrupting your business.",
       "desc_fr": "Transformation d'applications monolithiques en architectures microservices modernes et maintenables.",
       "desc_ar": "تحويل التطبيقات القديمة إلى معماريات Microservices حديثة وقابلة للصيانة دون تعطيل عملك.",
-      "stack": ".NET · C# · Microservices · DDD · CQRS"
+      "stack": ".NET ·  · Microservices · DDD · CQRS"
     },
     {
       "icon": "🎯",
@@ -333,7 +553,6 @@
       "stack": "UML · Architecture · Code Review · Agile · Scrum"
     }
   ],
-
   "projects": [
     {
       "title_en": "Fleet Management System",
@@ -342,7 +561,7 @@
       "desc_en": "Full back-end of a vehicle fleet tracking platform — real-time monitoring, payment integration, and performance dashboards.",
       "desc_fr": "Backend complet d'une plateforme de suivi de flotte — surveillance temps réel, intégration paiement et tableaux de bord.",
       "desc_ar": "تطوير خلفي كامل لمنصة تتبع أسطول مركبات — مراقبة فورية، دمج الدفع، ولوحات أداء.",
-      "stack": "C# · .NET Core · SQL Server · REST API",
+      "stack": " · systèmes d'entreprise · SQL Server · REST API",
       "sector_en": "Transport",
       "sector_fr": "Transport",
       "sector_ar": "النقل"
@@ -354,7 +573,7 @@
       "desc_en": "Centralised IdentityServer platform with 2FA (QR code + SMS) deployed across all company applications, replacing legacy authentication.",
       "desc_fr": "Plateforme IdentityServer centralisée avec 2FA (QR + SMS) déployée sur toutes les applications de l'entreprise.",
       "desc_ar": "منصة IdentityServer مركزية مع مصادقة ثنائية (QR + SMS) مُدمجة في جميع تطبيقات الشركة.",
-      "stack": "C# · IdentityServer · Azure · 2FA · Bootstrap",
+      "stack": " · IdentityServer · Azure · 2FA · Bootstrap",
       "sector_en": "Pharmaceutical",
       "sector_fr": "Pharmaceutique",
       "sector_ar": "الصناعة الدوائية"
@@ -363,10 +582,10 @@
       "title_en": "Cloud Microservices Platform",
       "title_fr": "Plateforme microservices cloud",
       "title_ar": "منصة Microservices السحابية",
-      "desc_en": "High-throughput microservices for a cloud call-centre — event streaming with Kafka, Docker containers, financial provider integrations.",
-      "desc_fr": "Microservices haute performance pour un centre d'appels cloud — Kafka, Docker, intégration de fournisseurs financiers.",
-      "desc_ar": "Microservices عالي الأداء لمركز اتصال سحابي — بث أحداث Kafka، حاويات Docker، دمج مزودي الخدمات.",
-      "stack": "C# · Kafka · Docker · Protocol Buffers · Azure",
+      "desc_en": "High-throughput microservices for a cloud call-centre — event streaming with Message Queues, Containerization containers, financial provider integrations.",
+      "desc_fr": "Microservices haute performance pour un centre d'appels cloud — Message Queues, Containerization, intégration de fournisseurs financiers.",
+      "desc_ar": "Microservices عالي الأداء لمركز اتصال سحابي — بث أحداث Message Queues، حاويات Containerization، دمج مزودي الخدمات.",
+      "stack": " · Message Queues · Containerization · Protocol Buffers · Azure",
       "sector_en": "Call-Centre / Telecom",
       "sector_fr": "Centre d'appels / Télécom",
       "sector_ar": "مركز الاتصال / الاتصالات"
@@ -375,10 +594,10 @@
       "title_en": "Investment Data Pipeline",
       "title_fr": "Pipeline de données d'investissement",
       "title_ar": "خط أنابيب بيانات الاستثمار",
-      "desc_en": "Multi-source financial data flows for a buy-side asset manager — SSIS batches, WCF services, Web API, and Azure infrastructure for retirement funds.",
-      "desc_fr": "Flux de données financières multi-sources pour un gestionnaire d'actifs — SSIS, WCF, Web API et Azure pour les fonds de retraite.",
-      "desc_ar": "تدفقات بيانات مالية متعددة المصادر لمدير أصول — دفعات SSIS، خدمات WCF، Web API، وبنية Azure لصناديق التقاعد.",
-      "stack": "C# · SSIS · WCF · Web API · Azure · Oracle",
+      "desc_en": "Multi-source financial data flows for a buy-side asset manager — SSIS batches, Service Layer services, Web API, and Azure infrastructure for retirement funds.",
+      "desc_fr": "Flux de données financières multi-sources pour un gestionnaire d'actifs — SSIS, Service Layer, Web API et Azure pour les fonds de retraite.",
+      "desc_ar": "تدفقات بيانات مالية متعددة المصادر لمدير أصول — دفعات SSIS، خدمات Service Layer، Web API، وبنية Azure لصناديق التقاعد.",
+      "stack": " · SSIS · Service Layer · Web API · Azure · Oracle",
       "sector_en": "Asset Management / Finance",
       "sector_fr": "Gestion d'actifs / Finance",
       "sector_ar": "إدارة الأصول / المالية"
