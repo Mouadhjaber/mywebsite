@@ -12,8 +12,8 @@
   "hero": {
     "title": "Mouadh Jaber",
     "subtitle": "Senior Software Engineer & Solution Architect",
-    "tagline": "15+ years building enterprise software, cloud platforms and scalable .NET systems across finance, telecom, insurance, transport and pharmaceuticals.",
-    "valueProp": "I help companies modernize legacy applications, design cloud-native architectures and deliver reliable software from architecture through production.",
+    "tagline": "15+ years building enterprise software, cloud platforms and scalable systems across finance, telecom, insurance, transport and pharmaceuticals.",
+    "valueProp": "I help companies modernize applications, design cloud-native architectures and deliver reliable software from architecture through production.",
     "ctaPrimary": "Download CV",
     "ctaSecondary": "View Case Studies",
     "ctaHire": "Hire Me"
@@ -40,10 +40,10 @@
         "company": "ASTERA",
         "role": "Senior Software Engineer",
         "challenge": "Modernize authentication across a suite of pharmaceutical applications post-COVID, enabling secure remote access for hundreds of users.",
-        "solution": "Implemented IdentityServer with 2-Factor Authentication (QR code/SMS), unified authentication across all applications, and migrated infrastructure to Microsoft Azure.",
+        "solution": "Implemented IdentityServer with 2-Factor Authentication (QR code/SMS), unified authentication across all applications, and migrated infrastructure to Azure.",
         "impact": "Secured remote access for the entire organization, reduced authentication-related support tickets, and established a foundation for cloud migration.",
         "technologies": "programming languages, IdentityServer, Azure, JavaScript, 2FA, DevOps",
-        "highlights": ["2FA with QR/SMS", "IdentityServer", "Azure migration", "DevOps/DevSecOps"]
+        "highlights": ["2FA with QR/SMS", "IdentityServer", "cloud migration", "DevOps/DevSecOps"]
       },
       {
         "title": "Cloud Data Architecture for Asset Management",
@@ -84,16 +84,16 @@
         "company": "MOWASALAT",
         "role": "Senior Software Engineer",
         "challenge": "Develop backend systems for a vehicle fleet management platform, including payment integration and performance monitoring.",
-        "solution": "Built .NET Core backend services, implemented payment system integration with suppliers, developed back-office modules for real-time fleet tracking and performance monitoring.",
+        "solution": "Built enterprise platforms backend services, implemented payment system integration with suppliers, developed back-office modules for real-time fleet tracking and performance monitoring.",
         "impact": "Enabled operational monitoring of fleet vehicles, streamlined payment processing, and provided management with real-time performance dashboards.",
-        "technologies": "programming languages, .NET Core, API Development, Visual Studio",
-        "highlights": ["Fleet management", "Payment integration", ".NET Core", "API design"]
+        "technologies": "programming languages, enterprise platforms, API Development, Visual Studio",
+        "highlights": ["Fleet management", "Payment integration", "enterprise platforms", "API design"]
       }
     ]
   },
   "skills": {
     "title": "Technologies",
-    "core": "Core",
+    "core": "Core Skills",
     "architecture": "Architecture",
     "cloud": "Cloud",
     "devops": "DevOps",
@@ -124,7 +124,7 @@
       {
         "icon": "☁️",
         "title": "Cloud & Azure",
-        "desc": "Design, migrate and optimize cloud-native systems on Microsoft Azure with security and compliance."
+        "desc": "Design, migrate and optimize cloud-native systems on Azure with security and compliance."
       },
       {
         "icon": "🔧",
@@ -175,7 +175,7 @@
   },
   "contact": {
     "title": "Let's Discuss Your Project",
-    "subtitle": "Need help with .NET architecture, Azure migration, legacy modernization or enterprise software? Available for freelance and consulting.",
+    "subtitle": "Need help with software architecture, cloud migration modernization or enterprise software? Available for freelance and consulting.",
     "phone": "Phone",
     "email": "Email",
     "linkedin": "LinkedIn",
