@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Recherche d'entreprises tunisiennes par dénomination ou identifiant unique.">
+    <title>RNE • Recherche d'entreprise tunisienne</title>
+    <link rel="canonical" href="/companiesintunisia/">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="rne-search.css">
+  </head>
+  <body>
+    <header class="rne-topbar">
+      <a class="rne-brand" href="/" aria-label="Retour au portfolio" data-i18n-aria="backHome"><span class="brand-dot"></span><span>RNE <b>Explorer</b></span></a>
+      <div class="rne-tools"><p class="rne-context"><span class="status-lamp" aria-hidden="true"></span><span data-i18n="proxyContext">Recherche via votre passerelle autorisée</span></p><label class="language-control"><span class="sr-only" data-i18n="language">Langue</span><select id="language-select" aria-label="Langue" data-i18n-aria="language"><option value="fr">FR</option><option value="en">EN</option><option value="ar">العربية</option><option value="es">ES</option><option value="zh">中文</option></select></label></div>
+    </header>
+
+    <main class="rne-shell">
+      <section class="rne-intro" aria-labelledby="page-title">
+        <p class="eyebrow" data-i18n="registry">REGISTRE NATIONAL DES ENTREPRISES · TUNISIE</p>
+        <h1 id="page-title" data-i18n-html="heroTitle">Voir l’essentiel.<br><em>Respecter l’accès.</em></h1>
+        <p class="lede" data-i18n="lede">Recherchez une entreprise par dénomination ou identifiant unique. Les informations affichées dépendent exclusivement de votre accès autorisé.</p>
+      </section>
+
+      <section class="search-deck" aria-label="Recherche d'entreprise" data-i18n-aria="searchArea">
+        <form id="search-form" novalidate>
+          <label for="company-query" data-i18n="queryLabel">Dénomination ou identifiant unique</label>
+          <div class="search-row">
+            <input id="company-query" name="query" type="search" autocomplete="off" placeholder="Ex. Société Exemple ou 1234567A" data-i18n-placeholder="queryPlaceholder" aria-describedby="search-help" required>
+            <button class="search-submit" type="submit"><span data-i18n="search">Rechercher</span><span aria-hidden="true">↗</span></button>
+          </div>
+          <p id="search-help" data-i18n="searchHelp">La recherche est transmise à votre proxy local sécurisé — aucune donnée d’accès n’est demandée ici.</p>
+        </form>
+        <div class="search-mark" aria-hidden="true"><span>TN</span><i></i><i></i><i></i></div>
+      </section>
+
+      <section id="state-panel" class="state-panel is-empty" aria-live="polite" aria-atomic="true">
+        <div class="state-icon" aria-hidden="true">⌕</div>
+        <div>
+          <p class="state-kicker" data-i18n="ready">Prêt à rechercher</p>
+          <h2 id="state-title" data-i18n="emptyTitle">Une fiche, quand elle est accessible.</h2>
+          <p id="state-description" data-i18n="emptyDescription">Saisissez une dénomination ou un identifiant unique pour lancer la recherche.</p>
+        </div>
+      </section>
+
+      <section id="company-list" class="company-list" aria-labelledby="company-list-title">
+        <div class="section-heading list-heading"><div><p class="eyebrow" data-i18n="browseEyebrow">CONSULTATION AUTORISÉE</p><h2 id="company-list-title" data-i18n="browseTitle">Parcourir les fiches disponibles</h2></div><button id="load-companies" class="quiet-button list-trigger" type="button" data-i18n="loadCompanies">Charger les entreprises</button></div>
+        <p class="list-intro" data-i18n="browseDescription">Cette liste est chargée uniquement à votre demande et ne représente que les fiches retournées par votre accès autorisé.</p>
+        <div id="company-list-state" class="list-state" aria-live="polite"><p id="company-list-message" data-i18n="listInitial">Chargez une page pour consulter les fiches actuellement retournées par la source autorisée.</p></div>
+        <div id="company-list-items" class="company-list-items" hidden></div>
+        <nav id="company-pagination" class="company-pagination" aria-label="Pagination" data-i18n-aria="pagination" hidden><button id="companies-prev" type="button" class="page-button" data-i18n="previous">Précédent</button><p id="companies-page" class="page-indicator"></p><button id="companies-next" type="button" class="page-button" data-i18n="next">Suivant</button></nav>
+      </section>
+
+      <section id="results" class="results" hidden aria-live="polite">
+        <div class="result-heading">
+          <div><p class="eyebrow" data-i18n="searchResult">RÉSULTAT DE RECHERCHE</p><p id="result-note" class="result-note"></p></div>
+          <button id="new-search" class="quiet-button" type="button" data-i18n="newSearch">Nouvelle recherche</button>
+        </div>
+
+        <article class="company-hero" aria-labelledby="company-name">
+          <div class="company-monogram" id="company-monogram" aria-hidden="true">?</div>
+          <div class="company-main">
+            <div class="company-title-line"><h2 id="company-name">—</h2><span id="company-status" class="status-chip" data-i18n="notProvidedStatus">Statut non communiqué</span></div>
+            <p id="company-legal-form" class="company-type" data-i18n="notProvidedLegal">Forme juridique non communiquée</p>
+            <dl class="identity-list">
+              <div><dt data-i18n="uniqueId">Identifiant unique</dt><dd id="company-id" data-i18n="notProvided">Non communiqué</dd></div>
+              <div><dt data-i18n="registeredOffice">Siège</dt><dd id="company-address" data-i18n="notProvided">Non communiqué</dd></div>
+              <div><dt data-i18n="activity">Activité</dt><dd id="company-activity" data-i18n="notProvidedF">Non communiquée</dd></div>
+              <div><dt data-i18n="updated">Dernière mise à jour</dt><dd id="company-updated" data-i18n="notProvidedF">Non communiquée</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <div class="section-heading"><div><p class="eyebrow" data-i18n="financialReading">LECTURE FINANCIÈRE</p><h2 data-i18n="financialTitle">Indicateurs & trajectoire</h2></div><p data-i18n="financialAuthorized">Uniquement si transmis par la source autorisée.</p></div>
+        <section id="financials" class="finance-zone" aria-label="Indicateurs financiers" data-i18n-aria="financialTitle">
+          <div id="kpi-grid" class="kpi-grid"></div>
+          <div class="performance-card"><div class="performance-head"><h3 data-i18n="multiYear">Performance pluriannuelle</h3><span id="performance-unit"></span></div><div id="performance-table" class="performance-table"></div></div>
+          <p id="financial-disclosure" class="financial-disclosure"></p>
+        </section>
+
+        <section class="access-grid" aria-label="Données sous autorisation" data-i18n-aria="authorizedData">
+          <article class="access-card"><span class="lock" aria-hidden="true">⌑</span><p class="eyebrow" data-i18n="contracts">CONTRATS</p><h3 data-i18n="authorizedAccess">Accès sous autorisation</h3><p data-i18n="authorizedOnly">Disponibles uniquement lorsque votre accès autorisé le permet.</p></article>
+          <article class="access-card"><span class="lock" aria-hidden="true">⌑</span><p class="eyebrow" data-i18n="ubo">BÉNÉFICIAIRES EFFECTIFS</p><h3 data-i18n="authorizedAccess">Accès sous autorisation</h3><p data-i18n="authorizedOnly">Disponibles uniquement lorsque votre accès autorisé le permet.</p></article>
+          <article class="access-card"><span class="lock" aria-hidden="true">⌑</span><p class="eyebrow" data-i18n="financialDocs">DOCUMENTS FINANCIERS</p><h3 data-i18n="authorizedAccess">Accès sous autorisation</h3><p data-i18n="authorizedOnly">Disponibles uniquement lorsque votre accès autorisé le permet.</p></article>
+        </section>
+      </section>
+    </main>
+    <footer data-i18n="footer">RNE Explorer · Interface de consultation · Les données ne sont jamais complétées ou supposées.</footer>
+    <script src="rne-search.js"></script>
+  </body>
+</html>
