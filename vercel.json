@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "outputDirectory": "src",
+  "functions": {
+    "api/rne/search.js": {
+      "runtime": "nodejs20.x"
+    }
+  }
+}
