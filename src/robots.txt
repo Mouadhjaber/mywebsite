@@ -1,40 +1,5 @@
-# robots.txt for mouadhjaber.com
+# Search engines may crawl all public portfolio pages.
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://mouadhjaber.com/sitemap.xml
-
-# Host
-Host: https://mouadhjaber.com
-
-# Crawl-delay (optional, for polite crawling)
-Crawl-delay: 1
-
-# Yandex-specific
-User-agent: YandexBot
-Allow: /
-Crawl-delay: 1
-
-# Googlebot (all versions)
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-# Baidu (Arabic/Chinese search)
-User-agent: Baiduspider
-Allow: /
-Crawl-delay: 2
-
-# Naver (Korean/Asian search)
-User-agent: Yeti
-Allow: /
-Crawl-delay: 2
-
-# Allow all important resources
-Allow: /assets/
-Allow: /locales/
-Allow: /vendor/
-Allow: /styles.css
-Allow: /app.js
-Allow: /content.json
