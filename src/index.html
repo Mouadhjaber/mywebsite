@@ -79,7 +79,7 @@
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
-      <label class="language-switcher"><span class="sr-only">Choose language</span><select id="language-select" aria-label="Choose language"><option value="en">EN</option><option value="fr">FR</option><option value="ar">العربية</option><option value="es">ES</option><option value="zh-CN">中文</option><option value="ru">RU</option></select></label>
+      <nav class="language-switcher" aria-label="Language"><a class="active" href="/" lang="en">EN</a><a href="/fr/" lang="fr">FR</a><a href="/ar/" lang="ar">العربية</a><a href="/es/" lang="es">ES</a><a href="/zh/" lang="zh">中文</a><a href="/ru/" lang="ru">RU</a></nav>
       <a class="header-link" href="https://www.linkedin.com/in/mouadhjaber/" target="_blank" rel="me noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
     </div>
   </header>
@@ -216,12 +216,5 @@
     </section>
   </main>
   <footer class="site-footer"><div class="shell">© 2026 Mouadh Jaber · Senior Software Engineer</div></footer>
-  <script>
-    document.getElementById('language-select').addEventListener('change', function () {
-      if (this.value === 'en') { window.location.href = 'https://mouadhjaber.com/'; return; }
-      const url = 'https://mouadhjaber.com/';
-      window.location.href = 'https://translate.google.com/translate?sl=auto&tl=' + encodeURIComponent(this.value) + '&u=' + encodeURIComponent(url);
-    });
-  </script>
 </body>
 </html>
