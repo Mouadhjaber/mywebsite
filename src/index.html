@@ -9,9 +9,8 @@
   <title>Mouadh Jaber | Enterprise Software Engineer</title>
   <link rel="canonical" href="https://mouadhjaber.com/">
   <link rel="me" href="https://www.linkedin.com/in/mouadhjaber/">
-  <link rel="me" href="https://github.com/Mouadhjaber">
   <link rel="icon" href="/assets/profile.jpg">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles.css?v=20261109c">
 
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="Mouadh Jaber">
@@ -41,8 +40,7 @@
         "email": "mailto:mouadh.jaber@msn.com",
         "telephone": "+21658201430",
         "sameAs": [
-          "https://www.linkedin.com/in/mouadhjaber/",
-          "https://github.com/Mouadhjaber"
+          "https://www.linkedin.com/in/mouadhjaber/"
         ],
         "knowsAbout": [
           "Software architecture", ".NET", "C#", "Distributed systems", "Microservices", "DevOps", "DevSecOps", "REST API", "Docker", "Microsoft Azure", "Identity and access management", "Large language model integration", "AI systems"
@@ -93,7 +91,8 @@
         <p class="lede">I engineer the software foundations behind complex organisations: critical enterprise applications, integration layers, APIs, distributed services, secure identities, AI and LLM integration, and reliable delivery pipelines.</p>
         <ul class="hero-pillars" aria-label="Core engineering focus"><li>Critical systems</li><li>Secure integration</li><li>AI / LLM integration</li><li>Reliable delivery</li></ul>
         <div class="hero-actions">
-          <a class="button button-primary" href="/CV_MJ_EN.docx" download>Download CV</a>
+          <a class="button button-primary" href="/full-cv.html" id="download-pdf">Download PDF</a>
+          <a class="button button-secondary" href="/CV_MJ_EN.docx" download>Download DOCX</a>
           <a class="button button-secondary" href="/full-cv.html">Read full CV</a>
           <a class="button button-secondary" href="https://www.linkedin.com/in/mouadhjaber/" target="_blank" rel="me noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
@@ -162,7 +161,7 @@
 
     <section class="shell section" id="experience" aria-labelledby="experience-title">
       <p class="eyebrow">Professional record / 05</p>
-      <h2 id="experience-title">Full résumé: engineering across regulated and operationally critical domains.</h2>
+      <h2 id="experience-title">Full career record: engineering across regulated and operationally critical domains.</h2>
       <p class="section-intro">The following record is based on the English CV. Each role is presented with its technical context, responsibilities and principal tools.</p>
       <div class="timeline">
         <article class="role"><p class="role-date">Jul 2025 — Present</p><div><h3>Senior Software Engineer <span>· NETCOM Telecommunication</span></h3><p>Developing mobile applications with Flutter and extending the internal CRM. Responsibilities include Dockerising ongoing projects, building Swagger-documented backend APIs and contributing to application urbanisation and modernisation.</p><p class="role-stack">C# · Flutter · Angular · JavaScript · Docker · Visual Studio 2019–2022</p><p class="role-link"><a href="https://netcom.tn/" target="_blank" rel="noopener noreferrer">NETCOM Tunisia — official website <span aria-hidden="true">↗</span></a></p></div></article>
@@ -197,7 +196,6 @@
       <p>These external resources provide context for technologies and organisations mentioned in the CV.</p>
       <ul>
         <li><a href="https://www.linkedin.com/in/mouadhjaber/" target="_blank" rel="me noopener noreferrer">Mouadh Jaber on LinkedIn <span aria-hidden="true">↗</span></a></li>
-        <li><a href="https://github.com/Mouadhjaber" target="_blank" rel="me noopener noreferrer">Mouadh Jaber on GitHub <span aria-hidden="true">↗</span></a></li>
         <li><a href="https://en.wikipedia.org/wiki/Alternative_trading_system" target="_blank" rel="noopener noreferrer">Alternative trading system — Wikipedia <span aria-hidden="true">↗</span></a></li>
         <li><a href="https://en.wikipedia.org/wiki/Precision_agriculture" target="_blank" rel="noopener noreferrer">Precision agriculture — Wikipedia <span aria-hidden="true">↗</span></a></li>
         <li><a href="https://www.crunchbase.com/organization/vermeg" target="_blank" rel="noopener noreferrer">VERMEG — Crunchbase <span aria-hidden="true">↗</span></a></li>
@@ -216,5 +214,48 @@
     </section>
   </main>
   <footer class="site-footer"><div class="shell">© 2026 Mouadh Jaber · Senior Software Engineer</div></footer>
+  <script>
+  document.getElementById('download-pdf').addEventListener('click', async function (event) {
+    event.preventDefault();
+    var btn = this;
+    btn.setAttribute('aria-busy', 'true');
+    try {
+      if (!window.html2pdf) {
+        await new Promise(function (resolve, reject) {
+          var script = document.createElement('script');
+          script.src = '/vendor/html2pdf.bundle.min.js';
+          script.onload = resolve;
+          script.onerror = reject;
+          document.head.appendChild(script);
+        });
+      }
+      var response = await fetch('/full-cv.html');
+      var html = await response.text();
+      var doc = new DOMParser().parseFromString(html, 'text/html');
+      var cv = doc.querySelector('.full-cv');
+      if (!cv) throw new Error('CV content not found');
+      var wrap = document.createElement('div');
+      wrap.className = 'pdf-export';
+      wrap.appendChild(document.importNode(cv, true));
+      document.body.appendChild(wrap);
+      try {
+        await window.html2pdf().set({
+          margin: 10,
+          filename: 'Mouadh_Jaber_CV.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+          pagebreak: { mode: ['css', 'legacy'] }
+        }).from(wrap).save();
+      } finally {
+        wrap.remove();
+      }
+    } catch (error) {
+      window.location.href = '/full-cv.html?pdf=1';
+    } finally {
+      btn.removeAttribute('aria-busy');
+    }
+  });
+  </script>
 </body>
 </html>
