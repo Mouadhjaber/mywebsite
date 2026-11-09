@@ -8,9 +8,16 @@
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
   <title>Муад Джабер | Корпоративный инженер-программист</title>
   <link rel="canonical" href="https://mouadhjaber.com/ru/"><link rel="alternate" hreflang="en" href="https://mouadhjaber.com/"><link rel="alternate" hreflang="fr" href="https://mouadhjaber.com/fr/"><link rel="alternate" hreflang="ar" href="https://mouadhjaber.com/ar/"><link rel="alternate" hreflang="es" href="https://mouadhjaber.com/es/"><link rel="alternate" hreflang="zh" href="https://mouadhjaber.com/zh/"><link rel="alternate" hreflang="ru" href="https://mouadhjaber.com/ru/"><link rel="alternate" hreflang="x-default" href="https://mouadhjaber.com/">
+  <link rel="alternate" hreflang="en" href="https://mouadhjaber.com/">
+  <link rel="alternate" hreflang="fr" href="https://mouadhjaber.com/fr/">
+  <link rel="alternate" hreflang="ar" href="https://mouadhjaber.com/ar/">
+  <link rel="alternate" hreflang="es" href="https://mouadhjaber.com/es/">
+  <link rel="alternate" hreflang="zh" href="https://mouadhjaber.com/zh/">
+  <link rel="alternate" hreflang="ru" href="https://mouadhjaber.com/ru/">
+  <link rel="alternate" hreflang="x-default" href="https://mouadhjaber.com/">
   <link rel="me" href="https://www.linkedin.com/in/mouadhjaber/">
   <link rel="icon" href="/assets/profile.jpg">
-  <link rel="stylesheet" href="/styles.css?v=20261109d">
+  <link rel="stylesheet" href="/styles.css?v=20261109f">
 
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="Mouadh Jaber">
@@ -19,6 +26,9 @@
   <meta property="og:url" content="https://mouadhjaber.com/ru/">
   <meta property="og:image" content="https://mouadhjaber.com/assets/profile.jpg">
   <meta property="og:image:alt" content="Портрет Муада Джабера">
+  <meta property="og:image:width" content="400">
+  <meta property="og:image:height" content="400">
+  <meta name="twitter:card" content="summary_large_image">
   <meta property="profile:first_name" content="Mouadh">
   <meta property="profile:last_name" content="Jaber">
   <meta name="twitter:card" content="summary">
@@ -258,14 +268,14 @@
       wrap.appendChild(document.importNode(cv, true));
       document.body.appendChild(wrap);
       try {
-        await window.html2pdf().set({
-          margin: 10,
-          filename: 'Mouadh_Jaber_CV_ru.pdf',
-          image: { type: 'jpeg', quality: 0.98 },
-          html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
-          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-          pagebreak: { mode: ['css', 'legacy'] }
-        }).from(wrap).save();
+      await window.html2pdf().set({
+        margin: { top: 22, right: 20, bottom: 22, left: 20 },
+        filename: 'Mouadh_Jaber_CV_ru.pdf',
+        image: { type: 'jpeg', quality: 1.0 },
+        html2canvas: { scale: 4, useCORS: true, backgroundColor: '#ffffff', letterRendering: true, logging: false },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak: { mode: ['css', 'legacy'], after: ['.role', 'h2', 'h3.cv-company'] }
+      }).from(wrap).save();
       } finally {
         wrap.remove();
       }
