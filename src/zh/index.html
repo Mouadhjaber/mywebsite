@@ -271,12 +271,12 @@
       document.body.appendChild(wrap);
       try {
       await window.html2pdf().set({
-        margin: { top: 22, right: 20, bottom: 22, left: 20 },
+        margin: 20,
         filename: 'Mouadh_Jaber_CV_zh.pdf',
         image: { type: 'jpeg', quality: 1.0 },
-        html2canvas: { scale: 4, useCORS: true, backgroundColor: '#ffffff', letterRendering: true, logging: false },
+        html2canvas: { scale: 3, useCORS: true, backgroundColor: '#ffffff', letterRendering: true },
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        pagebreak: { mode: ['css', 'legacy'], after: ['.role', 'h2', 'h3.cv-company'] }
+        pagebreak: { mode: ['css', 'legacy'] }
       }).from(wrap).save();
       } finally {
         wrap.remove();
