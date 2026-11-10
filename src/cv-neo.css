@@ -55,7 +55,7 @@
   margin-left: auto;
   text-align: right;
   font-size: 0.9rem;
-  color: #bfd1d0;
+  color: #fff;
   line-height: 1.7;
   font-family: "Courier New", monospace;
 }
@@ -114,7 +114,7 @@
 /* Summary */
 .cv-summary-text {
   font-size: 1.05rem;
-  color: #c9d9d8;
+  color: #e9f4f3;
   line-height: 1.7;
   text-align: justify;
   margin: 0;
@@ -142,7 +142,7 @@
 .cv-skill-group p {
   margin: 0 0 8px 0;
   font-size: 0.9rem;
-  color: #c9d9d8;
+  color: #e9f4f3;
   line-height: 1.5;
   font-family: "Courier New", monospace;
 }
@@ -176,13 +176,13 @@
 }
 
 .cv-role-company {
-  color: #94adaf;
+  color: #e9f4f3;
   font-size: 0.88rem;
   font-family: "Courier New", monospace;
 }
 
 .cv-role-summary {
-  color: #c9d9d8;
+  color: #e9f4f3;
   font-size: 0.95rem;
   line-height: 1.65;
   margin: 6px 0 10px 0;
@@ -204,7 +204,7 @@
   border-top: 1px solid rgba(140, 244, 207, 0.3);
   text-align: center;
   font-size: 0.85rem;
-  color: #94adaf;
+  color: #e9f4f3;
   font-family: "Courier New", monospace;
   position: relative;
   z-index: 1;

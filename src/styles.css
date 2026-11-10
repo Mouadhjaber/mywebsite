@@ -910,7 +910,7 @@ html[dir="rtl"] .hero-card::before { left:18px; right:auto; }
 }
 
 .full-cv .cv-contact {
-  color: #bfd1d0;
+  color: #fff;
 }
 
 .full-cv .cv-contact a {
@@ -918,7 +918,7 @@ html[dir="rtl"] .hero-card::before { left:18px; right:auto; }
 }
 
 .full-cv .cv-source-note {
-  color: #94adaf;
+  color: #c9d9d8;
 }
 
 .full-cv .cv-source-note a {
@@ -934,7 +934,7 @@ html[dir="rtl"] .hero-card::before { left:18px; right:auto; }
 }
 
 .full-cv .cv-skill-column p {
-  color: #c9d9d8;
+  color: #e9f4f3;
 }
 
 .full-cv .cv-role-date {
@@ -946,11 +946,11 @@ html[dir="rtl"] .hero-card::before { left:18px; right:auto; }
 }
 
 .full-cv .cv-role-company {
-  color: #94adaf;
+  color: #c9d9d8;
 }
 
 .full-cv .cv-role-body {
-  color: #c9d9d8;
+  color: #e9f4f3;
 }
 
 .full-cv .cv-role-stack {
@@ -958,7 +958,7 @@ html[dir="rtl"] .hero-card::before { left:18px; right:auto; }
 }
 
 .full-cv .cv-footer {
-  color: #94adaf;
+  color: #c9d9d8;
 }
 
 .full-cv .cv-hero {
