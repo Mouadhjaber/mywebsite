@@ -245,46 +245,9 @@
   </main>
   <footer class="site-footer"><div class="shell">© 2026 Mouadh Jaber · Ingénieur logiciel senior</div></footer>
   <script>
-  document.getElementById('download-pdf').addEventListener('click', async function (event) {
+  document.getElementById('download-pdf').addEventListener('click', function (event) {
     event.preventDefault();
-    var btn = this;
-    btn.setAttribute('aria-busy', 'true');
-    try {
-      if (!window.html2pdf) {
-        await new Promise(function (resolve, reject) {
-          var script = document.createElement('script');
-          script.src = '/vendor/html2pdf.bundle.min.js';
-          script.onload = resolve;
-          script.onerror = reject;
-          document.head.appendChild(script);
-        });
-      }
-      var response = await fetch('/fr/full-cv.html');
-      var html = await response.text();
-      var doc = new DOMParser().parseFromString(html, 'text/html');
-      var cv = doc.querySelector('.full-cv');
-      if (!cv) throw new Error('CV content not found');
-      var wrap = document.createElement('div');
-      wrap.className = 'pdf-export';
-      wrap.appendChild(document.importNode(cv, true));
-      document.body.appendChild(wrap);
-      try {
-      await window.html2pdf().set({
-        margin: 20,
-        filename: 'Mouadh_Jaber_CV_fr.pdf',
-        image: { type: 'jpeg', quality: 1.0 },
-        html2canvas: { scale: 3, useCORS: true, backgroundColor: '#ffffff', letterRendering: true },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        pagebreak: { mode: ['css', 'legacy'] }
-      }).from(wrap).save();
-      } finally {
-        wrap.remove();
-      }
-    } catch (error) {
-      window.location.href = '/fr/full-cv.html?pdf=1';
-    } finally {
-      btn.removeAttribute('aria-busy');
-    }
+    window.location.href = '/cv-neo.html?pdf=1';
   });
   </script>
 </body>

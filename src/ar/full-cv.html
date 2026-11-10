@@ -337,42 +337,11 @@
 <p>التقنيات: AD, GPO, MS Exchange, PowerShell, VBscript</p>
   </main>
   <footer class="site-footer"><div class="shell">© 2026 Mouadh Jaber · السيرة الذاتية الكاملة</div></footer>
-<script src="/vendor/html2pdf.bundle.min.js" defer></script>
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  var btn = document.getElementById('download-pdf');
-  if (!btn) return;
-  async function makePdf() {
-    if (!window.html2pdf) { window.print(); return; }
-    var main = document.querySelector('.full-cv');
-    if (!main) return;
-    var wrap = document.createElement('div');
-    wrap.className = 'pdf-export';
-    wrap.appendChild(main.cloneNode(true));
-    document.body.appendChild(wrap);
-    btn.setAttribute('aria-busy', 'true');
-    try {
-      await window.html2pdf().set({
-        margin: 10,
-        filename: 'Mouadh_Jaber_CV_ar.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        pagebreak: { mode: ['css', 'legacy'] }
-      }).from(wrap).save();
-    } finally {
-      wrap.remove();
-      btn.removeAttribute('aria-busy');
-    }
-  }
-  btn.addEventListener('click', function (event) {
+  document.getElementById('download-pdf').addEventListener('click', function (event) {
     event.preventDefault();
-    makePdf();
+    window.location.href = '/cv-neo.html?pdf=1';
   });
-  if (new URLSearchParams(window.location.search).get('pdf') === '1') {
-    window.addEventListener('load', makePdf, { once: true });
-  }
-});
-</script>
+  </script>
 </body>
 </html>

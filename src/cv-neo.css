@@ -1,0 +1,330 @@
+/* ============================================================
+   CV-NEO — Classic CV with Neo-Futurist Architecture
+   Professional, heavy, clear, and print-optimized
+   ============================================================ */
+
+.cv-neo {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 40px;
+  position: relative;
+  background: #fff;
+  color: #111;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+/* Decorative neo-futurist frame */
+.cv-neo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(135deg, rgba(140, 244, 207, 0.08) 0%, rgba(255, 112, 77, 0.06) 100%);
+  border: 1px solid rgba(140, 244, 207, 0.35);
+  border-radius: 6px;
+  box-shadow: 0 0 40px rgba(140, 244, 207, 0.15);
+  pointer-events: none;
+}
+
+/* Inner accent bars */
+.cv-neo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  z-index: 0;
+  background: linear-gradient(90deg, #8cf4cf 0%, #ff704d 50%, #8cf4cf 100%);
+  border-radius: 6px 6px 0 0;
+  pointer-events: none;
+}
+
+/* Header */
+.cv-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 36px;
+  border-bottom: 2px solid #1a2e32;
+  padding-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.cv-name {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin: 0 0 6px 0;
+  color: #111;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.cv-sub {
+  display: block;
+  font-size: 1.15rem;
+  color: #8cf4cf;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: "Courier New", monospace;
+}
+
+.cv-contact {
+  margin-left: auto;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.7;
+  font-family: "Courier New", monospace;
+}
+
+.cv-contact p {
+  margin: 0 0 4px 0;
+}
+
+.cv-contact a {
+  color: #8cf4cf;
+  text-decoration: none;
+  border-bottom: 1px dotted #8cf4cf;
+}
+
+.cv-contact a:hover {
+  color: #ff704d;
+  border-bottom-color: #ff704d;
+}
+
+/* Sections */
+.cv-section {
+  margin-bottom: 42px;
+  position: relative;
+  z-index: 1;
+}
+
+.cv-section::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #8cf4cf 0%, #ff704d 100%);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.cv-section-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin: 0 0 16px 0;
+  color: #1a2e32;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.cv-section-body {
+  padding-left: 20px;
+  border-left: 1px solid rgba(140, 244, 207, 0.3);
+}
+
+/* Summary */
+.cv-summary-text {
+  font-size: 1.05rem;
+  color: #222;
+  line-height: 1.7;
+  text-align: justify;
+  margin: 0;
+  padding-right: 40px;
+}
+
+/* Skills grid */
+.cv-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.cv-skill-group strong {
+  display: block;
+  color: #8cf4cf;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 8px;
+  font-family: "Courier New", monospace;
+}
+
+.cv-skill-group p {
+  margin: 0 0 8px 0;
+  font-size: 0.9rem;
+  color: #222;
+  line-height: 1.5;
+  font-family: "Courier New", monospace;
+}
+
+/* Roles */
+.cv-role {
+  margin-bottom: 30px;
+  page-break-inside: avoid;
+}
+
+.cv-role-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.cv-role-date {
+  color: #8cf4cf;
+  font: 700 0.8rem "Courier New", monospace;
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+}
+
+.cv-role-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111;
+  margin-right: auto;
+}
+
+.cv-role-company {
+  color: #555;
+  font-size: 0.88rem;
+  font-family: "Courier New", monospace;
+}
+
+.cv-role-summary {
+  color: #222;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 6px 0 10px 0;
+  text-align: justify;
+  font-family: "Courier New", monospace;
+}
+
+.cv-role-stack {
+  color: #555;
+  font: 700 0.78rem "Courier New", monospace;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+/* Footer */
+.cv-footer {
+  margin-top: 50px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(140, 244, 207, 0.3);
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+  font-family: "Courier New", monospace;
+  position: relative;
+  z-index: 1;
+}
+
+.cv-footer p {
+  margin: 0 0 6px 0;
+}
+
+/* Print / PDF optimization */
+@media print {
+  body {
+    background: #fff !important;
+    color: #111 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .cv-neo {
+    background: #fff !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cv-neo::before,
+  .cv-neo::after {
+    display: none !important;
+  }
+
+  .cv-section {
+    page-break-inside: avoid;
+    margin-bottom: 30px;
+  }
+
+  .cv-role {
+    page-break-inside: avoid;
+  }
+
+  .cv-footer {
+    page-break-after: avoid;
+  }
+
+  a {
+    color: #111 !important;
+    text-decoration: none !important;
+  }
+
+  .cv-contact a,
+  .cv-role-link a {
+    color: #111 !important;
+  }
+}
+
+/* Screen styles — hide print-only */
+@media screen {
+  .cv-neo {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .cv-neo {
+    padding: 30px 20px;
+  }
+
+  .cv-name {
+    font-size: 2.2rem;
+  }
+
+  .cv-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cv-contact {
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .cv-skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-role-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cv-role-title {
+    margin-right: 0;
+  }
+}
