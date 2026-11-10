@@ -885,36 +885,80 @@ html[dir="rtl"] .hero-card::before { left:18px; right:auto; }
   margin: 0 auto;
   padding: 56px 40px;
   position: relative;
-  background: #fff;
-  color: #111;
+  background: transparent;
+  color: #e9f4f3;
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.7;
 }
 
-.full-cv::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    linear-gradient(135deg, rgba(140, 244, 207, 0.07) 0%, rgba(255, 112, 77, 0.05) 100%);
-  border: 1px solid rgba(140, 244, 207, 0.3);
-  border-radius: 6px;
-  box-shadow: 0 0 40px rgba(140, 244, 207, 0.12);
-  pointer-events: none;
+.full-cv .cv-hero,
+.full-cv .cv-contact,
+.full-cv .cv-section,
+.full-cv .cv-role,
+.full-cv .cv-skill-column,
+.full-cv .cv-footer {
+  position: relative;
+  z-index: 1;
 }
 
-.full-cv::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  z-index: 0;
-  background: linear-gradient(90deg, #8cf4cf 0%, #ff704d 50%, #8cf4cf 100%);
-  border-radius: 6px 6px 0 0;
-  pointer-events: none;
+.full-cv .cv-hero h1 {
+  color: #fff;
+}
+
+.full-cv .cv-hero .cv-sub {
+  color: #8cf4cf;
+}
+
+.full-cv .cv-contact {
+  color: #bfd1d0;
+}
+
+.full-cv .cv-contact a {
+  color: #8cf4cf;
+}
+
+.full-cv .cv-source-note {
+  color: #94adaf;
+}
+
+.full-cv .cv-source-note a {
+  color: #8cf4cf;
+}
+
+.full-cv .cv-section-title {
+  color: #8cf4cf;
+}
+
+.full-cv .cv-skill-column h3 {
+  color: #8cf4cf;
+}
+
+.full-cv .cv-skill-column p {
+  color: #c9d9d8;
+}
+
+.full-cv .cv-role-date {
+  color: #8cf4cf;
+}
+
+.full-cv .cv-role-title {
+  color: #fff;
+}
+
+.full-cv .cv-role-company {
+  color: #94adaf;
+}
+
+.full-cv .cv-role-body {
+  color: #c9d9d8;
+}
+
+.full-cv .cv-role-stack {
+  color: #8cf4cf;
+}
+
+.full-cv .cv-footer {
+  color: #94adaf;
 }
 
 .full-cv .cv-hero {
@@ -1104,7 +1148,7 @@ html[dir="rtl"] .hero-card::before { left:18px; right:auto; }
 /* Print / PDF optimization for full-cv page */
 @media print {
   body { background: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .full-cv { background: #fff !important; box-shadow: none !important; border: none !important; width: 100%; max-width: 100%; margin: 0; padding: 0; }
+  .full-cv { background: #fff !important; box-shadow: none !important; border: none !important; width: 100%; max-width: 100%; margin: 0; padding: 0; color: #111 !important; }
   .full-cv::before, .full-cv::after { display: none !important; }
   .full-cv .cv-section { page-break-inside: avoid; margin-bottom: 30px; }
   .full-cv .cv-role { page-break-inside: avoid; }
