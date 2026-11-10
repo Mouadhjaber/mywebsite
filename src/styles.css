@@ -879,6 +879,7 @@ html[dir="rtl"] .hero-card::before { left:18px; right:auto; }
 
 /* ============================================================
    Full CV page — Clean, professional, well-formatted
+   All text is white/light for readability on transparent dark background
    ============================================================ */
 .full-cv {
   max-width: 900px;
@@ -901,76 +902,15 @@ html[dir="rtl"] .hero-card::before { left:18px; right:auto; }
   z-index: 1;
 }
 
-.full-cv .cv-hero h1 {
-  color: #fff;
-}
-
-.full-cv .cv-hero .cv-sub {
-  color: #8cf4cf;
-}
-
-.full-cv .cv-contact {
-  color: #fff;
-}
-
-.full-cv .cv-contact a {
-  color: #8cf4cf;
-}
-
-.full-cv .cv-source-note {
-  color: #c9d9d8;
-}
-
-.full-cv .cv-source-note a {
-  color: #8cf4cf;
-}
-
-.full-cv .cv-section-title {
-  color: #8cf4cf;
-}
-
-.full-cv .cv-skill-column h3 {
-  color: #8cf4cf;
-}
-
-.full-cv .cv-skill-column p {
-  color: #e9f4f3;
-}
-
-.full-cv .cv-role-date {
-  color: #8cf4cf;
-}
-
-.full-cv .cv-role-title {
-  color: #fff;
-}
-
-.full-cv .cv-role-company {
-  color: #c9d9d8;
-}
-
-.full-cv .cv-role-body {
-  color: #e9f4f3;
-}
-
-.full-cv .cv-role-stack {
-  color: #8cf4cf;
-}
-
-.full-cv .cv-footer {
-  color: #c9d9d8;
-}
-
+/* Hero header */
 .full-cv .cv-hero {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
   align-items: flex-start;
   margin-bottom: 36px;
-  border-bottom: 2px solid #1a2e32;
+  border-bottom: 2px solid rgba(140,244,207,.3);
   padding-bottom: 24px;
-  position: relative;
-  z-index: 1;
 }
 
 .full-cv .cv-hero h1 {
@@ -979,7 +919,7 @@ html[dir="rtl"] .hero-card::before { left:18px; right:auto; }
   letter-spacing: -0.04em;
   line-height: 1.05;
   margin: 0 0 6px 0;
-  color: #111;
+  color: #fff !important;
   font-family: Georgia, "Times New Roman", serif;
 }
 
@@ -997,7 +937,7 @@ html[dir="rtl"] .hero-card::before { left:18px; right:auto; }
   margin-left: auto;
   text-align: right;
   font-size: 0.9rem;
-  color: #333;
+  color: #fff;
   line-height: 1.7;
   font-family: "Courier New", monospace;
 }
@@ -1019,7 +959,7 @@ html[dir="rtl"] .hero-card::before { left:18px; right:auto; }
 
 .full-cv .cv-source-note {
   font-size: 0.85rem;
-  color: #666;
+  color: #c9d9d8;
   font-style: italic;
   margin: 0 0 32px 0;
   text-align: center;
@@ -1030,6 +970,7 @@ html[dir="rtl"] .hero-card::before { left:18px; right:auto; }
   text-decoration: underline;
 }
 
+/* Section titles */
 .full-cv .cv-section {
   margin-bottom: 42px;
   position: relative;
@@ -1054,12 +995,13 @@ html[dir="rtl"] .hero-card::before { left:18px; right:auto; }
   font-weight: 400;
   letter-spacing: 0.1em;
   margin: 0 0 18px 0;
-  color: #1a2e32;
+  color: #8cf4cf;
   text-transform: uppercase;
   position: relative;
   z-index: 1;
 }
 
+/* Skills grid */
 .full-cv .cv-skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -1079,11 +1021,12 @@ html[dir="rtl"] .hero-card::before { left:18px; right:auto; }
 .full-cv .cv-skill-column p {
   margin: 0 0 8px 0;
   font-size: 0.88rem;
-  color: #222;
+  color: #e9f4f3;
   line-height: 1.5;
   font-family: "Courier New", monospace;
 }
 
+/* Role entries */
 .full-cv .cv-role {
   margin-bottom: 30px;
   page-break-inside: avoid;
@@ -1109,12 +1052,17 @@ html[dir="rtl"] .hero-card::before { left:18px; right:auto; }
 .full-cv .cv-role-title {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #111;
+  color: #fff;
   margin-right: auto;
 }
 
+.full-cv .cv-role-company {
+  color: #c9d9d8;
+  font-size: 0.88rem;
+}
+
 .full-cv .cv-role-body {
-  color: #222;
+  color: #e9f4f3;
   font-size: 0.95rem;
   line-height: 1.65;
   margin: 6px 0 10px 0;
@@ -1123,19 +1071,20 @@ html[dir="rtl"] .hero-card::before { left:18px; right:auto; }
 }
 
 .full-cv .cv-role-stack {
-  color: #555;
+  color: #8cf4cf;
   font: 700 0.78rem "Courier New", monospace;
   letter-spacing: 0.03em;
   margin: 0;
 }
 
+/* Footer */
 .full-cv .cv-footer {
   margin-top: 50px;
   padding-top: 24px;
   border-top: 1px solid rgba(140, 244, 207, 0.3);
   text-align: center;
   font-size: 0.85rem;
-  color: #555;
+  color: #c9d9d8;
   font-family: "Courier New", monospace;
   position: relative;
   z-index: 1;
