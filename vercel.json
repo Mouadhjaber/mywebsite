@@ -2,6 +2,17 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "outputDirectory": "src",
+  "headers": [
+    {
+      "source": "/thread-game.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, max-age=0"
+        }
+      ]
+    }
+  ],
   "functions": {
     "api/rne/search.js": {
       "runtime": "nodejs20.x"
