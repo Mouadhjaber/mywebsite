@@ -3,711 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kids threading game: pull the colorful thread through 3 holes around 4 spinning pegs to grow a big thread and win!">
-  <meta name="author" content="Mouadh Jaber">
-  <title>Le Fil — Kids Threading Game | Mouadh Jaber</title>
+  <meta name="description" content="A kid-friendly boot, flower, key, and golden bag adventure game.">
+  <title>Magic Boot Quest | Mouadh Jaber</title>
   <style>
-    /* ============================================================
-       LE FIL — Kids Threading Game (styled like cv-neo)
-       Bright, kid-friendly: neon thread, spinning pegs, confetti win
-       ============================================================ */
-    :root {
-      --paper: #071315;
-      --panel: rgba(12, 32, 35, 0.94);
-      --ink: #e9f4f3;
-      --muted: #94adaf;
-      --accent: #8cf4cf;   // mint
-      --hot: #ff704d;      // coral
-      --line: rgba(156, 208, 202, 0.25);
-      --kid-pink: #ff9ff3;
-      --kid-blue: #54a0ff;
-      --kid-yellow: #ffe66d;
-      --kid-green: #55efc4;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--paper);
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      opacity: 0.06;
-      background-image:
-        linear-gradient(rgba(185, 243, 223, 0.5) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(185, 243, 223, 0.5) 1px, transparent 1px);
-      background-size: 40px 40px;
-    }
-    a { color: inherit; text-underline-offset: 3px; }
-
-    .cv-neo {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 30px;
-      position: relative;
-      background: transparent;
-    }
-    .cv-header {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 32px;
-      align-items: flex-start;
-      margin-bottom: 36px;
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 24px;
-      position: relative;
-      z-index: 1;
-    }
-    .cv-name {
-      font-size: 3rem;
-      font-weight: 400;
-      letter-spacing: -0.04em;
-      line-height: 1.05;
-      margin: 0 0 6px 0;
-      color: #fff;
-      font-family: Georgia, "Times New Roman", serif;
-    }
-    .cv-sub {
-      display: block;
-      font-size: 1.15rem;
-      color: var(--accent);
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-family: "Courier New", monospace;
-    }
-    .cv-contact {
-      margin-left: auto;
-      text-align: right;
-      font-size: 0.9rem;
-      color: #fff;
-      line-height: 1.7;
-      font-family: "Courier New", monospace;
-    }
-    .cv-contact p { margin: 0 0 4px 0; }
-    .cv-contact a {
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px dotted var(--accent);
-    }
-    .cv-contact a:hover { color: var(--hot); border-bottom-color: var(--hot); }
-
-    .cv-section {
-      margin-bottom: 42px;
-      position: relative;
-      z-index: 1;
-    }
-    .cv-section::before {
-      content: "";
-      position: absolute;
-      left: -6px; top: 0; bottom: 0;
-      width: 4px;
-      background: linear-gradient(180deg, var(--accent) 0%, var(--hot) 100%);
-      border-radius: 2px;
-      pointer-events: none;
-    }
-    .cv-section-title {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.7rem;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      margin: 0 0 16px 0;
-      color: var(--accent);
-      text-transform: uppercase;
-      position: relative;
-      z-index: 1;
-    }
-    .cv-section-body {
-      padding-left: 20px;
-      border-left: 1px solid rgba(140, 244, 207, 0.3);
-    }
-    .cv-game-intro {
-      font-size: 1rem;
-      color: #b4c9c7;
-      margin: 0 0 20px 0;
-      line-height: 1.7;
-      text-align: justify;
-      font-family: "Courier New", monospace;
-    }
-
-    /* ---------- game panel ---------- */
-    .game-panel {
-      position: relative;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      min-height: 420px;
-    }
-    #game {
-      display: block;
-      width: 100%;
-      height: 400px;
-      background: radial-gradient(circle at center, #0c1a1c 0%, #020708 100%);
-      border: 3px solid var(--line);
-      border-radius: 6px;
-      cursor: crosshair;
-      touch-action: none;
-      position: relative;
-    }
-    @media (min-width: 700px) { #game { height: 500px; } }
-    .game-panel canvas { image-rendering: crisp-edges; width: 100%; height: 100%; display: block; }
-
-    /* HUD */
-    .hud {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      font-family: "Courier New", monospace;
-    }
-    .hud-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      padding: 10px;
-      text-align: center;
-      color: #d7eede;
-    }
-    .hud-card .big {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--accent);
-      display: block;
-    }
-    .hud-card .small {
-      font-size: 0.72rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-top: 4px;
-    }
-    .hud-card .big.warn { color: var(--kid-pink); }
-    .hud-card .big.ok { color: var(--kid-green); }
-    .length-bar {
-      grid-column: 1 / -1;
-      height: 12px;
-      background: rgba(255,255,255,0.06);
-      border-radius: 6px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      margin-top: 4px;
-    }
-    .length-bar > span {
-      display: block;
-      height: 100%;
-      width: 0%;
-      background: linear-gradient(90deg, var(--accent), var(--kid-pink), var(--hot));
-      border-radius: 6px;
-      transition: width 0.3s ease;
-    }
-
-    /* encouragement banner */
-    .encourage {
-      font: 700 0.95rem "Courier New", monospace;
-      text-align: center;
-      color: var(--accent);
-      padding: 8px 12px;
-      border-radius: 4px;
-      margin-top: 6px;
-      min-height: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-    .encourage::before { content: "✨"; }
-
-    .controls {
-      color: var(--muted);
-      font-size: 0.8rem;
-      font-family: "Courier New", monospace;
-      text-align: center;
-    }
-    .controls b { color: var(--kid-yellow); }
-
-    /* ---------- win screen ---------- */
-    .win-screen {
-      position: absolute;
-      inset: 24px;
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: rgba(7, 19, 21, 0.93);
-      z-index: 10;
-      border-radius: 8px;
-      text-align: center;
-      padding: 30px 24px;
-      border: 2px solid var(--accent);
-      box-shadow: 0 0 40px rgba(140,244,207,0.15);
-    }
-    .win-screen.show { display: flex; }
-    .win-screen h2 {
-      color: var(--accent);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2rem, 7vw, 3rem);
-      margin: 0 0 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      text-shadow: 0 0 16px rgba(140,244,207,0.35);
-    }
-    .win-screen p { color: #fff; margin: 6px 0; font-size: 1.05rem; font-family: "Courier New", monospace; }
-    .win-screen .stat { color: var(--kid-pink); font-weight: 700; }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 34px;
-      border: 2px solid var(--accent);
-      color: #051112;
-      background: var(--accent);
-      font: 800 0.9rem "Courier New", monospace;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: 0.2s;
-      box-shadow: 0 6px 0 rgba(0,0,0,0.35);
-    }
-    .btn:active { transform: translateY(4px); box-shadow: 0 2px 0 rgba(0,0,0,0.35); }
-    .btn:hover { background: var(--kid-pink); border-color: var(--kid-pink); }
-
-    .cv-footer {
-      margin-top: 50px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(140, 244, 207, 0.3);
-      text-align: center;
-      font-size: 0.85rem;
-      color: #c9d9d8;
-      font-family: "Courier New", monospace;
-      position: relative;
-      z-index: 1;
-    }
-    .cv-footer p { margin: 0 0 6px 0; }
-
-    @media (max-width: 640px) {
-      .cv-neo { padding: 24px 16px; }
-      .cv-name { font-size: 2.2rem; }
-      .cv-header { flex-direction: column; gap: 16px; }
-      .cv-contact { margin-left: 0; text-align: left; }
-      .game-panel { padding: 16px; min-height: 380px; }
-      .hud { gap: 8px; }
-    }
+    :root { --paper:#071315; --ink:#e9f4f3; --muted:#94adaf; --accent:#8cf4cf; --hot:#ff704d; --line:rgba(156,208,202,.25); --gold:#ffd45e; --pink:#ff9ff3; --blue:#54a0ff; }
+    * { box-sizing:border-box; } body { margin:0; min-height:100vh; color:var(--ink); background:var(--paper); font-family:Georgia,"Times New Roman",serif; }
+    body:before { content:""; position:fixed; inset:0; z-index:-2; background:radial-gradient(circle at 80% 8%,rgba(84,160,255,.18),transparent 28rem),radial-gradient(circle at 10% 65%,rgba(255,159,243,.12),transparent 28rem),var(--paper); }
+    body:after { content:""; pointer-events:none; position:fixed; inset:0; z-index:-1; opacity:.07; background-image:linear-gradient(rgba(185,243,223,.7) 1px,transparent 1px),linear-gradient(90deg,rgba(185,243,223,.7) 1px,transparent 1px); background-size:40px 40px; }
+    .skip-link { position:absolute; left:-999px; } .skip-link:focus { left:12px; top:12px; background:var(--accent); color:#061315; padding:10px; z-index:5; }
+    .cv-neo { max-width:900px; margin:auto; padding:42px 32px; }
+    .cv-header { display:flex; flex-wrap:wrap; justify-content:space-between; gap:26px; padding-bottom:22px; margin-bottom:32px; border-bottom:2px solid var(--accent); }
+    h1 { margin:0; color:#fff; font-size:clamp(2.5rem,7vw,4rem); font-weight:400; letter-spacing:-.05em; line-height:.95; }
+    .sub { display:block; margin-top:12px; color:var(--accent); font:700 .82rem "Courier New",monospace; letter-spacing:.13em; text-transform:uppercase; }
+    .contact { text-align:right; color:#fff; font:.82rem "Courier New",monospace; line-height:1.8; }.contact p{margin:0}.contact a{color:var(--accent)}
+    .game-section { position:relative; padding-left:20px; border-left:1px solid rgba(140,244,207,.3); }.game-section:before{content:"";position:absolute;left:-6px;top:0;bottom:0;width:4px;border-radius:2px;background:linear-gradient(var(--accent),var(--hot));}
+    h2 { margin:0 0 15px; color:var(--accent); font-size:1.55rem; font-weight:400; letter-spacing:.1em; text-transform:uppercase; }
+    .intro { margin:0 0 18px; color:#b4c9c7; font: .94rem/1.65 "Courier New",monospace; }
+    .panel { position:relative; overflow:hidden; background:rgba(12,32,35,.92); border:1px solid var(--line); border-radius:6px; padding:18px; }
+    .quest { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:15px; font:700 .72rem "Courier New",monospace; text-align:center; }
+    .quest div { padding:9px 5px; border:1px solid var(--line); border-radius:4px; color:var(--muted); }.quest .active { color:var(--accent); border-color:var(--accent); background:rgba(140,244,207,.08); }.quest .done { color:var(--gold); border-color:var(--gold); }
+    #game { display:block; width:100%; height:500px; touch-action:none; cursor:crosshair; border:2px solid rgba(140,244,207,.25); border-radius:5px; background:#091718; }
+    .hint { min-height:28px; margin:13px 0 0; text-align:center; color:var(--accent); font:700 .9rem "Courier New",monospace; }.hint:before{content:"✨ ";}
+    .restart { display:block; margin:14px auto 0; border:1px solid var(--line); color:var(--accent); background:transparent; border-radius:3px; padding:9px 18px; cursor:pointer; font:700 .74rem "Courier New",monospace; letter-spacing:.1em; text-transform:uppercase; }.restart:hover{background:var(--accent);color:#061315}
+    .win { position:absolute; inset:18px; display:none; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:25px; border:2px solid var(--gold); border-radius:5px; background:rgba(7,19,21,.94); }.win.show{display:flex}.win h3{margin:0 0 10px;color:var(--gold);font-size:clamp(2rem,7vw,3rem);letter-spacing:.05em}.win p{margin:0;color:#fff;font:1rem/1.7 "Courier New",monospace}
+    footer { margin-top:42px; padding-top:20px; border-top:1px solid rgba(140,244,207,.3); color:#c9d9d8; text-align:center; font:.76rem "Courier New",monospace; }
+    @media(max-width:640px){.cv-neo{padding:25px 16px}.cv-header{flex-direction:column}.contact{text-align:left}#game{height:420px}.panel{padding:12px}.quest{font-size:.61rem}}
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#cv-content">Skip to game content</a>
-
-  <div class="cv-neo" id="cv-content">
-    <!-- Header -->
+  <a class="skip-link" href="#game">Skip to game</a>
+  <main class="cv-neo">
     <header class="cv-header">
-      <div>
-        <h1 class="cv-name">Le Fil<br><span class="cv-sub">Kids Threading Game — 3 holes · 4 spinning pegs</span></h1>
-      </div>
-      <div class="cv-contact">
-        <p>Tel: +216 58 201 430</p>
-        <p>Mail: mouadh.jaber@msn.com</p>
-        <p><a href="https://www.linkedin.com/in/mouadhjaber/" target="_blank" rel="noopener noreferrer">LinkedIn: mouadhjaber</a></p>
-      </div>
+      <div><h1>Magic Boot<br><span class="sub">Draw the flower · find the key · open the golden bag</span></h1></div>
+      <div class="contact"><p>Tel: +216 58 201 430</p><p>Mail: mouadh.jaber@msn.com</p><p><a href="https://www.linkedin.com/in/mouadhjaber/" target="_blank" rel="noopener noreferrer">LinkedIn: mouadhjaber</a></p></div>
     </header>
-
-    <!-- Game -->
-    <section class="cv-section" id="game-section">
-      <h2 class="cv-section-title">Sew &amp; Grow</h2>
-      <div class="cv-section-body">
-        <p class="cv-game-intro">Pull the thread through the 3 holes around the 4 spinning pegs. The longer you pull, the bigger your thread grows! Reach the end of the bar to win.</p>
-
-        <div class="game-panel">
-          <div class="hud">
-            <div class="hud-card">
-              <span class="big" id="hud-holes">0</span>
-              <span class="small">holes sewn</span>
-            </div>
-            <div class="hud-card">
-              <span class="big" id="hud-len">0</span>
-              <span class="small">thread px</span>
-            </div>
-            <div class="hud-card">
-              <span class="big" id="hud-time">0:00</span>
-              <span class="small">time</span>
-            </div>
-            <div class="length-bar"><span id="len-fill"></span></div>
-          </div>
-          <canvas id="game"></canvas>
-          <div class="encourage" id="encourage">Keep pulling the thread ✨</div>
-          <div class="controls">
-            Drag <b>mouse</b> or <b>finger</b> to pull. Touch a peg for bonus!
-          </div>
-          <div id="win-screen" class="win-screen">
-            <h2>You Won 🎉</h2>
-            <p>Thread: <b class="stat" id="win-len">0</b> px</p>
-            <p>Time: <b class="stat" id="win-time">0:00</b></p>
-            <p>You grew a big thread through the holes and pegs!</p>
-            <button class="btn" onclick="restartGame()">Play Again</button>
-          </div>
-        </div>
+    <section class="game-section"><h2>Boot Adventure</h2><p class="intro">Draw a pretty flower on the big boot. It will reveal a magic key. Then drag the key to the lock and open the golden bag!</p>
+      <div class="panel">
+        <div class="quest"><div class="active" id="step1">1 · Draw a flower</div><div id="step2">2 · Find the key</div><div id="step3">3 · Open the bag</div></div>
+        <canvas id="game" aria-label="Magic Boot Quest drawing game"></canvas>
+        <p class="hint" id="hint">Draw a flower anywhere on the big boot!</p>
+        <button class="restart" id="restart">Start again</button>
+        <div class="win" id="win"><h3>You did it! 🎉</h3><p>The golden bag is open!</p><button class="restart" id="again">Play again</button></div>
       </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="cv-footer">
-      <p>© 2026 Mouadh Jaber · Senior Software Engineer &amp; Software Architect — Multi-Discipline Fields</p>
-      <p>A HTML5 canvas game styled like <a href="cv-neo.html?pdf=1">cv-neo</a>.</p>
-    </footer>
-  </div>
-
-  <script>
-    (function () {
-      var canvas = document.getElementById('game');
-      var ctx = canvas.getContext('2d', { alpha: false });
-      var winScreen = document.getElementById('win-screen');
-      var encourage = document.getElementById('encourage');
-      var hudHoles = document.getElementById('hud-holes');
-      var hudLen = document.getElementById('hud-len');
-      var hudTargetBar = document.getElementById('len-fill');
-      var hudTime = document.getElementById('hud-time');
-      var winLen = document.getElementById('win-len');
-      var winTime = document.getElementById('win-time');
-
-      var W, H, dpr = window.devicePixelRatio || 1;
-      var state = 'PLAYING';
-
-      var ACCENT = { r: 140, g: 244, b: 207 };
-      var HOT = { r: 255, g: 112, b: 77 };
-      var KIDPINK = { r: 255, g: 159, b: 243 };
-      var KIDBLUE = { r: 84, g: 160, b: 255 };
-      var KIDYELLOW = { r: 255, g: 230, b: 109 };
-      var KIDGREEN = { r: 85, g: 239, b: 196 };
-
-      function mix(c1, c2, t) {
-        return { r: c1.r + (c2.r - c1.r) * t, g: c1.g + (c2.g - c1.g) * t, b: c1.b + (c2.b - c1.b) * t };
-      }
-      function rgbStr(c) { return 'rgb(' + Math.round(c.r) + ',' + Math.round(c.g) + ',' + Math.round(c.b) + ')'; }
-      function dist(a, b) { return Math.hypot(a.x - b.x, a.y - b.y); }
-      function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
-      function rand(a, b) { return a + Math.random() * (b - a); }
-
-      /* game objects */
-      var needle, holes = [], pegs = [], path = [], current = null;
-      var threadLength = 0, targetLength = 0, threadThickness = 6;
-      var startTime = Date.now();
-      var pegCooldown = [0, 0, 0, 0];
-      var particles = [];
-      var encouragementTimer = 0;
-
-      function resize() {
-        var b = canvas.getBoundingClientRect();
-        dpr = window.devicePixelRatio || 1;
-        canvas.width = Math.round(b.width * dpr);
-        canvas.height = Math.round(b.height * dpr);
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        W = b.width; H = b.height;
-        initLayout();
-      }
-      window.addEventListener('resize', resize);
-
-      function initLayout() {
-        var cx = W / 2, cy = H / 2;
-        var sc = Math.min(W - 40, H - 40);
-
-        needle = { x: clamp(cx - sc * 0.30, 22, W - 22), y: clamp(cy, 22, H - 22) };
-        holes = [
-          { x: clamp(cx + sc * 0.52, 26, W - 26), y: clamp(cy - sc * 0.26, 26, H - 26), r: 22, threaded: false, label: '1', color: KIDPINK },
-          { x: clamp(cx + sc * 0.36, 26, W - 26), y: clamp(cy + sc * 0.30, 26, H - 26), r: 22, threaded: false, label: '2', color: KIDBLUE },
-          { x: clamp(cx - sc * 0.14, 26, W - 26), y: clamp(cy + sc * 0.38, 26, H - 26), r: 22, threaded: false, label: '3', color: KIDYELLOW }
-        ];
-
-        path = [{ x: needle.x, y: needle.y }];
-        current = { x: needle.x, y: needle.y };
-        threadLength = 0;
-        threadThickness = 6;
-        targetLength = Math.max(1100, 800 + sc * 1.8);
-
-        pegs = [
-          { orbit: sc * 0.24, speed: 0.010, angle: 0.0, r: 9, color: KIDGREEN },
-          { orbit: sc * 0.30, speed: -0.012, angle: 1.6, r: 9, color: KIDBLUE },
-          { orbit: sc * 0.36, speed: 0.008, angle: 3.1, r: 9, color: KIDPINK },
-          { orbit: sc * 0.42, speed: -0.009, angle: 4.7, r: 9, color: KIDYELLOW }
-        ].map(function (p) {
-          return { x: cx + Math.cos(p.angle) * p.orbit, y: cy + Math.sin(p.angle) * p.orbit, orbit: p.orbit, speed: p.speed, angle: p.angle, r: p.r, color: p.color, caught: false, caughtUntil: 0 };
-        });
-
-        pegCooldown = [0, 0, 0, 0];
-        startTime = Date.now();
-        state = 'PLAYING';
-        winScreen.classList.remove('show');
-        particles = [];
-        encouragementTimer = 0;
-        updateHUD();
-      }
-
-      /* input */
-      function pointerPos(x, y) {
-        var b = canvas.getBoundingClientRect();
-        return { x: x - b.left, y: y - b.top };
-      }
-      function setCurrent(x, y) {
-        if (state !== 'PLAYING') return;
-        var p = pointerPos(x, y);
-        current = { x: p.x, y: p.y };
-      }
-      function onDown(e) {
-        if (e.touches) e.preventDefault();
-        var t = e.touches ? e.touches[0] : e;
-        setCurrent(t.clientX, t.clientY);
-      }
-      function onMove(e) {
-        if (e.touches) e.preventDefault();
-        var t = e.touches ? e.touches[0] : e;
-        setCurrent(t.clientX, t.clientY);
-      }
-      canvas.addEventListener('mousedown', onDown);
-      canvas.addEventListener('mousemove', onMove);
-      canvas.addEventListener('mouseup', onDown);
-      canvas.addEventListener('touchstart', onDown, { passive: false });
-      canvas.addEventListener('touchmove', onMove, { passive: false });
-      canvas.addEventListener('touchend', onDown, { passive: false });
-
-      /* logic */
-      var CATCH_R = 34;
-      var GROW_PER_FRAME = 0.10;
-
-      function updatePegs() {
-        pegs.forEach(function (p) {
-          p.angle += p.speed;
-          p.x = W / 2 + Math.cos(p.angle) * p.orbit;
-          p.y = H / 2 + Math.sin(p.angle) * p.orbit;
-        });
-      }
-
-      function threadHole(h) {
-        h.threaded = true;
-        path.push({ x: h.x, y: h.y });
-        var last = path[path.length - 2];
-        threadLength += dist(last, h);
-        threadThickness = Math.min(threadThickness + 2.2, 26);
-        setEncourage("Great! Hole " + h.label + " sewn ✨");
-      }
-
-      function catchPeg(idx) {
-        var now = Date.now();
-        if (now <= pegCooldown[idx]) return;
-        pegCooldown[idx] = now + 700;
-        pegs[idx].caught = true;
-        pegs[idx].caughtUntil = now + 300;
-        threadLength += 45;
-        threadThickness = Math.min(threadThickness + 1.0, 26);
-        setEncourage("Peg bonus! +45 px 🎯");
-      }
-
-      function setEncourage(msg) {
-        encourage.textContent = msg;
-        encouragementTimer = 90;
-      }
-      function tickEncourage() {
-        if (encouragementTimer > 0) {
-          encouragementTimer--;
-          if (encouragementTimer <= 0) {
-            var t = holes.filter(function (h) { return h.threaded; }).length;
-            encourage.textContent = t === 3 ? "All holes! Pull more to win 🏁" : "Sew hole " + (t + 1) + " next ✨";
-          }
-        }
-      }
-
-      function checkWin() {
-        var allThreaded = holes.every(function (h) { return h.threaded; });
-        if (allThreaded && threadLength >= targetLength && state === 'PLAYING') {
-          state = 'WON';
-          showWin();
-        }
-      }
-
-      function updateHUD() {
-        var threaded = holes.filter(function (h) { return h.threaded; }).length;
-        hudHoles.textContent = threaded;
-        hudLen.textContent = Math.floor(threadLength);
-        var p = Math.min(threadLength / targetLength, 1);
-        hudTargetBar.style.width = (p * 100) + '%';
-        var t = Math.max(0, Math.floor((Date.now() - startTime) / 1000));
-        var m = String(Math.floor(t / 60)).padStart(2, '0');
-        var s = String(t % 60).padStart(2, '0');
-        hudTime.textContent = m + ':' + s;
-        hudHoles.className = threaded === 3 ? 'big ok' : 'big';
-      }
-
-      /* particles & confetti */
-      function burst(x, y) {
-        var colors = [ACCENT, HOT, KIDPINK, KIDBLUE, KIDYELLOW, KIDGREEN];
-        for (var i = 0; i < 70; i++) {
-          particles.push({
-            x: x, y: y,
-            vx: rand(-16, 16), vy: rand(-20, 6),
-            life: 1, color: colors[Math.floor(Math.random() * colors.length)],
-            size: rand(2, 5)
-          });
-        }
-      }
-      function updateParticles(dt) {
-        for (var i = particles.length - 1; i >= 0; i--) {
-          var p = particles[i];
-          p.x += p.vx; p.y += p.vy; p.vy += 0.7; p.life -= dt * 1.0;
-          if (p.life <= 0) particles.splice(i, 1);
-        }
-      }
-      function drawParticles() {
-        particles.forEach(function (p) {
-          ctx.globalAlpha = p.life;
-          ctx.fillStyle = rgbStr(p.color);
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-          ctx.fill();
-          ctx.globalAlpha = 1;
-        });
-      }
-
-      /* draw */
-      function drawGrid() {
-        ctx.strokeStyle = 'rgba(140, 244, 207, 0.05)';
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        var step = 44;
-        for (var x = 0; x <= W; x += step) { ctx.moveTo(x, 0); ctx.lineTo(x, H); }
-        for (var y = 0; y <= H; y += step) { ctx.moveTo(0, y); ctx.lineTo(W, y); }
-        ctx.stroke();
-      }
-
-      function draw() {
-        ctx.clearRect(0, 0, W, H);
-        drawGrid();
-
-        // spinning pegs
-        pegs.forEach(function (p) {
-          var flashing = Date.now() < p.caughtUntil;
-          var outer = flashing ? p.r + 5 : p.r;
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, outer, 0, Math.PI * 2);
-          ctx.fillStyle = flashing ? '#ffffff' : rgbStr(p.color);
-          ctx.fill();
-          if (flashing) {
-            ctx.strokeStyle = rgbStr(HOT); ctx.lineWidth = 2.5; ctx.stroke();
-          }
-          // little shine
-          ctx.beginPath();
-          ctx.arc(p.x - p.r * 0.35, p.y - p.r * 0.35, 2, 0, Math.PI * 2);
-          ctx.fillStyle = '#fff'; ctx.fill();
-        });
-
-        // thread line
-        if (path.length && current) {
-          var prog = Math.min(threadLength / targetLength, 1);
-          var col = rgbStr(mix(ACCENT, KIDPINK, prog));
-          var thick = Math.max(4, Math.min(threadThickness, 28));
-          ctx.beginPath();
-          ctx.moveTo(path[0].x, path[0].y);
-          for (var i = 1; i < path.length; i++) ctx.lineTo(path[i].x, path[i].y);
-          ctx.lineTo(current.x, current.y);
-          ctx.strokeStyle = col;
-          ctx.lineWidth = thick;
-          ctx.lineCap = 'round'; ctx.lineJoin = 'round';
-          ctx.shadowColor = col; ctx.shadowBlur = Math.min(16, thick * 1.1);
-          ctx.stroke();
-          ctx.shadowBlur = 0;
-
-          // anchor dots
-          path.forEach(function (pt) {
-            ctx.beginPath(); ctx.arc(pt.x, pt.y, 3.6, 0, Math.PI * 2);
-            ctx.fillStyle = col; ctx.fill();
-          });
-          // free end
-          ctx.beginPath(); ctx.arc(current.x, current.y, 5.5, 0, Math.PI * 2);
-          ctx.fillStyle = '#fff'; ctx.fill();
-          ctx.strokeStyle = col; ctx.lineWidth = 2; ctx.stroke();
-        }
-
-        // needle origin
-        ctx.beginPath(); ctx.rect(needle.x - 6, needle.y - 6, 12, 12);
-        ctx.fillStyle = rgbStr(ACCENT); ctx.fill();
-        ctx.fillStyle = '#fff';
-        ctx.font = 'bold 10px "Courier New", monospace';
-        ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-        ctx.fillText('START', needle.x, needle.y - 16);
-
-        // holes
-        holes.forEach(function (h) {
-          ctx.beginPath();
-          ctx.arc(h.x, h.y, h.r, 0, Math.PI * 2);
-          if (h.threaded) { ctx.fillStyle = rgbStr(h.color); ctx.fill(); }
-          ctx.strokeStyle = h.threaded ? rgbStr(h.color) : rgbStr(ACCENT);
-          ctx.lineWidth = h.threaded ? 2.5 : 4;
-          ctx.stroke();
-          ctx.fillStyle = '#020708';
-          ctx.font = 'bold 13px "Courier New", monospace';
-          ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-          ctx.fillText(h.label, h.x, h.y);
-        });
-
-        drawParticles();
-      }
-
-      /* loop */
-      var last = Date.now();
-      function loop() {
-        var now = Date.now();
-        var dt = (now - last) / 1000;
-        last = now;
-
-        if (state === 'PLAYING') {
-          updatePegs();
-          threadLength += GROW_PER_FRAME; // grows with time
-          tickEncourage();
-          if (current) {
-            holes.forEach(function (h) {
-              if (!h.threaded && dist(current, h) < h.r + CATCH_R) threadHole(h);
-            });
-            pegs.forEach(function (p, idx) {
-              if (dist(current, p) < p.r + CATCH_R + 12) catchPeg(idx);
-            });
-          }
-          checkWin();
-          updateHUD();
-        } else if (state === 'WON') {
-          updateParticles(dt);
-        }
-
-        draw();
-        requestAnimationFrame(loop);
-      }
-
-      /* win */
-      function showWin() {
-        var t = Math.max(0, Math.floor((Date.now() - startTime) / 1000));
-        var m = String(Math.floor(t / 60)).padStart(2, '0');
-        var s = String(t % 60).padStart(2, '0');
-        winLen.textContent = Math.floor(threadLength);
-        winTime.textContent = m + ':' + s;
-        winScreen.classList.add('show');
-        burst(W / 2, H / 2);
-        setTimeout(function () { burst(W / 2 - 80, H / 2 - 60); burst(W / 2 + 80, H / 2 + 60); }, 200);
-        setTimeout(function () { burst(W / 2 - 60, H / 2 + 70); burst(W / 2 + 60, H / 2 - 70); }, 400);
-      }
-
-      window.restartGame = function () {
-        initLayout();
-      };
-
-      resize();
-      loop();
-    })();
-  </script>
+    <footer>© 2026 Mouadh Jaber · Magic Boot Quest</footer>
+  </main>
+<script>
+(() => {
+  const canvas=document.getElementById('game'), ctx=canvas.getContext('2d');
+  const hint=document.getElementById('hint'), win=document.getElementById('win');
+  const steps=[document.getElementById('step1'),document.getElementById('step2'),document.getElementById('step3')];
+  let W,H,dpr,mode,strokes,key,bag,boot,stars=[],dragging=false,dragOffset={x:0,y:0};
+  const colors=['#8cf4cf','#ff9ff3','#54a0ff','#ffd45e','#ff704d'];
+  const clamp=(n,min,max)=>Math.max(min,Math.min(max,n));
+  const distance=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y);
+  function resize(){const r=canvas.getBoundingClientRect();dpr=devicePixelRatio||1;canvas.width=r.width*dpr;canvas.height=r.height*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);W=r.width;H=r.height; layout();draw();}
+  function layout(){boot={x:W*.12,y:H*.24,w:W*.55,h:H*.53};bag={x:W*.72,y:H*.56,w:Math.min(W*.2,115),h:Math.min(H*.24,115),open:false};if(!key)key={x:W*.43,y:H*.42,r:15,visible:false};}
+  function reset(){mode='DRAW';strokes=[];key={x:W*.43,y:H*.42,r:15,visible:false};stars=[];dragging=false;win.classList.remove('show');steps.forEach((s,i)=>s.className=i===0?'active':'');hint.textContent='Draw a flower anywhere on the big boot!';layout();draw();}
+  function pos(e){const r=canvas.getBoundingClientRect(),p=e.touches?e.touches[0]:e;return{x:p.clientX-r.left,y:p.clientY-r.top};}
+  function pointInBoot(p){return p.x>boot.x&&p.x<boot.x+boot.w&&p.y>boot.y&&p.y<boot.y+boot.h;}
+  function setStep(i){steps.forEach((s,n)=>s.className=n<i?'done':n===i?'active':'');}
+  function addStars(x,y,n=18){for(let i=0;i<n;i++)stars.push({x,y,vx:(Math.random()-.5)*8,vy:(Math.random()-.5)*8-2,life:1,c:colors[i%colors.length]});}
+  function revealKey(){mode='KEY';key.visible=true;setStep(1);hint.textContent='Amazing flower! Drag the magic key to the golden bag 🔑';addStars(key.x,key.y,28);}
+  function tryFlower(){const pts=strokes.flat();if(pts.length<18)return;const xs=pts.map(p=>p.x),ys=pts.map(p=>p.y),spreadX=Math.max(...xs)-Math.min(...xs),spreadY=Math.max(...ys)-Math.min(...ys);if(spreadX>35&&spreadY>35)revealKey();}
+  function down(e){e.preventDefault();const p=pos(e);if(mode==='DRAW'&&pointInBoot(p)){dragging=true;strokes.push([p]);}else if(mode==='KEY'&&key.visible&&distance(p,key)<key.r+20){dragging=true;dragOffset={x:p.x-key.x,y:p.y-key.y};}}
+  function move(e){if(!dragging)return;e.preventDefault();const p=pos(e);if(mode==='DRAW'){if(pointInBoot(p))strokes.at(-1).push(p);}else if(mode==='KEY'){key.x=p.x-dragOffset.x;key.y=p.y-dragOffset.y;if(key.x>bag.x-25&&key.x<bag.x+bag.w+25&&key.y>bag.y-35&&key.y<bag.y+bag.h+25)openBag();}draw();}
+  function up(){if(mode==='DRAW'&&dragging)tryFlower();dragging=false;}
+  canvas.addEventListener('mousedown',down);canvas.addEventListener('mousemove',move);window.addEventListener('mouseup',up);canvas.addEventListener('touchstart',down,{passive:false});canvas.addEventListener('touchmove',move,{passive:false});window.addEventListener('touchend',up);
+  function rounded(x,y,w,h,r){ctx.beginPath();ctx.roundRect(x,y,w,h,r);}
+  function drawBoot(){ctx.save();ctx.shadowColor='rgba(255,159,243,.35)';ctx.shadowBlur=18;ctx.fillStyle='#54a0ff';rounded(boot.x,boot.y,boot.w*.45,boot.h*.7,28);ctx.fill();rounded(boot.x+boot.w*.27,boot.y+boot.h*.52,boot.w*.73,boot.h*.38,28);ctx.fill();ctx.shadowBlur=0;ctx.strokeStyle='#8cf4cf';ctx.lineWidth=4;rounded(boot.x,boot.y,boot.w*.45,boot.h*.7,28);ctx.stroke();rounded(boot.x+boot.w*.27,boot.y+boot.h*.52,boot.w*.73,boot.h*.38,28);ctx.stroke();ctx.fillStyle='rgba(255,255,255,.45)';ctx.fillRect(boot.x+boot.w*.1,boot.y+boot.h*.12,boot.w*.22,5);ctx.fillStyle='#fff';ctx.font='bold 13px Courier New';ctx.textAlign='center';ctx.fillText('DRAW HERE',boot.x+boot.w*.45,boot.y-16);ctx.restore();}
+  function drawFlower(){ctx.save();ctx.lineCap='round';ctx.lineJoin='round';for(const stroke of strokes){if(stroke.length<2)continue;ctx.beginPath();ctx.moveTo(stroke[0].x,stroke[0].y);for(let i=1;i<stroke.length;i++)ctx.lineTo(stroke[i].x,stroke[i].y);ctx.strokeStyle='#ff9ff3';ctx.lineWidth=7;ctx.shadowColor='#ff9ff3';ctx.shadowBlur=10;ctx.stroke();}ctx.restore();}
+  function drawBag(){const b=bag;ctx.save();ctx.shadowColor='rgba(255,212,94,.45)';ctx.shadowBlur=18;ctx.fillStyle='#d69d14';rounded(b.x,b.y,b.w,b.h,15);ctx.fill();ctx.shadowBlur=0;ctx.strokeStyle='#ffd45e';ctx.lineWidth=4;rounded(b.x,b.y,b.w,b.h,15);ctx.stroke();ctx.beginPath();ctx.arc(b.x+b.w/2,b.y,b.w*.27,Math.PI,0);ctx.stroke();if(!b.open){ctx.fillStyle='#071315';rounded(b.x+b.w*.38,b.y+b.h*.36,b.w*.24,b.h*.23,5);ctx.fill();ctx.strokeStyle='#ffd45e';ctx.lineWidth=2;ctx.stroke();ctx.fillStyle='#ffd45e';ctx.font='24px serif';ctx.textAlign='center';ctx.fillText('🔒',b.x+b.w/2,b.y+b.h*.56);}else{ctx.fillStyle='#fff4af';ctx.font='36px serif';ctx.textAlign='center';ctx.fillText('✨',b.x+b.w/2,b.y+b.h*.6);}ctx.fillStyle='#fff';ctx.font='bold 12px Courier New';ctx.fillText('GOLD BAG',b.x+b.w/2,b.y+b.h+21);ctx.restore();}
+  function drawKey(){if(!key.visible)return;ctx.save();ctx.translate(key.x,key.y);ctx.rotate(-.45);ctx.shadowColor='#ffd45e';ctx.shadowBlur=13;ctx.strokeStyle='#ffd45e';ctx.fillStyle='#ffd45e';ctx.lineWidth=6;ctx.beginPath();ctx.arc(-10,0,10,0,Math.PI*2);ctx.stroke();ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(27,0);ctx.lineTo(27,9);ctx.moveTo(17,0);ctx.lineTo(17,6);ctx.stroke();ctx.restore();}
+  function draw(){ctx.clearRect(0,0,W,H);ctx.fillStyle='#071315';ctx.fillRect(0,0,W,H);ctx.strokeStyle='rgba(140,244,207,.05)';for(let x=0;x<W;x+=40){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}for(let y=0;y<H;y+=40){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}drawBoot();drawFlower();drawBag();drawKey();stars.forEach(s=>{ctx.globalAlpha=s.life;ctx.fillStyle=s.c;ctx.beginPath();ctx.arc(s.x,s.y,3,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;});}
+  function openBag(){if(mode!=='KEY')return;mode='WIN';bag.open=true;key.visible=false;setStep(2);hint.textContent='The golden bag opened! You are a magic artist! 🎉';addStars(bag.x+bag.w/2,bag.y+bag.h/2,70);setTimeout(()=>win.classList.add('show'),450);}
+  function animate(){for(let i=stars.length-1;i>=0;i--){let s=stars[i];s.x+=s.vx;s.y+=s.vy;s.vy+=.15;s.life-=.018;if(s.life<=0)stars.splice(i,1);}draw();requestAnimationFrame(animate);}
+  document.getElementById('restart').onclick=reset;document.getElementById('again').onclick=reset;window.addEventListener('resize',resize);resize();reset();animate();
+})();
+</script>
 </body>
 </html>
