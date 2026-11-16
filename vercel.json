@@ -11,6 +11,15 @@
           "value": "no-store, max-age=0"
         }
       ]
+    },
+    {
+      "source": "/lego-game.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, max-age=0"
+        }
+      ]
     }
   ],
   "functions": {
